@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>공략</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="title.js"></script>
+  </head>
+  <body>
+    <!-- 상단 -->
+    <div class="header"> <a href="../index.html">
+        <h1>페르소나2 벌</h1>
+      </a>
+      <h2>식사/운세/에스테틱/아로마테라피</h2>
+    </div>
+    <!-- 본문 -->
+    <div class="viewer">
+      <ol id="mozToc">
+        <!--mozToc h3 1 h4 2-->
+        <li><a href="#mozTocId514136">식사</a>
+          <ol>
+            <li><a href="#mozTocId236854">식당과 식사 일람</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId126182">운세</a>
+          <ol>
+            <li><a href="#mozTocId893708">왕론 운세 (ワンロン占い)</a></li>
+            <li><a href="#mozTocId368333">궁합 운세 (相性占い)</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId848865">에스테틱 (エステティック)</a></li>
+        <li><a href="#mozTocId383802">아로마테라피 (アロマテラピー)</a></li>
+      </ol>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId514136"></a>식사</h3>
+      음식점에서 식사를 하면, 음식에 따라서 캐릭터의 파라미터가 일시적으로 상승한다.<br>
+      식사의 효과는 일정 보수를 걷는 것에 의해 효과가 사라진다. 효과가 사라질 때까지는 다른 식사를 할 수 없다.<br>
+      참고로 '타츠야'는 미성년자이므로, 게임에서 술을 마실 수 없다.<br>
+      <br>
+      <table class="twtable">
+        <caption align="top">효과가 사리질 때까지의 보수</caption>
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">캐릭터</th>
+            <th align="center">보수</th>
+            <th align="center">캐릭터</th>
+            <th align="center">보수</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">마야</td>
+            <td align="left">512보</td>
+            <td align="left">난조</td>
+            <td align="left">672보</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">우라라</td>
+            <td align="left">544보</td>
+            <td align="left">에리</td>
+            <td align="left">768보</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">카츠야</td>
+            <td align="left">704보</td>
+            <td align="left">타츠야</td>
+            <td align="left">608보</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">파오후</td>
+            <td align="left">640보</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId236854"></a>식당과 식사 일람</h4>
+      <span class="marked">강조 표시</span>의 식사는 루트 분기 이후 &lt;4000엔 소문&gt;의 효과로 추가된다.<br>
+      <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <td style="background-color: rgb(102, 209, 222);" colspan="3"
+
+              align="center"><strong>연화대 : 갓텡 스시</strong></td>
+            <td style="background-color: rgb(102, 209, 222);" colspan="3"
+
+              align="center"><strong>히라사카구 : 아카쵸우칭 시라이시</strong></td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">이름</th>
+            <th align="center">가격</th>
+            <th align="center">효과</th>
+            <th align="center">이름</th>
+            <th align="center">가격</th>
+            <th align="center">효과</th>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">まぐろ</td>
+            <td align="left">300엔</td>
+            <td align="left">TEC +2</td>
+            <td align="left">えだまめ</td>
+            <td align="left">230엔</td>
+            <td align="left">AGI +5</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">いか</td>
+            <td align="left">300엔</td>
+            <td align="left">AGI +6</td>
+            <td align="left">やきとり</td>
+            <td align="left">400엔</td>
+            <td align="left">VIT +2</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">甘えび</td>
+            <td align="left">400엔</td>
+            <td align="left">VIT +2</td>
+            <td align="left">とりのから揚げ</td>
+            <td align="left">500엔</td>
+            <td align="left">TEC +1</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">あなご</td>
+            <td align="left">400엔</td>
+            <td align="left">AGI +1</td>
+            <td align="left">おでん</td>
+            <td align="left">500엔</td>
+            <td align="left">VIT +5</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">うに</td>
+            <td align="left">500엔</td>
+            <td align="left">TEC +4</td>
+            <td align="left">特製あんこ餃子</td>
+            <td align="left">400엔</td>
+            <td align="left">STR +2</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">いくら</td>
+            <td align="left">500엔</td>
+            <td align="left">STR +4</td>
+            <td align="left">特製五目バナナそば</td>
+            <td align="left">700엔</td>
+            <td align="left">AGI +7</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">えんがわ</td>
+            <td align="left">400엔</td>
+            <td align="left">TEC +8</td>
+            <td align="left">生ビール</td>
+            <td align="left">500엔</td>
+            <td align="left">STR +3</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">中とろ</td>
+            <td align="left">400엔</td>
+            <td align="left">VIT +1</td>
+            <td align="left">清酒白石</td>
+            <td align="left">500엔</td>
+            <td align="left">VIT +8</td>
+          </tr>
+          <tr class="evenRow">
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td align="left"><span class="marked">盛り合わせスペシャル</span></td>
+            <td align="left">1500엔</td>
+            <td align="left">STR +15</td>
+          </tr>
+          <tr class="oddRow">
+            <td style="background-color: rgb(102, 209, 222);" colspan="3"
+
+              align="center"><strong>유메사키구 : 피스 다이나</strong></td>
+            <td style="background-color: rgb(102, 209, 222);" colspan="3"
+
+              align="center"><strong>코난구 : 죠리 로저</strong></td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">이름</th>
+            <th align="center">가격</th>
+            <th align="center">효과</th>
+            <th align="center">이름</th>
+            <th align="center">가격</th>
+            <th align="center">효과</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">ピースバーガー</td>
+            <td align="left">230엔</td>
+            <td align="left">VIT +3</td>
+            <td align="left">ブレンドコーヒー</td>
+            <td align="left">380엔</td>
+            <td align="left">VIT +7</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">チキンバーガー</td>
+            <td align="left">300엔</td>
+            <td align="left">VIT +4</td>
+            <td align="left">ブレンドティー</td>
+            <td align="left">350엔</td>
+            <td align="left">AGI +1</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">グリルバーガー</td>
+            <td align="left">300엔</td>
+            <td align="left">VIT +6</td>
+            <td align="left">ミックスジュース</td>
+            <td align="left">280엔</td>
+            <td align="left">STR +2</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">ダブルピースバーガー</td>
+            <td align="left">350엔</td>
+            <td align="left">TEC +3</td>
+            <td align="left">スペシャルココア</td>
+            <td align="left">320엔</td>
+            <td align="left">STR +7</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">ビッグピースバーガー</td>
+            <td align="left">380엔</td>
+            <td align="left">AGI +8</td>
+            <td align="left">焼きリンゴパイ</td>
+            <td align="left">400엔</td>
+            <td align="left">STR +1</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">ポテトフライ</td>
+            <td align="left">270엔</td>
+            <td align="left">AGI +4</td>
+            <td align="left">チョコレートクッキー</td>
+            <td align="left">420엔</td>
+            <td align="left">AGI +3</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">ピースシェイク</td>
+            <td align="left">150엔</td>
+            <td align="left">STR +5</td>
+            <td align="left">玄米カレー</td>
+            <td align="left">700엔</td>
+            <td align="left">TEC +6</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">バリュー御膳</td>
+            <td align="left">700엔</td>
+            <td align="left">STR +1</td>
+            <td align="left">パイレーツセット</td>
+            <td align="left">900엔</td>
+            <td align="left">TEC +2</td>
+          </tr>
+          <tr class="oddRow">
+            <td style="background-color: rgb(102, 209, 222);" colspan="3"
+
+              align="center"><strong>아오바구 : 파라베람</strong></td>
+            <td style="background-color: rgb(102, 209, 222);" colspan="3"
+
+              align="center"><strong>아오바구 : 더블 슬래시</strong></td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">이름</th>
+            <th align="center">가격</th>
+            <th align="center">효과</th>
+            <th align="center">이름</th>
+            <th align="center">가격</th>
+            <th align="center">효과</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">リボルバー</td>
+            <td align="left">800엔</td>
+            <td align="left">AGI +2</td>
+            <td align="left">コーヒー</td>
+            <td align="left">350엔</td>
+            <td align="left">TEC +5</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">ダブルアクション</td>
+            <td align="left">750엔</td>
+            <td align="left">STR +6</td>
+            <td align="left">カフェオレ</td>
+            <td align="left">400엔</td>
+            <td align="left">STR +6</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">マグナム</td>
+            <td align="left">660엔</td>
+            <td align="left">TEC +8</td>
+            <td align="left">ミルクティー</td>
+            <td align="left">300엔</td>
+            <td align="left">AGI +2</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">ビュレットコア</td>
+            <td align="left">820엔</td>
+            <td align="left">STR +2</td>
+            <td align="left">ハーブティー</td>
+            <td align="left">450엔</td>
+            <td align="left">AGI +2</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">ブローニングパワー</td>
+            <td align="left">880엔</td>
+            <td align="left">TEC +4</td>
+            <td align="left">ダブルサンド</td>
+            <td align="left">700엔</td>
+            <td align="left">STR +8</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">エンジェルトリガー</td>
+            <td align="left">700엔</td>
+            <td align="left">AGI +6</td>
+            <td align="left">ピザトースト</td>
+            <td align="left">600엔</td>
+            <td align="left">VIT +1</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">ティルトバレル</td>
+            <td align="left">500엔</td>
+            <td align="left">VIT +8</td>
+            <td align="left">スパゲッティ</td>
+            <td align="left">980엔</td>
+            <td align="left">TEC +1</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">デリンジャー</td>
+            <td align="left">900엔</td>
+            <td align="left">VIT +4</td>
+            <td align="left">カレーライス</td>
+            <td align="left">700엔</td>
+            <td align="left">TEC +7</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left"><span class="marked">フロント・サイト</span></td>
+            <td align="left">1000엔</td>
+            <td align="left">LUC +3</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left"><span class="marked">リア・サイト</span></td>
+            <td align="left">1200엔</td>
+            <td align="left">LUC +6</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td style="background-color: rgb(102, 209, 222);" colspan="3"
+
+              align="center"><strong>나루미구 : 에보니</strong></td>
+            <td style="background-color: rgb(102, 209, 222);" colspan="3"
+
+              align="center"><strong>나루미구 : 클레르・드・륜느</strong></td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">이름</th>
+            <th align="center">가격</th>
+            <th align="center">효과</th>
+            <th align="center">이름</th>
+            <th align="center">가격</th>
+            <th align="center">효과</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">オン・ザ・ロック</td>
+            <td align="left">1500엔</td>
+            <td align="left">AGI +4</td>
+            <td align="left">ヴィッシソワーズ</td>
+            <td align="left">1000엔</td>
+            <td align="left">VIT +1</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">ヴィトゥイーンザシーツ</td>
+            <td align="left">1600엔</td>
+            <td align="left">TEC +6</td>
+            <td align="left">エスカヴェッシュ</td>
+            <td align="left">1000엔</td>
+            <td align="left">TEC +2</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">ギムレット</td>
+            <td align="left">1700엔</td>
+            <td align="left">AGI +8</td>
+            <td align="left">カスレ</td>
+            <td align="left">1000엔</td>
+            <td align="left">STR +8</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">ブルーラグーン</td>
+            <td align="left">1400엔</td>
+            <td align="left">TEC +2</td>
+            <td align="left">プロシェット</td>
+            <td align="left">1000엔</td>
+            <td align="left">AGI +2</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">グリーンアイズ</td>
+            <td align="left">1400엔</td>
+            <td align="left">VIT +6</td>
+            <td align="left">ブランダード</td>
+            <td align="left">1000엔</td>
+            <td align="left">VIT +5</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">モッキンバード</td>
+            <td align="left">1700엔</td>
+            <td align="left">STR +8</td>
+            <td align="left">ブイヤベース</td>
+            <td align="left">1000엔</td>
+            <td align="left">STR +3</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">エンジェルキッス</td>
+            <td align="left">1300엔</td>
+            <td align="left">VIT +2</td>
+            <td align="left">バロティーヌ</td>
+            <td align="left">1000엔</td>
+            <td align="left">AGI +4</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">スプリッツアー</td>
+            <td align="left">1800엔</td>
+            <td align="left">STR +4</td>
+            <td align="left">ナヴァラン</td>
+            <td align="left">1000엔</td>
+            <td align="left">VIT +6</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <td style="background-color: rgb(102, 209, 222);" colspan="3"
+
+              align="center"><strong>던전 : 트릿슈의 샘</strong></td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">이름</th>
+            <th align="center">가격</th>
+            <th align="center">효과</th>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">イタリアンジェラート</td>
+            <td align="left">10500엔</td>
+            <td align="left">VIT +7</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">スパゲッティーアイス</td>
+            <td align="left">10500엔</td>
+            <td align="left">TEC +3</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">ペッパークリーム</td>
+            <td align="left">10500엔</td>
+            <td align="left">AGI +3</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">イカスミシャーベット</td>
+            <td align="left">10500엔</td>
+            <td align="left">STR +7</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">あいすくりん</td>
+            <td align="left">10500엔</td>
+            <td align="left">TEC +7</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">スーパーバニラ</td>
+            <td align="left">10500엔</td>
+            <td align="left">AGI +7</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">抹茶アイス</td>
+            <td align="left">10500엔</td>
+            <td align="left">STR +3</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">ダイナミックソフト</td>
+            <td align="left">10500엔</td>
+            <td align="left">VIT +3</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left"><span class="marked">ラッキークリーム</span></td>
+            <td align="left">12000엔</td>
+            <td align="left">LUC +8</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left"><span class="marked">ノーザンライトバニラ</span></td>
+            <td align="left">12000엔</td>
+            <td align="left">LUC +15</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId126182"></a>운세</h3>
+      <h4><a class="mozTocH4" id="mozTocId893708"></a>왕론 운세 (ワンロン占い)</h4>
+      '스마루 지니'와 한 번 대화하면, '죠리 로저'의 마스터로부터 "스마루 지니, 드디어 갈아타다"라는 소문을 들을 수 있다.<br>
+      이 소문을 퍼트리면, 왕론 운세를 이용할 수 있게 된다. 요금은 3000엔<br>
+      <ul>
+        <li> 운세의 결과는 로드하면 바뀌므로, 원하는 효과가 나올 때까지 로드를 반복하는 것도 가능하다.</li>
+        <li> 운세의 효과는 일정 보수를 걷는 것에 따라 사라진다.</li>
+      </ul>
+      <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">결과</th>
+            <th align="center">효과</th>
+          </tr>
+          <tr class="oddRow">
+            <td>광룡<br>
+              (光龍)</td>
+            <td>획득 경험치 2배<br>
+              획득 자금 0.5배</td>
+          </tr>
+          <tr class="evenRow">
+            <td>흑룡<br>
+              (黒龍)</td>
+            <td>획득 경험치 0.5배<br>
+              획득 자금 2배</td>
+          </tr>
+          <tr class="oddRow">
+            <td>황룡<br>
+              (黄龍)</td>
+            <td>마야의 LUC 2배</td>
+          </tr>
+          <tr class="evenRow">
+            <td>청룡<br>
+              (青龍)</td>
+            <td>컨택트 시, 악마의 개성이 반전<br>
+              (예 : 거만↔성급, 강기↔약기, 명랑↔음침, 영리↔바보)</td>
+          </tr>
+          <tr class="oddRow">
+            <td>적룡<br>
+              (赤龍)</td>
+            <td>전투 종료 시, 레어 보이스를 들을 수 있게 된다.</td>
+          </tr>
+          <tr class="evenRow">
+            <td>은룡<br>
+              (銀龍)</td>
+            <td>컨택트 시, 감정을 4단계까지 올려야 컨택트의 결과가 나온다.</td>
+          </tr>
+        </tbody>
+      </table>
+      ※ '광룡'은 보스전에서도 유효하다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId368333"></a>궁합 운세 (相性占い)</h4>
+      왕론 운세의 소문을 퍼트린 상태에서, 루트 분기 이후 '죠리 로저'의 마스터로부터 "스마루 지니의 새로운 운세"의 소문을 들을 수 있다.<br>
+      이 소문을 퍼트리면, 궁합 운세를 이용할 수 있게 된다. 요금은 5000엔<br>
+      <br>
+      타츠야가 파티에 가입한 이후(이와토야마 클리어 후)에 "지니, 파워업!!"의 소문을 퍼트려서 궁합 운세를 파워업 시킬 수 있다. (궁합 운세의 대상이 되는 캐릭터가 증가)<br>
+      <br>
+      <ul>
+        <li> 6개의 질문에 YES/NO 로 대답해서 최종적으로 궁합이 좋은 사람이 발표된다.</li>
+        <li> 궁합이 좋은 사람에 의해서 효과가 3종류로 나뉘며, 효과는 다음 궁합 운세를 칠 때까지 지속된다.</li>
+      </ul>
+      <table class="twtable">
+        <caption align="top">궁합이 좋은 사람</caption>
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">종류</th>
+            <th align="center">효과</th>
+          </tr>
+          <tr class="oddRow">
+            <td>시설의 점원</td>
+            <td>상품의 가격과 시설의 이용 요금이 20% 할인된다.</td>
+          </tr>
+          <tr class="evenRow">
+            <td>파티 멤버</td>
+            <td>마야와 합체 스킬을 발동시켰을 때 위력이 증가한다.</td>
+          </tr>
+          <tr class="oddRow">
+            <td>보스</td>
+            <td>마야에게 주는 데미지가 감소한다.</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      ※ 점원이나 보스의 궁합 운세는 메리트가 별로 없기 때문에 파티 멤버와의 궁합만 기재합니다.<br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">캐릭터</th>
+            <th align="center">선택 Y/N</th>
+          </tr>
+          <tr class="oddRow">
+            <td>우라라</td>
+            <td>YYYYNY</td>
+          </tr>
+          <tr class="evenRow">
+            <td>카츠야</td>
+            <td>NNNNNY</td>
+          </tr>
+          <tr class="oddRow">
+            <td>파오후</td>
+            <td>YYNNNN</td>
+          </tr>
+          <tr class="evenRow">
+            <td>타츠야</td>
+            <td>YYYYYY</td>
+          </tr>
+          <tr class="oddRow">
+            <td>난조</td>
+            <td>YNYYNN</td>
+          </tr>
+          <tr class="evenRow">
+            <td>에리</td>
+            <td>NYYYNY</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId848865"></a>에스테틱 (エステティック)</h3>
+      '칠자매 학원' 클리어 이후, "에테리아의 새로운 도전"의 소문을 퍼트리면, 에스테틱을 이용할 수 있다.<br>
+      <ul>
+        <li> 에스테틱을 받으면 특정 <strong>어조</strong>의 악마와의 호감도가 올라서, 컨택트를 유리하게 진행할 수 있게 된다. (단, 악마의 성별에 따라 반대의 결과가 나올 때도 있다.)</li>
+        <li> 에스테틱의 효과는 일정 보수를 걷는 것에 따라 사라진다.</li>
+      </ul>
+      <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th colspan="3" align="center">초기 코스</th>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">코스</th>
+            <th align="center">가격</th>
+            <th align="center">대상의 어조</th>
+          </tr>
+          <tr class="evenRow">
+            <td>ゴールド</td>
+            <td>2000</td>
+            <td>남자 아이<br>
+              여자 아이</td>
+          </tr>
+          <tr class="oddRow">
+            <td>シルバー</td>
+            <td>1800</td>
+            <td>젊은이<br>
+              걸</td>
+          </tr>
+          <tr class="evenRow">
+            <td>アイアン</td>
+            <td>1500</td>
+            <td>신사<br>
+              숙녀</td>
+          </tr>
+          <tr class="oddRow">
+            <td>マーキュリー</td>
+            <td>1600</td>
+            <td>수상한 자</td>
+          </tr>
+          <tr class="evenRow">
+            <th colspan="3" align="center">추가 코스</th>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">코스</th>
+            <th align="center">가격</th>
+            <th align="center">대상의 어조</th>
+          </tr>
+          <tr class="evenRow">
+            <td>ティン</td>
+            <td>2500</td>
+            <td>노인</td>
+          </tr>
+          <tr class="oddRow">
+            <td>コパー</td>
+            <td>2600</td>
+            <td>짐승</td>
+          </tr>
+          <tr class="evenRow">
+            <td>レッド</td>
+            <td>2700</td>
+            <td>짐승의 신</td>
+          </tr>
+          <tr class="oddRow">
+            <td>サイファー</td>
+            <td>2700</td>
+            <td>히호</td>
+          </tr>
+          <tr class="evenRow">
+            <td>ソルト</td>
+            <td>2400</td>
+            <td>슬라임</td>
+          </tr>
+          <tr class="oddRow">
+            <td>メルクリウス</td>
+            <td>3000</td>
+            <td>광인</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId383802"></a>아로마테라피 (アロマテラピー)</h3>
+      '칠자매 학원' 클리어 이후, "카오리씨의 도전" 소문을 퍼트리면, 이용할 수 있게 된다.<br>
+      "카오리, 의문의 임시 휴업"의 소문을 좋은 결과로 끝내면, 신메뉴가 추가된다.<br>
+      <br>
+      <table class="sortable">
+        <thead>
+          <tr class="evenRow">
+            <th index="0" align="center">아로마 오일<span class="hidden"></span></th>
+            <th index="1" align="center">가격<span class="hidden"></span></th>
+            <th index="2" align="center">효과<span class="hidden"></span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="oddRow">
+            <td>バジル</td>
+            <td>1300</td>
+            <td>일정 기간 &lt;DEATH&gt;의 악마의 출현율을 저하</td>
+          </tr>
+          <tr class="evenRow">
+            <td>ゼラニウム</td>
+            <td>1250</td>
+            <td>일정 기간 &lt;STRENGTH&gt;의 악마의 출현율을 상승</td>
+          </tr>
+          <tr class="oddRow">
+            <td>コリアンダー</td>
+            <td>1400</td>
+            <td>일정 기간 &lt;STAR&gt;의 악마의 출현율을 상승</td>
+          </tr>
+          <tr class="evenRow">
+            <td>ローズウッド</td>
+            <td>1200</td>
+            <td>일정 기간 &lt;TEMPERANCE&gt;의 악마의 출현율을 상승</td>
+          </tr>
+          <tr class="oddRow">
+            <td>レモングラス</td>
+            <td>1250</td>
+            <td>일정 기간 &lt;DEATH&gt;의 악마의 출현율을 상승</td>
+          </tr>
+          <tr class="evenRow">
+            <td>クラリセージ</td>
+            <td>1100</td>
+            <td>일정 기간 &lt;MAGICIAN&gt;의 악마의 출현율을 저하</td>
+          </tr>
+          <tr class="oddRow">
+            <td>ローズマリー</td>
+            <td>1250</td>
+            <td>일정 기간 &lt;DEVIL&gt;의 악마의 출현율을 상승</td>
+          </tr>
+          <tr class="evenRow">
+            <td>サイプレス</td>
+            <td>1400</td>
+            <td>일정 기간 &lt;LOVERS&gt;의 악마의 출현율을 상승</td>
+          </tr>
+          <tr class="oddRow">
+            <td>スイートオレンジ</td>
+            <td>1150</td>
+            <td>일정 기간 &lt;CHARIOT&gt;의 악마의 출현율을 저하</td>
+          </tr>
+          <tr class="evenRow">
+            <td>ラベンダー</td>
+            <td>1440</td>
+            <td>일정 기간 &lt;HANGED MAN&gt;의 악마의 출현율을 저하</td>
+          </tr>
+          <tr class="oddRow">
+            <td>サンダルウッド</td>
+            <td>1150</td>
+            <td>일정 기간 &lt;STAR&gt;의 악마의 출현율을 저하</td>
+          </tr>
+          <tr class="evenRow">
+            <td>ユーカリ</td>
+            <td>1300</td>
+            <td>일정 기간 &lt;HANGED MAN&gt;의 악마의 출현율을 상승</td>
+          </tr>
+          <tr class="oddRow">
+            <td>キャロットシード</td>
+            <td>1300</td>
+            <td>일정 기간 &lt;TOWER&gt;의 악마의 출현율을 상승</td>
+          </tr>
+          <tr class="evenRow">
+            <td>ペパーミント</td>
+            <td>1400</td>
+            <td>일정 기간 &lt;HERMIT&gt;의 악마의 출현율을 저하</td>
+          </tr>
+          <tr class="oddRow">
+            <td>ジャーマンカモミール</td>
+            <td>1100</td>
+            <td>일정 기간 &lt;TEMPERANCE&gt;의 악마의 출현율을 저하</td>
+          </tr>
+          <tr class="evenRow">
+            <td>イランイラン</td>
+            <td>1200</td>
+            <td>일정 기간 &lt;MAGICIAN&gt;의 악마의 출현율을 상승</td>
+          </tr>
+          <tr class="oddRow">
+            <td>ジュニパーベリー</td>
+            <td>1200</td>
+            <td>일정 기간 &lt;CHARIOT&gt;의 악마의 출현율을 상승</td>
+          </tr>
+          <tr class="evenRow">
+            <td>ネロリ</td>
+            <td>1350</td>
+            <td>일정 기간 &lt;HERMIT&gt;의 악마의 출현율을 상승</td>
+          </tr>
+          <tr class="oddRow">
+            <td>ローレル</td>
+            <td>1450</td>
+            <td>일정 기간 &lt;MOON&gt;의 악마의 출현율을 저하</td>
+          </tr>
+          <tr class="evenRow">
+            <td>ジャスミン</td>
+            <td>1350</td>
+            <td>일정 기간 &lt;TOWER&gt;의 악마의 출현율을 저하</td>
+          </tr>
+          <tr class="oddRow">
+            <td>クローブ</td>
+            <td>1400</td>
+            <td>일정 기간 &lt;DEVIL&gt;의 악마의 출현율을 저하</td>
+          </tr>
+          <tr class="evenRow">
+            <td>ティートリー</td>
+            <td>1300</td>
+            <td>일정 기간 &lt;STRENGTH&gt;의 악마의 출현율을 저하</td>
+          </tr>
+          <tr class="oddRow">
+            <td>マロウ</td>
+            <td>1300</td>
+            <td>일정 기간 &lt;LOVERS&gt;의 악마의 출현율을 저하</td>
+          </tr>
+          <tr class="evenRow">
+            <td>シナモン</td>
+            <td>1300</td>
+            <td>일정 기간 &lt;MOON&gt;의 악마의 출현율을 상승</td>
+          </tr>
+          <tr class="oddRow">
+            <td>ローズ</td>
+            <td>1450</td>
+            <td>일정 기간 &lt;FORTUNE&gt;의 악마의 출현율을 상승</td>
+          </tr>
+          <tr class="evenRow">
+            <td>マージョラム</td>
+            <td>1250</td>
+            <td>일정 기간 &lt;FORTUNE&gt;의 악마의 출현율을 저하</td>
+          </tr>
+          <tr class="oddRow">
+            <td>パイン</td>
+            <td>1400</td>
+            <td>일정 기간 &lt;JUDGEMENT&gt;의 악마의 출현율을 상승</td>
+          </tr>
+          <tr class="evenRow">
+            <td>ベルガモット</td>
+            <td>1350</td>
+            <td>일정 기간 &lt;JUDGEMENT&gt;의 악마의 출현율을 저하</td>
+          </tr>
+          <tr class="oddRow">
+            <td>ヒソップ</td>
+            <td>1250</td>
+            <td>일정 기간 &lt;WORLD&gt;의 악마의 출현율을 상승</td>
+          </tr>
+          <tr class="evenRow">
+            <td>エルダーフラワー</td>
+            <td>1300</td>
+            <td>일정 기간 &lt;WORLD&gt;의 악마의 출현율을 저하</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+    <!-- 하단 -->
+    <div class="footer">
+      <p>이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</p>
+    </div>
+  </body>
+</html>

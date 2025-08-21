@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>공략</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="title.js"></script>
+  </head>
+  <body>
+    <!-- 상단 -->
+    <div class="header"> <a href="../index.html">
+        <h1>마이트 &amp; 매직 7</h1>
+      </a>
+      <h2>계산식</h2>
+    </div>
+    <!-- 본문 -->
+    <div class="viewer">
+      <ol id="mozToc">
+        <!--mozToc h3 1 h4 2-->
+        <li><a href="#mozTocId271531">다음 레벨까지 필요한 경험치</a></li>
+        <li><a href="#mozTocId938058">각종 확률 계산식</a></li>
+        <li><a href="#mozTocId820237">저항력</a></li>
+        <li><a href="#mozTocId407641">복귀 시간</a>
+          <ol>
+            <li><a href="#mozTocId46354">복귀 시간 감소/증가</a></li>
+            <li><a href="#mozTocId123094">무기의 복귀 시간</a></li>
+            <li><a href="#mozTocId116635">방어구의 복귀 시간</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId732963">듀얼 웨폰</a></li>
+        <li><a href="#mozTocId179492">기타</a></li>
+      </ol>
+      <br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId271531"></a>다음 레벨까지 필요한 경험치</h3>
+      <pre>필요 경험치 = 현재 레벨 × (현재 레벨 + 1) × 500
+</pre><br>
+      <h3><a class="mozTocH3" id="mozTocId938058"></a>각종 확률 계산식</h3>
+      <strong>플레이어의 명중률</strong><br>
+      <pre>(15 + 공격 보너스 × 2) ÷ (30 + 공격 보너스 × 2 + 몬스터의 AC)
+</pre><br>
+      <strong>몬스터의 명중률</strong><br>
+      <pre>(5 + 몬스터의 레벨 × 2) ÷ (10 + 몬스터의 레벨 × 2 + 플레이어의 AC)
+</pre><br>
+      <strong>마비(Paralyze), 슬로우(Slow) 주문의 성공률</strong><br>
+      <pre>30 ÷ (30 + 몬스터의 저항력 + 몬스터의 레벨  ÷ 4)
+</pre><br>
+      <strong>플레이어가 상태 이상에 걸릴 확률</strong><br>
+      <pre>30 ÷ (30 + 운 + 관련 능력치)
+</pre>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">관련 능력치</th>
+            <th align="center">상태 이상/마법</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">인내력</td>
+            <td>허약함<br>
+              수면<br>
+              취함<br>
+              질병<br>
+              의식불명<br>
+              나이</td>
+          </tr>
+          <tr class="evenRow">
+            <td>인성</td>
+            <td>저주</td>
+          </tr>
+          <tr class="oddRow">
+            <td>(인성 + 지성) ÷ 2</td>
+            <td>SP 흡수<br>
+              디스펠 매직</td>
+          </tr>
+          <tr class="evenRow">
+            <td>정신(Mind) 저항력</td>
+            <td>광기<br>
+              마비<br>
+              공포</td>
+          </tr>
+          <tr class="oddRow">
+            <td>대지(Earth) 저항력</td>
+            <td>석화</td>
+          </tr>
+          <tr class="evenRow">
+            <td>육체(Body) 저항력</td>
+            <td>중독<br>
+              사망<br>
+              근절</td>
+          </tr>
+          <tr class="oddRow">
+            <td>아이템 부서짐<br>
+              훔치기 당함</td>
+            <td>아이템의 강도(내구력)</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId820237"></a>저항력</h3>
+      <pre>기본 데미지 감소 확률 = 1 - 30 ÷ (30 + 저항력 + 운) 
+</pre>&lt;기본 데미지 감소 확률&gt;을 기본으로 5회의 기회가 있습니다. 저항에 성공하면 다음 단계로, 실패하면 거기서 중단입니다.<br>
+      <blockquote> 먼저 &lt;기본 데미지 감소 확률&gt;을 계산한다. → 1회 판정. 실패하면 100% 데미지를 받는다. → 2회째 판정. 여기서 성공하면 다음 판정으로, 실패하면 데미지 50% → 이후 계속</blockquote>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">회수</th>
+            <th align="center">데미지 감소율</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">1</td>
+            <td align="center">100%</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">2</td>
+            <td align="center">50%</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">3</td>
+            <td align="center">25%</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">4</td>
+            <td align="center">12.5%</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">5</td>
+            <td align="center">6.25%</td>
+          </tr>
+        </tbody>
+      </table>
+      결론적으로 주문 공격에 대한 데미지를 감소하기 위해서 플레이어는 캐릭터의 '저항력'과 '운'을 높이면 됩니다.<br>
+      참고로 몬스터는 '운'이 없기 때문에 '저항력'만으로 계산합니다. 다만, '물리' 저항력도 가지고 있기 때문에 무기 공격에도 저항력을 가지고 있습니다.<br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId407641"></a>복귀 시간</h3>
+      '복귀 시간'은 행동 후 다시 라운드가 돌아오는 간격입니다. 아래의 요소에 대한 합계를 기반으로 캐릭터의 '복귀 시간'이 정해집니다.<br>
+      복귀 시간 총합이 낮을수록 좋으며 더 빨리 라운드가 돌아옵니다. 경우에 따라서 한 턴에 여러 라운드를 행동할 수 있습니다. (턴 모드에서 전투할 경우 제대로 확인 가능)<br>
+      <blockquote>일부 복귀 시간 감소 효과는 게임의 버그 때문에 제대로 적용되지 않는 효과가 있습니다. 비공식 패치로 해결할 수 있지만 한글판에서는 적용할 수 없습니다. (영문으로 바뀜)</blockquote>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId46354"></a>복귀 시간 감소/증가</h4>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">감소에 영향을 주는 요소</th>
+            <th align="center">감소치</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">캐릭터의 '속도'(Speed)</td>
+            <td align="center">해당 능력치만큼 뺀다.</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">복귀 시간을 감소하는 기술</td>
+            <td align="right">(기술 레벨 × -1)</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">GM급 암즈마스터(Armsmaster)</td>
+            <td align="right">(기술 레벨 × -2)</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">'헤이스트' 주문</td>
+            <td align="right">-25 (※ 1)</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">'슬로우' 주문</td>
+            <td align="right">+20</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">'복귀 시간 감소' 관련 인챈트</td>
+            <td align="right">-20</td>
+          </tr>
+        </tbody>
+      </table>
+      ※ 1 : '헤이스트' 주문은 버그 때문에 영향이 없다.<br>
+      <br>
+      복귀 시간은 '블래스터'와 '활'을 제외하고 '30' 이하로 내려갈 수 없습니다.<br>
+      실시간 모드의 전투에서는 '블래스터'와 '활'은 '0'까지 가능합니다. (턴 모드는 불가) 실제로 게임에 적용해보면 실시간으로 발사하는 모습을 볼 수 있습니다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId123094"></a>무기의 복귀 시간</h4>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">무기</th>
+            <th align="center">기본 복귀 시간</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">블래스터</td>
+            <td align="right">30</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">단검</td>
+            <td align="right">60</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">맨손</td>
+            <td align="right">60</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">창</td>
+            <td align="right">80</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">철퇴</td>
+            <td align="right">80</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">검</td>
+            <td align="right">90</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">도끼</td>
+            <td align="right">100</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">지팡이</td>
+            <td align="right">100</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">활</td>
+            <td align="right">100</td>
+          </tr>
+        </tbody>
+      </table>
+      무기 기술의 레벨에 따라 복귀 시간을 감소할 수 있습니다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId116635"></a>방어구의 복귀 시간</h4>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">방어구</th>
+            <th align="center">기본 복귀 시간</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">방패</td>
+            <td align="right">10</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">가죽갑옷</td>
+            <td align="right">10</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">사슬갑옷</td>
+            <td align="right">20</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">판금갑옷</td>
+            <td align="right">30</td>
+          </tr>
+        </tbody>
+      </table>
+      방어구 기술의 레벨에 따라 복귀 시간을 감소할 수 있습니다.<br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId732963"></a>듀얼 웨폰</h3>
+      <dl>
+        <dt>복귀 시간</dt>
+        <dd>양손에 든 무기 중에서 메인 무기(오른손)에 장비한 무기를 기준으로 계산합니다. (예 : '창' + '검'은 '검'이 기준) </dd>
+        <dd>이때 다른 무기는 복귀 시간에 아무런 영향을 주지 않습니다.</dd>
+      </dl>
+      <br>
+      <dl>
+        <dt>공격 보너스, 공격 타격치(데미지), 특수 효과</dt>
+        <dd>'복귀 시간'과 다르게, 서브 무기의 기술 효과도 그대로 적용됩니다.</dd>
+      </dl>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId179492"></a>기타</h3>
+      <dl>
+        <dt>단검의 3배 데미지</dt>
+        <dd>마스터 레벨의 단검 기술은 <span class="marked">10% 확률</span>로 3배의 데미지를 낼 수 있습니다. 이 데미지는 <span
+
+            class="marked">단검 자체의 타격치(데미지)의 3배</span>입니다.</dd>
+        <dd>MM7 한글판에서는 툴팁에 "기술 레벨에 비례한 확률"이라고 쓰여 있지만 틀립니다. 고정 10%의 확률입니다.</dd>
+      </dl>
+      <br>
+    </div>
+    <!-- 하단 -->
+    <div class="footer">
+      <p>이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</p>
+    </div>
+  </body>
+</html>

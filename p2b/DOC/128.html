@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>공략</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="title.js"></script>
+  </head>
+  <body>
+    <!-- 상단 -->
+    <div class="header"> <a href="../index.html">
+        <h1>페르소나2 벌</h1>
+      </a>
+      <h2>컨택트</h2>
+    </div>
+    <!-- 본문 -->
+    <div class="viewer">
+      <ol id="mozToc">
+        <!--mozToc h3 1 h4 2-->
+        <li><a href="#mozTocId107921">컨택트의 기본</a>
+          <ol>
+            <li><a href="#mozTocId923446">계약에 대해</a></li>
+            <li><a href="#mozTocId506845">카드 입수에 대해</a></li>
+            <li><a href="#mozTocId411708">개성에 대해</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId612858">캐릭터별 컨택트 커맨드</a></li>
+        <li><a href="#mozTocId45529">개성별 컨택트 커맨드</a></li>
+      </ol>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId107921"></a>컨택트의 기본</h3>
+      <ul>
+        <li> 전투 중, 아군 턴의 처음에 악마와 직접 회화를 하는 선택 사항 <strong>컨택트 (コンタクト) </strong>가 있습니다.</li>
+        <li> 악마는 &lt;기쁨, 흥미, 분노, 공포&gt; 4개의 감정이 있어서, 컨택트를 실행하면 특정 감정이 1단계 상승합니다. 이 감정은 색으로 표현됩니다.</li>
+      </ul>
+      <table class="twtable">
+        <caption align="top"> 감정별 색상표</caption>
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">감정</th>
+            <th align="center">색상</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">기쁨 (喜び)</td>
+            <td><span style="color: rgb(0, 128, 0);">녹색</span></td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">흥미 (興味)</td>
+            <td><span style="color: rgb(218, 165, 32);">황색</span></td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">분노 (怒り)</td>
+            <td><span style="color: rgb(255, 0, 0);">적색</span></td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">공포 (恐怖)</td>
+            <td><span style="color: rgb(0, 0, 255);">청색</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <ul>
+        <li> 기본은 1체 1커맨드로 컨택트를 실시합니다만, 2~3명의 복수 컨택트도 가능합니다. (이것은 캐릭터의 관계에 따라 다름)</li>
+        <li> 어느 선택으로 어떤 감정이 오를까는 <u>개성과 어조(口調)</u>에 따라 악마마다 지정되어 있습니다.</li>
+        <li> 악마의 감정이 최대치 (통상 3단계, 운세의 효과에 따라 2~4단계로 변화)에 도달하면 악마는 아래의 행동을 합니다.</li>
+      </ul>
+      <table class="twtable">
+        <caption align="top">감정 최대치일 때 악마의 행동 </caption>
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">감정</th>
+            <th align="center">행동</th>
+          </tr>
+          <tr class="oddRow">
+            <td>기쁨</td>
+            <td><strong>계약</strong>을 할 수 있습니다. 컨택트를 실시하는 아군의 레벨이, 악마의 레벨보다 높아야 합니다.</td>
+          </tr>
+          <tr class="evenRow">
+            <td>흥미</td>
+            <td>타로 카드를 줍니다. 받을 수 있는 카드의 종류는 악마의 아르카나와 일치합니다.</td>
+          </tr>
+          <tr class="oddRow">
+            <td>분노</td>
+            <td>교섭이 파기되며, 간혹 악마의 선제 공격을 받습니다.</td>
+          </tr>
+          <tr class="evenRow">
+            <td>공포</td>
+            <td>악마가 공포에 질려서 전투에서 도망칩니다.</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId923446"></a>계약에 대해</h4>
+      <ul>
+        <li> 악마와 계약을 한 후, 전투에서 다시 같은 악마와 만났을 경우. 기쁨을 3단계 올리면, 아이템이나 소문의 정보를 얻을 수 있습니다.</li>
+        <li> 받을 수 있는 아이템은 악마에 따라 다릅니다.</li>
+        <li> 계약 가능한 악마는 최대 3체까지 입니다.</li>
+      </ul>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId506845"></a>카드 입수에 대해</h4>
+      <ul>
+        <li> 컨택트로 악마의 흥미를 최대치까지 올리면, 악마로부터 타로 카드를 받을 수 있습니다. 페르소나 소환에 필요하는 카드는 이 방법으로 모을 수 있는 겁니다.</li>
+        <li> 계약한 상태의 악마라면, 재차 만나서 흥미를 최대치까지 올리면 '프리 타로'를 받을 수 있습니다.</li>
+      </ul>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId411708"></a>개성에 대해</h4>
+      악마는 개성(個性)을 가지고 있습니다. <span class="marked">전투에서 컨택트를 한 번이라도 시도하면, 애널라이즈 항목에 개성 정보가 추가됩니다.</span><br>
+      악마의 개성을 파악한 후, 각 개성과 대응하는 컨택트 커맨드를 선택하면, 원하는 감정을 올릴 수 있습니다.<br>
+      각 개성별 컨택트 커맨드는 아래의 "개성별 컨택트 커맨드" 항목을 보세요.<br>
+      <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th colspan="4" align="center">악마의 개성</th>
+          </tr>
+          <tr class="oddRow">
+            <td>거만 (高慢)</td>
+            <td>성급 (短気)</td>
+            <td>강기 (強気)</td>
+            <td>약기 (弱気)</td>
+          </tr>
+          <tr class="evenRow">
+            <td>명랑 (陽気)</td>
+            <td>음침 (陰気)</td>
+            <td>영리 (賢い)</td>
+            <td>바보 (愚か)</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId612858"></a>캐릭터별 컨택트 커맨드</h3>
+      ※ 페르소나2 벌에서는 컨택트가 1인 4커맨드에서, 1인 1커맨드로 간략화됐다.<br>
+      ※ 컨택트의 내용은 "누구를 리더로 할까"에 따라서 내용이 바뀐다.<br>
+      <br>
+      <table class="sortable">
+        <thead>
+          <tr class="evenRow">
+            <th index="0" align="center">컨택트 커맨드<span class="hidden"></span></th>
+            <th index="1" align="center">편성<span class="hidden"></span></th>
+            <th index="2" align="center">비고<span class="hidden"></span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="oddRow">
+            <td>インタビュー</td>
+            <td>마야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>燃えろイイ女！</td>
+            <td>마야→우라라<br>
+              우라라→마야</td>
+            <td>GOLD에서 "우라라가 부럽다(うららが羨ましい)"를 선택해야 사용 가능</td>
+          </tr>
+          <tr class="oddRow">
+            <td>相談スペシャル</td>
+            <td>마야→우라라→카츠야</td>
+            <td>GOLD에서 "우라라가 부럽다(うららが羨ましい)"를 선택해야 사용 가능</td>
+          </tr>
+          <tr class="evenRow">
+            <td>相談にのる</td>
+            <td>마야→카츠야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>突撃レポート</td>
+            <td>마야→난조<br>
+              마야→에리</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>相談にのる？</td>
+            <td>마야→카츠야→파오후</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>占い</td>
+            <td>우라라</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>情熱のフラメンコ</td>
+            <td>우라라→카츠야</td>
+            <td>'루나 팰리스 코난'에서 우라라, <br>
+              '스마루 프리즌' ('마키무라' 확보 이전)에서 카츠야의 이야기를 들은 이후 사용 가능</td>
+          </tr>
+          <tr class="oddRow">
+            <td>情熱のフラメンコスペシャル</td>
+            <td>우라라→카츠야→타츠야<br>
+              우라라→카츠야→에리</td>
+            <td>'루나 팰리스 코난'에서 우라라, 에리<br>
+              '스마루 프리즌'에서 카츠야, 타츠야의 이야기를 들은 이후 사용 가능</td>
+          </tr>
+          <tr class="evenRow">
+            <td>結婚したい女</td>
+            <td>우라라→마야→카츠야<br>
+              우라라→마야→파오후<br>
+              우라라→난조→마야</td>
+            <td>GOLD 클리어 후</td>
+          </tr>
+          <tr class="oddRow">
+            <td>売らない？</td>
+            <td>우라라→파오후</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>占星術</td>
+            <td>우라라→에리</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>占星術スペシャル</td>
+            <td>우라라→에리→파오후</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>取り調べ</td>
+            <td>카츠야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>取り調べ（結婚詐欺は許せないワ編）</td>
+            <td>카츠야→우라라</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>説得する</td>
+            <td>카츠야→마야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>説得スペシャル</td>
+            <td>카츠야→마야→우라라<br>
+              카츠야→마야→난조</td>
+            <td>GOLD에서 "우라라가 부럽다(うららが羨ましい)"를 선택해야 사용 가능</td>
+          </tr>
+          <tr class="evenRow">
+            <td>説得？</td>
+            <td>카츠야→파오후→마야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>取り調べ（痴漢撃退スペシャル）</td>
+            <td>카츠야→에리</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>兄の思いやり</td>
+            <td>카츠야→타츠야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>正義ってなんだ？</td>
+            <td>카츠야→난조</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>取り調べスペシャル</td>
+            <td>카츠야→난조→우라라</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>恐怖の取り調べ</td>
+            <td>카츠야→파오후</td>
+            <td>폐공장 클리어 후</td>
+          </tr>
+          <tr class="evenRow">
+            <td>恐怖の取り調べ（痴漢撃退スペシャル）</td>
+            <td>카츠야→에리→파오후</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>恐怖の取り調べ（結婚詐欺スペシャル）</td>
+            <td>카츠야→우라라→파오후</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>取り調べ（結婚詐欺＆痴漢撃退スペシャル）</td>
+            <td>카츠야→우라라→에리</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>正義なんてのは…</td>
+            <td>카츠야→난조→파오후</td>
+            <td align="left">이학 연구소 클리어 후 ~ 폐공장</td>
+          </tr>
+          <tr class="evenRow">
+            <td>盗聴</td>
+            <td>파오후</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>盗聴スペシャル</td>
+            <td>파오후→마야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>盗聴…は犯罪です</td>
+            <td>파오후→카츠야<br>
+              파오후→마야→카츠야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>酒と涙と男と女</td>
+            <td>파오후→카츠야→우라라</td>
+            <td>폐공장 클리어 후</td>
+          </tr>
+          <tr class="evenRow">
+            <td>野球狂の唄</td>
+            <td>파오후→난조</td>
+            <td>'아카쵸우칭 시라이시'에서 파오후, '스마루TV'에서 난조의 이야기를 듣는다.</td>
+          </tr>
+          <tr class="oddRow">
+            <td>嗚呼、酒こそ我が人生</td>
+            <td>파오후→우라라<br>
+              파오후→우라라→난조</td>
+            <td>'파라베람'의 이벤트 종료 후</td>
+          </tr>
+          <tr class="evenRow">
+            <td>大人のいいわけ</td>
+            <td>파오후→타츠야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>目で殺す</td>
+            <td>타츠야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>背比べ</td>
+            <td>타츠야→카츠야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>子供の言い分</td>
+            <td>타츠야→파오후</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>白馬の王子</td>
+            <td>타츠야→마야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>白馬の王子（うらら、舞耶を妬むの巻）</td>
+            <td>타츠야→우라라→마야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>白馬の王子（パオフゥ、無責任の巻）</td>
+            <td>타츠야→파오후→마야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>白馬の王子様（克哉、２人を守る編）</td>
+            <td>타츠야→카츠야→마야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>熱視線</td>
+            <td>타츠야→카츠야→파오후</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>ファッションショー</td>
+            <td>에리</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>いらっしゃぁ~い（はあと）</td>
+            <td>에리→우라라→마야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>男ってヤツは…</td>
+            <td>에리→우라라</td>
+            <td>스마루TV 클리어 후</td>
+          </tr>
+          <tr class="evenRow">
+            <td>百物語</td>
+            <td>에리→카츠야→우라라<br>
+              에리→우라라→파오후</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>働く女達</td>
+            <td>에리→마야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>働く女達？</td>
+            <td>에리→마야→파오후</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>明日の日本を斬る</td>
+            <td>난조</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>皮肉屋たち</td>
+            <td>난조→파오후</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>みんなでお小言</td>
+            <td>난조→우라라→카츠야</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>朝まで生討論</td>
+            <td>난조→카츠야<br>
+              난조→마야<br>
+              난조→마야→우라라<br>
+              난조→마야→파오후</td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId45529"></a>개성별 컨택트 커맨드</h3>
+      <table class="sortable">
+        <thead>
+          <tr class="evenRow">
+            <th index="0" align="center">개성<span class="hidden"></span></th>
+            <th index="1" align="center">기쁨<span class="hidden"></span></th>
+            <th index="2" align="center">흥미<span class="hidden"></span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="oddRow">
+            <td>음침・바보<br>
+              (陰気・愚か)</td>
+            <td>마야→카츠야→파오후</td>
+            <td>카츠야</td>
+          </tr>
+          <tr class="evenRow">
+            <td>음침・영리<br>
+              (陰気・賢い)</td>
+            <td>우라라→파오후</td>
+            <td>카츠야→우라라<br>
+              파오후<br>
+              마야→카츠야→파오후</td>
+          </tr>
+          <tr class="oddRow">
+            <td>강기・음침<br>
+              (強気・陰気)</td>
+            <td>카츠야<br>
+              파오후<br>
+              카츠야→우라라</td>
+            <td>카츠야<br>
+              카츠야→우라라</td>
+          </tr>
+          <tr class="evenRow">
+            <td>강기・음침・영리<br>
+              (強気・陰気・賢い)</td>
+            <td>난조</td>
+            <td>카츠야→난조<br>
+              카츠야→우라라→에리</td>
+          </tr>
+          <tr class="oddRow">
+            <td>강기・바보<br>
+              (強気・愚か)</td>
+            <td>난조<br>
+              우라라→에리</td>
+            <td>파오후<br>
+              카츠야→에리</td>
+          </tr>
+          <tr class="evenRow">
+            <td>강기・영리<br>
+              (強気・賢い)</td>
+            <td>카츠야→마야→우라라</td>
+            <td>카츠야<br>
+              파오후<br>
+              카츠야→우라라</td>
+          </tr>
+          <tr class="oddRow">
+            <td>강기・명랑<br>
+              (強気・陽気)</td>
+            <td>마야→우라라<br>
+              카츠야→마야→우라라</td>
+            <td>파오후<br>
+              카츠야→우라라</td>
+          </tr>
+          <tr class="evenRow">
+            <td>강기・명랑・바보<br>
+              (強気・陽気・愚か)</td>
+            <td>난조<br>
+              마야→에리</td>
+            <td>파오후</td>
+          </tr>
+          <tr class="oddRow">
+            <td>바보<br>
+              (愚か)</td>
+            <td>마야→카츠야<br>
+              마야→우라라→카츠야</td>
+            <td>마야<br>
+              우라라<br>
+              마야→우라라<br>
+              우라라→마야→카츠야</td>
+          </tr>
+          <tr class="evenRow">
+            <td>거만・음침・바보<br>
+              (高慢・陰気・愚か)</td>
+            <td>카츠야→마야→우라라</td>
+            <td>우라라<br>
+              마야→우라라<br>
+              카츠야→우라라</td>
+          </tr>
+          <tr class="oddRow">
+            <td>거만・음침・영리<br>
+              (高慢・陰気・賢い)</td>
+            <td>카츠야→마야→에리<br>
+              카츠야→마야→우라라</td>
+            <td>카츠야→우라라<br>
+              카츠야→우라라→에리</td>
+          </tr>
+          <tr class="evenRow">
+            <td>거만・강기・바보<br>
+              (高慢・強気・愚か)</td>
+            <td>카츠야→마야→우라라</td>
+            <td>우라라</td>
+          </tr>
+          <tr class="oddRow">
+            <td>거만・강기・영리<br>
+              (高慢・強気・賢い)</td>
+            <td>카츠야→마야→우라라</td>
+            <td>카츠야→우라라</td>
+          </tr>
+          <tr class="evenRow">
+            <td>거만・강기・명랑<br>
+              (高慢・強気・陽気)</td>
+            <td>???</td>
+            <td>카츠야→우라라→마야</td>
+          </tr>
+          <tr class="oddRow">
+            <td>거만・바보<br>
+              (高慢・愚か)</td>
+            <td>카츠야→마야</td>
+            <td>우라라<br>
+              마야→카츠야<br>
+              마야→카츠야→우라라</td>
+          </tr>
+          <tr class="evenRow">
+            <td>거만・영리<br>
+              (高慢・賢い)</td>
+            <td>카츠야→마야<br>
+              카츠야→마야→우라라</td>
+            <td>카츠야<br>
+              파오후→카츠야</td>
+          </tr>
+          <tr class="oddRow">
+            <td>거만・약기・명랑<br>
+              (高慢・弱気・陽気)</td>
+            <td>우라라<br>
+              마야→우라라</td>
+            <td>카츠야→마야→우라라</td>
+          </tr>
+          <tr class="evenRow">
+            <td>거만・명랑<br>
+              (高慢・陽気)</td>
+            <td>마야→우라라<br>
+              우라라</td>
+            <td>마야→난조</td>
+          </tr>
+          <tr class="oddRow">
+            <td>거만・명랑・영리<br>
+              (高慢・陽気・賢い)</td>
+            <td>카츠야→마야→우라라<br>
+              우라라→파오후</td>
+            <td>카츠야→마야<br>
+              카츠야→마야→난조</td>
+          </tr>
+          <tr class="evenRow">
+            <td>거만・명랑・바보<br>
+              (高慢・陽気・愚か)</td>
+            <td>우라라<br>
+              마야→우라라<br>
+              우라라→파오후</td>
+            <td>카츠야→타츠야</td>
+          </tr>
+          <tr class="oddRow">
+            <td>거만・성급・영리<br>
+              (高慢・短気・賢い)</td>
+            <td>카츠야→파오후→마야</td>
+            <td>카츠야→타츠야</td>
+          </tr>
+          <tr class="evenRow">
+            <td>거만・성급・바보<br>
+              (高慢・短気・愚か)</td>
+            <td>카츠야→마야→파오후<br>
+              파오후→우라라→카츠야</td>
+            <td>카츠야→파오후→우라라</td>
+          </tr>
+          <tr class="oddRow">
+            <td>거만・성급・강기<br>
+              (高慢・短気・強気)</td>
+            <td>카츠야→파오후→마야</td>
+            <td>카츠야→파오후→우라라</td>
+          </tr>
+          <tr class="evenRow">
+            <td>약기・영리<br>
+              (弱気・賢い)</td>
+            <td>???</td>
+            <td>카츠야→마야→우라라</td>
+          </tr>
+          <tr class="oddRow">
+            <td>약기・음침・바보<br>
+              (弱気・陰気・愚か)</td>
+            <td>마야→우라라→카츠야<br>
+              카츠야→마야</td>
+            <td>우라라<br>
+              마야→카츠야<br>
+              카츠야→마야</td>
+          </tr>
+          <tr class="evenRow">
+            <td>약기・명랑<br>
+              (弱気・陽気)</td>
+            <td>우라라</td>
+            <td>마야→카츠야</td>
+          </tr>
+          <tr class="oddRow">
+            <td>약기・명랑・영리<br>
+              (弱気・陽気・賢い)</td>
+            <td>카츠야→난조</td>
+            <td>난조</td>
+          </tr>
+          <tr class="evenRow">
+            <td>성급・음침・바보<br>
+              (短気・陰気・愚か)</td>
+            <td>마야→카츠야→우라라</td>
+            <td>파오후</td>
+          </tr>
+          <tr class="oddRow">
+            <td>성급・음침・영리<br>
+              (短気・陰気・賢い)</td>
+            <td>에리</td>
+            <td>파오후<br>
+              카츠야→파오후</td>
+          </tr>
+          <tr class="evenRow">
+            <td>성급・강기・바보<br>
+              (短気・強気・愚か)</td>
+            <td>마야→난조</td>
+            <td>파오후</td>
+          </tr>
+          <tr class="oddRow">
+            <td>성급・강기・명랑<br>
+              (短気・強気・陽気)</td>
+            <td>우라라→카츠야</td>
+            <td>파오후</td>
+          </tr>
+          <tr class="evenRow">
+            <td>성급・바보<br>
+              (短気・愚か)</td>
+            <td>마야→우라라→카츠야<br>
+              마야→카츠야→파오후</td>
+            <td>마야</td>
+          </tr>
+          <tr class="oddRow">
+            <td>성급・영리<br>
+              (短気・賢い)</td>
+            <td>에리</td>
+            <td>카츠야→파오후</td>
+          </tr>
+          <tr class="evenRow">
+            <td>성급・명랑・바보<br>
+              (短気・陽気・愚か)</td>
+            <td>마야→카츠야→파오후<br>
+              마야→카츠야</td>
+            <td>???</td>
+          </tr>
+          <tr class="oddRow">
+            <td>명랑・바보<br>
+              (陽気・愚か)</td>
+            <td>마야→우라라→카츠야<br>
+              마야→카츠야→우라라</td>
+            <td>마야<br>
+              우라라</td>
+          </tr>
+          <tr class="evenRow">
+            <td>명랑・영리<br>
+              (陽気・賢い)</td>
+            <td>우라라→카츠야</td>
+            <td>카츠야<br>
+              우라라→카츠야</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+    <!-- 하단 -->
+    <div class="footer">
+      <p>이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</p>
+    </div>
+  </body>
+</html>

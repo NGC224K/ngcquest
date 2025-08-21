@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<title>공략</title>
+
+<link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="title.js"></script>
+</head>
+
+<body>
+<!-- 상단 -->
+<div class="header">
+<a href="../index.html"><h1>데빌 서바이버 2</h1></a>
+<h2>종족 특유 스킬</h2>
+</div>
+
+<!-- 본문 -->
+<div class="viewer">
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th align="center">종족</th><th align="center">순위</th><th align="center">명칭</th><th align="center">HP</th><th align="center">MP</th><th align="center">효과</th></tr>
+<tr class="oddRow">
+<td rowspan="2">파괴신</td>
+<td>하위</td>
+<td>수라의 업 (修羅の業)</td>
+<td><br></td>
+<td><br></td>
+<td>3번째 행동이 가능</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>수라의 숙명 (修羅の宿命)</td>
+<td><br></td>
+<td><br></td>
+<td>3번째 행동이 가능<br>EXTRA 발생이 쉬워진다.</td></tr>
+<tr class="oddRow">
+<td rowspan="2">여신</td>
+<td>하위</td>
+<td>여신의 자애 (女神の慈愛)</td>
+<td><br></td>
+<td>(Lv×0.5)+24</td>
+<td>선택한 아군 팀의 HP를 회복(대), '상태 이상'도 회복<br>사정거리 4</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>여신의 은총 (女神の恩寵)</td>
+<td><br></td>
+<td>(Lv×0.5)+24</td>
+<td>사정거리 6</td></tr>
+<tr class="oddRow">
+<td rowspan="2">마신</td>
+<td>하위</td>
+<td>마력 각성 (魔力覚醒)</td>
+<td><br></td>
+<td>(Lv×0.5)+4</td>
+<td>사용 후, 1회만 MP를 사용하는 스킬의 효과가 1.5배</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>마력 개안 (魔力開眼)</td>
+<td><br></td>
+<td>(Lv×0.5)+6</td>
+<td>추가로 전원의 스킬 MP 소비가 항상 3/4이 된다.</td></tr>
+<tr class="oddRow">
+<td rowspan="2">사신</td>
+<td>하위</td>
+<td>혼돈의 파동 (混沌の波動)</td>
+<td><br></td>
+<td><br></td>
+<td>공격/회복 스킬의 사정거리 3<br>자신의 팀은 EXTRA 발생 없음<br>이동력 -1<br>공격 시, 행동 순서가 지연</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>혼돈의 숨결 (混沌の息吹)</td>
+<td><br></td>
+<td><br></td>
+<td>사정거리 4</td></tr>
+<tr class="oddRow">
+<td rowspan="2">용왕</td>
+<td>하위</td>
+<td>용의 조르기 (龍胴締め)</td>
+<td><br></td>
+<td><br></td>
+<td>인접한 적의 이동력이 1이 된다.<br>적의 공격을 받았을 때 선제 행동이 발생하기 쉬워진다.</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>용의 굳히기 (龍胴固め)</td>
+<td><br></td>
+<td><br></td>
+<td>추가로 적의 공격을 받을 때, 적의 초기 EXTRA를 소멸<br>공격을 받아도 행동 지연이 없다.</td></tr>
+<tr class="oddRow">
+<td rowspan="2">사룡</td>
+<td>하위</td>
+<td>사념의 파동 (邪念の波動)</td>
+<td><br></td>
+<td><br></td>
+<td>공격/회복 스킬의 사정거리 2<br>자신의 팀은 EXTRA 발생 없음<br>공격 시, 행동 순서가 지연</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>사념 유동 (邪念流動)</td>
+<td><br></td>
+<td>(Lv×0.5)+8</td>
+<td>사용 직후만, 사정거리 +4 (최대 6), 상위 사신과 함께라면 최대 사정거리 8</td></tr>
+<tr class="oddRow">
+<td rowspan="2">천사</td>
+<td>하위</td>
+<td>천사의 혈배 (天使の血杯)</td>
+<td>(Lv×1.5)+15</td>
+<td><br></td>
+<td>HP소비로 MP를 회복 (Lv 의존)</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>천사의 성흔 (天使の聖痕)</td>
+<td>(Lv×2.25)+20</td>
+<td><br></td>
+<td>회복량이 증가</td></tr>
+<tr class="oddRow">
+<td rowspan="2">영조</td>
+<td>하위</td>
+<td>비상 (飛翔)</td>
+<td><br></td>
+<td><br></td>
+<td>장애물을 무시하며 이동 가능<br>이동력 +1 (누적 불가)</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>비상천구 (飛翔天駆)</td>
+<td><br></td>
+<td><br></td>
+<td>이동력 +2로 강화</td></tr>
+<tr class="oddRow">
+<td rowspan="2">타천사</td>
+<td>하위</td>
+<td>제물의 맹약 (いけにえの盟約)</td>
+<td><br></td>
+<td><br></td>
+<td>쓰러뜨린 상대의 레벨에 따라 팀 전원의 HP/MP를 회복</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>타천의 낙인 (堕天の烙印)</td>
+<td>(Lv×2.5)+12</td>
+<td><br></td>
+<td>추가로 사용하면 적 팀의 MP를 흡수<br>사정거리 3, 마력 속성</td></tr>
+<tr class="oddRow">
+<td rowspan="2">신수</td>
+<td>하위</td>
+<td>순전의 춤 (瞬転の舞)</td>
+<td><br></td>
+<td>(Lv÷3)+5</td>
+<td>선택한 아군 팀과 위치를 교환 (제3세력에게도 사용 가능)<br>사정거리 6</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>순전의 무도 (瞬転の舞踏)</td>
+<td><br></td>
+<td>(Lv÷3)+8</td>
+<td>사정거리 8로 강화</td></tr>
+<tr class="oddRow">
+<td rowspan="2">마수</td>
+<td>하위</td>
+<td>짐승의 도약 (獣の跳躍)</td>
+<td><br></td>
+<td><br></td>
+<td>&lt;이동 + 공격&gt; 행동 이후에도 이동할 수 있다. (누적 불가)</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>도약 자재 (跳躍自在)</td>
+<td><br></td>
+<td><br></td>
+<td>EXTRA턴에 도주 가능이 추가</td></tr>
+<tr class="oddRow">
+<td rowspan="2">요수</td>
+<td>하위</td>
+<td>요기신뢰 (妖気迅雷)</td>
+<td>(Lv×1.25)+5</td>
+<td><br></td>
+<td>사용 직후만, 이동력이 7<br>선제 행동이 쉬워진다.</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>요광일섬 (妖光一閃)</td>
+<td>(Lv×1.25)+10</td>
+<td><br></td>
+<td>이동력 8로 강화</td></tr>
+<tr class="oddRow">
+<td rowspan="2">환마</td>
+<td>하위</td>
+<td>몽환의 구족 (夢幻の具足)</td>
+<td><br></td>
+<td><br></td>
+<td>장애물을 무시하며 이동 가능<br>이동에 의한 행동 순서의 지연이 적다</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>진・몽환의 구족 (真・夢幻の具足)</td>
+<td><br></td>
+<td>(Lv×0.5)+6</td>
+<td>사용하면 아군 팀의 인접 칸으로 순간 이동이 가능<br>사정거리 5</td></tr>
+<tr class="oddRow">
+<td rowspan="2">요정</td>
+<td>하위</td>
+<td>주술 (おまじない)</td>
+<td><br></td>
+<td>(Lv÷3)+5</td>
+<td>선택한 아군 팀의 HP회복<br>낮은 확률로 추가 효과 발생 (HP 완전 회복, 크리티컬율 상승, 행동 순서 보너스)<br>사정거리 3</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>요정의 가루 (妖精の粉)</td>
+<td><br></td>
+<td>(Lv×0.5)+15</td>
+<td align="left">효과 범위가 3칸 이내에 있는 아군 팀 전원에게</td></tr>
+<tr class="oddRow">
+<td rowspan="2">마왕</td>
+<td>하위</td>
+<td>패왕의 맹약 (覇王の盟約)</td>
+<td><br></td>
+<td><br></td>
+<td>적에게 데미지를 주면 자신의 팀의 MP 회복<br>상대 팀의 행동을 지연시킨다.</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>패왕의 밀약 (覇王の密約)</td>
+<td><br></td>
+<td>(Lv×0.5)+12</td>
+<td>추가로 사용 후~행동 종료까지, 흡수/회복 효과가 3배</td></tr>
+<tr class="oddRow">
+<td rowspan="2">귀신</td>
+<td>하위</td>
+<td>귀신쌍수 (鬼神双手)</td>
+<td><br></td>
+<td><br></td>
+<td>통상 공격 후, 재차 1회 공격이 가능 (누적 불가)</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>귀신무쌍 (鬼神無双)</td>
+<td><br></td>
+<td><br></td>
+<td>추가로 재차 1회 스킬 사용이 가능해진다.</td></tr>
+<tr class="oddRow">
+<td rowspan="2">투귀</td>
+<td>하위</td>
+<td>흉화 (凶化)</td>
+<td>(Lv×1.25)+5</td>
+<td><br></td>
+<td>사용 직후의 전투 중, 팀 전원의 물리 공격이 1회만 크리티컬이 반드시 발생한다.</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>대흉화 (大凶化)</td>
+<td>(Lv×1.5)+15</td>
+<td><br></td>
+<td>사용 직후의 전투 중, 팀 전원의 물리 공격의 크리티컬 확률이 상승한다.<br>전투 행동마다 크리티컬 확률이 100%부터 서서히 저하</td></tr>
+<tr class="oddRow">
+<td rowspan="2">사귀</td>
+<td>하위</td>
+<td>주박 (呪縛)</td>
+<td>(Lv×1.5)+7</td>
+<td><br></td>
+<td>선택한 적 팀의 다음 행동 시의 이동력을 1로 만든다.<br>사정거리 3</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>사념 주박 (邪念呪縛)</td>
+<td>(Lv×1.5)+7</td>
+<td><br></td>
+<td>추가로 선택한 적 팀의 행동 순서를 1단계 낮추는 효과</td></tr>
+<tr class="oddRow">
+<td rowspan="2">귀녀</td>
+<td>하위</td>
+<td>헌신 (献身)</td>
+<td><br></td>
+<td>(Lv×0.5)+7</td>
+<td>선택한 아군 팀의 HP를 회복 (회복량은 사용자의 현재 HP의 50%)<br>사정거리 2</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>자모의 헌신 (慈母の献身)</td>
+<td><br></td>
+<td>(Lv×0.75)+12</td>
+<td>회복량이 2배 (사용자의 현재 HP)<br>추가로 행동 순서를 1단계 앞당기는 효과</td></tr>
+<tr class="oddRow">
+<td rowspan="2">유귀</td>
+<td>하위</td>
+<td>영장 (霊障)</td>
+<td><br></td>
+<td>(Lv×0.5)+6</td>
+<td>선택한 적 팀의 사정거리를 1로 만든다.<br>추가로 이동력 반감시킨다.<br>사정거리 3</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>빙의 (憑依)</td>
+<td><br></td>
+<td>(Lv×0.5)+12</td>
+<td>추가로 랜덤 '상태 이상' 부여, '회복 불능' 효과 부여</td></tr>
+<tr class="oddRow">
+<td rowspan="2">마인</td>
+<td>하위</td>
+<td>몽환의 주인 (夢幻の住人)</td>
+<td><br></td>
+<td>(Lv×1.5)+50</td>
+<td>사용하면 재이동/재공격/마인을 제외하고 재행동이 가능해진다.</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>이계의 주인 (異界の住人)</td>
+<td><br></td>
+<td>(Lv×1.5)+25</td>
+<td>소비 MP의 비율이 감소</td></tr>
+<tr class="oddRow">
+<td rowspan="2">영웅</td>
+<td>하위</td>
+<td>영웅의 상징 (英雄の印)</td>
+<td><br></td>
+<td>(Lv×0.5)+10</td>
+<td>사용 직후부터 다음 행동 순서까지 자신의 팀이 받는 데미지를 30% 경감</td></tr>
+<tr class="evenRow">
+<td>상위</td>
+<td>영웅의 증표 (英雄の証)</td>
+<td><br></td>
+<td>(Lv×0.75)+10</td>
+<td>50% 경감으로 강화</td></tr></tbody></table></div><br><!-- 하단 -->
+<div class="footer">
+<p>이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</p></div>
+
+</body></html>

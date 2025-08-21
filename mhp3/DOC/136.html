@@ -1,0 +1,3082 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+
+
+
+
+	
+
+	<title>공략</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="title.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<!-- 상단 -->
+
+	<div class="header">
+		<a href="../index.html">
+		<h1>몬스터 헌터 포터블 서드</h1></a>
+
+		<h2>탄 성능</h2>
+	</div><!-- 본문 -->
+
+	<div class="viewer">
+		<ol id="mozToc"><!--mozToc h3 1 h4 2-->
+<li><a href="#mozTocId474694">보우건 탄 상세</a>
+<ol>
+<li><a href="#mozTocId963421">일반탄</a></li>
+<li><a href="#mozTocId908898">관통탄</a></li>
+<li><a href="#mozTocId849482">산탄</a></li>
+<li><a href="#mozTocId645019">철갑유탄</a></li>
+<li><a href="#mozTocId814063">확산탄</a></li>
+<li><a href="#mozTocId81318">속성탄</a></li>
+<li><a href="#mozTocId957456">특수탄</a></li>
+<li><a href="#mozTocId708160">상태이상탄</a></li>
+<li><a href="#mozTocId838695">회복·강화탄</a></li>
+<li><a href="#mozTocId645694">기타 보조탄</a></li></ol></li>
+<li><a href="#mozTocId481150">특수 동작</a>
+<ol>
+<li><a href="#mozTocId191236">속사</a></li>
+<li><a href="#mozTocId226956">앉아쏘기</a></li></ol></li>
+<li><a href="#mozTocId233092">파라미터 상세</a>
+<ol>
+<li><a href="#mozTocId81846">장전속도</a></li>
+<li><a href="#mozTocId805554">리로드 조견표</a></li>
+<li><a href="#mozTocId292160">반동</a></li>
+<li><a href="#mozTocId114927">반동-경직 조견표</a></li>
+<li><a href="#mozTocId664781">오차</a></li>
+<li><a href="#mozTocId672761">장전수</a></li></ol></li>
+<li><a href="#mozTocId575532">데미지 관련</a>
+<ol>
+<li><a href="#mozTocId922509">데미지 계산식</a></li>
+<li><a href="#mozTocId412435">비거리 보정</a></li>
+<li><a href="#mozTocId960007">육질과 이펙트</a></li>
+<li><a href="#mozTocId20366">스킬에 의한 보정</a></li></ol></li></ol><br>
+<h3><a class="mozTocH3" id="mozTocId474694"></a>보우건 탄 상세</h3>
+
+		<h4><a class="mozTocH4" id="mozTocId963421"></a>일반탄</h4>
+
+		<table>
+			<thead>
+				<tr>
+					<th>이름</th>
+
+					<th>위력</th>
+
+					<th>HIT수</th>
+
+					<th>리로드치</th>
+
+					<th>반동치</th>
+
+					<th>소지수</th>
+
+					<th>가격</th>
+
+					<th>특성</th>
+
+					<th>조합 소재<br>
+					(괄호는 최대 소지수)</th>
+
+					<th>성공<br>
+					확률<br>
+					(％)</th>
+
+					<th>조합 결과</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>LV1 일반탄</td>
+
+					<td>6</td>
+
+					<td>1</td>
+
+					<td>4</td>
+
+					<td>8</td>
+
+					<td>∞</td>
+
+					<td>1z</td>
+
+					<td><br></td>
+
+					<td>없음</td>
+
+					<td>없음</td>
+
+					<td>없음</td>
+
+					<td>지급품</td>
+				</tr>
+
+				<tr>
+					<td>LV2 일반탄</td>
+
+					<td>12</td>
+
+					<td>1</td>
+
+					<td>5</td>
+
+					<td>9</td>
+
+					<td>99</td>
+
+					<td>3z</td>
+
+					<td><br></td>
+
+					<td>속빈열매(99)×가시열매(99)</td>
+
+					<td>95%</td>
+
+					<td>1~3</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>LV3 일반탄</td>
+
+					<td>10</td>
+
+					<td>1+α</td>
+
+					<td>6</td>
+
+					<td>9</td>
+
+					<td>99</td>
+
+					<td>5z</td>
+
+					<td>도탄</td>
+
+					<td>속빈열매(99)×튀는정어리(40)</td>
+
+					<td>95%</td>
+
+					<td>2~4</td>
+
+					<td><br></td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<div>착탄 부위를 공격하는 일반적인 탄환. 약점이 외부로 노출되어 노리기 쉬운 상대에게 높은 효과를 발휘한다.<br>약점을 핀포인트로 저격할 수 있으므로 「일반탄강화」는 물론 「약점특효」과 궁합이 좋다.<br>비거리(飛距離)에 의해서 위력이 변화하는데 영거리부터 중거리까지 높은 위력을 발휘하며 멀어질 수록 낮아진다.<br>탄 레벨이 오르는 만큼 탄속이 상승하고, 크리티컬 거리나 사정 거리가 성장한다.</div><br>
+
+		<div>
+			LV1은 제일 염가로 수도 무한이지만 위력은 낮고, 초반을 제외하면 소형종을 청소할 때 밖에 사용할 수 없다.<br>
+			LV2는 모든 보우건의 주력이 되는 탄환. 가성비가 좋고, 조합분을 대량으로 반입할 수 있는 점도 크다. 조합분도 대부분 맵에서 채취가 가능해서 탄 수급도 자체 해결 가능한 탄종이다.</div><br>
+
+		<div>
+			LV3은 LV2보다 약간 위력이 낮지만, 착탄 후 총알이 도탄(튕김)하여 연속 히트가 발생하는 경우가 있다. 추가 데미지를 기대할 수 있긴 하지만, 의도적으로 발생시키기 어렵다. LV2보다 장전수가 많은 보우건이 많은 것도 특징. 이번작은 장전속도 '보통'으로 최고 속도 장전을 할 수 있어서 취급이 쉬워졌다.
+
+		</div><br>
+
+		<h4><a class="mozTocH4" id="mozTocId908898"></a>관통탄</h4>
+
+		<table>
+			<thead>
+				<tr>
+					<th>이름</th>
+
+					<th>위력</th>
+
+					<th>HIT수</th>
+
+					<th>리로드치</th>
+
+					<th>반동치</th>
+
+					<th>소지수</th>
+
+					<th>가격</th>
+
+					<th>특성</th>
+
+					<th>조합 소재<br>
+					(괄호는 최대 소지수)</th>
+
+					<th>성공<br>
+					확률<br>
+					(％)</th>
+
+					<th>조합 결과</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>LV1 관통탄</td>
+
+					<td>9</td>
+
+					<td>3</td>
+
+					<td>6</td>
+
+					<td>10</td>
+
+					<td>60</td>
+
+					<td>12z</td>
+
+					<td><br></td>
+
+					<td>속빈열매(99)×관통열매(60)</td>
+
+					<td>90%</td>
+
+					<td>1~2</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>LV2 관통탄</td>
+
+					<td>8</td>
+
+					<td>4</td>
+
+					<td>7</td>
+
+					<td>11</td>
+
+					<td>60</td>
+
+					<td>16z</td>
+
+					<td><br></td>
+
+					<td>척추뼈(99)×조룡종이빨(50)</td>
+
+					<td>75%</td>
+
+					<td>1~2</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>LV3 관통탄</td>
+
+					<td>8</td>
+
+					<td>5</td>
+
+					<td>8</td>
+
+					<td>11</td>
+
+					<td>60</td>
+
+					<td>22z</td>
+
+					<td><br></td>
+
+					<td>척추뼈(99)×가시다랑어(30)</td>
+
+					<td>75%</td>
+
+					<td>1~3</td>
+
+					<td>HR4</td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<div>탄이 관통하여 다단 히트하는 탄환이다. 크리티컬 거리는 관통탄 모든 레벨이 동일하며, 최종 사정 거리는 레벨이 오를수록 길어진다.<br><br>[머리→목→몸통], [날개→몸통→날개] 등 각 부위를 통과시켜 히트수로 데미지를 버는 것이 주된 사용법이다.<br><br>
+			LV1은 히트수가 적은 대신에 위력이 약간 높고, 반동 '중'으로 무반동 사격이 가능하다는 점이 특징<br>
+			LV2와 LV3는 히트수가 많고, 무반동으로 사격하려면 반동 '약간소'가 필요하다.
+
+		</div><br>
+<div>
+			모든 레벨 공통으로 몬스터에 따라 적합함과 부적합함이 갈려,&nbsp; 몸집이 작은 상대에게는 히트수가 거의 없는 반면,<br>몸집이 큰 상대로는 관통탄의 위력을 최대한 살릴 수 있다. 특히 해룡종과 수룡종에게 궁합이 좋다.
+		</div><br>
+
+		<div>탄속 관계상, 크리티컬 거리의 시점보다 앞쪽에서 맞추면 히트 간격이 넓어지고, 안쪽에서 맞히면 약간 좁아진다. 다만, 안쪽에서 맞추기 시작하면 후반 히트 부분이 크리티컬 거리 밖으로 날아가버리는 경우도 생긴다. 크리티컬 거리를 조절할 수 있다면 충분한 화력을 발휘한다.
+
+		</div><br><h4><a class="mozTocH4" id="mozTocId849482"></a>산탄</h4>
+
+		<table>
+			<thead>
+				<tr>
+					<th>이름</th>
+
+					<th>위력</th>
+
+					<th>HIT수</th>
+
+					<th>리로드치</th>
+
+					<th>반동치</th>
+
+					<th>소지수</th>
+
+					<th>가격</th>
+
+					<th>특성</th>
+
+					<th>조합 소재<br>
+					(괄호는 최대 소지수)</th>
+
+					<th>성공<br>
+					확률<br>
+					(％)</th>
+
+					<th>조합 결과</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>LV1 산탄</td>
+
+					<td>5</td>
+
+					<td>3</td>
+
+					<td>5</td>
+
+					<td>10</td>
+
+					<td>60</td>
+
+					<td>12z</td>
+
+					<td><br></td>
+
+					<td>속빈열매(99)×툭터지는호두(30)</td>
+
+					<td>90%</td>
+
+					<td>1~3</td>
+
+					<td>지급품</td>
+				</tr>
+
+				<tr>
+					<td>LV2 산탄</td>
+
+					<td>5</td>
+
+					<td>4</td>
+
+					<td>6</td>
+
+					<td>10</td>
+
+					<td>60</td>
+
+					<td>18z</td>
+
+					<td><br></td>
+
+					<td>속빈열매(99)×용이빨(50)</td>
+
+					<td>75%</td>
+
+					<td>1~2</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>LV3 산탄</td>
+
+					<td>5</td>
+
+					<td>5</td>
+
+					<td>7</td>
+
+					<td>11</td>
+
+					<td>60</td>
+
+					<td>24z</td>
+
+					<td><br></td>
+
+					<td>척추뼈(99)×용이빨(50)</td>
+
+					<td>75%</td>
+
+					<td>1~2</td>
+
+					<td>HR4</td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<div>광범위를 공격할 수 있는 탄환. 몬스터의 특정 부위에 집중 히트하는 것이 특징.<br>실제 탄환이 날아가는 것이 아니라, 크고 작은 복수의 공격 판정이 각각 서로 겹친 상태로 발생한다.<br>이 판정 영역 안에 몬스터가 있었을 경우 히트가 발생하는 구조이며, 부위 사이는 우선 순위가 있다.<br>복수의 부위가 영역 안에 있었을 경우는 가장 우선 순위가 높은 부위로만 히트한다.<br>이것이 특정 부위에 빨려 들어가는 듯 한 산탄 이펙트 현상의 정체이다.</div><br>
+
+		<div>
+			LV에 따라 최대로 히트하는 거리(=판정이 중첩)가 변경되며, 가깝거나 멀어도 히트수는 줄어든다.<br>
+			LV1&amp;2은 앞 구르기 1.5~2.5회 만큼,&nbsp; LV3은 앞 구르기 2~3회 만큼의 거리가 필요하다.<br><br>특히 LV3는 일부의 판정이 원거리에서 생기기 때문에 집탄 부위에 5히트를 전부 넣는 것은 드물다.<br>
+			또한, 보이는 이펙트와 정반대로 윗 방향으로의 범위가 작고, 높낮이차가 있으면 히트수가 격감한다.<br>단차가 있거나 공중의 상대에게 쏘는 경우 확실하게 위를 노려 쏘자.</div><br>
+
+		<div>반드시 육질이 약한 부위에 집탄하는 것은 아니며, 특정 상황 아래 육질이 변화하는 몬스터라도 집탄 부위는 변화하지 않는다. (즉, 몬스터마다 집탄 위치가 고정적으로 정해져 있다)<br><br>산탄은 크리티컬 거리에 의한 데미지 보정이 없기 때문에 1발의 위력은 매우 낮지만, 약점 부위에 집중 히트하는 몬스터를 상대로는 높은 화력을 발휘한다.<br><br>광범위 공격이라는 특성상. 조준을 대충하여도 오차와 무관하게 명중시킬 수 있다는 메리트가 있다. 다만 파티 플레이에 아군을 말려들게 하기 쉽다. 특히 아군이 산탄을 가드하면 무서운 속도로 스태미너가 고갈된다. 파티에서는 경화탄으로 슈퍼아머 효과를 발생시킨 후, 할 수 있는 한 상공을 향해 쏘는 것이 좋다.<br><br>LV3만 무반동으로 공격하려면 반동 '약간소'가 필요하다. 속사의 틈은 '중'으로 설정되어 있다.</div><br>
+
+		<ul>
+			<li>집탄 부위 (육질 45 이상은&nbsp; <span style="color:#f44;">빨간색</span> )</li>
+		</ul>
+
+		<table>
+			<thead>
+				<tr>
+					<th colspan="3">조룡종</th>
+
+					<th colspan="3">아수종/아룡종</th>
+
+					<th colspan="3">해룡종</th>
+				</tr>
+
+				<tr>
+					<th>몬스터명</th>
+
+					<th>육질</th>
+
+					<th>HIT 부위</th>
+
+					<th>몬스터명</th>
+
+					<th>육질</th>
+
+					<th>HIT 부위</th>
+
+					<th>몬스터명</th>
+
+					<th>육질</th>
+
+					<th>HIT 부위</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>도스쟈기</td>
+
+					<td><span style="color:#F33;">65</span></td>
+
+					<td rowspan="3">머리</td>
+
+					<td>도스팡고</td>
+
+					<td><span style="color:#F33;">70</span></td>
+
+					<td rowspan="4">머리</td>
+
+					<td>로알도로스</td>
+
+					<td><span style="color:#F33;">50</span></td>
+
+					<td rowspan="4">머리</td>
+				</tr>
+
+				<tr>
+					<td>도스프로기</td>
+
+					<td><span style="color:#F33;">50</span></td>
+
+					<td>아오아시라</td>
+
+					<td><span style="color:#F33;">60</span></td>
+
+					<td>로알도로스 아종</td>
+
+					<td><span style="color:#F33;">50</span></td>
+				</tr>
+
+				<tr>
+					<td>도스바기</td>
+
+					<td><span style="color:#F33;">55</span></td>
+
+					<td>우르크스스</td>
+
+					<td><span style="color:#F33;">50</span></td>
+
+					<td>아그나코틀</td>
+
+					<td><span style="color:#F33;">50</span> / 15</td>
+				</tr>
+
+				<tr>
+					<td>쿠루펫코</td>
+
+					<td><span style="color:#F33;">60</span> / <span style="color:#F33;">70</span></td>
+
+					<td rowspan="2">머리/<br>연주시는 울음낭</td>
+
+					<td>진오우가</td>
+
+					<td><span style="color:#F33;">60</span> / <span style="color:#F33;">70</span></td>
+
+					<td>아그나코틀 아종</td>
+
+					<td><span style="color:#F33;">50</span> / 15</td>
+				</tr>
+
+				<tr>
+					<td>쿠루펫코 아종</td>
+
+					<td><span style="color:#F33;">60</span> / <span style="color:#F33;">70</span></td>
+
+					<td>란그로토라</td>
+
+					<td>40</td>
+
+					<td>등짝</td>
+
+					<td>하플봇카</td>
+
+					<td>30</td>
+
+					<td>앞발</td>
+				</tr>
+			</tbody>
+
+			<thead>
+				<tr>
+					<th colspan="3">비룡종</th>
+
+					<th colspan="3">비룡종/고룡종</th>
+
+					<th colspan="3">수룡종</th>
+				</tr>
+
+				<tr>
+					<th>몬스터명</th>
+
+					<th>육질</th>
+
+					<th>HIT 부위</th>
+
+					<th>몬스터명</th>
+
+					<th>육질</th>
+
+					<th>HIT 부위</th>
+
+					<th>몬스터명</th>
+
+					<th>육질</th>
+
+					<th>HIT 부위</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>리오레이아</td>
+
+					<td><span style="color:#F33;">45</span></td>
+
+					<td rowspan="10">복부</td>
+
+					<td>기기네브라</td>
+
+					<td><span style="color:#F33;">50</span> / 10</td>
+
+					<td rowspan="8">머리</td>
+
+					<td>볼보로스</td>
+
+					<td>15</td>
+
+					<td rowspan="5">머리</td>
+				</tr>
+
+				<tr>
+					<td>리오레이아 희소종</td>
+
+					<td>30</td>
+
+					<td>기기네브라 아종</td>
+
+					<td><span style="color:#F33;">50</span> / 10</td>
+
+					<td>볼보로스 아종</td>
+
+					<td>13</td>
+				</tr>
+
+				<tr>
+					<td>리오레우스</td>
+
+					<td>15</td>
+
+					<td>베리오로스</td>
+
+					<td><span style="color:#F33;">70</span></td>
+
+					<td>우라간킨</td>
+
+					<td>10 / 40</td>
+				</tr>
+
+				<tr>
+					<td>리오레우스 희소종</td>
+
+					<td>30</td>
+
+					<td>베리오로스 아종</td>
+
+					<td><span style="color:#F33;">70</span></td>
+
+					<td>우라간킨 아종</td>
+
+					<td>10 / 40</td>
+				</tr>
+
+				<tr>
+					<td>나루가크루가</td>
+
+					<td>30</td>
+
+					<td>디아브로스</td>
+
+					<td>20</td>
+
+					<td>이빌죠</td>
+
+					<td><span style="color:#F33;">65</span> / 40</td>
+				</tr>
+
+				<tr>
+					<td>나루가크루가 아종</td>
+
+					<td>30</td>
+
+					<td>디아브로스 아종</td>
+
+					<td>20</td>
+
+					<td>도볼베르크</td>
+
+					<td>35 / <span style="color:#F33;">60</span></td>
+
+					<td>혹</td>
+				</tr>
+
+				<tr>
+					<td>티가렉스</td>
+
+					<td>20</td>
+
+					<td>아마츠마가츠치</td>
+
+					<td><span style="color:#F33;">65</span> / <span style="color:#F33;">75</span></td>
+
+					<td>-</td>
+
+					<td><br></td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>티가렉스 아종</td>
+
+					<td>20</td>
+
+					<td>알바트리온</td>
+
+					<td><span style="color:#F33;">60</span></td>
+
+					<td>-</td>
+
+					<td><br></td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>아캄토룸</td>
+
+					<td>25</td>
+
+					<td>지엔모란</td>
+
+					<td><span style="color:#F33;">55</span></td>
+
+					<td>튼살/?</td>
+
+					<td>-</td>
+
+					<td><br></td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>우캄루바스</td>
+
+					<td>15</td>
+
+					<td>-</td>
+
+					<td><br></td>
+
+					<td><br></td>
+
+					<td>-</td>
+
+					<td><br></td>
+
+					<td><br></td>
+				</tr>
+			</tbody>
+		</table><br><h4><a class="mozTocH4" id="mozTocId645019"></a>철갑유탄</h4>
+
+		<table>
+			<thead>
+				<tr>
+					<th>이름</th>
+
+					<th>위력</th>
+
+					<th>HIT수</th>
+
+					<th>리로드치</th>
+
+					<th>반동치</th>
+
+					<th>소지수</th>
+
+					<th>가격</th>
+
+					<th>특성</th>
+
+					<th>조합 소재<br>
+					(괄호는 최대 소지수)</th>
+
+					<th>성공<br>
+					확률<br>
+					(％)</th>
+
+					<th>조합 결과</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>LV1 철갑유탄</td>
+
+					<td>3 <span style="color:#f55;">(25+화30)</span></td>
+
+					<td>1 <span style="color:#f55;">(1)</span></td>
+
+					<td>7</td>
+
+					<td>11</td>
+
+					<td>9</td>
+
+					<td>41z</td>
+
+					<td><span style="color:#f55;">감기치:10<br>
+					(기절치:25)</span></td>
+
+					<td>속빈열매(99)×니트로버섯(20)</td>
+
+					<td>90%</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>LV2 철갑유탄</td>
+
+					<td>3 <span style="color:#f55;">(30+화45)</span></td>
+
+					<td>1 <span style="color:#f55;">(1)</span></td>
+
+					<td>8</td>
+
+					<td>12</td>
+
+					<td>9</td>
+
+					<td>-z</td>
+
+					<td><span style="color:#f55;">감기치:10<br>
+					(기절치:30)</span></td>
+
+					<td>척추뼈(99)×파열아로와나(10)</td>
+
+					<td>90%</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>LV3 철갑유탄</td>
+
+					<td>3 <span style="color:#f55;">(40+화60)</span></td>
+
+					<td>1 <span style="color:#f55;">(1)</span></td>
+
+					<td>9</td>
+
+					<td>12</td>
+
+					<td>9</td>
+
+					<td>-z</td>
+
+					<td><span style="color:#f55;">감기치:10<br>
+					(기절치:40)</span></td>
+
+					<td>척추뼈(99)×폭렬아로와나(10)</td>
+
+					<td>95%</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			※ 표의&nbsp; <span style="color:#f55;">빨간색</span> 은 폭발 부분의 수치</div><br>
+
+		<div>착탄 후, 약간의 지연 뒤에 폭발하는 탄환. 사정 거리는 속성탄과 비슷한 정도이다.<br>폭발은 육질 무시 데미지와 불 속성 데미지로 되어 있고, 그 위력은 공격력의 영향을 받지 않는다. 더불어 감기치와 기절치 축적도 가능하다.<br>
+			「포술사/왕」으로 물리·속성 양쪽 모두 보정이 걸리지만, 「화속성공격강화」는 효과가 없다.<br>또한,&nbsp; <span style="text-decoration: underline">폭탄계 아이템과 동일하게 음폭탄 효과가 발생한다.</span></div><br>
+
+		<div>
+			반입수·조합수 모두 적은 것이 단점이지만, 기절치가 높아 서포트용으로 우수하다.<br>폭발 범위 안에 머리 부위가 있으면 우선적으로 머리에 히트하므로 파티 플레이에는 아군에게 오폭하지 않도록 조심.<br>단발과 속사의 성능 차이는 없다.</div><br>
+<h4><a class="mozTocH4" id="mozTocId814063"></a>확산탄</h4>
+
+		<table>
+			<thead>
+				<tr>
+					<th>이름</th>
+
+					<th>위력</th>
+
+					<th>HIT수</th>
+
+					<th>리로드치</th>
+
+					<th>반동치</th>
+
+					<th>소지수</th>
+
+					<th>가격</th>
+
+					<th>특성</th>
+
+					<th>조합 소재<br>
+					(괄호는 최대 소지수)</th>
+
+					<th>조합<br>
+					확률<br>
+					(％)</th>
+
+					<th>조합 결과</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>LV1 확산탄</td>
+
+					<td>6 <span style="color:#f55;">(25+화2)</span></td>
+
+					<td>1 <span style="color:#f55;">(3)</span></td>
+
+					<td>9</td>
+
+					<td>13</td>
+
+					<td>3</td>
+
+					<td>38z</td>
+
+					<td><br></td>
+
+					<td>속빈열매(99)×확산열매(10)</td>
+
+					<td>90%</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>LV2 확산탄</td>
+
+					<td>6 <span style="color:#f55;">(25+화2)</span></td>
+
+					<td>1 <span style="color:#f55;">(4)</span></td>
+
+					<td>10</td>
+
+					<td>14</td>
+
+					<td>3</td>
+
+					<td>-z</td>
+
+					<td><br></td>
+
+					<td>척추뼈(99)×용발톱(50)</td>
+
+					<td>75%</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>LV3 확산탄</td>
+
+					<td>6 <span style="color:#f55;">(25+화2)</span></td>
+
+					<td>1 <span style="color:#f55;">(5)</span></td>
+
+					<td>10</td>
+
+					<td>14</td>
+
+					<td>3</td>
+
+					<td>-z</td>
+
+					<td><br></td>
+
+					<td>척추뼈(99)×확산툭눈붕어(10)</td>
+
+					<td>75%</td>
+
+					<td>2</td>
+
+					<td><br></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			※ 표의&nbsp; <span style="color:#f55;">빨간색</span> 은 폭발 부분의 수치</div><br>
+
+		<div>착탄 후, 작은 폭탄을 살포하여 데미지를 주는 탄환. 사정 거리는 매우 길다.<br>폭발은 육질 무시 데미지와 약간의 불 속성 데미지이며, 그 위력은 공격력이나 스킬에 영향을 받지 않는다.<br>또한, 폭발에는 날려버림 효과가 있다. 아군에게 오폭하지 않도록 조심.<br><br>착탄의 소폭탄은 불규칙적으로 포물선을 그리며 떨어지기 때문에 노린 부위에 맞지 않고 주위의 지면에서 폭발하는 경우도 있다.<br>
+			<span style="text-decoration: underline">지면에서 폭발했을 때에 한정하여, 작은통폭탄과 동일한 정도의 범위로 음폭탄 효과가 발생한다.</span>
+		</div>
+
+		<div>또한, 필드상의 파괴 가능한 오브젝트를 파괴할 수 있다.</div><br>
+
+		<div>다른 탄과 비교해서 소지수·장전수·반동·코스트가 높아서 사용하기 어렵다.<br>
+			LV2만은 소재 반입수가 50개로 많아서 이것을 메인으로 사용하게 된다.<br>날개나 몸통 등 면적이 넓고 복수 히트를 노리기 쉬운 부위나, 육질이 딱딱한 부위의 파괴를 신속하게 실시하기 위해 사용한다.<br>고정 데미지의 특성상. 공격력이 낮은 초반에 높은 데미지 소스로 기대할 수 있다.<br>단발과 속사의 성능 차이는 없다.</div><br>
+<h4><a class="mozTocH4" id="mozTocId81318"></a>속성탄</h4>
+
+		<table>
+			<thead>
+				<tr>
+					<th>이름</th>
+
+					<th>위력</th>
+
+					<th>HIT수</th>
+
+					<th>리로드치</th>
+
+					<th>반동치</th>
+
+					<th>소지수</th>
+
+					<th>가격</th>
+
+					<th>특성</th>
+
+					<th>조합 소재<br>
+					(괄호는 최대 소지수)</th>
+
+					<th>성공<br>확률<br>
+					(％)</th>
+
+					<th>조합 결과</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>화염탄</td>
+
+					<td>7+ <span style="color:#F62;">화</span> 45</td>
+
+					<td>1</td>
+
+					<td>6</td>
+
+					<td>9</td>
+
+					<td>60</td>
+
+					<td>20z</td>
+
+					<td><br></td>
+
+					<td>속빈열매(99)×화약초(20)</td>
+
+					<td>85%</td>
+
+					<td>1~2</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>수냉탄</td>
+
+					<td>7+ <span style="color:#6EF;">수</span> 45</td>
+
+					<td>1</td>
+
+					<td>6</td>
+
+					<td>9</td>
+
+					<td>60</td>
+
+					<td>20z</td>
+
+					<td><br></td>
+
+					<td>속빈열매(99)×전갱이(20)</td>
+
+					<td>85%</td>
+
+					<td>1~2</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>전격탄</td>
+
+					<td>7+ <span style="color:#FC4;">뇌</span> 45</td>
+
+					<td>1</td>
+
+					<td>6</td>
+
+					<td>9</td>
+
+					<td>60</td>
+
+					<td>20z</td>
+
+					<td><br></td>
+
+					<td>속빈열매(99)×광충(10)</td>
+
+					<td>85%</td>
+
+					<td>2~4</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>빙결탄</td>
+
+					<td>7+ <span style="color:#4AF;">빙</span> 45</td>
+
+					<td>1</td>
+
+					<td>6</td>
+
+					<td>9</td>
+
+					<td>60</td>
+
+					<td>20z</td>
+
+					<td><br></td>
+
+					<td>속빈열매(99)×서리풀(20)</td>
+
+					<td>85%</td>
+
+					<td>1~2</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>멸룡탄</td>
+
+					<td>1+ <span style="color:#AF9;">용</span> 40</td>
+
+					<td>5</td>
+
+					<td>9</td>
+
+					<td>13</td>
+
+					<td>3</td>
+
+					<td>100z</td>
+
+					<td><br></td>
+
+					<td>척추뼈(99)×용살열매(20)</td>
+
+					<td>85%</td>
+
+					<td>1</td>
+
+					<td>행상인</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			※ 속성치는 공격력에 비례한다.</div><br>
+
+		<div>
+			각종 속성을 가진 탄환. 스킬의 영향을 많이 받는다. 약점 속성을 특화시키면 일반탄·관통탄 이상의 데미지를 뽑을 수 있다.속성치도 공격력에 비례하지만 무기의 보정은 받지 않아서, 라이트나 헤비로 속성치에 차이가 나지 않는다.<br>
+			또한, 속성치는 회심 보정이 적용되지 않기 때문에 회심 특화 세팅은 무의미하므로 주의.</div><br>
+
+		<ul>
+			<li>화염탄·수냉탄·전격탄·빙결탄</li>
+		</ul>
+
+		<div>이번작은 멸룡탄 이외의 모든 속성탄이 1히트 판정만 가능하기 때문에 작은 몬스터에게도 사용할 수 있게 되어, 용도가 증가했다. 유효 사정 거리가 약간 짧아 LV2일반탄의 크리티컬 거리의 종점 근처에서 소멸한다.</div><br>
+
+		<div>사정이나 히트의 특성이 일반탄과 유사하여 같은 감각으로 사용할 수 있으며, 속성 데미지가 대부분을 차지하므로 사격 육질보다 속성 육질을 중시하여 약점을 노려야 한다.</div><br>
+
+		<ul>
+			<li>멸룡탄</li>
+		</ul>
+
+		<div>
+			멸룡탄만 반동이 매우 크다. 관통하는 특성이 있어서 특정 부위로 몰아 쏘기 어려운 등 약간 사용하기 어렵다.</div>
+
+		<div>사정이 꽤 길고, 합계 위력도 높기 때문에 속사와 조합하면 매우 강력하다. 다만 소지수와 조합이 적은 것이 단점이다.</div><br>
+		<br><h4><a class="mozTocH4" id="mozTocId957456"></a>특수탄</h4>
+
+		<table>
+			<thead>
+				<tr>
+					<th>이름</th>
+
+					<th>위력</th>
+
+					<th>HIT수</th>
+
+					<th>리로드치</th>
+
+					<th>반동치</th>
+
+					<th>소지수</th>
+
+					<th>가격</th>
+
+					<th>특성</th>
+
+					<th>조합 소재<br>
+					(괄호는 최대 소지수)</th>
+
+					<th>성공<br>확률<br>
+					(％)</th>
+
+					<th>조합 결과</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>참열탄</td>
+
+					<td>1 <span style="color:#f55;">(8)</span></td>
+
+					<td>1 <span style="color:#f55;">(3)</span></td>
+
+					<td>7</td>
+
+					<td>10</td>
+
+					<td>30</td>
+
+					<td>30z</td>
+
+					<td><span style="color:#f55;">(참격 속성 축적)</span></td>
+
+					<td>속빈열매(99)×숫돌(20)</td>
+
+					<td>90%</td>
+
+					<td>1~2</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>LV1 감기탄</td>
+
+					<td>15</td>
+
+					<td>1</td>
+
+					<td>7</td>
+
+					<td>11</td>
+
+					<td>12</td>
+
+					<td>25z</td>
+
+					<td><span style="color:#4aF;">감기치</span> :35<br>
+					(기절치 :15)</td>
+
+					<td>속빈열매(99)×피로버섯(10)</td>
+
+					<td>90%</td>
+
+					<td>1~2</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>LV2 감기탄</td>
+
+					<td>20</td>
+
+					<td>1</td>
+
+					<td>8</td>
+
+					<td>12</td>
+
+					<td>8</td>
+
+					<td>-z</td>
+
+					<td><span style="color:#4aF;">감기치</span> :70<br>
+					(기절치 :20)</td>
+
+					<td>척추뼈(99)×피로정어리(20)</td>
+
+					<td>75%</td>
+
+					<td>1~3</td>
+
+					<td><br></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			※ 표의 <span style="color:#f55;">빨간색</span> 은 작렬(炸裂) 부분</div><br>
+
+		<ul>
+			<li>참열탄</li>
+		</ul>
+
+		<div>착탄 후, 작렬(炸裂)하여 참격 속성의 데미지를 주는 탄환. 참격 속성 데미지를&nbsp; <span style="color:#f55;">규정량 축적하면 꼬리 절단</span> 이 가능.<br>작렬 부분은 참격 속성이며, 데미지 자체는 사격 육질로 계산되고, 보우건의 공격력과 회심율에 의존한다.<br><br>작렬시의 이펙트는 작은 범위 판정을 가지고 있어 다른 대상을 말려 들게 할 수 있다.<br><br>착탄 판정은 내부에 있는 골격을 기준으로 하므로 꼬리나 뿔 같은 요철이 격렬한 부위에 맞추면 장소가 빗나가버려 이펙트가 닿지 않는 경우가 발생한다. <br><br>
+			사정은 속성탄보다 좀 더 짧고, 사선으로 공격하면 빗나가기 쉬워서 바로 옆이나 뒤에서 노려 쏴야 쉽다.</div><br>
+
+		<div>참격 데미지는 그다지 높지 않아서 기본적으로 파티 플레이의 꼬리 절단 보조용이 된다. 솔플의 경우 조합분을 챙겨서 참열탄을 사용하면 그럭저럭 절단까지 도달 가능.</div><br>
+
+		<ul>
+			<li>감기탄</li>
+		</ul>
+
+		<div>높은 감기치를 가지는 상태이상탄의 일종. 기절치도 가지므로 <span style="text-decoration:underline;">머리 부위에 히트하면 기절치를 축적시킬 수 있다.</span><br>일정치까지 축적시키는 것으로 몬스터에게 <span style="color:#4af;">감기</span> 를 일으키거나 기절 상태로 할 수 있다.<br>이번작의 감기탄은 육질의 영향을 받는다.<br>사정은 꽤 길지만, 탄도가 특수하고, 포물선으로 날아가므로 멀리 쏘려면 조준점을 올리고 쏴야 한다.</div><br>
+<h4><a class="mozTocH4" id="mozTocId708160"></a>상태이상탄</h4>
+
+		<table>
+			<thead>
+				<tr>
+					<th>이름</th>
+
+					<th>위력</th>
+
+					<th>HIT수</th>
+
+					<th>리로드치</th>
+
+					<th>반동치</th>
+
+					<th>소지수</th>
+
+					<th>가격</th>
+
+					<th>특성</th>
+
+					<th>조합 소재<br>
+					(괄호는 최대 소지수)</th>
+
+					<th>성공<br>
+					확률<br>
+					(％)</th>
+
+					<th>조합 결과</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>LV1 독탄</td>
+
+					<td>10</td>
+
+					<td>1</td>
+
+					<td>7</td>
+
+					<td>12</td>
+
+					<td>12</td>
+
+					<td>17z</td>
+
+					<td><span style="color:#D9E;">독</span> 축적치:25</td>
+
+					<td>속빈열매(99)×독버섯(10)</td>
+
+					<td>90%</td>
+
+					<td>1~2</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>LV2 독탄</td>
+
+					<td>15</td>
+
+					<td>1</td>
+
+					<td>9</td>
+
+					<td>14</td>
+
+					<td>12</td>
+
+					<td>-z</td>
+
+					<td><span style="color:#D9E;">독</span> 축적치:50</td>
+
+					<td>척추뼈(99)×프로기독이빨(99)</td>
+
+					<td>75%</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>LV1 마비탄</td>
+
+					<td>10</td>
+
+					<td>1</td>
+
+					<td>8</td>
+
+					<td>12</td>
+
+					<td>12</td>
+
+					<td>26z</td>
+
+					<td><span style="color:#FF5;">마비</span> 축적치:25</td>
+
+					<td>속빈열매(99)×마비버섯(10)</td>
+
+					<td>90%</td>
+
+					<td>1~2</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>LV2 마비탄</td>
+
+					<td>15</td>
+
+					<td>1</td>
+
+					<td>9</td>
+
+					<td>14</td>
+
+					<td>8</td>
+
+					<td>-z</td>
+
+					<td><span style="color:#FF5;">마비</span> 축적치:50</td>
+
+					<td>척추뼈(99)×비갑충마비침(99)</td>
+
+					<td>75%</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>LV1 수면탄</td>
+
+					<td>0</td>
+
+					<td>1</td>
+
+					<td>8</td>
+
+					<td>12</td>
+
+					<td>12</td>
+
+					<td>17z</td>
+
+					<td><span style="color:#ADF;">수면</span> 축적치:25</td>
+
+					<td>속빈열매(99)×수면초(10)</td>
+
+					<td>90%</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>LV2 수면탄</td>
+
+					<td>0</td>
+
+					<td>1</td>
+
+					<td>9</td>
+
+					<td>14</td>
+
+					<td>8</td>
+
+					<td>-z</td>
+
+					<td><span style="color:#ADF;">수면</span> 축적치:50</td>
+
+					<td>척추뼈(99)×면어(10)</td>
+
+					<td>75%</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<div>각종 상태이상 속성을 가진 탄환. 몬스터에 히트시키면 축적되어 일정치 이상 모으면 상태 이상이 발생한다.<br>근접 무기와 다르게 맞추면 반드시 축적이 발생한다. 축적치 자체가 높아 상태이상의 발생까지 히트수로 계산하여 카운트할 수 있다. 따라서 임의의 타이밍에 상태이상을 일으켜 전투를 유리하게 풀어날 수 있다.</div><br>
+
+		<div>탄속은 느리고, 사정은 매우 길다.<br>
+			반동이 크다.&nbsp; LV1은 "소", LV2은 "최소"로 하지 않으면 발사 후 경직이 생기므로 주의.<br>
+			「상태이상공격강화」로 축적치가 상승하지만 필요 탄수는 별 차이가 없어서 효과는 적다.<br>기본적으로 반동을 "최소"로 억제하여 연발하는 것이 사용하기 편하며, 「장전수UP」를 발동시키면 더욱 편리하다.<br>
+			속사와 단발의 데미지와 축적치 차이는 없다. 속사는 반동이 고정되어 있다.</div><br>
+<h4><a class="mozTocH4" id="mozTocId838695"></a>회복·강화탄</h4>
+
+		<table>
+			<thead>
+				<tr>
+					<th>이름</th>
+
+					<th>위력</th>
+
+					<th>HIT수</th>
+
+					<th>리로드치</th>
+
+					<th>반동치</th>
+
+					<th>소지수</th>
+
+					<th>가격</th>
+
+					<th>특성</th>
+
+					<th>조합 소재<br>
+					(괄호는 최대 소지수)</th>
+
+					<th>성공<br>
+					확률<br>
+					(％)</th>
+
+					<th>조합 결과</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>LV1 회복탄</td>
+
+					<td>0</td>
+
+					<td>특수</td>
+
+					<td>5</td>
+
+					<td>10</td>
+
+					<td>12</td>
+
+					<td>8z</td>
+
+					<td>회복량:30</td>
+
+					<td>속빈열매(99)×약초(10)</td>
+
+					<td>90%</td>
+
+					<td>1</td>
+
+					<td>지급품</td>
+				</tr>
+
+				<tr>
+					<td>LV2 회복탄</td>
+
+					<td>0</td>
+
+					<td>특수</td>
+
+					<td>7</td>
+
+					<td>12</td>
+
+					<td>12</td>
+
+					<td>15z</td>
+
+					<td>회복량:50</td>
+
+					<td>회복약(10)×속빈열매(99)</td>
+
+					<td>90%</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>귀인탄</td>
+
+					<td>0</td>
+
+					<td>특수</td>
+
+					<td>8</td>
+
+					<td>11</td>
+
+					<td>5</td>
+
+					<td>-z</td>
+
+					<td>90초간 공격력+10<br>
+					예리도 보정 1.1배</td>
+
+					<td>귀인약(5)×속빈열매(99)</td>
+
+					<td>75%</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>경화탄</td>
+
+					<td>0</td>
+
+					<td>특수</td>
+
+					<td>8</td>
+
+					<td>11</td>
+
+					<td>5</td>
+
+					<td>-z</td>
+
+					<td>90초간 방어 ??배<br>슈퍼아머 추가</td>
+
+					<td>경화약(5)×속빈열매(99)</td>
+
+					<td>75%</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<div>
+			아군의 체력을 회복시키거나, 아군을 강화하는 탄. 탄이므로 자신에게 맞추는 것은 불가능.<br>
+			관통탄+산탄 같은 판정으로 총구에서 원추형의 범위 판정이 나오고, 범위 내에 있으면 복수의 사람에게 히트한다.<br>다만, 관통탄과 다르게 적을 통과하여 명중하지는 않는다.</div><br>
+
+		<div>동기화 엇갈림에 의해서 화면과 다른 위치에 있어도 효과가 발생하지 않는 경우가 있다. 또한, 움직이는 대상으로 예측 사격하지 않으면 맞추기 어려우니 효과를 얻을 수 없는 경우도 있다. <br><br>따라서 파티원 전부 효과를 보려면, 전투 에리어 입장 후 특정 위치에 서 있으라는 지시(나무 앞이나 바위 앞 등 잘 보이는 오브젝트)를 통해 아군을 세워두고 발사하여 효과를 발생시키는 것이 더 편하다.<br><br>또한, 몬스터나 폭탄 등에도 공격 판정으로 명중하기 때문에 수면 중의 몬스터를 일으키거나 기폭시키는 일이 없도록 주의해야 한다.</div><br>
+
+		<ul>
+			<li>회복탄</li>
+		</ul>
+
+		<div>아군의 체력을 회복시키는 탄환. 막상 사용하려면 타이밍을 잡기 어렵다. (상태 확인이나 리로드 지연 등)<br>게다가 엉덩방아 후의 무적 시간이나 구속 공격을 받고 있는 동료에게는 효과가 없다. 몬스터에 대해서도 회복탄을 맞추면 체력과 부위의 경직값이 회복하는 효과가 있어서, 전투에서는 생명분진이나 광역 스킬보다 한참 뒤떨어진다.</div><br>
+
+		<ul>
+			<li>귀인탄</li>
+		</ul>
+
+		<div>
+			공격력+10, <span style="color: red;">예리도 보정:1.1배</span> (근접 공격에도 효과 있음)가 부여된다.<br>거너는 공격력UP 효과만 있다.</div><br>
+
+		<ul>
+			<li>경화탄</li>
+		</ul>
+
+		<div>
+			방어력UP, <span style="color: red;">경직무효</span> 효과를 부여한다.<br>경직무효를 파티원에게 걸면 산탄을 마음대로 사용할 수 있으므로 전술적으로 용이한 탄이다.</div><br>
+
+		<div>
+			귀인탄/경화탄은 몬스터에 맞춰도 아무런 영향이 없다.</div><br>
+<h4><a class="mozTocH4" id="mozTocId645694"></a>기타 보조탄</h4>
+
+		<table>
+			<thead>
+				<tr>
+					<th>이름</th>
+
+					<th>위력</th>
+
+					<th>HIT수</th>
+
+					<th>리로드치</th>
+
+					<th>반동치</th>
+
+					<th>소지수</th>
+
+					<th>가격</th>
+
+					<th>특성</th>
+
+					<th>조합 소재<br>
+					(괄호는 최대 소지수)</th>
+
+					<th>성공<br>
+					확률<br>
+					(％)</th>
+
+					<th>조합 결과</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>포획용마취탄</td>
+
+					<td>0</td>
+
+					<td>1</td>
+
+					<td>5</td>
+
+					<td>10</td>
+
+					<td>8</td>
+
+					<td>-z</td>
+
+					<td><span style="color:#f44;">마취</span> 축적치:80</td>
+
+					<td>포획용마취약(10)×속빈열매(99)</td>
+
+					<td>90%</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>페인트탄</td>
+
+					<td>0</td>
+
+					<td>1</td>
+
+					<td>5</td>
+
+					<td>9</td>
+
+					<td>99</td>
+
+					<td>-z</td>
+
+					<td>10분간 마킹</td>
+
+					<td>속빈열매(99)×페인트열매(99)</td>
+
+					<td>90%</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<div>둘 다 같은 효과의 아이템이 존재하므로 중요한 탄환은 아니다. 사정거리에 이점이 있을 뿐.</div><br>
+
+		<h3><a class="mozTocH3" id="mozTocId481150"></a>특수 동작</h3>
+
+		
+
+		<h4><a class="mozTocH4" id="mozTocId191236"></a>속사</h4>
+
+		일부 라이트보우건은 속사 기능을 가지고 있다.<br>
+			속사에 대응한 탄을 발사하면 자동적으로 일정수의 탄환을 연사한다. (탄 소비는 1발) 속사탄은 단발 사격이 불가능하다.<br><br>
+
+		
+			속사 보정이 걸려서 1발의 위력은 낮아지지만 합계 위력은 단발보다 높아진다.<br>틈은 보우건의 반동 스펙과 무관하게 탄환마다 일정하여, 반동경감 스킬을 발동시켜도 변화하지 않는다.<br><br>
+
+		<table>
+			<thead>
+				<tr>
+					<th>틈</th>
+
+					<th>발사 간격</th>
+
+					<th>경직 시간</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>소</td>
+
+					<td>단 (약 0.4초)</td>
+
+					<td><span style="color:#4af;">소</span> (약 0.8초)</td>
+				</tr>
+
+				<tr>
+					<td>중</td>
+
+					<td>단 (약 0.4초)</td>
+
+					<td><span style="color:#fc4;">중</span> (약 1.8초)</td>
+				</tr>
+
+				<tr>
+					<td>대</td>
+
+					<td>장 (약 0.6초)</td>
+
+					<td><span style="color:#fc4;">중</span> (약 1.8초)</td>
+				</tr>
+
+				<tr>
+					<td>특대</td>
+
+					<td>단 (약 0.4초)</td>
+
+					<td><span style="color:#f44;">대</span> (약 2.3초)</td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<table>
+			<thead>
+				<tr>
+					<th>탄종</th>
+
+					<th>속사수</th>
+
+					<th>물리(특성) 배율</th>
+
+					<th>합계 위력</th>
+
+					<th>틈</th>
+
+					<th>대응 보우건<br> (이름은 번역 안함, 보우건 항목에서 검색하세요.)</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>Lv1 일반탄</td>
+
+					<td>5</td>
+
+					<td>80%</td>
+
+					<td>400%</td>
+
+					<td>소</td>
+
+					<td>ユクモノ弩</td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">Lv2 일반탄</td>
+
+					<td>3</td>
+
+					<td>80%</td>
+
+					<td>240%</td>
+
+					<td>소</td>
+
+					<td>瓢弾 계열<br>神ヶ島 계열</td>
+				</tr>
+
+				<tr>
+					<td>4</td>
+
+					<td>70%</td>
+
+					<td>280%</td>
+
+					<td>소</td>
+
+					<td>レックスタンク 계열</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 관통탄</td>
+
+					<td>3</td>
+
+					<td>70%</td>
+
+					<td>210%</td>
+
+					<td>중</td>
+
+					<td>ジャギットファイア 계열<br>繚乱の対弩</td>
+				</tr>
+
+				<tr>
+					<td>Lv2 관통탄</td>
+
+					<td>3</td>
+
+					<td>70%</td>
+
+					<td>210%</td>
+
+					<td>중</td>
+
+					<td>ヒドゥンゲイズ 계열</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 산탄</td>
+
+					<td>3</td>
+
+					<td>80%</td>
+
+					<td>240%</td>
+
+					<td>중</td>
+
+					<td>ヴァルキリーファイア 계열<br>ハンターライフル</td>
+				</tr>
+
+				<tr>
+					<td>Lv2 산탄</td>
+
+					<td>2</td>
+
+					<td>80%</td>
+
+					<td>160%</td>
+
+					<td>중</td>
+
+					<td>ヴァルキリーファイア 계열<br>王弩ライカン 계열</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 철갑유탄</td>
+
+					<td>2</td>
+
+					<td>70% (폭발 100%)</td>
+
+					<td>140%<br>(200%)</td>
+
+					<td>중</td>
+
+					<td>鬼ヶ島<br>神ヶ島</td>
+				</tr>
+
+				<tr>
+					<td>Lv2 철갑유탄</td>
+
+					<td>2</td>
+
+					<td>70% (폭발 100%)</td>
+
+					<td>140%<br>(200%)</td>
+
+					<td>대</td>
+
+					<td>レックスタンク 계열</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 확산탄</td>
+
+					<td>2</td>
+
+					<td>70% (폭발 100%)</td>
+
+					<td>140%<br>(200%)</td>
+
+					<td>특대</td>
+
+					<td>カーサスタンク 계열</td>
+				</tr>
+
+				<tr>
+					<td>화염탄</td>
+
+					<td>3</td>
+
+					<td>70% ( <span style="color:#F62;">화</span> 70%)</td>
+
+					<td>210%<br>(210%)</td>
+
+					<td>소</td>
+
+					<td>火竜砲 계열<br>凶針【水禍】</td>
+				</tr>
+
+				<tr>
+					<td>수냉탄</td>
+
+					<td>3</td>
+
+					<td>70% ( <span style="color:#6EF;">수</span> 70%)</td>
+
+					<td>210%<br>(210%)</td>
+
+					<td>소</td>
+
+					<td>ロアルストリーム 계열<br>凶針【水禍】</td>
+				</tr>
+
+				<tr>
+					<td>전격탄</td>
+
+					<td>3</td>
+
+					<td>70% ( <span style="color:#FC4;">뇌</span> 70%)</td>
+
+					<td>210%<br>(210%)</td>
+
+					<td>소</td>
+
+					<td>王弩ライカン 계열<br>凶針【水禍】</td>
+				</tr>
+
+				<tr>
+					<td>빙결탄</td>
+
+					<td>3</td>
+
+					<td>70% ( <span style="color:#4AF;">빙</span> 70%)</td>
+
+					<td>210%<br>(210%)</td>
+
+					<td>소</td>
+
+					<td>ブリザードカノン 계열<br>凶針【水禍】</td>
+				</tr>
+
+				<tr>
+					<td>멸룡탄</td>
+
+					<td>2</td>
+
+					<td>80% ( <span style="color:#AF9;">용</span> 80%)</td>
+
+					<td>160%<br>(160%)</td>
+
+					<td>특대</td>
+
+					<td>イビルマシーン 계열</td>
+				</tr>
+
+				<tr>
+					<td>참열탄</td>
+
+					<td>2</td>
+
+					<td>90% (참격 90%)</td>
+
+					<td>180%<br>(180%)</td>
+
+					<td>중</td>
+
+					<td>王弩ライカン 계열</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 독탄</td>
+
+					<td>3</td>
+
+					<td>100% ( <span style="color:#D9E;">독</span> 100%)</td>
+
+					<td>300%<br>(300%)</td>
+
+					<td>대</td>
+
+					<td>ロアルフラッド 이후<br>ポイズンギフト 계열<br>吹吹茶釜 계열</td>
+				</tr>
+
+				<tr>
+					<td>Lv2 독탄</td>
+
+					<td>2</td>
+
+					<td>100% ( <span style="color:#D9E;">독</span> 100%)</td>
+
+					<td>200%<br>(200%)</td>
+
+					<td>대</td>
+
+					<td>ポイズンレガシー</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 마비탄</td>
+
+					<td>2</td>
+
+					<td>100% ( <span style="color:#FF5;">마비</span> 100%)</td>
+
+					<td>200%<br>(200%)</td>
+
+					<td>대</td>
+
+					<td>ブラッディバインド 계열<br>吹吹茶釜 계열</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 수면탄</td>
+
+					<td>2</td>
+
+					<td>100% ( <span style="color:#ADF;">수면</span> 100%)</td>
+
+					<td>200%<br>(200%)</td>
+
+					<td>대</td>
+
+					<td>バンデットファイア/レイジ<br>吹吹茶釜 계열</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 감기탄</td>
+
+					<td>3</td>
+
+					<td>100% ( 감기<span style="color:#4aF;"></span>·기절 100%)</td>
+
+					<td>300%<br>(300%)</td>
+
+					<td>중</td>
+
+					<td>ベルクーツ 계열</td>
+				</tr>
+			</tbody>
+		</table><br><h4><a class="mozTocH4" id="mozTocId226956"></a>앉아쏘기</h4>
+
+		<div>
+			헤비보우건은 대응한 탄종을 앉아쏘기에 사용할 수 있다. 이동은 불가능하지만 장전수가 매우 많다.<br>
+			속사와 달리 대응탄이어도 통상과 같이 발사하기 때문에 용도를 구분해서 사용하기 쉽다.</div><br>
+
+		<div>앉아쏘기 개시부터 단발 사격까지 대략 3초가 소요. 연발 사이에 약간 조준을 위한 시간이 주어진다.<br>다음 탄을 발사할 때까지의 간격은 통상 사격으로 경직 모션 '소'의 경우 약 0.7초, '중' 이상은 일률적으로 약 1.6초가 된다.</div>
+
+		<div>또한, 앉아쏘기는 위력 보정이 전혀 없어서 통상 사격의 위력만 나온다.</div><br>
+
+		<table>
+			<thead>
+				<tr>
+					<th>탄종</th>
+
+					<th>장전수</th>
+
+					<th>대응 보우건<br> (이름은 번역 안함, 보우건 항목에서 검색하세요.)</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>Lv1 일반탄</td>
+
+					<td>30</td>
+
+					<td>古ユクモノ 계열<br>ボーンシューター 계열<br>ネロディアーカ</td>
+				</tr>
+
+				<tr>
+					<td>Lv2 일반탄</td>
+
+					<td>30</td>
+
+					<td>デュエルスタッブ 계열<br>ネロディアーカ<br>覇砲ユプカムトルム</td>
+				</tr>
+
+				<tr>
+					<td>Lv3 일반탄</td>
+
+					<td>30</td>
+
+					<td>真ユクモノ 계열<br>46式潜伏重砲 계열<br>ズッカカロッツァ 계열<br>レックスハウル 계열<br>デュエルスタッブ 계열<br>
+					ネロディアーカ<br>覇砲ユプカムトルム</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 관통탄</td>
+
+					<td>20</td>
+
+					<td>デュエルスタッブ 계열<br>妃竜砲【神撃】<br>バズディアーカ<br>覇砲ユプカムトルム</td>
+				</tr>
+
+				<tr>
+					<td>Lv2 관통탄</td>
+
+					<td>20</td>
+
+					<td>スレイペンギーガー 이후<br>メテオリト 이후<br>ユクモ連山重弩<br>ヒドゥンスナイパー 계열<br>デュエルスタッブ改<br>
+					バズディアーカ<br>カブレライトキャノン 계열<br>凶刻【時雨】</td>
+				</tr>
+
+				<tr>
+					<td>Lv3 관통탄</td>
+
+					<td>20</td>
+
+					<td>スレイペンギング 이후<br>夜砲【黒風】 이후<br>峯山龍砲 이후<br>バズディアーカ</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 산탄</td>
+
+					<td>20</td>
+
+					<td>青熊筒 계열<br>トロペクルガン 계열<br>真ユクモノ 계열</td>
+				</tr>
+
+				<tr>
+					<td>Lv2 산탄</td>
+
+					<td>20</td>
+
+					<td>凶刻【時雨】</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 철갑유탄</td>
+
+					<td>9</td>
+
+					<td>レックスハウル 계열<br>海造砲 계열</td>
+				</tr>
+
+				<tr>
+					<td>Lv2 철갑유탄</td>
+
+					<td>9</td>
+
+					<td>アグナブラスター<br>海造砲 계열<br>炎戈銃ブレイズヘル</td>
+				</tr>
+
+				<tr>
+					<td>Lv3 철갑유탄</td>
+
+					<td>9</td>
+
+					<td>海造砲【炎刃】 이후<br>覇砲ユプカムトルム</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 확산탄</td>
+
+					<td>3</td>
+
+					<td>レックスハウル 계열</td>
+				</tr>
+
+				<tr>
+					<td>Lv2 확산탄</td>
+
+					<td>3</td>
+
+					<td>ミーティア<br>轟砲【虎頭】<br>崩砲バセカムルバス</td>
+				</tr>
+
+				<tr>
+					<td>화염탄</td>
+
+					<td>20</td>
+
+					<td>アグナブロウ 계열<br>妃竜砲 계열<br>トロペクルガン 계열<br>ギガン=ショット 계열<br>カオスウイング</td>
+				</tr>
+
+				<tr>
+					<td>수냉탄</td>
+
+					<td>20</td>
+
+					<td>46式潜伏重砲 계열<br>峯山大砲 계열<br>凍戈銃アヴェルスヘル<br>カオスウイング<br>凶刻【時雨】</td>
+				</tr>
+
+				<tr>
+					<td>전격탄</td>
+
+					<td>20</td>
+
+					<td>ペコキッシュサンダー 이후<br>王砲ライド 계열<br>カオスウイング</td>
+				</tr>
+
+				<tr>
+					<td>빙결탄</td>
+
+					<td>20</td>
+
+					<td>スレイペンギーゴ 계열<br>メテオキャノン<br>凍戈銃アヴェルスヘル<br>ギガン=ショット 계열<br>
+					崩砲バセカムルバス<br>カオスウイング</td>
+				</tr>
+
+				<tr>
+					<td>멸룡탄</td>
+
+					<td>3</td>
+
+					<td>ギガン=ショット 계열</td>
+				</tr>
+
+				<tr>
+					<td>참열탄</td>
+
+					<td>5</td>
+
+					<td>ブルームスター 계열<br>王砲ライド 계열<br>ヒドゥンスナイパー 계열<br>カブレライトキャノン 계열</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 독탄</td>
+
+					<td>6</td>
+
+					<td>妃竜砲 계열<br>潜砲ハープール</td>
+				</tr>
+
+				<tr>
+					<td>Lv2 독탄</td>
+
+					<td>4</td>
+
+					<td>妃竜砲【姫撃】 이후</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 마비탄</td>
+
+					<td>6</td>
+
+					<td>王砲ライド 계열<br>青熊筒改 이후</td>
+				</tr>
+
+				<tr>
+					<td>Lv2 마비탄</td>
+
+					<td>4</td>
+
+					<td>凶刻【時雨】</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 수면탄</td>
+
+					<td>6</td>
+
+					<td>ズッカカロッツァ 계열</td>
+				</tr>
+
+				<tr>
+					<td>Lv2 수면탄</td>
+
+					<td>4</td>
+
+					<td>サンドリヨン</td>
+				</tr>
+
+				<tr>
+					<td>Lv1 감기탄</td>
+
+					<td>6</td>
+
+					<td>峯山大砲 계열<br>ギリースナイパー 이후</td>
+				</tr>
+
+				<tr>
+					<td>Lv2 감기탄</td>
+
+					<td>4</td>
+
+					<td>青熊轟筒 이후</td>
+				</tr>
+			</tbody>
+		</table><br><br><h3><a class="mozTocH3" id="mozTocId233092"></a>파라미터 상세</h3>
+<h4><a class="mozTocH4" id="mozTocId81846"></a>장전속도</h4>
+<div>탄환의 장전에 걸리는 시간에 영향을 준다. 보우건의 <span style="color:#2D7;">"장전속도"</span> 는 9단계가 있다. 이것에 의해서 탄마다 '장전 모션'의 길이가 정해지는 구조. 빠를수록 장전 모션이 단축된다.</div><br>
+
+		<div>장전 모션의 길이는 아래의 계산식의 결과로 3단계로 나뉜다.</div>
+		<pre>리로드 속도치　=　탄의 리로드치 - 보우건의 수정치(스킬 장전속도에 의한 보정을 포함) 
+</pre>
+
+		<div>
+			「장전속도±~」의 값은 그대로 보우건 본래의 수정치에 가산된다.</div><br>
+
+		<table>
+			<thead>
+				<tr>
+					<th>리로드 속도치</th>
+
+					<th>장전 모션</th>
+
+					<th>경직 시간</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>4 이하</td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td>약 2.1초</td>
+				</tr>
+
+				<tr>
+					<td>5~7</td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td>약 2.6초</td>
+				</tr>
+
+				<tr>
+					<td>8 이상</td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td>약 3.5초</td>
+				</tr>
+			</tbody>
+		</table><br>
+
+
+		<h4><a class="mozTocH4" id="mozTocId805554"></a>리로드 조견표</h4>
+
+		<table>
+			<thead>
+				<tr>
+					<th rowspan="3">리로드치</th>
+
+					<th rowspan="3">탄종</th>
+
+					<th colspan="9">표시 리로드 속도<br>(하단 : 수정치)</th>
+				</tr>
+
+				<tr>
+					<th>매우<br>느림</th>
+
+					<th>아주<br>느림</th>
+
+					<th>느림</th>
+
+					<th>약간<br>
+					느림</th>
+
+					<th>보통</th>
+
+					<th>약간<br>
+					빠름</th>
+
+					<th>빠름</th>
+
+					<th>아주<br>빠름</th>
+
+					<th>매우<br>빠름</th>
+				</tr>
+
+				<tr>
+					<th>-2</th>
+
+					<th>-1</th>
+
+					<th>0</th>
+
+					<th>1</th>
+
+					<th>2</th>
+
+					<th>3</th>
+
+					<th>4</th>
+
+					<th>5</th>
+
+					<th>6</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>4</td>
+
+					<td>LV1 일반탄</td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+				</tr>
+
+				<tr>
+					<td>5</td>
+
+					<td>LV2 일반탄, LV1 산탄·회복탄<br>
+					포획마취탄, 페인트탄</td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+				</tr>
+
+				<tr>
+					<td>6</td>
+
+					<td>LV3 일반탄, LV1 관통탄, LV2 산탄<br>
+					화염탄, 수냉탄, 빙결탄, 전격탄</td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+				</tr>
+
+				<tr>
+					<td>7</td>
+
+					<td>LV2 관통탄·회복탄, LV3 산탄<br>
+					LV1 철갑유탄·독탄·감기탄, 참열탄</td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+				</tr>
+
+				<tr>
+					<td>8</td>
+
+					<td>LV3 관통탄, LV1 마비탄·수면탄<br>
+					LV2 철갑유탄·감기탄, 귀인탄, 경화탄</td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+				</tr>
+
+				<tr>
+					<td>9</td>
+
+					<td>LV3 철갑유탄, LV1 확산탄<br>
+					LV2 독탄·마비탄·수면탄, 멸룡탄</td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+				</tr>
+
+				<tr>
+					<td>10</td>
+
+					<td>LV2-3 확산탄</td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td><span style="color:#f44;">느림</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#fc4;">보통</span></td>
+
+					<td><span style="color:#4af;">빠름</span></td>
+				</tr>
+			</tbody>
+		</table><br><h4><a class="mozTocH4" id="mozTocId292160"></a>반동</h4>
+
+		<div>사격 후의 경직의 크기에 영향을 준다. 보우건의 <span style="color:#2D7;">"반동"</span> 스펙은 “최대, 대, 중, 약간소, 소, 극소, 최소”의 7단계이며, 이것에 의해서 탄마다의 '경직 모션'이 정해지는 구조.<br>(라보건의 속사의 틈은 반동 스펙과 관계없다.)</div><br>
+
+		<div>경직 모션의 크기는 아래의 계산식의 결과로 3단계로 나뉜다.</div>
+		<pre>산출 반동치　=　탄의 반동치　- 보우건의 수정치 (스킬 반동경감이나 소음장치에 의한 보정을 포함)
+</pre>
+
+		<div>스킬 「반동경감±~」의 값은 그대로 보우건 본래의 수정치에 가산된다. 라이트보우건의 소음장치는 수정치+1</div><br>
+
+		<table>
+			<thead>
+				<tr>
+					<th>산출 반동치</th>
+
+					<th>경직 모션 (시간)</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>8 이하</td>
+
+					<td><span style="color:#4af;">소</span> (약 0.8초)</td>
+
+					<td>무반동</td>
+				</tr>
+
+				<tr>
+					<td>9~10</td>
+
+					<td><span style="color:#fc4;">중</span> (약 1.8초)</td>
+
+					<td>약간 총구가 들리고, 뒤로 밀려난다</td>
+				</tr>
+
+				<tr>
+					<td>11 이상</td>
+
+					<td><span style="color:#f44;">대</span> (약 2.3초)</td>
+
+					<td>크게 총구가 들리고, 뒤로 밀려난다</td>
+				</tr>
+			</tbody>
+		</table><br><h4><a class="mozTocH4" id="mozTocId114927"></a>반동-경직 조견표</h4>
+
+		<table>
+			<thead>
+				<tr>
+					<th rowspan="3">반동치</th>
+
+					<th rowspan="3">탄종</th>
+
+					<th colspan="7">표시 반동<br>(하단 : 수정치)</th>
+				</tr>
+
+				<tr>
+					<th>최대</th>
+
+					<th>대</th><th>중</th><th>약간<br>
+					소</th>
+
+					<th>소</th>
+
+					<th>극소</th>
+
+					<th>최소</th>
+				</tr>
+
+				<tr>
+					<th>0</th>
+
+					<th>1</th>
+
+					<th>2</th>
+
+					<th>3</th>
+
+					<th>4</th>
+
+					<th>5</th>
+
+					<th>6</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>8</td>
+
+					<td>LV1 일반탄</td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+				</tr>
+
+				<tr>
+					<td>9</td>
+
+					<td>LV2-3 일반탄, 페인트탄<br>
+					화염탄, 수냉탄, 빙결탄, 전격탄</td>
+
+					<td><span style="color:#fc4;">중</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+				</tr>
+
+				<tr>
+					<td>10</td>
+
+					<td>LV1 관통탄, LV1-2산탄, 참열탄<br>
+					LV1 회복탄, 포획마취탄</td>
+
+					<td><span style="color:#fc4;">중</span></td>
+
+					<td><span style="color:#fc4;">중</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+				</tr>
+
+				<tr>
+					<td>11</td>
+
+					<td>LV2-3 관통탄, LV3 산탄, LV1 철갑유탄<br>
+					LV1 감기탄, 귀인탄, 경화탄</td>
+
+					<td><span style="color:#f44;">대</span></td>
+
+					<td><span style="color:#fc4;">중</span></td>
+
+					<td><span style="color:#fc4;">중</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+				</tr>
+
+				<tr>
+					<td>12</td>
+
+					<td>LV1 상태이상탄, Lv2-3 철갑유탄<br>
+					LV2 회복탄, LV2 감기탄</td>
+
+					<td><span style="color:#f44;">대</span></td>
+
+					<td><span style="color:#f44;">대</span></td>
+
+					<td><span style="color:#fc4;">중</span></td>
+
+					<td><span style="color:#fc4;">중</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+				</tr>
+
+				<tr>
+					<td>13</td>
+
+					<td>LV1 확산탄, 멸룡탄</td>
+
+					<td><span style="color:#f44;">대</span></td>
+
+					<td><span style="color:#f44;">대</span></td>
+
+					<td><span style="color:#f44;">대</span></td>
+
+					<td><span style="color:#fc4;">중</span></td>
+
+					<td><span style="color:#fc4;">중</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+				</tr>
+
+				<tr>
+					<td>14</td>
+
+					<td>LV2-3 확산탄, LV2 상태이상탄</td>
+
+					<td><span style="color:#f44;">대</span></td>
+
+					<td><span style="color:#f44;">대</span></td>
+
+					<td><span style="color:#f44;">대</span></td>
+
+					<td><span style="color:#f44;">대</span></td>
+
+					<td><span style="color:#fc4;">중</span></td>
+
+					<td><span style="color:#fc4;">중</span></td>
+
+					<td><span style="color:#4af;">소</span></td>
+				</tr>
+			</tbody>
+		</table><br><h4><a class="mozTocH4" id="mozTocId664781"></a>오차</h4>
+
+		<div>발사된 탄의 탄도에 영향을 준다. 오차가 있는 보우건으로 탄을 발사하면, 좌나 우로 휘어서 날아가 버린다.<br>「오차제어」 스킬로만 이 영향을 줄일 수 있기 때문에 오차가 큰 보우건을 사용하면 발동하게 하자.</div><br>
+
+		<h4><a class="mozTocH4" id="mozTocId672761"></a>장전수</h4>
+
+		<div>
+			각 탄종을 장전할 수 있는 수. 보우건마다 정해져 있고, 늘리려면 스킬이 필요하다.<br>
+			「장전수UP」으로 장전 가능한 탄의 최대수가 1개 증가.<br>
+			「각 탄종 추가」로 본래 대응하고 있지 않은 탄환도 장전할 수 있게 되지만, 양이 적은 탓에 도움이 되지 않는 것이 많다.</div><br>
+
+		<h3><a class="mozTocH3" id="mozTocId575532"></a>데미지 관련</h3>
+<h4><a class="mozTocH4" id="mozTocId922509"></a>데미지 계산식</h4>
+		<pre>물리 데미지:(0.01×탄 위력×공격력×회심 보정×속사 보정×스킬 보정×비거리 보정×무기 보정×육질)
+속성 데미지:(0.01×속성 위력×공격력×속사 보정×스킬 보정×속성 육질)
+총합 데미지:{(물리 데미지+속성 데미지)의 합계 (소수점 이하 버림)}×전체 방어율
+</pre>
+
+		<div>
+			※ 무기 보정은 라이트 130%, 헤비 148%</div>
+
+		<ul>
+			<li>자세한 내용은 <a href="165.html">데미지 계산식</a>을 참고</li>
+		</ul><br><h4><a class="mozTocH4" id="mozTocId412435"></a>비거리 보정</h4>
+
+		<div>
+			일반탄과 관통탄의 데미지는 비거리(飛距離)에 의해 데미지가 증감한다.<br>
+			위력 보정은 최대 1.5배까지. 이 구간을&nbsp; <span style="color: #ff0;">『크리티컬 거리』</span> 라 부른다.<br>크리티컬 거리에서 히트하면 물보라가 튀고, 효과음이 커지므로 판별이 가능하다.<br>적정 거리에서 너무 멀어지면 점차 이펙트가 변화하며, 마침내 위력이 반감해버린다.</div>
+
+		<table>
+			<thead>
+				<tr>
+					<th>거리</th>
+
+					<th>보정</th>
+
+					<th>이펙트</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>가깝다 (관통탄 한정)</td>
+
+					<td>100%</td>
+
+					<td>황색</td>
+				</tr>
+
+				<tr>
+					<td>크리티컬 거리</td>
+
+					<td>150%</td>
+
+					<td><span style="color: #ff8;"></span> 황색+물보라</td>
+				</tr>
+
+				<tr>
+					<td>약간 멀다</td>
+
+					<td>100%</td>
+
+					<td><span style="color: #fd0;"></span> 황색</td>
+				</tr>
+
+				<tr>
+					<td>멀다</td>
+
+					<td>80%</td>
+
+					<td>등색</td>
+				</tr>
+
+				<tr>
+					<td>너무 멀다</td>
+
+					<td>50%</td>
+
+					<td>불똥</td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<div>
+			일반탄은 발사 직후부터 크리티컬 거리가 개시하며, 멀리 떨어질수록 데미지가 작아진다.<br>
+			관통탄은 일정 거리를 날고서 시점이 발생하므로, 너무 가깝거나 너무 멀어도 데미지가 작아진다.<br>개시점에는 탄환의 주위에 작은 바퀴 모양 이펙트가 발생하므로 이것을 참고하자.</div>
+		<pre>(☆:크리티컬 거리의 시점   ①②③:종점, 탄의 레벨에 따라 다름)
+일반탄:☆――――――①②③―――→
+관통탄:――――☆―――①②③―――→　
+</pre><br>
+
+		<h4><a class="mozTocH4" id="mozTocId960007"></a>육질과 이펙트</h4>탄의 히트 이펙트는 탄(사격) 육질 25를 경계로 2종으로 나뉜다.<br>
+<div>탄 육질 25 이하는 「*」와 같은 찌그러진 별표 모양.<br>탄 육질 26 이상은 「×」모양의 회심 효과와 비슷한 큰 이펙트.<br>검사로 공격했을 때의 피의 물보라 이펙트처럼, 육안으로 확인할 수 있다.<br>크리티컬 이펙트가 발생하지 않는 산탄 등으로 확인하기가 쉽다.
+		</div><br>
+<h4><a class="mozTocH4" id="mozTocId20366"></a>스킬에 의한 보정</h4>
+
+		<div>
+			각 스킬에 의한 데미지의 보정치.<br>
+			○○탄UP 중에는 산탄만 20% 업이 된다.</div>
+
+		<table>
+			<thead>
+				<tr>
+					<th>이름</th>
+
+					<th>보정</th>
+
+					<th>대상</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>일반탄·연사시UP</td>
+
+					<td>110%</td>
+
+					<td>일반탄의 위력</td>
+				</tr>
+
+				<tr>
+					<td>관통탄·관통시UP</td>
+
+					<td>110%</td>
+
+					<td>관통탄의 위력</td>
+				</tr>
+
+				<tr>
+					<td>산탄·산탄시UP</td>
+
+					<td>120%</td>
+
+					<td>산탄의 위력</td>
+				</tr>
+
+				<tr>
+					<td>포술사</td>
+
+					<td>115%</td>
+
+					<td rowspan="2">철갑유탄의 폭발 데미지</td>
+				</tr>
+
+				<tr>
+					<td>포술왕</td>
+
+					<td>130%</td>
+				</tr>
+
+				<tr>
+					<td>각 속성공격강화+1</td>
+
+					<td>110%</td>
+
+					<td rowspan="2">대응하는 속성탄의 속성 위력</td>
+				</tr>
+
+				<tr>
+					<td>각 속성공격강화+2</td>
+
+					<td>120%</td>
+				</tr>
+
+				<tr>
+					<td>속성공격강화</td>
+
+					<td>120%</td>
+
+					<td>모든 속성탄의 속성 위력</td>
+				</tr>
+			</tbody>
+		</table>
+
+		
+	</div><!-- 하단 -->
+
+	<div class="footer">
+		<p>이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</p>
+	</div>
+
+</body></html>

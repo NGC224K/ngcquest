@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+	<title>공략의 제국</title>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="../RES/favicon.ico" rel="shortcut icon">
+	<link href="../RES/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="header"><a href="../index.html"><h1>마계전기 디스가이아2</h1></a><h2>적 강화 레벨 계산기</h2></div>
+	<div id="article">
+	<div class="textbox" style="line-height:200%;">
+			<form>
+			기본 레벨 : <input id="B_LV" maxlength="4" name="B_LV" size="5" type="text"> (1~9999)<br>
+			적 강화 : <input id="POW_UP" maxlength="2" name="POW_UP" size="5" type="text"> (0~20)<br>
+			수라의 나라 : <input id="SYURA" name="SYURA" type="checkbox"><br>
+			<br>
+			<input onclick="em_Lv();" type="button" value="계산"><br>
+			<br>
+			최종 레벨 : <input id="result_LV" type="text"><br>
+			</form>
+	</div>
+	</div>
+	<div id="footer"><a href="#header">이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</a></div>
+	<!-- 적강화레벨계산기 -->
+	<script id = "em_Lv" type = "text/javascript">
+		function em_Lv() {
+			var Lv = parseInt(document.getElementById("B_LV").value);
+			//alert(Lv); //기본 레벨
+			var PW = parseInt(document.getElementById("POW_UP").value);
+			//alert(PW); //적 강화
+			if (document.getElementById("SYURA").checked) {
+				PW = PW + 100;
+			}
+			Lv = parseInt(Lv * (1 + PW / 5) + PW * 2);
+			if (Lv > 9999) {
+				Lv = 9999;
+			}
+			document.getElementById("result_LV").value = Lv;
+			//수라의 나라 = 적 강화 + 100
+			//최종 레벨 = (적의 레벨 * (1 + 적 강화 / 5) + 적 강화 * 2);
+		}
+	</script>
+	<script src="../RES/jquery.min.js"></script>
+	<script src="../RES/jquery.toc-1.1.4.min.js"></script>
+	<script src="../RES/jquery.tablesorter.min.js"></script>
+	<script src="../RES/ngcquest.js"></script>
+</body>
+</html>

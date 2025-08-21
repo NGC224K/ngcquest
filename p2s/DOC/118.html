@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>공략</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="title.js"></script>
+  </head>
+  <body>
+    <!-- 상단 -->
+    <div class="header"> <a href="../index.html">
+        <h1>페르소나2 죄</h1>
+      </a>
+      <h2>식사/운세/카지노/현상</h2>
+    </div>
+    <!-- 본문 -->
+    <div class="viewer">
+      <ol id="mozToc">
+        <!--mozToc h3 1 h4 2-->
+        <li><a href="#mozTocId614053">식사</a></li>
+        <li><a href="#mozTocId432524">운세</a></li>
+        <li><a href="#mozTocId408461">카지노</a>
+          <ol>
+            <li><a href="#mozTocId122123">블랙잭 (ブラックジャック)</a></li>
+            <li><a href="#mozTocId689795">포커 (ポーカー)</a></li>
+            <li><a href="#mozTocId840921">슬롯 (スロット)</a></li>
+            <li><a href="#mozTocId874436">빙고 (ビンゴ)</a></li>
+            <li><a href="#mozTocId840250">주인공의 LUC의 영향에 대하여</a></li>
+            <li><a href="#mozTocId93942">경품 일람</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId987938">현상</a>
+          <ol>
+            <li><a href="#mozTocId529417">현상 당첨에 대하여</a></li>
+            <li><a href="#mozTocId620294">현상 추첨 타이밍</a></li>
+            <li><a href="#mozTocId985373">상품 일람</a></li>
+          </ol>
+        </li>
+      </ol>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId614053"></a>식사</h3>
+      <ul>
+        <li> 식사를 하면 파라미터가 일정치, 일정 보수(歩数)간 상승합니다.</li>
+        <li> 효과가 사라질 때까지의 보수는 캐릭터마다 다르며, 효과가 사라지면 메시지가 나타납니다.
+          <ul>
+            <li> PS판 : 타츠야(672보), 긴코(640보), 에이키치(576보), 마야(512보), 유키노(704보), 쥰(768보)</li>
+            <li> PS판에서는 효과가 사라지기 전에 세이브&amp;로드를 하면, 보수 카운트가 리셋됩니다. 이것으로 반영구적인 효과를 얻을 수 있습니다. (PSP판에서는 수정되어서 불가능)</li>
+          </ul>
+        </li>
+      </ul>
+      <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">아이템명</th>
+            <th align="center">가격</th>
+            <th align="center">STR</th>
+            <th align="center">VIT</th>
+            <th align="center">TEC</th>
+            <th align="center">AGI</th>
+            <th align="center">아이템명</th>
+            <th align="center">가격</th>
+            <th align="center">STR</th>
+            <th align="center">VIT</th>
+            <th align="center">TEC</th>
+            <th align="center">AGI</th>
+          </tr>
+          <tr class="oddRow">
+            <td style="background-color: rgb(102, 209, 222);" colspan="6"
+
+              align="center"><strong>히라사카구 : 라면 시라이시</strong></td>
+            <td style="background-color: rgb(102, 209, 222);" colspan="6"
+
+              align="center"><strong>아오바구 : 더블・슬래시</strong></td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">간장 라면 (醤油ラーメン)</td>
+            <td align="left">500</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">5</td>
+            <td align="left">커피 (コーヒー)</td>
+            <td align="left">350</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">5</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">된장 라면 (味噌ラーメン)</td>
+            <td align="left">600</td>
+            <td align="center">-</td>
+            <td align="left">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">카페오레 (カフェオレ)</td>
+            <td align="left">400</td>
+            <td align="left">6</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">야채 라면 (野菜ラーメン)</td>
+            <td align="left">700</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">1</td>
+            <td align="center">-</td>
+            <td align="left">레몬티 (レモンティー)</td>
+            <td align="left">300</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">3</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">챠슈멘 (チャーシューメン)</td>
+            <td align="left">700</td>
+            <td align="center">-</td>
+            <td align="left">4</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">허브티 (ハーブティ)</td>
+            <td align="left">450</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">2</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">라면 세트 (ラーメンセット)</td>
+            <td align="left">900</td>
+            <td align="left">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">샌드위치 (サンドイッチ)</td>
+            <td align="left">700</td>
+            <td align="left">4</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">믹스 라면 (ミックスラーメン)</td>
+            <td align="left">800</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">7</td>
+            <td align="left">피자 토스트 (ピザトースト)</td>
+            <td align="left">600</td>
+            <td align="center">-</td>
+            <td align="left">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">초격신파 라면 (超激辛ネギラーメン)</td>
+            <td align="left">780</td>
+            <td align="left">3</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">스파게티 (スパゲッティ)</td>
+            <td align="left">980</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">1</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">특제 시라이시 라면 (特製白石ラーメン)</td>
+            <td align="left">600</td>
+            <td align="center">-</td>
+            <td style="background-color: rgb(255, 204, 204);" align="left">8</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">카레라이스 (カレーライス)</td>
+            <td align="left">700</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">7</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="evenRow">
+            <td style="background-color: rgb(102, 209, 222);" colspan="6"
+
+              align="center"><strong>히라사카구 : 갓텡 스시</strong></td>
+            <td style="background-color: rgb(102, 209, 222);" colspan="6"
+
+              align="center"><strong>아오바구 : 클레르・드・륜느</strong></td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">참치 (まぐろ)</td>
+            <td align="left">300</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">2</td>
+            <td align="center">-</td>
+            <td align="left">비시수아즈 (ヴィッシソワーズ)</td>
+            <td align="left">1000</td>
+            <td align="center">-</td>
+            <td align="left">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">오징어 (いか)</td>
+            <td align="left">300</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">6</td>
+            <td align="left">에스카베슈 (エスカヴェッシュ)</td>
+            <td align="left">1000</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">2</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">단새우 (甘えび)</td>
+            <td align="left">400</td>
+            <td align="center">-</td>
+            <td align="left">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">카스레 (カスレ)</td>
+            <td align="left">1000</td>
+            <td style="background-color: rgb(255, 204, 204);" align="left">8</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">붕장어 (あなご)</td>
+            <td align="left">400</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">1</td>
+            <td align="left">브로셰트 (プロシェット)</td>
+            <td align="left">1000</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">2</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">성게 (うに)</td>
+            <td align="left">500</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">4</td>
+            <td align="center">-</td>
+            <td align="left">브란다드 (ブランダード)</td>
+            <td align="left">1000</td>
+            <td align="center">-</td>
+            <td align="left">5</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">어란 (いくら)</td>
+            <td align="left">500</td>
+            <td align="left">4</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">부야베스 (ブイヤベース)</td>
+            <td align="left">1000</td>
+            <td align="left">3</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">툇마루 (えんがわ)</td>
+            <td align="left">400</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td style="background-color: rgb(255, 204, 204);" align="left">8</td>
+            <td align="center">-</td>
+            <td align="left">보틴 (バロティーヌ)</td>
+            <td align="left">1000</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">4</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">다랑어 (びんとろ)</td>
+            <td align="left">400</td>
+            <td align="center">-</td>
+            <td align="left">3</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">나바란 (ナヴァラン)</td>
+            <td align="left">1000</td>
+            <td align="center">-</td>
+            <td align="left">6</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="oddRow">
+            <td style="background-color: rgb(102, 209, 222);" colspan="6"
+
+              align="center"><strong>유메사키구 : 피스 다이나</strong></td>
+            <td style="background-color: rgb(102, 209, 222);" colspan="6"
+
+              align="center"><strong>코난구 : 죠리 로저</strong></td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">피스 버거 (ピースバーガー)</td>
+            <td align="left">230</td>
+            <td align="center">-</td>
+            <td align="left">3</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">브랜드 커피 (ブレンドコーヒー)</td>
+            <td align="left">380</td>
+            <td align="center">-</td>
+            <td align="left">7</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">치킨 버거 (チキンバーガー)</td>
+            <td align="left">300</td>
+            <td align="center">-</td>
+            <td align="left">4</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">브랜드티 (ブレンドティー)</td>
+            <td align="left">350</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">1</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">피쉬 버거 (フィッシュバーガー)</td>
+            <td align="left">300</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">4</td>
+            <td align="center">-</td>
+            <td align="left">믹스 쥬스 (ミックスジュース)</td>
+            <td align="left">280</td>
+            <td align="left">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">더블 피스 버거 (ダブルピースバーガー)</td>
+            <td align="left">350</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">3</td>
+            <td align="center">-</td>
+            <td align="left">스페셜 코코아 (スペシャルココア)</td>
+            <td align="left">320</td>
+            <td align="left">7</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">빅 피스 버거 (ビッグピースバーガー)</td>
+            <td align="left">380</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td style="background-color: rgb(255, 204, 204);" align="left">8</td>
+            <td align="left">구운 사과 파이 (焼きリンゴパイ)</td>
+            <td align="left">400</td>
+            <td align="left">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">포테이토 프라이 (ポテトフライ)</td>
+            <td align="left">270</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">4</td>
+            <td align="left">초콜렛 쿠키 (チョコレートクッキー)</td>
+            <td align="left">420</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">3</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">피스 셰이크 (ピースシェイク)</td>
+            <td align="left">150</td>
+            <td align="left">5</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">현미 카레 (玄米カレー)</td>
+            <td align="left">700</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">6</td>
+            <td align="center">-</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">프레시 셰이크 (フレッシュシェイク)</td>
+            <td align="left">200</td>
+            <td align="left">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">시크릿 세트 (シークレットセット)</td>
+            <td align="left">900</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="left">3</td>
+            <td align="center">-</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId432524"></a>운세</h3>
+      코난구(港南区)의 스마루 집시(珠閒瑠ジプシー)에서 점을 치는 일로 여러가지 효과를 얻을 수 있습니다.<br>
+      결과는 랜덤이므로 점을 보기 전에 세이브해서, 원하는 효과를 얻을 수 있을 때까지 로드를 반복하는 것이 좋습니다.<br>
+      <ul>
+        <li> 운세의 효과는 일정 보수(歩数)로 사라집니다.</li>
+        <li> 효과가 사라질 떄까지는 새로운 운세를 볼 수 없습니다.
+          <ul>
+            <li> PS판에서는 세이브&amp;로드로 카운트가 리셋됩니다. (식사와 동일) PSP판에서는 수정되어서 불가능합니다.</li>
+          </ul>
+        </li>
+      </ul>
+      <br>
+      <table class="twtable">
+        <caption>운세 효과 일람</caption>
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">결과 (PS판 표기)</th>
+            <th align="center">효과</th>
+          </tr>
+          <tr class="oddRow">
+            <td>The reason</td>
+            <td>취득 경험치 2배</td>
+          </tr>
+          <tr class="evenRow">
+            <td>The moon</td>
+            <td>취득 경험치 0.5배</td>
+          </tr>
+          <tr class="oddRow">
+            <td>Victory-one</td>
+            <td>취득 금액 2배</td>
+          </tr>
+          <tr class="evenRow">
+            <td>Ego</td>
+            <td>취득 금액 0.5배</td>
+          </tr>
+          <tr class="oddRow">
+            <td>Wheel of fortune</td>
+            <td>LUC 2배</td>
+          </tr>
+          <tr class="evenRow">
+            <td>Cycle of life</td>
+            <td>LUC 0.5배</td>
+          </tr>
+          <tr class="oddRow">
+            <td>The magician</td>
+            <td>2단계 감정까지만 올리면, 컨택트의 결과가 나오게 된다.</td>
+          </tr>
+          <tr class="evenRow">
+            <td>Purgatory</td>
+            <td>컨택트의 결과가 나오기까지, 4단계 감정까지 올리지 않으면 안 되게 된다.</td>
+          </tr>
+          <tr class="oddRow">
+            <td>Temperance</td>
+            <td>변화 없음</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId408461"></a>카지노</h3>
+      카지노의 소문을 듣고, 퍼트리면 무 대륙(ムー大陸)에서 카지노를 이용할 수 있게 됩니다.<br>
+      여기서 획득한 코인으로 여러가지 경품을 입수할 수 있습니다. 또한, 코인은 1매=100엔으로 구입할 수 있습니다.<br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">소문</th>
+            <th align="center">내용</th>
+            <th align="center">소문쟁이</th>
+            <th align="center">발생시기</th>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="3" align="left">무 대륙에서 카지노를 즐길 수 있다<br>
+              (ムー大陸でカジノが楽しめる)</td>
+            <td align="left">포커가 이기기 쉽다.<br>
+              (ポーカーが勝ち易い)</td>
+            <td align="left">혼마루 공원(本丸公園)의 토크씨(トクさん)</td>
+            <td rowspan="3">칠자매 학원(七姉妹学園) 클리어 후</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">슬롯이 맞추기 쉽다.<br>
+              (スロットが揃い易い)</td>
+            <td>갓텡 스시(がってん寿司)의 토로(トロ)</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">블랙잭의 배당금이 많다.<br>
+              (ブラックジャックの配当金が多い)</td>
+            <td>피스 다이나(ピースダイナー)의 치카린(チカリン)</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId122123"></a>블랙잭 (ブラックジャック)</h4>
+      <ul>
+        <li> 각 캐릭터에 각각 1매씩, 최고 10매까지 베트할 수 있다.</li>
+        <li> 캐릭터마다 조작을 매뉴얼과 오토로 전환할 수 있다.</li>
+        <li> 블랙잭 소문을 발생시키면 배당금이 2배가 된다.</li>
+      </ul>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId689795"></a>포커 (ポーカー)</h4>
+      <ul>
+        <li> 1게임에 1매씩, 최고 10매까지 베트할 수 있다.</li>
+        <li> 죠커(ジョーカー)는 CHANCE의 숫자가 0이 될 때까지, 다음의 승부를 미룰 수 있다.</li>
+        <li> 승리하면 승리한 만큼 베트하고, 다음 승부에 도전이 가능하다. (배당 1만매를 넘을 때까지)</li>
+        <li> 좌석에 따라 설정치가 다르며, 설정치가 높은 만큼 죠커의 CHANCE 숫자가 커지기 쉽다.</li>
+        <li> 포커 소문을 발생시키면, 어느 1대의 설정치가 최고치인 7이 된다.</li>
+      </ul>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">좌석 번호</th>
+            <td align="left">1</td>
+            <td align="left">2</td>
+            <td align="left">3</td>
+            <td align="left">4</td>
+            <td align="left">5</td>
+            <td align="left">6</td>
+            <td align="left">7</td>
+            <td align="left">8</td>
+            <td align="left">9</td>
+            <td align="left">10</td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">초기 설정치</th>
+            <td align="left">2</td>
+            <td align="left">0</td>
+            <td align="left">4</td>
+            <td align="left">3</td>
+            <td align="left">1</td>
+            <td align="left">1</td>
+            <td align="left">2</td>
+            <td align="left">3</td>
+            <td align="left">0</td>
+            <td align="left">1</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId840921"></a>슬롯 (スロット)</h4>
+      <ul>
+        <li> 1라인에 1매씩, 8라인까지 베트할 수 있다.</li>
+        <li> 좌석에 따라 설정치가 다르며, 설정치가 높은 만큼 맞추기 쉽다.</li>
+        <li> 슬롯 소문을 발생시키면, 어느 1대의 설정치가 최고치인 7이 된다.</li>
+      </ul>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">좌석 번호</th>
+            <td align="left">1</td>
+            <td align="left">2</td>
+            <td align="left">3</td>
+            <td align="left">4</td>
+            <td align="left">5</td>
+            <td align="left">6</td>
+            <td align="left">7</td>
+            <td align="left">8</td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">초기 설정치</th>
+            <td align="left">1</td>
+            <td align="left">2</td>
+            <td align="left">0</td>
+            <td align="left">1</td>
+            <td align="left">3</td>
+            <td align="left">1</td>
+            <td align="left">0</td>
+            <td align="left">2</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId874436"></a>빙고 (ビンゴ)</h4>
+      <ul>
+        <li> 4매의 카드를 1세트로서 각각의 카드에 10매씩, 최고 100매 베트할 수 있다.</li>
+        <li> 일치하는 것이 빠를 수록 배율이 높다.</li>
+        <li> 빙고가 되었을 경우는 승리한 만큼 사용하고, 나머지 3매로부터 다음 빙고가 되는 카드를 예상하는 게임에 도전이 가능하다.</li>
+      </ul>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId840250"></a>주인공의 LUC의 영향에 대하여</h4>
+      주인공의 LUC이 '포커'와 '슬롯'의 설정치에 영향을 줍니다.<br>
+      페르소나의 LUC은 관계 없습니다.<br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">주인공의 LUC</th>
+            <td align="left">1~20</td>
+            <td align="left">21~40</td>
+            <td align="left">41~60</td>
+            <td align="left">61~80</td>
+            <td align="left">81~99</td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">설정치 변화</th>
+            <td align="left">±0</td>
+            <td align="left">+1</td>
+            <td align="left">+2</td>
+            <td align="left">+3</td>
+            <td align="left">+4</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId93942"></a>경품 일람</h4>
+      시나리오가 진행되면 경품이 바뀝니다.<br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">경품</th>
+            <th align="center">코인</th>
+            <th align="center">경품</th>
+            <th align="center">코인</th>
+          </tr>
+          <tr class="oddRow">
+            <td style="background-color: rgb(102, 209, 222);" colspan="2"
+
+              align="center"><strong>초기 상태</strong></td>
+            <td style="background-color: rgb(102, 209, 222);" colspan="2"
+
+              align="center"><strong>시바르바 부상 후</strong></td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">ステュクス</td>
+            <td align="left">10000</td>
+            <td align="left">水蓮の花弁</td>
+            <td align="left">15000</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">ラッキーソース</td>
+            <td align="left">10000</td>
+            <td align="left">武将の駒</td>
+            <td align="left">14000</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">バイタリティソース</td>
+            <td align="left">10000</td>
+            <td align="left">ヒヒイロカネの具足</td>
+            <td align="left">13000</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">メビウスリング</td>
+            <td align="left">8000</td>
+            <td align="left">ミラクルオブジェクト</td>
+            <td align="left">12000</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">ソルヴィングオーブ</td>
+            <td align="left">3000</td>
+            <td align="left">ステュクス</td>
+            <td align="left">10000</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">リカームカード</td>
+            <td align="left">3000</td>
+            <td align="left">ラッキーソース</td>
+            <td align="left">10000</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">ディアカード</td>
+            <td align="left">2000</td>
+            <td align="left">バイタリティソース</td>
+            <td align="left">10000</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">アギカード</td>
+            <td align="left">2000</td>
+            <td align="left">陣の背水</td>
+            <td align="left">8000</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">アクアカード</td>
+            <td align="left">2000</td>
+            <td align="left">ソルヴィングオーブ</td>
+            <td align="left">3000</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">ガルカード</td>
+            <td align="left">2000</td>
+            <td align="left">リカームカード</td>
+            <td align="left">3000</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">マグナカード</td>
+            <td align="left">2000</td>
+            <td align="left">全快のカード</td>
+            <td align="left">3000</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">ディスガイズグッズ</td>
+            <td align="left">1000</td>
+            <td align="left">マハラギオンカード</td>
+            <td align="left">3000</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">マッスルドリンコ</td>
+            <td align="left">500</td>
+            <td align="left">マハアクエスカード</td>
+            <td align="left">3000</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="right"><br>
+            </td>
+            <td align="right"><br>
+            </td>
+            <td align="left">マハガルーラカード</td>
+            <td align="left">3000</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="right"><br>
+            </td>
+            <td align="right"><br>
+            </td>
+            <td align="left">マハマグナスカード</td>
+            <td align="left">3000</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="right"><br>
+            </td>
+            <td align="right"><br>
+            </td>
+            <td align="left">メディアカード</td>
+            <td align="left">2500</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="right"><br>
+            </td>
+            <td align="right"><br>
+            </td>
+            <td align="left">ディスガイズグッズ</td>
+            <td align="left">1000</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="right"><br>
+            </td>
+            <td align="right"><br>
+            </td>
+            <td align="left">マッスルドリンコ</td>
+            <td align="left">500</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId987938"></a>현상</h3>
+      현상의 소문을 퍼트리면, 현상에 응모할 수 있게 됩니다.<br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">소문</th>
+            <th align="center">내용</th>
+            <th align="center">소문쟁이</th>
+            <th align="center">발생시기</th>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="3" align="left">잡지의 현상으로 진짜 무기를 받는다<br>
+              (雑誌の懸賞で本物の武器が当たる)</td>
+            <td align="left">확률은 낮지만, 좋은 것이 맞는 것 같다.<br>
+              (確率は低いが、良い物が当たる)</td>
+            <td align="left">혼마루 공원(本丸公園)의 토크씨(トクさん)</td>
+            <td rowspan="3">칠자매 학원(七姉妹学園) 클리어 후</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">무턱대고 맞지는 않지만, 희귀한 것이 나온다.<br>
+              (滅多に当たらないが、珍しい物が届く)</td>
+            <td>갓텡 스시(がってん寿司)의 토로(トロ)</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">잘 맞지만, 대단한 것은 나오지 않는다.<br>
+              (よく当たるが、大した物は届かない)</td>
+            <td>피스 다이나(ピースダイナー)의 치카린(チカリン)</td>
+          </tr>
+        </tbody>
+      </table>
+      <ul>
+        <li> 소문을 퍼트린 후, 사토미타다시에서 현상 매거진(懸賞マガジン)을 구입하고, 탐정 사무소의 타마키에게 응모를 의뢰합니다.</li>
+        <li> 던전에서 일정 보수(PS판 300보)를 걸을 후, 연화대의 '실버맨 저택'에 가면 상품을 받을 수 있습니다.
+          <ul>
+            <li> 쉽게 보수를 올리는 방법은 적이 출현하지 않는 폐공장 1F 통로를 3바퀴 돌면 끝입니다.</li>
+          </ul>
+        </li>
+      </ul>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId529417"></a>현상 당첨에 대하여</h4>
+      <ul>
+        <li> 몇 권을 응모해도 1개의 상품밖에 당첨되지 않습니다. 대신, 응모수가 많을수록 당첨 확률이 오르므로, 가능한 한 99권 응모합시다.</li>
+        <li> 주인공의 LUC(페르소나 보정 없음)이 높은 만큼, 당첨 확률이 오릅니다.</li>
+      </ul>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId620294"></a>현상 추첨 타이밍</h4>
+      결론부터 말하면, 긴코의 아버지에게서 당첨 결과를 물어본 시점에서, 다음 회의 현상의 확률과 상품이 결정됩니다.<br>
+      <blockquote> 다음 회 응모 : 응모수 + 주인공의 LUC &gt; 당첨률</blockquote>
+      위와 같은 간이 계산식으로 추측할 수 있습니다.<br>
+      <br>
+      따라서, 타마키에게 응모 의뢰하기 전이나 현상 매거진 구입전에 세이브를 하여 도전하는 것으로는 결과가 바뀌지 않습니다. 다만, 응모수와 주인공의 LUC이 변동했을 경우는 결과가 바뀔 가능성이 있습니다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId985373"></a>상품 일람</h4>
+      추천 소문 내용은 '확률은 낮지만, 좋은 것이 맞는 것 같다. (確率は低いが、良い物が当たる)'입니다. 이걸로 에이키치의 최강 무기나 최고의 머리 방어구를 얻을 수 있습니다.<br>
+      <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">아이템명</th>
+            <th align="center">종류</th>
+            <th align="center">효과</th>
+          </tr>
+          <tr class="oddRow">
+            <td style="background-color: rgb(102, 209, 222);" colspan="3"
+
+              align="center"><strong>잘 맞지만, 대단한 것은 나오지 않는다.</strong></td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">崖っ縁粉末</td>
+            <td>아이템</td>
+            <td>아군 전체의 빈사를 회복, 사용자는 빈사</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">バフバフ</td>
+            <td align="left">권</td>
+            <td align="left">공격력 34</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">小烏丸</td>
+            <td align="left">검</td>
+            <td align="left">공격력 42</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">B級スターケース</td>
+            <td align="left">기타</td>
+            <td align="left">공격력 34</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">ガラガラドリンク</td>
+            <td>아이템</td>
+            <td align="left">아군 1체의 HP를 200회복</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">チューインソウル</td>
+            <td>아이템</td>
+            <td align="left">아군 1체의 SP를 100회복</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">クリーンソルト</td>
+            <td>아이템</td>
+            <td>레벨이 낮은 적의 출현을 억제한다.</td>
+          </tr>
+          <tr class="oddRow">
+            <td style="background-color: rgb(102, 209, 222);" colspan="3"
+
+              align="center"><strong>확률은 낮지만, 좋은 것이 맞는 것 같다.</strong></td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">スピリットソース</td>
+            <td align="left">장식품</td>
+            <td align="left">레벨업 보너스 최대 SP+5</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">五雷霊弾</td>
+            <td align="left">총</td>
+            <td align="left">공격력 50<br>
+              상성 : 전격</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">スーパーノヴァ</td>
+            <td align="left">기타</td>
+            <td align="left">공격력 200<br>
+              명중률이 상당히 낮다.</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">デモリッションハンド</td>
+            <td align="left">권</td>
+            <td align="left">공격력 40<br>
+              크리티컬율이 비정상적으로 높다.</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">輝くたてがみ</td>
+            <td align="left">머리 방어구</td>
+            <td align="left">방어력 28<br>
+              마법 방어력 120</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">四次元消しゴム</td>
+            <td>아이템</td>
+            <td align="left">아군 1체의 HP를 30회복<br>
+              전투에서만 사용 가능<br>
+              무한으로 사용 가능</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">陣の背水</td>
+            <td>아이템</td>
+            <td align="left">아군 1체의 빈사와 HP 소회복<br>
+              전투에서만 사용 가능<br>
+              무한으로 사용 가능</td>
+          </tr>
+          <tr class="oddRow">
+            <td style="background-color: rgb(102, 209, 222);" colspan="3"
+
+              align="center"><strong>무턱대고 맞지는 않지만, 희귀한 것이 나온다.</strong></td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">夢想劍</td>
+            <td align="left">검</td>
+            <td align="left">공격력 80 / LUC+10</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">アンチ・マター</td>
+            <td align="left">기타</td>
+            <td align="left">공격력 80 / 상성 : 암흑</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">カンノンセンジュ</td>
+            <td align="left">권</td>
+            <td align="left">공격력 80 / 상성 : 신성</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">打出の小槌</td>
+            <td>아이템</td>
+            <td align="left">아군 1체의 모든 기본 능력+3</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">ミラクルオブジェクト</td>
+            <td align="left">장식품</td>
+            <td align="left">LUC+12</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">ソーマ</td>
+            <td>아이템</td>
+            <td align="left">아군 전체의 HP・SP・상태 이상을 모두 회복<br>
+              이동할 때만 사용 가능</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+    <!-- 하단 -->
+    <div class="footer">
+      <p>이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>공략</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="title.js"></script>
+  </head>
+  <body>
+    <!-- 상단 -->
+    <div class="header"> <a href="../index.html">
+        <h1>마이트 &amp; 매직 8</h1>
+      </a>
+      <h2>스테이터스</h2>
+    </div>
+    <!-- 본문 -->
+    <div class="viewer">
+      <ol id="mozToc">
+        <!--mozToc h3 1 h4 2-->
+        <li><a href="#mozTocId608644">캐릭터의 상태</a>
+          <ol>
+            <li><a href="#mozTocId296017">능력치 보너스표</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId708608">상태 이상</a></li>
+      </ol>
+      <h3><a class="mozTocH3" id="mozTocId608644"></a>캐릭터의 상태</h3>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">능력치</th>
+            <th align="center">간이 설명</th>
+          </tr>
+          <tr class="oddRow">
+            <td>완력</td>
+            <td>근접 무기의 데미지 상승</td>
+          </tr>
+          <tr class="evenRow">
+            <td>지력</td>
+            <td align="left">최대 SP 증가 (네크로맨서/다크엘프)</td>
+          </tr>
+          <tr class="oddRow">
+            <td>인성</td>
+            <td align="left">최대 SP 증가 (성직자/뱀파이어/미노타우르스)</td>
+          </tr>
+          <tr class="evenRow">
+            <td>지구력</td>
+            <td align="left">최대 HP 증가 (클래스마다 증가폭이 다름)</td>
+          </tr>
+          <tr class="oddRow">
+            <td>정확성</td>
+            <td align="left">공격 보너스 상승</td>
+          </tr>
+          <tr class="evenRow">
+            <td>속도</td>
+            <td align="left">방어 등급(AC) 상승<br>
+              복귀 시간을 감소</td>
+          </tr>
+          <tr class="oddRow">
+            <td>운</td>
+            <td align="left">각종 성공률에 영향</td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">상태</th>
+            <th align="center">간이 설명</th>
+          </tr>
+          <tr class="oddRow">
+            <td>체력 (HP)</td>
+            <td>HP가 '0' 이하 : 기절<br>
+              HP가 '-10' 이하 : 사망<br>
+              8시간 휴식하면 완전 회복</td>
+          </tr>
+          <tr class="evenRow">
+            <td>주문 포인트 (SP)</td>
+            <td>마법을 사용할 때 소모된다.<br>
+              8시간 휴식하면 완전 회복</td>
+          </tr>
+          <tr class="oddRow">
+            <td>방어 등급 (AC)</td>
+            <td>적의 물리 공격에 대한 차단율/회피율 (데미지 경감이 아님)</td>
+          </tr>
+          <tr class="evenRow">
+            <td>상태</td>
+            <td>각종 상태이상 효과에 대해 표시</td>
+          </tr>
+          <tr class="oddRow">
+            <td>퀵 스펠</td>
+            <td>등록한 마법을 지정한 단축키(기본 : S)를 누르면 곧바로 사용할 수 있다.</td>
+          </tr>
+          <tr class="evenRow">
+            <td>나이</td>
+            <td>나이에 따라 캐릭터의 능력치가 변동한다. (예 : 50~99세의 경우 지성/인성이 증가, 완력/지구력 감소)</td>
+          </tr>
+          <tr class="oddRow">
+            <td>레벨</td>
+            <td>캐릭터의 현재 레벨<br>
+              레벨에 비례해서 HP와 SP가 상승한다.<br>
+              레벨이 상승할 때마다 기술 점수를 획득한다.</td>
+          </tr>
+          <tr class="evenRow">
+            <td>경험치</td>
+            <td>필요 경험치에 도달하면 레벨업이 가능해진다.</td>
+          </tr>
+          <tr class="oddRow">
+            <td>기술 점수</td>
+            <td>기술 점수를 소비해서 기술 레벨을 올릴 수 있다.</td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">전투</th>
+            <th align="center">간이 설명</th>
+          </tr>
+          <tr class="oddRow">
+            <td>공격력 보너스</td>
+            <td align="left">근접 공격에 대한 명중률 (관련 능력치 : 정확성)</td>
+          </tr>
+          <tr class="evenRow">
+            <td>공격력 피해량</td>
+            <td align="left">근접 공격에 대한 데미지 (관련 능력치 : 완력)</td>
+          </tr>
+          <tr class="oddRow">
+            <td>사격 보너스</td>
+            <td align="left">원거리 공격에 대한 명중률 (관련 능력치 : 정확성)</td>
+          </tr>
+          <tr class="evenRow">
+            <td>사격 피해량</td>
+            <td align="left">원거리 공격에 대한 데미지 (관련 능력치 : 무기의 데미지)</td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">저항력</th>
+            <th align="center">간이 설명</th>
+          </tr>
+          <tr class="evenRow">
+            <td>불</td>
+            <td>일정 확률로 '불' 속성의 공격에 대한 받는 데미지를 감소</td>
+          </tr>
+          <tr class="oddRow">
+            <td>바람</td>
+            <td>일정 확률로 '바람' 속성의 공격에 대한 받는 데미지를 감소</td>
+          </tr>
+          <tr class="evenRow">
+            <td>물</td>
+            <td>일정 확률로 '물' 속성의 공격에 대한 받는 데미지를 감소</td>
+          </tr>
+          <tr class="oddRow">
+            <td>대지</td>
+            <td>일정 확률로 '대지' 속성의 공격에 대한 받는 데미지를 감소</td>
+          </tr>
+          <tr class="evenRow">
+            <td>마음(Mind)</td>
+            <td>일정 확률로 '마음' 속성의 공격에 대한 받는 데미지를 감소</td>
+          </tr>
+          <tr class="oddRow">
+            <td>육체(Body)</td>
+            <td>일정 확률로 '육체' 속성의 공격에 대한 받는 데미지를 감소</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId296017"></a>능력치 보너스표</h4>
+      각 능력치 (완력, 지성/인성, 지구력, 정확성, 속도, 운)는 일정 값 이상이되면 각각 해당하는 항목에 수정치가 반영된다. (예 : 정확성 → 공격 보너스)<br>
+      정상적인 진행으로는 최대치까지 올릴 수 없으므로, 마이너스가 되지 않는 범위까지만 능력치를 올려주면 된다. 따라서 각 직업마다 중요한 능력치는 최소 '13' 이상으로 맞추는 것이 가장 이상적이다.<br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">능력치</th>
+            <th align="center">수정치</th>
+            <th align="center">능력치</th>
+            <th align="center">수정치</th>
+          </tr>
+          <tr class="oddRow">
+            <td>1</td>
+            <td>-6</td>
+            <td>50</td>
+            <td>9</td>
+          </tr>
+          <tr class="evenRow">
+            <td>3</td>
+            <td>-5</td>
+            <td>75</td>
+            <td>10</td>
+          </tr>
+          <tr class="oddRow">
+            <td>5</td>
+            <td>-4</td>
+            <td>100</td>
+            <td>11</td>
+          </tr>
+          <tr class="evenRow">
+            <td>7</td>
+            <td>-3</td>
+            <td>125</td>
+            <td>12</td>
+          </tr>
+          <tr class="oddRow">
+            <td>9</td>
+            <td>-2</td>
+            <td>150</td>
+            <td>13</td>
+          </tr>
+          <tr class="evenRow">
+            <td>11</td>
+            <td>-1</td>
+            <td>175</td>
+            <td>14</td>
+          </tr>
+          <tr class="oddRow">
+            <td>13</td>
+            <td>0</td>
+            <td>200</td>
+            <td>15</td>
+          </tr>
+          <tr class="evenRow">
+            <td>15</td>
+            <td>1</td>
+            <td>225</td>
+            <td>16</td>
+          </tr>
+          <tr class="oddRow">
+            <td>17</td>
+            <td>2</td>
+            <td>250</td>
+            <td>17</td>
+          </tr>
+          <tr class="evenRow">
+            <td>19</td>
+            <td>3</td>
+            <td>275</td>
+            <td>18</td>
+          </tr>
+          <tr class="oddRow">
+            <td>21</td>
+            <td>4</td>
+            <td>300</td>
+            <td>19</td>
+          </tr>
+          <tr class="evenRow">
+            <td>25</td>
+            <td>5</td>
+            <td>350</td>
+            <td>20</td>
+          </tr>
+          <tr class="oddRow">
+            <td>30</td>
+            <td>6</td>
+            <td>400</td>
+            <td>25</td>
+          </tr>
+          <tr class="evenRow">
+            <td>35</td>
+            <td>7</td>
+            <td>500</td>
+            <td>30</td>
+          </tr>
+          <tr class="oddRow">
+            <td>40</td>
+            <td>8</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId708608"></a>상태 이상</h3>
+      숫자는 %이다. (예 : 완력 15의 캐릭터가 공포 상태일 때 완력은 18)<br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">상태 이상</th>
+            <th align="center">완력</th>
+            <th align="center">지성</th>
+            <th align="center">인성</th>
+            <th align="center">지구력</th>
+            <th align="center">정확성</th>
+            <th align="center">속도</th>
+            <th align="center">운</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">저주</td>
+            <td style="text-align: center;" colspan="7">모든 행동이 1/2 확률로 실패</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">공포</td>
+            <td align="right">120</td>
+            <td align="right">50</td>
+            <td align="right">50</td>
+            <td align="right">100</td>
+            <td align="right">50</td>
+            <td align="right">120</td>
+            <td align="right">100</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">질병 1</td>
+            <td align="right">60</td>
+            <td align="right">100</td>
+            <td align="right">100</td>
+            <td align="right">60</td>
+            <td align="right">60</td>
+            <td align="right">60</td>
+            <td align="right">100</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">질병 2</td>
+            <td align="right">30</td>
+            <td align="right">60</td>
+            <td align="right">60</td>
+            <td align="right">30</td>
+            <td align="right">30</td>
+            <td align="right">30</td>
+            <td align="right">100</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">질병 3</td>
+            <td align="right">10</td>
+            <td align="right">30</td>
+            <td align="right">30</td>
+            <td align="right">10</td>
+            <td align="right">10</td>
+            <td align="right">10</td>
+            <td align="right">100</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">광기</td>
+            <td align="right">200</td>
+            <td align="right">10</td>
+            <td align="right">10</td>
+            <td align="right">150</td>
+            <td align="right">100</td>
+            <td align="right">120</td>
+            <td align="right">100</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">중독 1</td>
+            <td align="right">75</td>
+            <td align="right">100</td>
+            <td align="right">100</td>
+            <td align="right">75</td>
+            <td align="right">75</td>
+            <td align="right">75</td>
+            <td align="right">100</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">중독 2</td>
+            <td align="right">50</td>
+            <td align="right">75</td>
+            <td align="right">75</td>
+            <td align="right">50</td>
+            <td align="right">50</td>
+            <td align="right">50</td>
+            <td align="right">100</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">중독 3</td>
+            <td align="right">25</td>
+            <td align="right">50</td>
+            <td align="right">50</td>
+            <td align="right">25</td>
+            <td align="right">25</td>
+            <td align="right">25</td>
+            <td align="right">100</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">취함</td>
+            <td align="right">50</td>
+            <td align="right">50</td>
+            <td align="right">50</td>
+            <td align="right">50</td>
+            <td align="right">10</td>
+            <td align="right">20</td>
+            <td align="right">200</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">좀비</td>
+            <td align="right">100</td>
+            <td align="right">1</td>
+            <td align="right">1</td>
+            <td align="right">100</td>
+            <td align="right">50</td>
+            <td align="right">50</td>
+            <td align="right">100</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+    <!-- 하단 -->
+    <div class="footer">
+      <p>이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</p>
+    </div>
+  </body>
+</html>

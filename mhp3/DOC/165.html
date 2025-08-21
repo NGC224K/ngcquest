@@ -1,0 +1,2654 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+
+
+
+
+
+
+	
+
+	<title>공략</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="title.js" type="text/javascript"></script>
+</head>
+<body>
+	<!-- 상단 -->
+
+	<div class="header">
+		<a href="../index.html">
+		<h1>몬스터 헌터 포터블 서드</h1></a>
+
+		<h2>데미지 계산식</h2>
+	</div><!-- 본문 -->
+
+	<div class="viewer">
+		<ol id="mozToc"><!--mozToc h3 1 h4 2-->
+<li><a href="#mozTocId809593">데미지 계산식</a></li>
+<li><a href="#mozTocId529372">물리 데미지</a>
+<ol>
+<li><a href="#mozTocId982793">표시 공격력을 변화시키는 요소</a></li>
+<li><a href="#mozTocId934487">회심 보정</a></li>
+<li><a href="#mozTocId48413">모션치</a></li>
+<li><a href="#mozTocId563908">예리도 보정</a></li>
+<li><a href="#mozTocId993910">무기 보정</a></li>
+<li><a href="#mozTocId257248">각종 스킬에 의한 보정</a></li>
+<li><a href="#mozTocId925489">비거리 보정</a></li>
+<li><a href="#mozTocId468743">육질</a></li></ol></li>
+<li><a href="#mozTocId623392">속성 데미지</a></li>
+<li><a href="#mozTocId947339">공격의 튕김, 히트 이펙트</a></li>
+<li><a href="#mozTocId708949">전체 방어율</a></li>
+<li><a href="#mozTocId720845">기타 데미지 변동</a>
+<ol>
+<li><a href="#mozTocId305829">아이템 데미지</a></li></ol></li>
+<li><a href="#mozTocId303395">받는 데미지 계산식</a>
+<ol>
+<li><a href="#mozTocId793293">몬스터의 공격력</a></li>
+<li><a href="#mozTocId769783">방어력</a></li>
+<li><a href="#mozTocId268510">방어력과 받는 데미지</a></li>
+<li><a href="#mozTocId781858">내성</a></li>
+<li><a href="#mozTocId991870">스킬과 데미지</a></li>
+<li><a href="#mozTocId221601">자연 회복</a></li></ol></li>
+<li><a href="#mozTocId84170">가드 성능</a>
+<ol>
+<li><a href="#mozTocId536583">위력치</a></li>
+<li><a href="#mozTocId356911">넉백의 대·중·소</a></li>
+<li><a href="#mozTocId725005">스태미너 소비의 대·중·소</a></li></ol></li>
+<li><a href="#mozTocId378604">상태이상 축적치 계산식</a>
+<ol>
+<li><a href="#mozTocId976737">상태이상치</a></li>
+<li><a href="#mozTocId202131">궁:차지 배율</a></li>
+<li><a href="#mozTocId311733">연주 보정</a></li>
+<li><a href="#mozTocId834157">스킬 보정</a></li>
+<li><a href="#mozTocId691168">무기 보정</a></li></ol></li></ol><br>
+
+		<h3><a class="mozTocH3" id="mozTocId809593"></a>데미지 계산식</h3>
+		<pre>물리 데미지 = 표시 공격력 × 모션치 × 0.01 × 회심 보정 × 예리도 보정 × 무기 보정 × 각종 스킬에 의한 보정 × 비거리 보정 × 물리 육질 
+속성 데미지 = 무기 속성치 × 스킬 보정 × 예리도 보정 × 무기 보정 × 속성 육질
+종합 데미지 = {(물리 데미지 + 속성 데미지) × 전체 방어율} (소수점 이하 버림) 
+</pre>
+
+		<ul>
+			<li>종합 데미지가 1 미만의 경우, 데미지는 1로 고정</li>
+<li>속성 데미지 : 속성탄의 경우, 무기의 속성치를 (표시 공격력 × 탄 속성 위력 × 0.01)로 치환한다.</li>
+		</ul><a class="externalLink" href="http://wizeweb.net/mhp3calc/">MHP3의 데미지 계산기(일본어) 외부 링크</a><br><br>
+
+		<h3><a class="mozTocH3" id="mozTocId529372"></a>물리 데미지</h3>
+
+		<ul>
+			<li>표시 공격력 (스테이터스 화면에서 표시되는 공격력의 값)</li>
+		</ul>
+		<pre>표시 공격력 = (무기 공격력+부스트 효과+공격력UP 스킬 등의 정량 변화)×화사장력 스킬 등의 배율 변화
+</pre>
+
+		<ul>
+			<li>소수점 이하가 0.1 이하이면 소수점 이하 버림. 0.1 초과라면 올림.</li>
+		</ul>
+
+		<h4><a class="mozTocH4" id="mozTocId982793"></a>표시 공격력을 변화시키는 요소</h4>
+
+		<ul>
+			<li>정량 변화</li>
+		</ul>
+
+		<table>
+			<thead>
+				<tr>
+					<th>그룹</th>
+
+					<th>해당하는 요소</th>
+
+					<th>상승치</th>
+
+					<th>효과 시간</th>
+
+					<th>우선 순위</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>A</td>
+
+					<td>공격력 부스트</td>
+
+					<td>+15</td>
+
+					<td>상시</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td>B</td>
+
+					<td>힘의부적을 소지</td>
+
+					<td>+6</td>
+
+					<td>상시</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td>C</td>
+
+					<td>힘발톱을 소지</td>
+
+					<td>+9</td>
+
+					<td>상시</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td rowspan="4">D</td>
+
+					<td>귀인적의 사용</td>
+
+					<td>+10</td>
+
+					<td>180초</td>
+
+					<td rowspan="4">※1</td>
+				</tr>
+
+				<tr>
+					<td>괴력의씨의 사용</td>
+
+					<td>+10</td>
+
+					<td>180초</td>
+				</tr>
+
+				<tr>
+					<td>괴력의환약의 사용</td>
+
+					<td>+25</td>
+
+					<td>20초</td>
+				</tr>
+
+				<tr>
+					<td>고양이무도술의 효과</td>
+
+					<td>+15</td>
+
+					<td>30초</td>
+				</tr>
+
+				<tr>
+					<td>E</td>
+
+					<td>고양이단기최면술</td>
+
+					<td>+3</td>
+
+					<td>600초</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td rowspan="3">F</td>
+
+					<td>귀인약의 사용</td>
+
+					<td>+5</td>
+
+					<td rowspan="2">※2</td>
+
+					<td>2</td>
+				</tr>
+
+				<tr>
+					<td>귀인약G의 사용</td>
+
+					<td>+7</td>
+
+					<td>1</td>
+				</tr>
+
+				<tr>
+					<td>귀인탄을 맞는다</td>
+
+					<td>+10</td>
+
+					<td>90초</td>
+
+					<td>2</td>
+				</tr>
+
+				<tr>
+					<td rowspan="6">G<br>
+					공격 스킬</td>
+
+					<td>공격력UP【소】</td>
+
+					<td>+10</td>
+
+					<td rowspan="6">상시</td>
+
+					<td rowspan="3">-</td>
+				</tr>
+
+				<tr>
+					<td>공격력UP【중】</td>
+
+					<td>+15</td>
+				</tr>
+
+				<tr>
+					<td>공격력UP【대】</td>
+
+					<td>+20</td>
+				</tr>
+
+				<tr>
+					<td><span style="color:#f55;">공격력DOWN【소】</span></td>
+
+					<td>-5</td>
+
+					<td rowspan="3">-</td>
+				</tr>
+
+				<tr>
+					<td><span style="color:#f55;">공격력DOWN【중】</span></td>
+
+					<td>-10</td>
+				</tr>
+
+				<tr>
+					<td><span style="color:#f55;">공격력DOWN【대】</span></td>
+
+					<td>-15</td>
+				</tr>
+
+				<tr>
+					<td rowspan="3">H<br>드링크 스킬</td>
+
+					<td>공격력UP【소】</td>
+
+					<td>+3</td>
+
+					<td rowspan="3">상시</td>
+
+					<td rowspan="3">-</td>
+				</tr>
+
+				<tr>
+					<td>공격력UP【중】</td>
+
+					<td>+5</td>
+				</tr>
+
+				<tr>
+					<td>공격력UP【대】</td>
+
+					<td>+7</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			그룹이 다르면 병용할 수 있지만, 같은 경우 병용할 수 없다.<br>
+			※1 그룹D는 마지막에 사용한 것이 덮어쓰기가 된다.<br>
+			※2 퀘스트 종료나 탈진할 때까지 지속<br>
+			그룹F에는 우선 순위가 있다. 순위가 낮은 것을 나중에 사용하여도 덮어쓰기가 되지 않는다.</div><br>
+
+		<ul>
+			<li>배율 변화</li>
+		</ul>
+
+		<table>
+			<thead>
+				<tr>
+					<th>그룹</th>
+
+					<th>해당 요소</th>
+
+					<th>배율</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td rowspan="3">A</td>
+
+					<td>고양이화사장력</td>
+
+					<td>1.35</td>
+
+					<td>HP10 이하 발동</td>
+				</tr>
+
+				<tr>
+					<td>화사장력+2</td>
+
+					<td>1.3</td>
+
+					<td rowspan="2">HP40% 이하 발동</td>
+				</tr>
+
+				<tr>
+					<td><span style="color:#f55;">소심함</span></td>
+
+					<td>0.7</td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">B</td>
+
+					<td rowspan="2">불굴</td>
+
+					<td>1.1</td>
+
+					<td>1회 탈진</td>
+				</tr>
+
+				<tr>
+					<td>1.2</td>
+
+					<td>2회 탈진</td>
+				</tr>
+
+				<tr>
+					<td rowspan="4">C<br>수렵적의 연주</td>
+
+					<td>공격력UP소</td>
+
+					<td>1.1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>공격력UP소×2</td>
+
+					<td>1.15</td>
+
+					<td>중첩</td>
+				</tr>
+
+				<tr>
+					<td>공격력UP대</td>
+
+					<td>1.15</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>공격력UP대×2</td>
+
+					<td>1.2</td>
+
+					<td>중첩</td>
+				</tr>
+
+				<tr>
+					<td>D</td>
+
+					<td>고양이폭격</td>
+
+					<td>1.05</td>
+
+					<td>사격 무기 한정</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			※ 화사장력 스킬과 고양이화사장력 중에서 고양이화사장력이 우선된다.</div><br>
+
+		<h4><a class="mozTocH4" id="mozTocId934487"></a>회심 보정</h4>
+
+		<div>플러스 회심이 발생하면 물리 위력 1.25배<br>마이너스 회심이 발생하면 물리 위력 0.75배</div>
+
+		<table>
+			<thead>
+				<tr>
+					<th>그룹</th>
+
+					<th>해당 요소</th>
+
+					<th>회심율</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td rowspan="6">A</td>
+
+					<td>간파+3</td>
+
+					<td>+30%</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>간파+2</td>
+
+					<td>+20%</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>간파+1</td>
+
+					<td>+10%</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td><span style="color:#f55;">간파-1</span></td>
+
+					<td>-10%</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td><span style="color:#f55;">간파-2</span></td>
+
+					<td>-20%</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td><span style="color:#f55;">간파-3</span></td>
+
+					<td>-30%</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>B</td>
+
+					<td>발도술【기】</td>
+
+					<td>+100%</td>
+
+					<td>※1</td>
+				</tr>
+
+				<tr>
+					<td>C</td>
+
+					<td>약점특효</td>
+
+					<td>+50%</td>
+
+					<td>※2</td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">D</td>
+
+					<td>힘의해방+1</td>
+
+					<td>+30%</td>
+
+					<td rowspan="2">90초</td>
+				</tr>
+
+				<tr>
+					<td>힘의해방+2</td>
+
+					<td>+50%</td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">E<br>수렵적의 연주</td>
+
+					<td>회심율UP＆체력회복【소】</td>
+
+					<td>+10%</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>회심율 더욱 증가</td>
+
+					<td>+20%</td>
+
+					<td>중첩</td>
+				</tr>
+
+				<tr>
+					<td>F</td>
+
+					<td>예리도 게이지가 적색</td>
+
+					<td>※3</td>
+
+					<td><br></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			그룹Ｅ는 수렵적의 연주 효과<br>
+			※1　발도술【기】스킬이 발동하면, 발도 공격에 회심율 +100%</div>
+
+		<div>
+			※2　약점특효 스킬이 발동하면, 약점 부위(물리 육질 45 이상)에의 공격에 대해서 회심율 +50%<br>
+			※3　회심 판정이 발생하지 않고, 모두 통상 히트가 된다. (+100%/-100%라도 회심 효과가 나오지 않는다.)</div><br>
+
+		<h4><a class="mozTocH4" id="mozTocId48413"></a>모션치</h4>
+
+		<div>무기의 각 공격 동작으로 설정되어 있는 값으로, 물리 위력을 결정하는 중요한 요소.<br>기본적으로 동작이 느린 것은 값이 높고, 빠른 것은 값이 낮다.<br>자세한 모션치는 각 무기의 페이지를 참조.<br>참격, 타격, 사격의 3종류로 분류되어 각각 적용되는 육질이 다르다.</div><br>
+
+		<h4><a class="mozTocH4" id="mozTocId563908"></a>예리도 보정</h4>
+
+		<div>근접 무기는 예리도 게이지의 색으로 물리, 속성 양쪽에 보정이 걸린다. (상태이상치에는 영향 없음)</div>
+
+		<table>
+			<thead>
+				<tr>
+					<th>예리도</th>
+
+					<th>적</th>
+
+					<th>등</th>
+
+					<th>황</th>
+
+					<th>녹</th>
+
+					<th>청</th>
+
+					<th>백</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>물리 보정</td>
+
+					<td><span style="color:#F00;">0.5</span></td>
+
+					<td><span style="color:#F90;">0.75</span></td>
+
+					<td><span style="color:#FF0;">1.0</span></td>
+
+					<td><span style="color:#0F0;">1.05</span></td>
+
+					<td><span style="color:#48F;">1.2</span></td>
+
+					<td>1.32</td>
+				</tr>
+
+				<tr>
+					<td>속성 보정</td>
+
+					<td><span style="color:#F00;">0.25</span></td>
+
+					<td><span style="color:#F90;">0.5</span></td>
+
+					<td><span style="color:#FF0;">0.75</span></td>
+
+					<td><span style="color:#0F0;">1.0</span></td>
+
+					<td><span style="color:#48F;">1.0625</span></td>
+
+					<td>1.125</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			※ 표의 숫자는 모두 배율<br><br>이번작에서는 예리도 게이지 색에 의한 회심율 보정이나 기절치 변동은 존재하지 않는다.</div><br>
+
+		<div>
+			각 무기의 모션에 따라 예리도 보정이 존재한다. 게이지색 보정치에 곱셈.</div>
+
+		<table>
+			<thead>
+				<tr>
+					<th>무기</th>
+
+					<th>조건</th>
+
+					<th>배율(물리)</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>한손검</td>
+
+					<td>검 공격</td>
+
+					<td>1.06</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td rowspan="3">대검</td>
+
+					<td>(강)모아1</td>
+
+					<td>1.1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>(강)모아2, 모아오버</td>
+
+					<td>1.2</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>(강)모아3</td>
+
+					<td>1.3</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>태도</td>
+
+					<td>연기 게이지 점멸</td>
+
+					<td>1.13</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>대검/태도</td>
+
+					<td>무기의 중턱 히트</td>
+
+					<td>1.05</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">랜스</td>
+
+					<td>참격</td>
+
+					<td>1.00</td>
+
+					<td rowspan="2">※1</td>
+				</tr>
+
+				<tr>
+					<td>타격</td>
+
+					<td>0.72</td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">근접 무기</td>
+
+					<td>무기의 振り 시작</td>
+
+					<td>0.7</td>
+
+					<td rowspan="2">※2</td>
+				</tr>
+
+				<tr>
+					<td>무기의 振り 끝</td>
+
+					<td>0.6</td>
+				</tr>
+
+				<tr>
+					<td>궁</td>
+
+					<td>접격병(화살 베기)</td>
+
+					<td>1.32</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>공통</td>
+
+					<td>귀인탄을 맞음</td>
+
+					<td>1.1</td>
+
+					<td><br></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			※1　참격과 타격 양쪽 모두의 물리 육질로 계산하여, 데미지가 높은 쪽을 선택한다.<br>
+			※2　예리도 게이지 황색 이하만</div><br>
+		<br>
+
+		
+
+		<h4><a class="mozTocH4" id="mozTocId993910"></a>무기 보정</h4>
+
+		<div>각 무기 고유로 설정된 보정치<br>근접 무기의 속성 보정은 상태이상 보정과 공통</div>
+
+		<table>
+			<thead>
+				<tr>
+					<th>무기</th>
+
+					<th>조건</th>
+
+					<th>물리 보정</th>
+
+					<th>속성 보정</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td rowspan="2">한손검</td>
+
+					<td>검 공격</td>
+
+					<td>-</td>
+
+					<td>0.7배</td>
+				</tr>
+
+				<tr>
+					<td>방패 공격</td>
+
+					<td>-</td>
+
+					<td>0배</td>
+				</tr>
+
+				<tr>
+					<td rowspan="3">쌍검</td>
+
+					<td>귀인화 중</td>
+
+					<td>1.15배</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td>통상 히트</td>
+
+					<td>-</td>
+
+					<td>0.7배</td>
+				</tr>
+
+				<tr>
+					<td>동시 히트</td>
+
+					<td>-</td>
+
+					<td>0.49배</td>
+				</tr>
+
+				<tr>
+					<td rowspan="6">대검</td>
+
+					<td>모아베기1</td>
+
+					<td>-</td>
+
+					<td>1.2배</td>
+				</tr>
+
+				<tr>
+					<td>모아베기2, 모아오버</td>
+
+					<td>-</td>
+
+					<td>1.5배</td>
+				</tr>
+
+				<tr>
+					<td>모아베기3</td>
+
+					<td>-</td>
+
+					<td>2.0배</td>
+				</tr>
+
+				<tr>
+					<td>강 모아베기1</td>
+
+					<td>-</td>
+
+					<td>1.8배</td>
+				</tr>
+
+				<tr>
+					<td>강 모아베기2</td>
+
+					<td>-</td>
+
+					<td>2.25배</td>
+				</tr>
+
+				<tr>
+					<td>강 모아베기3</td>
+
+					<td>-</td>
+
+					<td>3.0배</td>
+				</tr>
+
+				<tr>
+					<td rowspan="3">태도</td>
+
+					<td>연기 게이지 백</td>
+
+					<td>1.05배</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td>연기 게이지 황</td>
+
+					<td>1.1배</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td>연기 게이지 적</td>
+
+					<td>1.2배</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">랜스</td>
+
+					<td>돌진</td>
+
+					<td>-</td>
+
+					<td>0.5배</td>
+				</tr>
+
+				<tr>
+					<td>방패 공격</td>
+
+					<td>-</td>
+
+					<td>0배</td>
+				</tr>
+
+				<tr>
+					<td rowspan="5">건랜스</td>
+
+					<td>모아 포격</td>
+
+					<td>1.2배</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td>모아 포격 (확산형)</td>
+
+					<td>1.45배</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td>풀버스트 (통상형)</td>
+
+					<td>1.1배</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td>풀버스트 (확산형)</td>
+
+					<td>0.9배</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td>용격포 (방사형)</td>
+
+					<td>1.2배</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">슬래쉬액스</td>
+
+					<td>강격병</td>
+
+					<td>1.2배</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td>강속성병</td>
+
+					<td>-</td>
+
+					<td>1.25배</td>
+				</tr>
+
+				<tr>
+					<td rowspan="6">궁</td>
+
+					<td>강격병</td>
+
+					<td>1.5배</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td>근접 공격</td>
+
+					<td>-</td>
+
+					<td>0.5배</td>
+				</tr>
+
+				<tr>
+					<td>차지1</td>
+
+					<td>0.4배</td>
+
+					<td>0.7배</td>
+				</tr>
+
+				<tr>
+					<td>차지2</td>
+
+					<td>1.0배</td>
+
+					<td>0.85배</td>
+				</tr>
+
+				<tr>
+					<td>차지3</td>
+
+					<td>1.5배</td>
+
+					<td>1.0배</td>
+				</tr>
+
+				<tr>
+					<td>차지4</td>
+
+					<td>1.7배</td>
+
+					<td>1.125배</td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">라이트보우건</td>
+
+					<td>상시</td>
+
+					<td>1.3배</td>
+
+					<td>-</td>
+				</tr>
+
+				<tr>
+					<td>속사 보정</td>
+
+					<td colspan="2"><a href="136.html">탄 성능</a>/속사</td>
+				</tr>
+
+				<tr>
+					<td>헤비보우건</td>
+
+					<td>상시</td>
+
+					<td>1.48배</td>
+
+					<td>-</td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<h4><a class="mozTocH4" id="mozTocId257248"></a>각종 스킬에 의한 보정</h4>
+
+		<div>사격이나 포격 등 일부의 데미지는 아래와 같은 스킬에 의해서 위력 보정이 존재한다.</div>
+
+		<table>
+			<thead>
+				<tr>
+					<th>스킬</th>
+
+					<th>배율</th>
+
+					<th>대상</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>일반탄·연사시UP</td>
+
+					<td>1.1배</td>
+
+					<td rowspan="2">각 대응탄종<br>사격 타입만 유효</td>
+				</tr>
+
+				<tr>
+					<td>관통탄·관통시UP</td>
+
+					<td>1.1배</td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">산탄·산탄시UP</td>
+
+					<td>1.2배</td>
+
+					<td>산탄의 위력</td>
+				</tr>
+
+				<tr>
+					<td>1.3배</td>
+
+					<td>확산 화살의 위력</td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">포술사</td>
+
+					<td>1.1배</td>
+
+					<td>건랜스의 포격</td>
+				</tr>
+
+				<tr>
+					<td>1.15배</td>
+
+					<td>철갑유탄의 폭발 데미지</td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">포술왕</td>
+
+					<td>1.2배</td>
+
+					<td>건랜스의 포격</td>
+				</tr>
+
+				<tr>
+					<td>1.3배</td>
+
+					<td>철갑유탄의 폭발 데미지</td>
+				</tr>
+
+				<tr>
+					<td>고양이사격술</td>
+
+					<td>1.1배</td>
+
+					<td>대상은 일반탄만</td>
+				</tr>
+
+				<tr>
+					<td>고양이포격술</td>
+
+					<td>1.1배</td>
+
+					<td>건랜스의 포격<br>
+					철갑유탄의 폭발 데미지</td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<h4><a class="mozTocH4" id="mozTocId925489"></a>비거리 보정</h4>
+
+		<div>궁의 사격이나 보우건의 탄종 일부는 데미지가 비거리에 의해 보정이 들어간다.<br>크리티컬 거리라고 불리는 1.5배 보정이 걸리는 거리를 기준으로 하면 아래와 같다.</div>
+
+		<table>
+			<thead>
+				<tr>
+					<th>거리</th>
+
+					<th>물리 보정</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>가깝다</td>
+
+					<td>1.0배※</td>
+
+					<td>노란 빛</td>
+				</tr>
+
+				<tr>
+					<td>크리티컬 거리</td>
+
+					<td>1.5배</td>
+
+					<td>물보라 이펙트</td>
+				</tr>
+
+				<tr>
+					<td>약간 멀다</td>
+
+					<td>1.0배</td>
+
+					<td>노란 빛</td>
+				</tr>
+
+				<tr>
+					<td>멀다</td>
+
+					<td>0.8배</td>
+
+					<td>오렌지 빛</td>
+				</tr>
+
+				<tr>
+					<td>너무 멀다</td>
+
+					<td>0.5배</td>
+
+					<td>튕기고 불꽃이 튄다</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			※ 접격병 사용 중이나 일반탄은 1.5배<br>사격 타입별 크리티컬 거리는 <a href="137.html">궁</a> 페이지로,<br>보우건에 대해서는 <a href="136.html">탄 성능</a> 페이지로</div><br>
+
+		<h4><a class="mozTocH4" id="mozTocId468743"></a>육질</h4>
+
+		<div>몬스터의 각 부위에 설정된 데미지가 얼마나 통과하는 지를 나타내는 수치.<br>백분율 표기이므로, 육질이 100보다 작으면, 그 만큼 데미지가 경감된다.<br>물리 육질은 예리도 보정과의 균형으로 '튕김 판정'에 사용된다.<br><br>물리 육질은 참격, 타격, 사격의 3개.&nbsp; 속성 육질은 화, 수, 뇌, 빙, 용의 5개 로 분류하여 공격 속성에 대응한 육질로 계산한다.</div>※ 본 공략에 있는 육질값은 백분율이므로 반드시 계산할 때 ÷100을 해야 한다.<br>
+		<br>
+
+		<h3><a class="mozTocH3" id="mozTocId623392"></a>속성 데미지</h3>
+
+		<div>물리 데미지와는 별도의 추가 데미지로서 발생하며, 각 속성마다 속성 육질을 사용하여 계산한다.<br>물리 육질이나 모션치에 의존하지 않기 때문에 활이나 근접 무기 중 공격 횟수가 많은 무기에 영향을 강하게 받는다.</div><br>
+<ul>
+			<li>속성 배율 변화</li>
+		</ul>
+
+		<table>
+			<thead>
+				<tr>
+					<th>그룹</th>
+
+					<th>스킬</th>
+
+					<th>배율</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td rowspan="3">A</td>
+
+					<td>각 속성공격강화+1</td>
+
+					<td>1.1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>각 속성공격강화+2</td>
+
+					<td>1.2</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td><span style="color:#f55;">각 속성공격약화</span></td>
+
+					<td>0.7</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">B</td>
+
+					<td>속성공격강화</td>
+
+					<td>1.1</td>
+
+					<td>※</td>
+				</tr>
+
+				<tr>
+					<td><span style="color:#f55;">속성공격약화</span></td>
+
+					<td>0.9</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">C<br>수렵적의 연주</td>
+
+					<td>속성공격력강화</td>
+
+					<td>1.15</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>속성공격력강화×2</td>
+
+					<td>1.2</td>
+
+					<td>중첩</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			※ 보우건의 속성탄만 효과 1.2배</div>※ 건랜스의 포격, 철갑유탄, 확산탄에 추가되는 불속성치에는 전혀 영향이 없다.<br>
+		<br>
+
+		<h3><a class="mozTocH3" id="mozTocId947339"></a>공격의 튕김, 히트 이펙트</h3>
+
+		<div>몬스터의 딱딱한 부위를 공격하거나 무기의 예리도가 떨어지고 있으면, 피물보라 대신에 불꽃이 튀기며 무기가 튕기는 경우가 발생한다.<br>
+			「튕김」에는 무기의 공격력은 일절 관계하지 않고, 예리도 보정과 몬스터의 각 부위에 설정된 육질에 의해서만 정해진다.</div><br>
+
+		<div>일부의 공격 모션이나 스킬 『심안』이 있으면 튕김을 무시하고 벨 수 있지만, 튕김 이펙트가 발생했을 경우 예리도 소비량이 통상의 2배가 된다.</div>
+		<pre>계산식 : 예리도 보정 × 물리 육질<br><br>튕김(불꽃) ≦ 25 &lt; 이펙트【소】 ≦ 45 &lt; 이펙트【중】 ≦ 100 &lt; 이펙트【대】
+</pre>
+
+		<div>계산치가 25.0 이하가 되면 공격이 튕기며, 25.0을 초과하면 히트 효과(피물보라)가 표시된다.</div>어느 무기라도 예리도 게이지 [ 녹색=육질24, 청색=육질21, 흰색=육질19 ] 의 부위까지는 튕기지 않고 공격할 수 있다.<br>
+<div><br>튕김과 반대로 피물보라 이펙트가 커지는 것에 따라 <strong>히트 스톱</strong>이 발생한다. (무기가 뚝뚝 끊긴다)<br>이펙트【대】에서는 2배의 히트 스톱이 걸려서 무기를 빼는 속도가 약간 늦어진다.<br>이펙트【소】이하는 히트 스톱이 없다.<br><br>히트 이펙트의 효과 크기는 쌍검의 게이지 상승량과 연관이 있다.<br>사격 속성의 공격도 육질 25를 경계로 히트 효과의 형태와 크기가 변화한다.</div>
+		<br>
+
+		<h3><a class="mozTocH3" id="mozTocId708949"></a>전체 방어율</h3>
+
+		실제로 주는 데미지는 물리+속성 데미지의 합계에서, 퀘스트 난이도에 따라 설정된 <strong>전체 방어율</strong>에 의해서 경감한다. (촌장：100%　상위：85~75%　일부 어려운 퀘스트：70%) 또한, 일부 몬스터는 분노하는 것에 따라 방어율이 변동한다.<br><br><br>
+
+		<h3><a class="mozTocH3" id="mozTocId720845"></a>기타 데미지 변동</h3>
+
+		<div>이하 상태에서는 전체 방어율을 계산한 후의 데미지가 변동한다.<br>
+			구멍함정의 효과는 상태이상과 중복하지 않고, 후자가 우선된다.</div>
+
+		<table>
+			<thead>
+				<tr>
+					<th>상태</th>
+
+					<th>배율</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>구멍함정</td>
+
+					<td>1.1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>마비</td>
+
+					<td>1.1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>수면</td>
+
+					<td>2.0</td>
+
+					<td>※</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			※ 사격·아이템의 데미지만 3배. 부위 내구치에 대한 손상은 준 데미지의 2/3배</div><br>
+
+		<h4><a class="mozTocH4" id="mozTocId305829"></a>아이템 데미지</h4>
+
+		<div>아래의 요소들은 표시 공격력이나 물리 육질을 무시하고 고정 데미지를 주지만, 전체 방어율에 의한 영향은 받는다.</div><br>
+
+		<ul>
+			<li>요격 무기</li>
+		</ul>
+
+		<table>
+			<thead>
+				<tr>
+					<th>명칭</th>
+
+					<th>위력</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>발리스타탄</td>
+
+					<td>40×2</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>대포탄</td>
+
+					<td>170</td>
+
+					<td>떨어뜨리면 폭발</td>
+				</tr>
+
+				<tr>
+					<td>격룡창</td>
+
+					<td>255×4(1020)</td>
+
+					<td>복수 히트</td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<ul>
+			<li>폭탄</li>
+		</ul>
+
+		<table>
+			<thead>
+				<tr>
+					<th>명칭</th>
+
+					<th>위력</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>작은통폭탄</td>
+
+					<td>20</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>개다래폭탄</td>
+
+					<td>0</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>큰통폭탄</td>
+
+					<td>80</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>큰통폭탄G</td>
+
+					<td>150</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>상층통폭탄</td>
+
+					<td>20</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>JUMP통폭탄</td>
+
+					<td>80</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>폴리탄폭탄</td>
+
+					<td>80+뇌속성치 50</td>
+
+					<td>보머 효과는 물리 부분만</td>
+				</tr>
+
+				<tr>
+					<td>지급전용큰통폭탄</td>
+
+					<td>150</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>대거룡폭탄</td>
+
+					<td>400</td>
+
+					<td><br></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<ul>
+			<li>보머 스킬로 1.3배</li>
+		</ul><br>
+
+		<ul>
+			<li>투척물</li>
+		</ul>
+
+		<table>
+			<thead>
+				<tr>
+					<th>명칭</th>
+
+					<th>위력</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>자갈</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>페인트볼</td>
+
+					<td>0</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>악취구슬</td>
+
+					<td>0</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>포획용마취옥</td>
+
+					<td>0</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>부메랑</td>
+
+					<td>8</td>
+
+					<td>참격 속성</td>
+				</tr>
+
+				<tr>
+					<td>투척나이프</td>
+
+					<td>20</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>각 상태이상 투척나이프</td>
+
+					<td>5</td>
+
+					<td>축적치：50</td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<ul>
+			<li>기타</li>
+		</ul>
+
+		<table>
+			<thead>
+				<tr>
+					<th>명칭</th>
+
+					<th>위력</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>킥</td>
+
+					<td>2</td>
+
+					<td>※</td>
+				</tr>
+
+				<tr>
+					<td>섀도우</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>보우건의 근접 공격</td>
+
+					<td>1</td>
+
+					<td><br></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			※ 이펙트는 발생하지 않지만 회심의 영향은 받는다. 역회심일 때는 위력 1, 고양이발차기가 발동하면 위력 10</div><br>
+
+		<ul>
+			<li>건랜스의 포격
+
+
+
+
+<ul>
+<li><a href="132.html">건랜스</a> 페이지에</li></ul></li>
+		</ul><br><br>
+
+		<h3><a class="mozTocH3" id="mozTocId303395"></a>받는 데미지 계산식</h3>
+		<pre>받는 데미지 = 몬스터의 공격력 × 80 ÷ (80 + 표시 방어력) × 속성 경감율
+</pre>
+
+		<div>
+			(체력은 초기 상태로 100)</div><br>
+
+		<h4><a class="mozTocH4" id="mozTocId793293"></a>몬스터의 공격력</h4>
+
+		<div>
+			몬스터의 각 공격으로 설정된 기본 위력에 퀘스트마다 설정된 <strong>공격력 배율</strong>(1~4배 정도, 랜덤으로 개체차가 있다)과 <strong>분노 배율</strong>을 곱한다.</div><br>
+
+		<h4><a class="mozTocH4" id="mozTocId769783"></a>방어력</h4>
+		<pre>표시 방어력 = 헌터의 방어력(1)　+　방어구·무기의 방어력 합계　+　아래와 같은 변동 요소
+</pre><br>
+
+		<ul>
+			<li>방어력의 변동 요소</li>
+		</ul>
+
+		<table>
+			<thead>
+				<tr>
+					<th>그룹</th>
+
+					<th>해당 요소</th>
+
+					<th>상승치</th>
+
+					<th>효과 시간</th>
+
+					<th>비고</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>A</td>
+
+					<td>수호의부적 소지</td>
+
+					<td>+12</td>
+
+					<td>상시</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>B</td>
+
+					<td>수호발톱 소지</td>
+
+					<td>+18</td>
+
+					<td>상시</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td rowspan="4">C</td>
+
+					<td>인내의환약의 사용</td>
+
+					<td>1.3배</td>
+
+					<td>20초</td>
+
+					<td rowspan="3">※1</td>
+				</tr>
+
+				<tr>
+					<td>경화적의 사용</td>
+
+					<td rowspan="3">+20</td>
+
+					<td rowspan="3">180초</td>
+				</tr>
+
+				<tr>
+					<td>인내의씨의 사용</td>
+				</tr>
+
+				<tr>
+					<td>두근두근버섯의 사용</td>
+
+					<td>방어력UP 효과일 때만</td>
+				</tr>
+
+				<tr>
+					<td rowspan="3">D</td>
+
+					<td>경화약의 사용</td>
+
+					<td>+15</td>
+
+					<td rowspan="2">※2</td>
+
+					<td rowspan="2"><br></td>
+				</tr>
+
+				<tr>
+					<td>경화약G의 사용</td>
+
+					<td>+25</td>
+				</tr>
+
+				<tr>
+					<td>경화탄을 맞음</td>
+
+					<td>1.15배</td>
+
+					<td>90초</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td rowspan="3">E<br>
+					저력 스킬</td>
+
+					<td>스킬 없음</td>
+
+					<td>+30</td>
+
+					<td><br></td>
+
+					<td rowspan="3">체력 40% 이하로 발동</td>
+				</tr>
+
+				<tr>
+					<td>화사장력 +1,+2</td>
+
+					<td>+45</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td><span style="color:#f55;">소심함</span></td>
+
+					<td>+21</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td rowspan="6">F<br>
+					방어 스킬</td>
+
+					<td>방어UP【소】</td>
+
+					<td>+15</td>
+
+					<td rowspan="6">상시</td>
+
+					<td rowspan="6">-</td>
+				</tr>
+
+				<tr>
+					<td>방어UP【중】</td>
+
+					<td>1.03배,+20</td>
+				</tr>
+
+				<tr>
+					<td>방어UP【대】</td>
+
+					<td>1.07배,+25</td>
+				</tr>
+
+				<tr>
+					<td><span style="color:#f55;">방어DOWN【소】</span></td>
+
+					<td>-10</td>
+				</tr>
+
+				<tr>
+					<td><span style="color:#f55;">방어DOWN【중】</span></td>
+
+					<td>-15</td>
+				</tr>
+
+				<tr>
+					<td><span style="color:#f55;">방어DOWN【대】</span></td>
+
+					<td>-20</td>
+				</tr>
+
+				<tr>
+					<td rowspan="3">G<br>드링크 스킬</td>
+
+					<td>방어력UP【소】</td>
+
+					<td>+15</td>
+
+					<td rowspan="3">상시</td>
+
+					<td rowspan="3">퀘스트 종료까지</td>
+				</tr>
+
+				<tr>
+					<td>방어력UP【중】</td>
+
+					<td>+20</td>
+				</tr>
+
+				<tr>
+					<td>방어력UP【대】</td>
+
+					<td>+25</td>
+				</tr>
+
+				<tr>
+					<td>H</td>
+
+					<td>고양이단기최면술</td>
+
+					<td>+10</td>
+
+					<td>600초</td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td rowspan="4">I<br>수렵적의 연주</td>
+
+					<td>방어력UP소</td>
+
+					<td>1.1배</td>
+
+					<td><br></td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>방어력UP소×2</td>
+
+					<td>1.15배</td>
+
+					<td><br></td>
+
+					<td>중첩</td>
+				</tr>
+
+				<tr>
+					<td>방어력UP대</td>
+
+					<td>1.15배</td>
+
+					<td><br></td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td>방어력UP대×2</td>
+
+					<td>1.2배</td>
+
+					<td><br></td>
+
+					<td>중첩</td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">J<br>상태이상</td>
+
+					<td><span style="color:#f55;">방어력DOWN【소】</span></td>
+
+					<td>0.8배</td>
+
+					<td><br></td>
+
+					<td><br></td>
+				</tr>
+
+				<tr>
+					<td><span style="color:#f55;">방어력DOWN【대】</span></td>
+
+					<td>0.5배</td>
+
+					<td><br></td>
+
+					<td><br></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			그룹이 다르면 병용할 수 있지만, 같은 경우 병용할 수 없다.<br>
+			※1 그룹C는 마지막에 사용한 것이 덮어쓰기가 된다.<br>
+			※2 퀘스트 종료나 탈진할 때까지 지속<br>
+			그룹D에는 우선 순위가 있다. 순위가 낮은 것을 나중에 사용하여도 덮어쓰기가 되지 않는다.</div><br>
+
+		<h4><a class="mozTocH4" id="mozTocId268510"></a>방어력과 받는 데미지</h4>
+
+		데미지 경감율은 아래의 식으로 계산할 수 있다.<br>
+		<pre>1 - 80 ÷ (80 + 표시 방어력)
+</pre>
+
+		<table>
+			<tbody>
+				<tr>
+					<td>방어력</td>
+
+					<td>9</td>
+
+					<td>20</td>
+
+					<td>34</td>
+
+					<td>53</td>
+
+					<td>80</td>
+
+					<td>120</td>
+
+					<td>240</td>
+
+					<td>320</td>
+
+					<td>420</td>
+
+					<td>720</td>
+				</tr>
+
+				<tr>
+					<td>경감율</td>
+
+					<td>10%</td>
+
+					<td>20%</td>
+
+					<td>30%</td>
+
+					<td>40%</td>
+
+					<td>50%</td>
+
+					<td>60%</td>
+
+					<td>75%</td>
+
+					<td>80%</td>
+
+					<td>84%</td>
+
+					<td>90%</td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<h4><a class="mozTocH4" id="mozTocId781858"></a>내성</h4>
+
+		<ul>
+			<li>속성내성</li>
+		</ul>
+
+		<div>
+			몬스터의 공격에는 속성이 설정되어 있는 것이 있다.<br>몬스터에게 주는 속성 데미지와는 달리, 기본 데미지 산출 후 해당하는 내성치만큼 X% 데미지가 증감한다. (=백분율)<br>
+			속성내성치는 방어구의 내성치의 합계이며, 각종 스킬이나 드링크의 효과로 변화한다.</div>
+		<pre>속성 경감율  = 1 - 속성내성치 ÷ 100
+</pre>
+
+		<div>예：몬스터의 용속성 공격으로 100의 데미지를 받았을 때<br>
+			용내성치가 +20의 경우, 데미지가 20% 감소하여 80의 데미지를 받는다.<br>
+			용내성치가 -20의 경우, 데미지가 20% 증가하여 120의 데미지를 받는다.</div><br>
+
+		<ul>
+			<li>속성 상태이상
+
+
+
+
+<ul>
+<li>소거의씨로 해소 가능</li>
+<li>○내성【소】·【대】 스킬로 무효화 가능</li>
+<li>&nbsp;회피 행동으로 효과 시간 감소</li></ul></li>
+		</ul>
+
+		
+			화속성 상태이상【소/대】: 15초/20초간 계속 데미지 (소는 2초마다, 대는 1초마다 2의 데미지)<br>
+			수속성 상태이상【소/대】: 60초간 스태미너회복속도(소는 1/2, 대는 1/4)<br>
+			뇌속성 상태이상【소/대】: 60초간 받는 기절치 2배<br>빙속성 상태이상【소/대】: 60초간 스태미너 감소 속도 증가 (소는 2배, 대는 3배)<br>
+		<br>
+
+		<h4><a class="mozTocH4" id="mozTocId991870"></a>스킬과 데미지</h4>
+
+		<ul>
+			<li>방어 스킬</li>
+		</ul>
+
+		<div>
+			정령의가호: 25%의 확률로 받는 데미지를 70% 경감<br>
+			악령의가호: 25%의 확률로 받는 데미지를 130% 증가</div><br>
+
+		<ul>
+			<li>드링크 스킬</li>
+		</ul>
+
+		<div>고양이방어술【대】: 1/4 확률로 헌터가 받은 데미지를 0.7배로 경감<br>고양이방어술【소】: 1/8 확률로 헌터가 받은 데미지를 0.7배로 경감</div><br>
+
+		<ul>
+			<li>연주 효과</li>
+		</ul>
+
+		<div>
+			정령왕의가호 : 약 50%의 확률로 받는 데미지를 30% 감소</div><br>
+
+		<h4><a class="mozTocH4" id="mozTocId221601"></a>자연 회복</h4>
+
+		<div>받은 데미지는 감소한 만큼의 반 정도까지(적색 게이지 부분) 서서히 자연 회복한다.<br>적색 게이지는 회복하기 전에 데미지를 받으면 소멸한다.<br>통상은 2초마다 1씩 회복.</div><br>
+
+		<ul>
+			<li>「회복속도」는 이 회복 간격에 영향을 미친다.</li>
+		</ul>
+
+		<div>
+			＋1으로 1초마다, ＋2으로 0.5초마다.</div>
+
+		<ul>
+			<li>아이템 효과 및 연주 효과 "자연 회복량 상승"은 초 마다의 회복량에 영향을 준다.</li>
+		</ul>
+
+		<div>기본 1씩 회복에 대해서 아이템 효과에 의해 +1 되어 2씩 회복.<br>연주 효과【소】로+1, 【대】로+2 (아이템 효과에 추가됨)
+		</div><br><br>
+		<br>
+
+		<h3><a class="mozTocH3" id="mozTocId84170"></a>가드 성능</h3>
+
+		<h4><a class="mozTocH4" id="mozTocId536583"></a>위력치</h4>몬스터의 공격을 가드했을 때, 얼마나 '넉백'하는가에 대한 충격력. 데미지 수치와는 별도로 각 공격에 설정된 수치이다. 데미지의 양과 비례하지 않는다.<br>
+		<br>
+		스킬 「가드성능+」은 적의 공격을 가드했을 때, 「+1」이라면 몬스터의 공격 위력치<span style="font-weight: bold;"></span>에 -10, 「+2」이라면 -20 을 하여 가드 판정에 영향을 주는 스킬이다.<br>
+		<br>
+		참고로 헤비보우건의 쉴드는 「가드성능」과 「가드강화」가 적용되지 않는다.<br><br><span style="color: #cc0000;">※ 본 공략에서는 각 대형 몬스터 정보 페이지에 공격 패턴별 위력치 일람표를 기재합니다. 다만, 미완성 데이터를 참고했으므로 표에 없는 부분은 스태미너 소비량으로 판단해주십시오. 표의 (―)는 왼쪽과 동일하다는 표시입니다.</span><br>
+		<br>
+
+		<h4><a class="mozTocH4" id="mozTocId356911"></a>넉백의 대·중·소</h4>가드의 데미지 감소량은 원래 받았을 데미지량의 1/4 가 된다.<br>
+		후퇴 모션 및 경직 시간은 보우건의 발사 경직(대·중·소)와 거의 비슷하다.<br>
+		<br>
+
+		<table>
+			<tbody>
+				<tr>
+					<th>종별</th>
+
+					<th>후퇴 거리</th>
+
+					<th>경직 시간</th>
+
+					<th>받는 데미지</th>
+
+					<th>대검의 예리도 소비</th>
+
+					<th>카운터 찌르기의 반격</th>
+				</tr>
+
+				<tr>
+					<td>대</td>
+
+					<td>대</td>
+
+					<td>약 2.4초</td>
+
+					<td>있음</td>
+
+					<td>10</td>
+
+					<td>반격 불가 (×)</td>
+				</tr>
+
+				<tr>
+					<td>중</td>
+
+					<td>중</td>
+
+					<td>약 1.9초</td>
+
+					<td>없음</td>
+
+					<td>2</td>
+
+					<td>반격 가능 (△)</td>
+				</tr>
+
+				<tr>
+					<td>소</td>
+
+					<td>소</td>
+
+					<td>약 0.9초</td>
+
+					<td>없음</td>
+
+					<td>1</td>
+
+					<td>반격 가능 (○)</td>
+				</tr>
+			</tbody>
+		</table><br>
+		<strong style="color: #ff9900;">※ 랜스의 가드 전진</strong><br>
+		'가드 전진'의 위력치 감소와 스태미너 소비 무효는 이번작에서 폐지.<br>
+		서드의 '가드 전진' 효과는 넉백「중」이하를 무효화.<br>
+		<br>
+		<strong style="color: #ff9900;">※ 무기별 가드 성능표</strong><br>
+		(잠정 데이터이므로 확정은 아닙니다. 참고용)<br>
+
+		<table>
+			<thead>
+				<tr>
+					<th>무기</th>
+
+					<th>소</th>
+
+					<th>중</th>
+
+					<th>대</th>
+
+					<th>가드 범위</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>한손검</td>
+
+					<td rowspan="2">0~19</td>
+
+					<td rowspan="2">20~29</td>
+
+					<td rowspan="2">30 이상</td>
+
+					<td rowspan="2">약 120도</td>
+				</tr>
+
+				<tr>
+					<td>헤비보우건</td>
+				</tr>
+
+				<tr>
+					<td>대검</td>
+
+					<td>0~19</td>
+
+					<td>20~39</td>
+
+					<td>40 이상</td>
+
+					<td>약 180도</td>
+				</tr>
+
+				<tr>
+					<td>랜스</td>
+
+					<td rowspan="2">0~39</td>
+
+					<td rowspan="2">40~49</td>
+
+					<td rowspan="2">50 이상</td>
+
+					<td rowspan="2">약 240도</td>
+				</tr>
+
+				<tr>
+					<td>건랜스</td>
+				</tr>
+			</tbody>
+		</table>(표의 숫자는 위력치. 위력치 <span style="color:#f11;">70</span> 이상은 랜스·건랜스 성능+2라도 넉백「대」)<br>
+		<br>
+		<br>
+
+		<h4><a class="mozTocH4" id="mozTocId725005"></a>스태미너 소비의 대·중·소</h4>
+
+		<ul>
+<li>대…스태미너 소비 60, 위력치 40 이상의 공격을 가드했을 경우</li>
+<li>중…스태미너 소비 33, 위력치 20~39 의 공격을 가드했을 경우</li>
+<li>소…스태미너 소비 25, 위력치 19 이하의 공격을 가드했을 경우</li></ul><br>
+
+		<table>
+			<thead>
+				<tr>
+					<th rowspan="2">분류</th>
+
+					<th colspan="8">위력치</th>
+				</tr>
+
+				<tr>
+					<th>0~9</th>
+
+					<th>10~19</th>
+
+					<th>20~29</th>
+
+					<th>30~39</th>
+
+					<th><span style="color:#fd1;">40~49</span></th>
+
+					<th><span style="color:#f91;">50~59</span></th>
+
+					<th><span style="color:#f51;">60~69</span></th>
+
+					<th><span style="color:#f11;">70 이상</span></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>한손검·헤비보우건</td>
+
+					<td colspan="2" style="background-color:#06a;text-align:center;">소</td>
+
+					<td style="background-color:#b70;text-align:center;">중</td>
+
+					<td colspan="5" style="background-color:#f22;text-align:center;">대</td>
+				</tr>
+
+				<tr>
+					<td>대검</td>
+
+					<td colspan="2" style="background-color:#06a;text-align:center;">소</td>
+
+					<td colspan="2" style="background-color:#b70;text-align:center;">중</td>
+
+					<td colspan="4" style="background-color:#f22;text-align:center;">대</td>
+				</tr>
+
+				<tr>
+					<td>랜스·건랜스</td>
+
+					<td colspan="4" style="background-color:#06a;text-align:center;">소</td>
+
+					<td style="background-color:#b70;text-align:center;">중</td>
+
+					<td colspan="3" style="background-color:#f22;text-align:center;">대</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<ul>
+<li>「가드성능」＋로 오른쪽, －로 왼쪽으로 각각 수치만큼 변화한다. (보우건의 쉴드는 제외)</li></ul><br><br><br>
+
+		<h3><a class="mozTocH3" id="mozTocId378604"></a>상태이상 축적치 계산식</h3>
+
+		<div>상태이상(독·마비·수면)의 축적량 산출식을 해설</div><br>
+		<pre>축적량 = 상태이상치 × 궁:차지 배율 × 강화궁 보정 × 연주 보정 × 스킬 보정(※) × 무기 보정 (소수점 이하 버림) 
+</pre>
+
+		<div>
+			(※)「상태이상공격 +1~2」이 있는 경우, 무기 보정 앞에 +1을 가산한다.</div>
+
+		<ul>
+			<li>궁:차지 배율, 강화궁 보정은 궁만 해당한다.</li>
+
+			<li>무기 보정은 근접 무기만 해당, 속성 보정과 같은 수치</li>
+		</ul><br>
+
+		<h4><a class="mozTocH4" id="mozTocId976737"></a>상태이상치</h4><br>
+
+		<ul>
+			<li>근접 무기</li>
+		</ul>
+
+		<div>무기마다 설정된 축적치 (약 1/3의 확률로 발동하여 축적)</div><br>
+
+		<ul>
+			<li>보우건</li>
+		</ul>
+
+		<table>
+			<thead>
+				<tr>
+					<th>종류</th>
+
+					<th>축적치</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>Lv1독탄</td>
+
+					<td>독25</td>
+				</tr>
+
+				<tr>
+					<td>Lv2독탄</td>
+
+					<td>독50</td>
+				</tr>
+
+				<tr>
+					<td>Lv1마비탄</td>
+
+					<td>마비25</td>
+				</tr>
+
+				<tr>
+					<td>Lv2마비탄</td>
+
+					<td>마비50</td>
+				</tr>
+
+				<tr>
+					<td>Lv1수면탄</td>
+
+					<td>수면25</td>
+				</tr>
+
+				<tr>
+					<td>Lv2수면탄</td>
+
+					<td>수면50</td>
+				</tr>
+
+				<tr>
+					<td>포획용마취탄</td>
+
+					<td>포획80？</td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<ul>
+			<li>궁</li>
+		</ul>
+
+		<table>
+			<thead>
+				<tr>
+					<th>종류</th>
+
+					<th>축적치</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>방산형</td>
+
+					<td>화살 4<br>탄4×5</td>
+				</tr>
+
+				<tr>
+					<td>집중型</td>
+
+					<td>화살 4<br>탄4×5</td>
+				</tr>
+
+				<tr>
+					<td>폭렬형</td>
+
+					<td>화살 13<br>폭발 13</td>
+				</tr>
+
+				<tr>
+					<td>화살 베기1</td>
+
+					<td>2</td>
+				</tr>
+
+				<tr>
+					<td>화살 베기2</td>
+
+					<td>2</td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<table>
+			<thead>
+				<tr>
+					<th>사격 LV</th>
+
+					<th>연사</th>
+
+					<th>확산</th>
+
+					<th>관통</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>LV1</td>
+
+					<td>13</td>
+
+					<td>5+5+5</td>
+
+					<td>5×3</td>
+				</tr>
+
+				<tr>
+					<td>LV2</td>
+
+					<td>7+7</td>
+
+					<td>6+6+6</td>
+
+					<td>4×4</td>
+				</tr>
+
+				<tr>
+					<td>LV3</td>
+
+					<td>5+5+5</td>
+
+					<td>4+4+4+4+4</td>
+
+					<td>4×5</td>
+				</tr>
+
+				<tr>
+					<td>LV4</td>
+
+					<td>4+4+4+4</td>
+
+					<td>4+4+4+4+4</td>
+
+					<td>4×5</td>
+				</tr>
+
+				<tr>
+					<td>LV5</td>
+
+					<td>4+4+4+4</td>
+
+					<td>4+4+4+4+4</td>
+
+					<td>4×5</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			※ 연사는 맨 위의 화살부터 차례대로, 확산은 화살의 발사 위치 그대로 표기</div><br>
+
+		<ul>
+			<li>기타</li>
+		</ul>
+
+		<table>
+			<thead>
+				<tr>
+					<th>종류</th>
+
+					<th>축척치</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>독투척나이프</td>
+
+					<td>독50</td>
+				</tr>
+
+				<tr>
+					<td>마비투척나이프</td>
+
+					<td>마비50</td>
+				</tr>
+
+				<tr>
+					<td>수면투척나이프</td>
+
+					<td>수면50</td>
+				</tr>
+
+				<tr>
+					<td>독연기구슬</td>
+
+					<td>독10</td>
+				</tr>
+
+				<tr>
+					<td>포획용마취옥</td>
+
+					<td>포획80？</td>
+				</tr>
+
+				<tr>
+					<td>포획용투척나이프</td>
+
+					<td>포획80？</td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<h4><a class="mozTocH4" id="mozTocId202131"></a>궁:차지 배율</h4>
+
+		<table>
+			<thead>
+				<tr>
+					<th>차지 단계</th>
+
+					<th>독</th>
+
+					<th>마비·수면</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>차지1</td>
+
+					<td>0.5</td>
+
+					<td>0.5</td>
+				</tr>
+
+				<tr>
+					<td>차지2</td>
+
+					<td>1.0</td>
+
+					<td>1.0</td>
+				</tr>
+
+				<tr>
+					<td>차지3</td>
+
+					<td>1.5</td>
+
+					<td>1.3</td>
+				</tr>
+
+				<tr>
+					<td>차지4</td>
+
+					<td>1.5</td>
+
+					<td>1.3</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<ul>
+			<li>강화활 보정</li>
+		</ul>
+
+		<div>특정의 활에서 대응 병종×1.5배</div><br>
+
+		<h4><a class="mozTocH4" id="mozTocId311733"></a>연주 보정</h4>
+
+		<table>
+			<thead>
+				<tr>
+					<th>연주 효과</th>
+
+					<th>보정치</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>상태이상공격강화</td>
+
+					<td>×1.1</td>
+				</tr>
+
+				<tr>
+					<td>상태이상공격강화×2</td>
+
+					<td>×1.15</td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<h4><a class="mozTocH4" id="mozTocId834157"></a>스킬 보정</h4>
+
+		<table>
+			<thead>
+				<tr>
+					<th>그룹</th>
+
+					<th>해당 요소</th>
+
+					<th>보정치</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>A</td>
+
+					<td>
+					고양이특수공격술</td>
+
+					<td>×1.125</td>
+				</tr>
+
+				<tr>
+					<td rowspan="3">B</td>
+
+					<td>상태이상공격+1</td>
+
+					<td>×1.1+1</td>
+				</tr>
+
+				<tr>
+					<td>상태이상공격+2</td>
+
+					<td>×1.2+1</td>
+				</tr>
+
+				<tr>
+					<td><span style="color:#f55;">상태이상공격약화</span></td>
+
+					<td>×0.9</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			※ 그룹B　「상태이상공격+」이 존재하는 경우 곱셈 후 +1</div><br>
+
+		<h4><a class="mozTocH4" id="mozTocId691168"></a>무기 보정</h4>
+
+		<div>근접 무기에 설정된 배율 보정 (속성 보정과 같은 보정치)<br>스킬 보정 이후 곱셈한다.</div><br>
+
+		</div><!-- 하단 -->
+
+	<div class="footer">
+		<p>이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</p>
+	</div>
+
+</body></html>

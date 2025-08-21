@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>공략</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="title.js"></script>
+  </head>
+  <body>
+    <!-- 상단 -->
+    <div class="header"> <a href="../index.html">
+        <h1>제3차 슈퍼로봇대전 알파</h1>
+      </a>
+      <h2>第3次スーパーロボット大戦α</h2>
+    </div>
+    <!-- 본문 -->
+    <div class="viewer">
+      <h1>게임 시스템</h1>
+      <ol id="mozToc">
+        <!--mozToc h3 1 h4 2-->
+        <li><a href="#mozTocId315803">에이스 보너스</a></li>
+        <li><a href="#mozTocId439467">풀개조 보너스</a></li>
+        <li><a href="#mozTocId615835">전멸 플레이</a></li>
+        <li><a href="#mozTocId490828">특수 생일</a></li>
+        <li><a href="#mozTocId781708">서브 시나리오 선택</a></li>
+        <li><a href="#mozTocId714498">클리어 특전</a></li>
+        <li><a href="#mozTocId980732">숙련도</a></li>
+        <li><a href="#mozTocId879659">자동편성</a></li>
+        <li><a href="#mozTocId595181">전투</a>
+          <ol>
+            <li><a href="#mozTocId867493">소대 공격</a></li>
+            <li><a href="#mozTocId882597">원호 공격</a></li>
+            <li><a href="#mozTocId518676">전체 공격</a></li>
+            <li><a href="#mozTocId205191">맵병기</a></li>
+            <li><a href="#mozTocId79789">특수효과 무기</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId944326">파일럿 능력치</a></li>
+        <li><a href="#mozTocId427770">기력 관련 특수 기능</a></li>
+        <li><a href="#mozTocId984596">각종 보정</a>
+          <ol>
+            <li><a href="#mozTocId293945">기력 보정</a></li>
+            <li><a href="#mozTocId903024">사이즈 보정</a></li>
+            <li><a href="#mozTocId238770">지형 보정</a></li>
+            <li><a href="#mozTocId360567">지형 효과</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId582660">이데 게이지</a>
+          <ol>
+            <li><a href="#mozTocId258658">이데 게이지</a></li>
+            <li><a href="#mozTocId223639">이데온 추가 무기의 실수치</a></li>
+            <li><a href="#mozTocId842230">이데 포인트 증감표</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId694236">노래 시스템</a>
+          <ol>
+            <li><a href="#mozTocId253524">노래 에너지 증감표</a></li>
+            <li><a href="#mozTocId415730">노래의 효과</a></li>
+            <li><a href="#mozTocId953818">노래 레벨</a></li>
+            <li><a href="#mozTocId333904">사운드 부스터</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId149079">싱크로율</a></li>
+        <li><a href="#mozTocId645718">데미지 계산식</a></li>
+      </ol>
+      <br>
+      일반적인 정보는 게임 내의 옵션에 있는 "Q&amp;A"를 읽어보세요.<br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId315803"></a>에이스 보너스</h3>
+      <ul>
+        <li>50기 격추로 초기 기력 +5, 획득 자금 +20% 상승</li>
+        <li>자금 관련 소대장 능력이나 특수 기능과 중첩이 가능하다. </li>
+        <li><u>행운(정신기)과 중첩되지 않는다. 행운의 효과 그대로 자금 획득량이 2배가 된다.</u></li>
+        <li>톱 에이스 보너스 : 인터미션에서 표시된 1~3위 에이스 파일럿은 기존 에이스 보너스에 추가해서 초기 기력 +5, 결과적으로 초기 기력 +10이 된다.</li>
+      </ul>
+      <h3><a class="mozTocH3" id="mozTocId439467"></a>풀개조 보너스</h3>
+      <ul>
+        <li> 편성 코스트 다운 (0.5)</li>
+        <li> 최대 HP 10% 증가</li>
+        <li> 최대 EN 10% 증가</li>
+        <li> 운동성 10% 증가</li>
+        <li> 장갑 10% 증가</li>
+        <li> 이동력 +1</li>
+        <li> 기체/무기의 지형 적응「空」을 A로 한다.</li>
+        <li> 기체/무기의 지형 적응「陸」을 A로 한다.</li>
+        <li> 기체/무기의 지형 적응「海」을 A로 한다.</li>
+        <li> 기체/무기의 지형 적응「宇」을 A로 한다.</li>
+        <li> 배리어 소비 EN을 0으로 한다.</li>
+        <li> 무기의 사정거리를 +1한다.</li>
+      </ul>
+      <ul>
+      </ul>
+      <h3><a class="mozTocH3" id="mozTocId615835"></a>전멸 플레이 </h3>
+      <ul>
+        <li> <strong>자금, 경험치, 격추수</strong>를 계승해서 재시작</li>
+        <li> 게스트 파일럿, 첫 등장 파일럿은 인계되지 않는다.</li>
+        <li> 숙련도를 획득할 수 없다. 다만, 맵이 전/후로 나뉘어진 시나리오는 일부분 가능하다.</li>
+      </ul>
+      <h3><a class="mozTocH3" id="mozTocId490828"></a>특수 생일</h3>
+      테라다의 생일인 11월 11일 B형으로 주인공을 설정하면 습득하는 정신 커맨드가 변화한다.<br>
+      <ul>
+        <li> 슈퍼계 주인공(토우마, 쿠스하) : 감응(10), 불굴(10), 철벽(10), 열혈(30), 기백(40), 사랑(50)</li>
+        <li> 리얼계 주인공(쿼브레, 세레나) : 감응(10), 불굴(10), 집중(10), 열혈(30), 혼(40), 사랑(50)</li>
+      </ul>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId781708"></a>서브 시나리오 선택</h3>
+      옵션→시나리오 차트→「!」표가 있는 시나리오를 선택<br>
+      본편과 관계 없기 때문에 자금이나 경험치는 인계되지 않는다.<br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId714498"></a>클리어 특전</h3>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">모드</th>
+            <th align="center">설명</th>
+          </tr>
+          <tr class="oddRow">
+            <td>노멀</td>
+            <td>클리어 데이터의 <strong>자금/PP</strong>를 계승하여 시작한다.<br>
+              레벨, 격추수, 강화 파츠는 계승하지 않는다.<br>
+              이어받는 비율은 주회를 거듭할 때마다 증가한다.<br>
+              2주:50%, 3주:75%, 4주~:100%<br>
+              다른 모드도 계승 비율은 같다.</td>
+          </tr>
+          <tr class="evenRow">
+            <td>EX하드</td>
+            <td>1회 클리어 이후 선택 가능<br>
+              아군 유닛의 무기 개조 불가<br>
+              PP의 소모가 2배가 된다.<br>
+              적 유닛이 강화되어 출현(+3~6단계)<br>
+              숙련도와 관계 없이 난이도 HARD의 효과를 받는다.</td>
+          </tr>
+          <tr class="oddRow">
+            <td>스페셜</td>
+            <td>EX하드 클리어 이후 선택 가능<br>
+              15단 개조 가능<br>
+              모든 기체의 코스트가 -0.5<br>
+              게임 시작 시, 모든 강화 파츠를 소지</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th colspan="2" align="center">자금, PP 계승 비율</th>
+          </tr>
+          <tr class="oddRow">
+            <td>2주</td>
+            <td> 1주차 때 개조, 파일럿 양성에 사용한 자금/PP ＋ 1주 최종 자금/PP×50%</td>
+          </tr>
+          <tr class="evenRow">
+            <td>3주</td>
+            <td> (2주 개시시 자금/PP ＋ 2주 개조, 파일럿 양성에 사용한 자금/PP ＋ 2주 최종 자금/PP)×75%</td>
+          </tr>
+          <tr class="oddRow">
+            <td>4주</td>
+            <td> (3주 개시시 자금/PP ＋ 3주 개조, 파일럿 양성에 사용한 자금/PP ＋ 3주 최종 자금/PP)×100%</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId980732"></a>숙련도</h3>
+      <ul>
+        <li> 각 시나리오 마다 숙련도 획득 조건이 있다. 조건을 만족하면 숙련도가 1상승하며 출격한 아군 전원에게 PP+5가 된다.</li>
+        <li> 숙련도에 의해서 난이도가 변화한다. (3단계)</li>
+        <li> 또한 숙련도는 최종화 분기에 영향이 있다. 최종화까지의 숙련도와 클리어 턴수가 분기에 영향을 준다.</li>
+      </ul>
+      <br>
+      <strong>HARD</strong><br>
+      <ul>
+        <li> 클리어한 시나리오 수의 80% 이상의 숙련도를 획득하면 난이도가 하드가 된다.</li>
+        <li> 적의 출현수가 증가하며, 적 유닛이 강화한다.(+2단계~)</li>
+        <li> 격추시 획득 자금이 감소한다.</li>
+        <li> 파일럿의 성격이나 특수 기능 "기력+ (격추)"의 효과가 적 1기가 아닌, 1소대를 격파하면 기력이 1상승으로 바뀜.</li>
+      </ul>
+      <strong>NORMAL</strong><br>
+      <ul>
+        <li> 일반적인 난이도</li>
+        <li> 5화까지는 숙련도에 관계없이 노멀로 고정된다.</li>
+      </ul>
+      <strong>EASY</strong><br>
+      <ul>
+        <li> 클리어한 시나리오 수의 30% 미만의 숙련도를 획득하면 난이도가 이지가 된다.</li>
+        <li> 적의 출현수가 감소</li>
+        <li> 아군의 크리티컬율이 +10%</li>
+        <li> 격추시 획득 자금이 증가한다.</li>
+        <li> 시나리오 클리어시 자금, 강화 파츠 입수 보너스가 있다.</li>
+      </ul>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId879659"></a>자동편성</h3>
+      자동으로 소대를 편성한다. (自動編成)<br>
+      1주차때는 가급적 사용하지 않고 직접 편성하는 것이 게이머 자신의 경험적인 면에서 더 도움이 된다. 3주차쯤 진행하는 게이머는 슬슬 소대편성도 지겹고 알건 다 알게 되니까 자동편성으로 모든 파일럿을 활용하면서 약간의 수정(갈아타기, 소대원 변경)만 해주면 쓸만한 소대가 완성된다. 주로 분기 루트를 진행할 때 유용하게 사용할 수 있다.(대부분 분기 루트의 시나리오는 난이도가 낮은 편이다. 대충 소대를 편성해도 무난하게 클리어)<br>
+      <ul>
+        <li> 밸런스 : 원작과 유사한 소대 구성을 해준다. 다만, 이것을 선택해서 편성을 하면 갈아타기를 한 파일럿이 초기 탑승기로 초기화된다. 원작을 중요시 한다면 선택하자.</li>
+        <li> 파워 : 공격력이 높은 소대 편성. '밸런스'에서 있던 갈아타기 문제는 생기지 않는다. 문제점으로는 소대장급 유닛이 소대원으로 편성되는 경우가 있다.</li>
+        <li> 스피드 : 이동력이 높은 소대 편성. 갈아타기 문제점은 없으며, 빠른 맵 이동이 필요한 시나리오에서 사용하면 좋다.</li>
+      </ul>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId595181"></a>전투</h3>
+      <h4><a class="mozTocH4" id="mozTocId867493"></a>소대 공격</h4>
+      <ul>
+        <li> 소대 공격을 실시하면 소대장에게 명중률 +20%의 보너스가 있다.</li>
+        <li> 소대원은 "PLA" 무기로만 공격 가능. 무기 선택이 불가능하다.</li>
+        <li> 소대원의 공격력은 통상 데미지의 40%</li>
+        <li> 사기(정신 커맨드)를 사용하면 소대 공격으로 큰 데미지를 줄 수 있다.</li>
+        <li> 소대원이 적 유닛을 격추하면 경험치와 PP입수는 통상대로, 격추수는 소대원이 받는다.</li>
+        <li> 원호방어는 소대원만 가능, 원호공격은 소대장끼리만 가능</li>
+      </ul>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId882597"></a>원호 공격</h4>
+      <ul>
+        <li> 특수 기능 "원호 공격"을 가지고 있을 때 같은 지형에 있는 소대장끼리 사용이 가능하다. </li>
+        <li> 이동 중 유닛에 원호 공격이 가능한 유닛과 남은 횟수가 표시된다.</li>
+        <li> 원호 공격에 참여한 소대장은 통상의 공격과 동일한 데미지를 줄 수 있다.</li>
+        <li> 무기를 선택할 수 있다. 전체 공격과 맵 병기는 선택 불가</li>
+      </ul>
+      EX하드 모드를 원할하게 진행하기 위해서는 원호 공격이 필수적이다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId518676"></a>전체 공격</h4>
+      <ul>
+        <li> [ALL] 아이콘이 표시된 무기가 전체 공격이다.</li>
+        <li> 적 소대의 소대원 수가 2기 이상이면 통상 공격으로 줄 수 있는 데미지에서 단계적으로 감소함. </li>
+        <li> 2기 기준 통상의 80%에서 20%씩 감소. 4기이면 통상의 40%이다.</li>
+        <li> 특수 기능 "집속공격"이 있다면 +10% 보정이 있다. 2기 기준 통상의 90%, 3기는 70%, 4기는 50%</li>
+        <li> 특수 기능은 "기력+(명중)"이 있으면 공격이 명중한 적기 수 만큼 기력이 상승한다. 1회 공격에 최대 +4까지 기력이 상승</li>
+      </ul>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId205191"></a>맵병기</h4>
+      <ul>
+        <li> 피아 식별이 가능하거나 불가능한 맵병기가 존재한다.</li>
+        <li> 전체 공격과는 다르게 데미지 증감이 발생하지 않는다.(사이즈 보정 차이, 크리티컬 등등...직격을 사용할 필요가 없다.)</li>
+        <li> 반격을 받지 않는다.</li>
+        <li> 무기 타입은 "통상 무기"로 취급</li>
+        <li> 대부분 EN 소모가 크다.</li>
+      </ul>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId79789"></a>특수효과 무기</h4>
+      <ul>
+        <li> 무기 화면 목록에 「S」아이콘이 표시된 무기가 특수효과(特殊效果) 무기이다.</li>
+        <li> 대표적으로 적의 유닛 능력치를 낮추는 효과가 있다. (운동성 ▼, 장갑▼)</li>
+        <li> 배리어 관통, 사이즈보정 무시 효과가 있는 무기도 있다.</li>
+      </ul>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId944326"></a>파일럿 능력치</h3>
+      <dl>
+        <dt>격투/사격</dt>
+        <dd>이 수치가 1 높으면 기본 공격력에 0.5%가 추가되는 것과 같다. 적에게 주는 데미지에 큰 영향을 가지고 있다. 기력이 1 높으면 격투와 사격이 1 높아지는 것과 같다.</dd>
+        <dt>방어</dt>
+        <dd>이 수치가 1 높으면 기본 방어력에 0.5%가 추가되는 것과 같다. 아군이 받는 데미지에 큰 영향을 가지고 있다. 기력이 1 높으면 방어가 1 높아지는 것과 같다.</dd>
+        <dt>기량</dt>
+        <dd>발 동형 특수 기능(베어내기, 쉴드방어 등등)은 기량과 기능레벨에 의해 판정된다. 적과 자신의 기량 차이를 기본으로 연산하기 때문에 발동형 스킬을 제대로 활용하려면 적보다 기량이 높아야한다. 또한 크리티컬 확률도 자신과 적의 기량에 의해 판정.</dd>
+        <dt>명중 / 회피</dt>
+        <dd>명중률에 영향이 있는 능력치다. </dd>
+      </dl>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId427770"></a>기력 관련 특수 기능</h3>
+      기력 상승에 관련된 특수 기능의 효과는 서로 중첩이 가능하다. 또한 소대장 능력과도 중첩이 가능하다.<br>
+      일반적으로 가장 효율이 좋은 것은 「기력 + (격추)」이다. 직접 전투를 하는 소대장과 더불어 소대원도 이 특수 기능이 있으면 빠르게 기력을 상승시킬 수 있다. 다만, 난이도가 하드 또는 EX하드 모드의 경우 적 1기가 아닌 1소대를 격파하면 기력이 1상승으로 효과가 바뀐다.<br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId984596"></a>각종 보정</h3>
+      <h4><a class="mozTocH4" id="mozTocId293945"></a>기력 보정</h4>
+      공격력, 방어력에 관련 있다.<br>
+      데미지 계산식에 의하면 [격투/사격+기력]으로 계산, 방어도 마찬가지로 [방어+기력] 으로 계산한다.<br>
+      따라서 공격측 파일럿의 기력 1의 증가는 격투 또는 사격 능력치의 1상승 효과와 같다고 보면 된다.<br>
+      "기력한계돌파"(특수 기능)를 배우면 최대 170까지 기력이 상승하므로 격투/사격 능력치 +20의 효과와 동일하다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId903024"></a>사이즈 보정</h4>
+      자신의 사이즈를 기준으로 상대방과 사이즈가 1단계 씩 차이나면 ±10%의 보정치를 가지게 된다.<br>
+      S사이즈를 가진 기체로 M사이즈의 적을 공격하면 감소 보정이 걸려 통상의 90%의 위력을 가지며, L사이즈의 기체로 S사이즈를 공격하면 통상의 120%의 위력을 가진다.<br>
+      즉 기체의 사이즈가 상대방 보다 크면 공격력이 강하다는 말이되며, 크기가 작은 기체는 불리한 입장이 된다. 열혈/혼과 같이 기본 데미지에 연산하여 최종 데미지가 결정되므로 영향력이 매우 크다.<br>
+      감소 보정을 해결하기 위해 "사이즈보정무시"라는 특수 기능이나 소대장 능력, 무기 보정이 있다. 감소하는 보정을 무효화해서 100%의 위력으로 만들어주는 기능으로 증가 보정에 대해서는 영향이 없다. 이것은 S/M 사이즈의 기체는 필수적이다.<br>
+      명중률과 관련해서는 반대로 작은 사이즈의 기체가 유리하며 큰 사이즈의 기체가 작은 사이즈의 기체를 명중하기 어려워진다. 이 사항에 관련된 보정 무시 효과는 없다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId238770"></a>지형 보정</h4>
+      공격측(무기 지형 보정), 방어측(유닛 지형 보정)으로 나뉜다.<br>
+      <dl>
+        <dt>공격측</dt>
+        <dd>무기에 설정된 지형 보정으로 강화 파츠나 풀 개조 보너스로 단계를 상승시킬 수 있다. 단계가 높으면 공격력에 영향을 주어 상대에게 주는 데미지량이 늘어난다.</dd>
+        <dt>방어측</dt>
+        <dd>유닛이 위치한 지형에 따라 적용되는 보정치로 명중(회피)/방어력에 연관이 있다. 단계가 높으면 효과가 크며 회피력에 있어서 가장 영향력이 큰 부분이다.</dd>
+      </dl>
+      무기의 지형 보정을 S로 바꿀 수 있는 방법은 우주가 S로 되는 슬래스터 모듈(강화 파츠)뿐이며 나머지 강화 파츠나 각종 보너스들은 무기의 지형 보정을 A까지 밖에 바꿀 수 없다. 유닛의 지형 보정은 강화 파츠나 풀개조 보너스, PP를 사용해서 파일럿의 지형 적응을 올려주는 방법으로 S까지 올릴 수 있다.<br>
+      4가지 지형적응 중에서 우선적으로 신경쓰며 올려줘야 할 것은 '우주'다. 3차 알파는 우주 지형의 맵이 많이 나오기 때문. 지상 맵에서는 A 정도만 되어도 특별히 신경쓸 필요는 없다. 지상의 지형 효과를 사용하면 A에서도 충분히 S이상의 보정을 받을 수 있다. 따라서 PP로 우주 적응만 S로 올려주면 된다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId360567"></a>지형 효과</h4>
+      맵 의 타일 정보를 보면 지형 효과에 대한 내용을 볼 수 있다. 방어와 명중력에 지형 보정 만큼이나 큰 영향을 주며, 적이 좋은 지형 효과가 있는 장소에 위치한다면 상대하기 곤란해진다. 일부 지형은 HP/EN 회복이 가능한 장소도 존재한다.<br>
+      <ul>
+        <li> 우주가 아닌 맵(공중/지상 커맨드가 활성화)에서는 공중에 있으면 지형 효과를 받지 못하니 지상으로 내려와야 한다. 소대의 이동 타입을 잘 확인하자.</li>
+        <li> 지상 이동은 이동 코스트가 감소하는 단점이 있다. 빠른 이동력이 필요하면 공중으로 변경한 후 이동하고 일반적으로는 지상으로 내려오는 편이 유리하다.(지상 적응 A이상)</li>
+      </ul>
+      <br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId582660"></a>이데 게이지</h3>
+      <h4><a class="mozTocH4" id="mozTocId258658"></a>이데 게이지</h4>
+      이벤트나 특정 조건을 만족해여 5단계까지 변화한다. 단계에 따라서 기체의 능력이 상승, 특수 능력, 무기의 사용이 가능해진다.<br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">단계</th>
+            <th align="center">이데 포인트</th>
+            <th align="center">사용 가능</th>
+            <th align="center">EN</th>
+            <th align="center">이동</th>
+            <th align="center">운동</th>
+            <th align="center">장갑</th>
+            <th align="center">공</th>
+            <th align="center">육</th>
+            <th align="center">해</th>
+            <th align="center">우</th>
+            <th align="center">공격력</th>
+            <th align="center">추가 능력</th>
+            <th align="center">이데 게이지 상태</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">1</td>
+            <td align="center">~119</td>
+            <td align="center">첫 등장 이후 가능</td>
+            <td align="center">280</td>
+            <td align="center">5</td>
+            <td align="center">80</td>
+            <td align="center">1100</td>
+            <td align="center">A</td>
+            <td align="center">A</td>
+            <td align="center">B</td>
+            <td align="center">A</td>
+            <td align="center">-</td>
+            <td align="center">초기 상태</td>
+            <td align="center">초기 상태<br>
+              (한가운데에 별이 있는 상태)</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">2</td>
+            <td align="center">120~</td>
+            <td align="center">첫 등장 이후 가능</td>
+            <td align="center">280</td>
+            <td align="center">5</td>
+            <td align="center">80</td>
+            <td align="center">1200</td>
+            <td align="center">A</td>
+            <td align="center">A</td>
+            <td align="center">B</td>
+            <td align="center">A</td>
+            <td align="center">+200</td>
+            <td align="center">이데 바리어 추가<br>
+              (HP30%이하로 발동)</td>
+            <td align="center">세로에 한 개의 선이 들어가 있는 상태</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">3</td>
+            <td align="center">140~</td>
+            <td align="center">제18화 이후 가능</td>
+            <td align="center">320</td>
+            <td align="center">5</td>
+            <td align="center">85</td>
+            <td align="center">1200</td>
+            <td align="center">A</td>
+            <td align="center">A</td>
+            <td align="center">B</td>
+            <td align="center">A</td>
+            <td align="center">+400</td>
+            <td align="center">전방위 미사일 추가</td>
+            <td align="center">세로에 3개의 선이 들어가 있는 상태</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">4</td>
+            <td align="center">160~</td>
+            <td rowspan="2" align="center">달 루트 20화 이후<br>
+              or<br>
+              지구강하 루트 선택시 24화 이후</td>
+            <td align="center">370</td>
+            <td align="center">6</td>
+            <td align="center">90</td>
+            <td align="center">1500</td>
+            <td align="center">A</td>
+            <td align="center">A</td>
+            <td align="center">A</td>
+            <td align="center">A</td>
+            <td align="center">+600</td>
+            <td align="center">능력 변화 이외에 추가 없음</td>
+            <td align="center">상기 상태에 삼각형이 두 개 증가</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">5</td>
+            <td align="center">220~</td>
+            <td align="center">∞</td>
+            <td align="center">7</td>
+            <td align="center">95</td>
+            <td align="center">1700</td>
+            <td align="center">S</td>
+            <td align="center">S</td>
+            <td align="center">A</td>
+            <td align="center">S</td>
+            <td align="center">+800</td>
+            <td align="center">'이데온 소드' 추가<br>
+              '이데온 건'(HP60%이하)<br>
+              '이데온 건 MAP'(HP30%이하)<br>
+              에너지∞</td>
+            <td align="center">발광</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId223639"></a>이데온 추가 무기의 실수치</h4>
+      이데온 소드, 이데온 건은 게임에서 '9999'로 고정 표시된다. 실제 공격력 수치는 다음과 같다.<br>
+      <ul>
+        <li> 이데온 소드(통상) : 12000</li>
+        <li> 이데온 소드(맵 병기) : 12000</li>
+        <li> 이데온 건(통상-전체 공격) : <strong>15000</strong></li>
+        <li> 이데온 건(맵 병기) : 12000</li>
+      </ul>
+      무기 개조로 공격력이 상승하는 것은 미확인. 상승한다는 의견도 있고, 고정값이라는 의견도 있다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId842230"></a>이데 포인트 증감표</h4>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">변동 조건</th>
+            <th align="center">증감치</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">초기치</td>
+            <td align="center">100<br>
+              (이벤트에 따라 다른 경우가 있다)</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">이데온의 HP가 1%~30%로 플레이어 페이즈 개시</td>
+            <td align="center">+10</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">이데온의 HP가 31%~60%로 플레이어 페이즈 개시</td>
+            <td align="center">+7</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">이데온의 HP가 61%~99%로 플레이어 페이즈 개시</td>
+            <td align="center">+5</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">이데온의 HP가 100%로 플레이어 페이즈 개시</td>
+            <td align="center">+3</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">이데온이 공격을 받는다(데미지의 유무는 상관 없다)</td>
+            <td align="center">+4</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">이데온이 공격을 실시한다</td>
+            <td align="center">+1</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">이데온이 적을 격추한다</td>
+            <td align="center">-3</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">별소대의 아군이 격추된다</td>
+            <td align="center">+5</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">동소대의 아군이 격추된다</td>
+            <td align="center">+10</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">이데온을 전함에 탑재한다</td>
+            <td align="center">-10</td>
+          </tr>
+        </tbody>
+      </table>
+      ※ 상기 표는 소대장인 경우의 증감치이며, 소대원은 증감치가 1/2이 된다.<br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId694236"></a>노래 시스템</h3>
+      <ul>
+        <li> 노래를 사용할 수 있는 파일럿은 바사라와 밀레느 두 명.</li>
+        <li> 노래 에너지는 파일럿 정보로 확인할 수 있으며, 매 시나리오마다 초기화된다. </li>
+        <li> 노래 에너지(歌エネルギー)를 소비해서 아군에게는 버프를 프로토데빌에게는 데미지를 준다. 바로타병에게 노래를 사용해서 기력이 90미만이 되면 격추 판정으로 경험치와 PP를 얻을 수 있다.</li>
+        <li> 에너지가 2만이 넘으면 사운드 부스터(SB)를 사용할 수 있으며, 에너지의 수치가 높으면 아군에게 거는 버프의 효과도 크다.</li>
+        <li> 사운드 부스터를 장비하면 노래가 추가되고, 주변에 기력 보정 효과를 준다.</li>
+      </ul>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId253524"></a>노래 에너지 증감표</h4>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">행동</th>
+            <th align="center">증감치</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">플레이어 페이즈 개시시</td>
+            <td align="center">+1000</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">전투 참가</td>
+            <td align="center">+500</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">노래로 격추</td>
+            <td align="center">+3000</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">「정열」사용</td>
+            <td align="center">+10000</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId415730"></a>노래의 효과</h4>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">노래 속성</th>
+            <th align="center">속성을 가지는 파일럿</th>
+            <th align="center">노래의 효과</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">+</td>
+            <td align="center">아군 파일럿</td>
+            <td align="center">+효과</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">0</td>
+            <td align="center">일반 적, 기길, 가빌, 게페르닛치(전함)</td>
+            <td align="center">효과 없음</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">-</td>
+            <td align="center">바로타병</td>
+            <td align="center">기력 다운<br>
+              기력 90 이하가 되면 철퇴(이것을 노래 격추라고 한다)</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">D</td>
+            <td align="center">프로트데비룬, 라스트 보스</td>
+            <td align="center">기력 다운<br>
+              데미지</td>
+          </tr>
+        </tbody>
+      </table>
+      노래의 효과는 열혈로 효과치를 2배 늘릴 수 있다. 노래 에너지를 최대한 높이고 열혈을 사용하면 좋다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId953818"></a>노래 레벨</h4>
+      노래가 주는 효과는 노래 에너지에 의해서 결정되는 노래 레벨에 의해서 효과가 올라간다.<br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">노래 EN</th>
+            <th align="center">노래 레벨</th>
+            <th align="center">플러스 효과</th>
+            <th align="center">기력-</th>
+            <th align="center">공격력</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">0~4000</td>
+            <td align="center">1</td>
+            <td align="center">+5</td>
+            <td align="center">-6</td>
+            <td align="center">+1000</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">4100~8000</td>
+            <td align="center">2</td>
+            <td align="center">+6</td>
+            <td align="center">-6</td>
+            <td align="center">+1100</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">8100~12000</td>
+            <td align="center">3</td>
+            <td align="center">+7</td>
+            <td align="center">-7</td>
+            <td align="center">+1200</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">12100~16000</td>
+            <td align="center">4</td>
+            <td align="center">+8</td>
+            <td align="center">-7</td>
+            <td align="center">+1300</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">16100~20000</td>
+            <td align="center">5</td>
+            <td align="center">+9</td>
+            <td align="center">-8</td>
+            <td align="center">+1400</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">20100~24000</td>
+            <td align="center">6</td>
+            <td align="center">+10</td>
+            <td align="center">-8</td>
+            <td align="center">+1500</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">24100~28000</td>
+            <td align="center">7</td>
+            <td align="center">+11</td>
+            <td align="center">-9</td>
+            <td align="center">+1600</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">28100~32000</td>
+            <td align="center">8</td>
+            <td align="center">+12</td>
+            <td align="center">-9</td>
+            <td align="center">+1700</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">32100~36000</td>
+            <td align="center">9</td>
+            <td align="center">+13</td>
+            <td align="center">-10</td>
+            <td align="center">+1800</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">36100~40000</td>
+            <td align="center">10</td>
+            <td align="center">+14</td>
+            <td align="center">-10</td>
+            <td align="center">+1900</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">40100~</td>
+            <td align="center">11</td>
+            <td align="center">+15</td>
+            <td align="center">-10</td>
+            <td align="center">+2000</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId333904"></a>사운드 부스터</h4>
+      어느 정도 스토리가 진행되면, 바사라나 밀레느의 노래 에너지가 20000을 넘었을 때, 유닛에 사운드 부스터가 장비 가능하게 된다.<br>
+      주위에 유닛의 기력을 상승시키는 효과를 준다. 노래의 종류도 증가한다.<br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th colspan="2" align="center">사운드 부스터의 기력 보정</th>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">효과 범위 산출 방법</th>
+            <td align="center">범위(칸) = 노래 레벨÷3+1 (최대 범위 : 4칸)</td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">기력 수정 산출 방법</th>
+            <td align="center">노래 레벨÷2+6－유닛간의 거리 (수정 최고치 +10)</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId149079"></a>싱크로율</h3>
+      에반게리온 전용 시스템, <a tiddlyfields="server.type:&quot;file&quot; server.host:&quot;file:///C:/Users/kmk1290/Desktop/Alpha3.html&quot;"
+
+        tiddlylink="이데 게이지" refresh="link" class="tiddlyLink tiddlyLinkNonExisting"
+
+        title="'이데 게이지' 티들러가 아직 만들어지지 않았습니다." href="javascript:;">이데 게이지</a>와 비슷하다.<br>
+      AT필드의 효과, 명중/회피와 기력에 보정이 걸린다.<br>
+      <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th colspan="3" align="center">파일럿 기본치</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">신지 50</td>
+            <td align="center">아스카 45</td>
+            <td align="center">레이 40</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th colspan="2" align="center">싱크로율 각종 수치 해석</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">출격시 싱크로율 산출법</td>
+            <td align="center">파일럿 기본치+(레벨÷10)</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">명중・회피 보정</td>
+            <td align="center">(싱크로율-20)÷4</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">기력 보정</td>
+            <td align="center">(싱크로율-20)÷4</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table class="twtable">
+        <caption>싱크로율 증감표</caption>
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">상황</th>
+            <th align="center">증감치</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">데미지를 받는다</td>
+            <td align="center">-1</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">공격을 회피</td>
+            <td align="center">+1</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">공격을 AT필드에서 무효화</td>
+            <td align="center">+1</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">적에게 데미지를 준다</td>
+            <td align="center">+1</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">공격을 실시했지만, 데미지가 주어지지 않았다</td>
+            <td align="center">-2</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">적을 격추한다</td>
+            <td align="center">+3</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table class="twtable">
+        <tbody>
+        </tbody>
+        <caption>AT필드의 보정치</caption>
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">싱크로율</th>
+            <th align="center">보정치</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">~50%</td>
+            <td align="center">없음</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">51%~55%</td>
+            <td align="center">+100</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">56%~60%</td>
+            <td align="center">+200</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">61%~65%</td>
+            <td align="center">+300</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">66%~70%</td>
+            <td align="center">+400</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">71%~75%</td>
+            <td align="center">+500</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">76%~80%</td>
+            <td align="center">+600</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">81%~85%</td>
+            <td align="center">+700</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">86%~90%</td>
+            <td align="center">+800</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="center">91%~95%</td>
+            <td align="center">+900</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="center">96%~</td>
+            <td align="center">+1000</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId645718"></a>데미지 계산식</h3>
+      <ul>
+        <li> 기본 공격력 = 무기 공격력×(격투or사격+기력)÷200×무기 지형 적응</li>
+        <li> 기본 방어력 = 장갑치×(방어치+기력)÷200×기체 지형 적응</li>
+        <li> <strong>기본 데미지</strong> = (기본 공격력 - 기본 방어력)</li>
+      </ul>
+      기본 데미지에 각종 보정(특수 능력, 특수 기능, 소대장 능력, 사이즈 보정, 크리티컬, 열혈, 혼)을 곱해주면 된다.<br>
+    </div>
+    <!-- 하단 -->
+    <div class="footer">
+      <p>이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</p>
+    </div>
+  </body>
+</html>

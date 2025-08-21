@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>공략</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="title.js"></script>
+  </head>
+  <body>
+    <!-- 상단 -->
+    <div class="header"> <a href="../index.html">
+        <h1>진 여신전생</h1>
+      </a>
+      <h2>2신 합체</h2>
+    </div>
+    <!-- 본문 -->
+    <div class="viewer">
+      <ul>
+        <li> ※는 대종족 합체</li>
+        <li> 세로는 1번째 악마의 종족, 가로는 2번째 악마의 종족</li>
+        <li> 2신 합체로 만드는 악마의 결과 (아래의 계산식으로 나온 값에 가장 가까운 레벨의 악마가 탄생한다.)
+          <ul>
+            <li> 일반적인 합체의 경우, <u>악마의 레벨 평균 + 2</u></li>
+            <li> 대종족 합체의 경우, <u>악마의 레벨 평균 + 3</u></li>
+          </ul>
+        </li>
+      </ul>
+      <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">종족</th>
+            <th align="center">마신</th>
+            <th align="center">여신</th>
+            <th align="center">천마</th>
+            <th align="center">귀신</th>
+            <th align="center">귀녀</th>
+            <th align="center">요마</th>
+            <th align="center">야마</th>
+            <th align="center">요정</th>
+            <th align="center">천사</th>
+            <th align="center">타천사</th>
+            <th align="center">용신</th>
+            <th align="center">용왕</th>
+            <th align="center">영조</th>
+            <th align="center">요조</th>
+            <th align="center">신수</th>
+            <th align="center">성수</th>
+            <th align="center">마수</th>
+            <th align="center">투귀</th>
+            <th align="center">요귀</th>
+            <th align="center">지령</th>
+            <th align="center">수인</th>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">마신</th>
+            <td align="center">－</td>
+            <td align="center">※</td>
+            <td align="center">－</td>
+            <td align="center">－</td>
+            <td align="center">여신</td>
+            <td align="center">여신</td>
+            <td align="center">요마</td>
+            <td align="center">야마</td>
+            <td align="center">여신</td>
+            <td align="center">천마</td>
+            <td align="center">천마</td>
+            <td align="center">귀신</td>
+            <td align="center">천사</td>
+            <td align="center">타천사</td>
+            <td align="center">용신</td>
+            <td align="center">용왕</td>
+            <td align="center">신수</td>
+            <td align="center">귀신</td>
+            <td align="center">투귀</td>
+            <td align="center">요귀</td>
+            <td align="center">마수</td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">여신</th>
+            <td align="center">※</td>
+            <td align="center">－</td>
+            <td align="center">－</td>
+            <td align="center">－</td>
+            <td align="center">요정</td>
+            <td align="center">천마</td>
+            <td align="center">지령</td>
+            <td align="center">요마</td>
+            <td align="center">타천사</td>
+            <td align="center">천마</td>
+            <td align="center">귀녀</td>
+            <td align="center">용신</td>
+            <td align="center">천사</td>
+            <td align="center">타천사</td>
+            <td align="center">용신</td>
+            <td align="center">용왕</td>
+            <td align="center">신수</td>
+            <td align="center">귀녀</td>
+            <td align="center">투귀</td>
+            <td align="center">요귀</td>
+            <td align="center">용왕</td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">천마</th>
+            <td align="center">－</td>
+            <td align="center">－</td>
+            <td align="center">－</td>
+            <td align="center">※</td>
+            <td align="center">※</td>
+            <td align="center">여신</td>
+            <td align="center">타천사</td>
+            <td align="center">요마</td>
+            <td align="center">외도</td>
+            <td align="center">요마</td>
+            <td align="center">귀신</td>
+            <td align="center">용신</td>
+            <td align="center">천사</td>
+            <td align="center">타천사</td>
+            <td align="center">용신</td>
+            <td align="center">용왕</td>
+            <td align="center">신수</td>
+            <td align="center">귀신</td>
+            <td align="center">투귀</td>
+            <td align="center">요귀</td>
+            <td align="center">사룡</td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">귀신</th>
+            <td align="center">－</td>
+            <td align="center">－</td>
+            <td align="center">※</td>
+            <td align="center">－</td>
+            <td align="center">※</td>
+            <td align="center">귀녀</td>
+            <td align="center">타천사</td>
+            <td align="center">귀녀</td>
+            <td align="center">귀녀</td>
+            <td align="center">야마</td>
+            <td align="center">천마</td>
+            <td align="center">용신</td>
+            <td align="center">용왕</td>
+            <td align="center">귀녀</td>
+            <td align="center">용신</td>
+            <td align="center">용왕</td>
+            <td align="center">신수</td>
+            <td align="center">용신</td>
+            <td align="center">용왕</td>
+            <td align="center">투귀</td>
+            <td align="center">신수</td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">귀녀</th>
+            <td align="center">여신</td>
+            <td align="center">요정</td>
+            <td align="center">※</td>
+            <td align="center">※</td>
+            <td align="center">정령</td>
+            <td align="center">야마</td>
+            <td align="center">타천사</td>
+            <td align="center">야마</td>
+            <td align="center">여신</td>
+            <td align="center">투귀</td>
+            <td align="center">귀신</td>
+            <td align="center">여신</td>
+            <td align="center">요귀</td>
+            <td align="center">요마</td>
+            <td align="center">귀신</td>
+            <td align="center">용왕</td>
+            <td align="center">신수</td>
+            <td align="center">용왕</td>
+            <td align="center">투귀</td>
+            <td align="center">요귀</td>
+            <td align="center">사룡</td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">요마</th>
+            <td align="center">여신</td>
+            <td align="center">천마</td>
+            <td align="center">여신</td>
+            <td align="center">귀녀</td>
+            <td align="center">야마</td>
+            <td align="center">정령</td>
+            <td align="center">※</td>
+            <td align="center">※</td>
+            <td align="center">타천사</td>
+            <td align="center">야마</td>
+            <td align="center">귀녀</td>
+            <td align="center">영조</td>
+            <td align="center">용왕</td>
+            <td align="center">타천사</td>
+            <td align="center">수인</td>
+            <td align="center">사룡</td>
+            <td align="center">요귀</td>
+            <td align="center">귀녀</td>
+            <td align="center">투귀</td>
+            <td align="center">요귀</td>
+            <td align="center">마수</td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">야마</th>
+            <td align="center">요마</td>
+            <td align="center">지령</td>
+            <td align="center">타천사</td>
+            <td align="center">타천사</td>
+            <td align="center">타천사</td>
+            <td align="center">※</td>
+            <td align="center">정령</td>
+            <td align="center">※</td>
+            <td align="center">타천사</td>
+            <td align="center">요마</td>
+            <td align="center">용왕</td>
+            <td align="center">사룡</td>
+            <td align="center">흉조</td>
+            <td align="center">흉조</td>
+            <td align="center">마수</td>
+            <td align="center">수인</td>
+            <td align="center">요수</td>
+            <td align="center">귀녀</td>
+            <td align="center">사귀</td>
+            <td align="center">악령</td>
+            <td align="center">유귀</td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">요정</th>
+            <td align="center">야마</td>
+            <td align="center">요마</td>
+            <td align="center">요마</td>
+            <td align="center">귀녀</td>
+            <td align="center">야마</td>
+            <td align="center">※</td>
+            <td align="center">※</td>
+            <td align="center">정령</td>
+            <td align="center">여신</td>
+            <td align="center">천사</td>
+            <td align="center">신수</td>
+            <td align="center">성수</td>
+            <td align="center">천사</td>
+            <td align="center">타천사</td>
+            <td align="center">용왕</td>
+            <td align="center">마수</td>
+            <td align="center">성수</td>
+            <td align="center">귀녀</td>
+            <td align="center">요마</td>
+            <td align="center">요귀</td>
+            <td align="center">요귀</td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">천사</th>
+            <td align="center">여신</td>
+            <td align="center">타천사</td>
+            <td align="center">외도</td>
+            <td align="center">귀녀</td>
+            <td align="center">여신</td>
+            <td align="center">타천사</td>
+            <td align="center">타천사</td>
+            <td align="center">여신</td>
+            <td align="center">정령</td>
+            <td align="center">요마</td>
+            <td align="center">천마</td>
+            <td align="center">성수</td>
+            <td align="center">여신</td>
+            <td align="center">영조</td>
+            <td align="center">용신</td>
+            <td align="center">신수</td>
+            <td align="center">성수</td>
+            <td align="center">요마</td>
+            <td align="center">요마</td>
+            <td align="center">요정</td>
+            <td align="center">요귀</td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">타천사</th>
+            <td align="center">천마</td>
+            <td align="center">천마</td>
+            <td align="center">요마</td>
+            <td align="center">야마</td>
+            <td align="center">투귀</td>
+            <td align="center">야마</td>
+            <td align="center">요마</td>
+            <td align="center">천사</td>
+            <td align="center">요마</td>
+            <td align="center">정령</td>
+            <td align="center">사룡</td>
+            <td align="center">귀녀</td>
+            <td align="center">요마</td>
+            <td align="center">야마</td>
+            <td align="center">요마</td>
+            <td align="center">마수</td>
+            <td align="center">수신</td>
+            <td align="center">귀녀</td>
+            <td align="center">유귀</td>
+            <td align="center">사귀</td>
+            <td align="center">요수</td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">용신</th>
+            <td align="center">천마</td>
+            <td align="center">귀녀</td>
+            <td align="center">귀신</td>
+            <td align="center">천마</td>
+            <td align="center">귀신</td>
+            <td align="center">귀녀</td>
+            <td align="center">용왕</td>
+            <td align="center">신수</td>
+            <td align="center">천마</td>
+            <td align="center">사룡</td>
+            <td align="center">－</td>
+            <td align="center">※</td>
+            <td align="center">천마</td>
+            <td align="center">귀신</td>
+            <td align="center">용왕</td>
+            <td align="center">용왕</td>
+            <td align="center">용왕</td>
+            <td align="center">귀신</td>
+            <td align="center">투귀</td>
+            <td align="center">사룡</td>
+            <td align="center">천마</td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">용왕</th>
+            <td align="center">귀신</td>
+            <td align="center">용신</td>
+            <td align="center">용신</td>
+            <td align="center">용신</td>
+            <td align="center">여신</td>
+            <td align="center">영조</td>
+            <td align="center">사룡</td>
+            <td align="center">성수</td>
+            <td align="center">신수</td>
+            <td align="center">귀녀</td>
+            <td align="center">※</td>
+            <td align="center">정령</td>
+            <td align="center">용신</td>
+            <td align="center">귀녀</td>
+            <td align="center">영조</td>
+            <td align="center">신수</td>
+            <td align="center">성수</td>
+            <td align="center">귀신</td>
+            <td align="center">투귀</td>
+            <td align="center">요귀</td>
+            <td align="center">마수</td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">영조</th>
+            <td align="center">천사</td>
+            <td align="center">천사</td>
+            <td align="center">천사</td>
+            <td align="center">용왕</td>
+            <td align="center">요귀</td>
+            <td align="center">용왕</td>
+            <td align="center">흉조</td>
+            <td align="center">천사</td>
+            <td align="center">여신</td>
+            <td align="center">요마</td>
+            <td align="center">천마</td>
+            <td align="center">용신</td>
+            <td align="center">정령</td>
+            <td align="center">※</td>
+            <td align="center">용신</td>
+            <td align="center">신수</td>
+            <td align="center">성수</td>
+            <td align="center">신수</td>
+            <td align="center">야마</td>
+            <td align="center">요수</td>
+            <td align="center">마수</td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">요조</th>
+            <td align="center">타천사</td>
+            <td align="center">타천사</td>
+            <td align="center">타천사</td>
+            <td align="center">귀녀</td>
+            <td align="center">요마</td>
+            <td align="center">타천사</td>
+            <td align="center">흉조</td>
+            <td align="center">타천사</td>
+            <td align="center">영조</td>
+            <td align="center">야마</td>
+            <td align="center">귀신</td>
+            <td align="center">귀녀</td>
+            <td align="center">※</td>
+            <td align="center">정령</td>
+            <td align="center">영조</td>
+            <td align="center">영조</td>
+            <td align="center">요귀</td>
+            <td align="center">귀녀</td>
+            <td align="center">타천사</td>
+            <td align="center">흉조</td>
+            <td align="center">요귀</td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">신수</th>
+            <td align="center">용신</td>
+            <td align="center">용신</td>
+            <td align="center">용신</td>
+            <td align="center">용신</td>
+            <td align="center">귀신</td>
+            <td align="center">수신</td>
+            <td align="center">마수</td>
+            <td align="center">용왕</td>
+            <td align="center">용신</td>
+            <td align="center">요마</td>
+            <td align="center">용왕</td>
+            <td align="center">영조</td>
+            <td align="center">용신</td>
+            <td align="center">영조</td>
+            <td align="center">정령</td>
+            <td align="center">※</td>
+            <td align="center">※</td>
+            <td align="center">귀신</td>
+            <td align="center">용왕</td>
+            <td align="center">용왕</td>
+            <td align="center">용왕</td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">성수</th>
+            <td align="center">용왕</td>
+            <td align="center">용왕</td>
+            <td align="center">용왕</td>
+            <td align="center">용왕</td>
+            <td align="center">용왕</td>
+            <td align="center">사룡</td>
+            <td align="center">수신</td>
+            <td align="center">마수</td>
+            <td align="center">신수</td>
+            <td align="center">마수</td>
+            <td align="center">용왕</td>
+            <td align="center">신수</td>
+            <td align="center">신수</td>
+            <td align="center">영조</td>
+            <td align="center">※</td>
+            <td align="center">정령</td>
+            <td align="center">※</td>
+            <td align="center">신수</td>
+            <td align="center">마수</td>
+            <td align="center">마수</td>
+            <td align="center">요수</td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">마수</th>
+            <td align="center">신수</td>
+            <td align="center">신수</td>
+            <td align="center">신수</td>
+            <td align="center">신수</td>
+            <td align="center">신수</td>
+            <td align="center">요귀</td>
+            <td align="center">요수</td>
+            <td align="center">성수</td>
+            <td align="center">신수</td>
+            <td align="center">수신</td>
+            <td align="center">용왕</td>
+            <td align="center">성수</td>
+            <td align="center">성수</td>
+            <td align="center">요귀</td>
+            <td align="center">※</td>
+            <td align="center">※</td>
+            <td align="center">정령</td>
+            <td align="center">수신</td>
+            <td align="center">투귀</td>
+            <td align="center">성수</td>
+            <td align="center">성수</td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">투귀</th>
+            <td align="center">귀신</td>
+            <td align="center">귀녀</td>
+            <td align="center">귀신</td>
+            <td align="center">용신</td>
+            <td align="center">용왕</td>
+            <td align="center">귀녀</td>
+            <td align="center">귀녀</td>
+            <td align="center">귀녀</td>
+            <td align="center">요마</td>
+            <td align="center">귀녀</td>
+            <td align="center">귀신</td>
+            <td align="center">귀신</td>
+            <td align="center">신수</td>
+            <td align="center">귀녀</td>
+            <td align="center">귀신</td>
+            <td align="center">신수</td>
+            <td align="center">수신</td>
+            <td align="center">정령</td>
+            <td align="center">※</td>
+            <td align="center">※</td>
+            <td align="center">귀신</td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">요귀</th>
+            <td align="center">투귀</td>
+            <td align="center">투귀</td>
+            <td align="center">투귀</td>
+            <td align="center">용왕</td>
+            <td align="center">투귀</td>
+            <td align="center">투귀</td>
+            <td align="center">사귀</td>
+            <td align="center">요마</td>
+            <td align="center">요마</td>
+            <td align="center">유귀</td>
+            <td align="center">투귀</td>
+            <td align="center">투귀</td>
+            <td align="center">야마</td>
+            <td align="center">타천사</td>
+            <td align="center">용왕</td>
+            <td align="center">마수</td>
+            <td align="center">투귀</td>
+            <td align="center">※</td>
+            <td align="center">정령</td>
+            <td align="center">※</td>
+            <td align="center">요마</td>
+          </tr>
+          <tr class="evenRow">
+            <th align="center">지령</th>
+            <td align="center">요귀</td>
+            <td align="center">요귀</td>
+            <td align="center">요귀</td>
+            <td align="center">투귀</td>
+            <td align="center">요귀</td>
+            <td align="center">요귀</td>
+            <td align="center">악령</td>
+            <td align="center">요귀</td>
+            <td align="center">요정</td>
+            <td align="center">사귀</td>
+            <td align="center">사룡</td>
+            <td align="center">요귀</td>
+            <td align="center">요수</td>
+            <td align="center">흉조</td>
+            <td align="center">용왕</td>
+            <td align="center">마수</td>
+            <td align="center">성수</td>
+            <td align="center">※</td>
+            <td align="center">※</td>
+            <td align="center">정령</td>
+            <td align="center">요정</td>
+          </tr>
+          <tr class="oddRow">
+            <th align="center">수신</th>
+            <td align="center">마수</td>
+            <td align="center">용왕</td>
+            <td align="center">사룡</td>
+            <td align="center">신수</td>
+            <td align="center">사룡</td>
+            <td align="center">마수</td>
+            <td align="center">유귀</td>
+            <td align="center">요귀</td>
+            <td align="center">요귀</td>
+            <td align="center">요수</td>
+            <td align="center">천마</td>
+            <td align="center">마수</td>
+            <td align="center">마수</td>
+            <td align="center">요귀</td>
+            <td align="center">용왕</td>
+            <td align="center">요수</td>
+            <td align="center">성수</td>
+            <td align="center">귀신</td>
+            <td align="center">요마</td>
+            <td align="center">요정</td>
+            <td align="center">－</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+    <!-- 하단 -->
+    <div class="footer">
+      <p>이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+	<title>공략의 제국</title>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="../RES/favicon.ico" rel="shortcut icon">
+	<link href="../RES/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="header"><a href="../index.html"><h1>마계전기 디스가이아2</h1></a><h2>아이템 강화 계산기</h2></div>
+	<div id="article">
+	<div class="textbox" style="line-height:200%;">
+<form>
+	돌파한 층수 : <input maxlength="3" name="LV1" size="5" style="ime-mode:disabled" type="text" value="100"><br>
+	추가 레벨 : + <input maxlength="3" name="LV2" size="5" style="ime-mode:disabled" type="text" value="100"><br>
+	기본 파라미터 : <input maxlength="5" name="STATUS" size="6" style="ime-mode:disabled" type="text"> (노멀값을 입력)<br>
+	<span style="color: #666666;">
+	<ul>
+		<li>랭크 40 장비의 주요 파라미터<br>※ ()는 레전드일 때의 파라미터</li>
+		<li style="list-style: none; display: inline">
+			<ul>
+				<li>권(ATK, SPD) : 암루텐 = 3600 (5400)</li>
+				<li>검(ATK) : 마검 요시츠나 = 4000 (6000)</li>
+				<li>창(ATK) : 드릴 엠페러 = 3600 (5400)</li>
+				<li>활(ATK, HIT) : 러브 아처리 = 3100 (4650)</li>
+				<li>총(HIT) : 에투알 = 3100 (4650)</li>
+				<li>도끼(ATK) : 아포칼립스 = 5200 (7800)</li>
+				<li>지팡이(INT) : 전지전능의 지팡이 = 3600 (5400)</li>
+				<li>마물(ATK) : 바빌론의 왕관 = 4000 (6000)</li>
+				<li>마물(ATK, INT) : 우자의 석판 = 3600 (5400)</li>
+				<li>방어구(DEF) : 초합금 로봇 슈트 = 4200 (6300)</li>
+			</ul>
+		</li>
+	</ul></span><br>
+	레어리티 : <input name="RARITY" type="radio" value="0">노멀 <input name="RARITY" type="radio" value="1">레어 <input checked="checked" name="RARITY" type="radio" value="2">레전드<br>
+	<br>
+	<table>
+		<tbody>
+			<tr>
+				<th>층수</th>
+				<th>이노센트 수</th>
+				<th>보스 격파</th>
+				<th>성장 의제 가결</th>
+			</tr>
+			<tr align="center">
+				<td rowspan="2">10F</td>
+				<td><select name="INNOCENT_10_1">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option selected="selected" value="6">
+						6체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_10_1" type="checkbox"></td>
+				<td rowspan="2"><select name="GIKAI_10">
+					<option value="0">
+						－
+					</option>
+					<option value="1">
+						가결(조금)
+					</option>
+					<option selected="selected" value="2">
+						가결
+					</option>
+				</select></td>
+			</tr>
+			<tr align="center">
+				<td><select name="INNOCENT_10_2">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option selected="selected" value="6">
+						6체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_10_2" type="checkbox"></td>
+			</tr>
+			<tr align="center">
+				<td rowspan="2">20F</td>
+				<td><select name="INNOCENT_20_1">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option selected="selected" value="6">
+						6체
+					</option>
+					<option value="6">
+						7체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_20_1" type="checkbox"></td>
+				<td rowspan="2"><select name="GIKAI_20">
+					<option value="0">
+						－
+					</option>
+					<option value="1">
+						가결(조금)
+					</option>
+					<option selected="selected" value="2">
+						가결
+					</option>
+				</select></td>
+			</tr>
+			<tr align="center">
+				<td><select name="INNOCENT_20_2">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option selected="selected" value="6">
+						6체
+					</option>
+					<option value="6">
+						7체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_20_2" type="checkbox"></td>
+			</tr>
+			<tr align="center">
+				<td rowspan="2">30F</td>
+				<td><select name="INNOCENT_30_1">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option selected="selected" value="6">
+						6체
+					</option>
+					<option value="6">
+						7체
+					</option>
+					<option value="6">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_30_1" type="checkbox"></td>
+				<td rowspan="2"><select name="GIKAI_30">
+					<option value="0">
+						－
+					</option>
+					<option value="1">
+						가결(조금)
+					</option>
+					<option selected="selected" value="2">
+						가결
+					</option>
+				</select></td>
+			</tr>
+			<tr align="center">
+				<td><select name="INNOCENT_30_2">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option value="6">
+						6체
+					</option>
+					<option selected="selected" value="7">
+						7체
+					</option>
+					<option value="6">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_30_2" type="checkbox"></td>
+			</tr>
+			<tr align="center">
+				<td rowspan="2">40F</td>
+				<td><select name="INNOCENT_40_1">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option value="6">
+						6체
+					</option>
+					<option value="7">
+						7체
+					</option>
+					<option selected="selected" value="8">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_40_1" type="checkbox"></td>
+				<td rowspan="2"><select name="GIKAI_40">
+					<option selected="selected" value="0">
+						－
+					</option>
+					<option value="1">
+						가결(조금)
+					</option>
+					<option value="2">
+						가결
+					</option>
+				</select></td>
+			</tr>
+			<tr align="center">
+				<td><select name="INNOCENT_40_2">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option value="6">
+						6체
+					</option>
+					<option value="7">
+						7체
+					</option>
+					<option selected="selected" value="8">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_40_2" type="checkbox"></td>
+			</tr>
+			<tr align="center">
+				<td rowspan="2">50F</td>
+				<td><select name="INNOCENT_50_1">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option value="6">
+						6체
+					</option>
+					<option value="7">
+						7체
+					</option>
+					<option selected="selected" value="8">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_50_1" type="checkbox"></td>
+				<td rowspan="2"><select name="GIKAI_50">
+					<option selected="selected" value="0">
+						－
+					</option>
+					<option value="1">
+						가결(조금)
+					</option>
+					<option value="2">
+						가결
+					</option>
+				</select></td>
+			</tr>
+			<tr align="center">
+				<td><select name="INNOCENT_50_2">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option value="6">
+						6체
+					</option>
+					<option value="7">
+						7체
+					</option>
+					<option selected="selected" value="8">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_50_2" type="checkbox"></td>
+			</tr>
+			<tr align="center">
+				<td rowspan="2">60F</td>
+				<td><select name="INNOCENT_60_1">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option value="6">
+						6체
+					</option>
+					<option value="7">
+						7체
+					</option>
+					<option selected="selected" value="8">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_60_1" type="checkbox"></td>
+				<td rowspan="2"><select name="GIKAI_60">
+					<option selected="selected" value="0">
+						－
+					</option>
+					<option value="1">
+						가결(조금)
+					</option>
+					<option value="2">
+						가결
+					</option>
+				</select></td>
+			</tr>
+			<tr align="center">
+				<td><select name="INNOCENT_60_2">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option value="6">
+						6체
+					</option>
+					<option value="7">
+						7체
+					</option>
+					<option selected="selected" value="8">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_60_2" type="checkbox"></td>
+			</tr>
+			<tr align="center">
+				<td rowspan="2">70F</td>
+				<td><select name="INNOCENT_70_1">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option value="6">
+						6체
+					</option>
+					<option value="7">
+						7체
+					</option>
+					<option selected="selected" value="8">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_70_1" type="checkbox"></td>
+				<td rowspan="2"><select name="GIKAI_70">
+					<option selected="selected" value="0">
+						－
+					</option>
+					<option value="1">
+						가결(조금)
+					</option>
+					<option value="2">
+						가결
+					</option>
+				</select></td>
+			</tr>
+			<tr align="center">
+				<td><select name="INNOCENT_70_2">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option value="6">
+						6체
+					</option>
+					<option value="7">
+						7체
+					</option>
+					<option selected="selected" value="8">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_70_2" type="checkbox"></td>
+			</tr>
+			<tr align="center">
+				<td rowspan="2">80F</td>
+				<td><select name="INNOCENT_80_1">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option value="6">
+						6체
+					</option>
+					<option value="7">
+						7체
+					</option>
+					<option selected="selected" value="8">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_80_1" type="checkbox"></td>
+				<td rowspan="2"><select name="GIKAI_80">
+					<option selected="selected" value="0">
+						－
+					</option>
+					<option value="1">
+						가결(조금)
+					</option>
+					<option value="2">
+						가결
+					</option>
+				</select></td>
+			</tr>
+			<tr align="center">
+				<td><select name="INNOCENT_80_2">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option value="6">
+						6체
+					</option>
+					<option value="7">
+						7체
+					</option>
+					<option selected="selected" value="8">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_80_2" type="checkbox"></td>
+			</tr>
+			<tr align="center">
+				<td rowspan="2">90F</td>
+				<td><select name="INNOCENT_90_1">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option value="6">
+						6체
+					</option>
+					<option value="7">
+						7체
+					</option>
+					<option selected="selected" value="8">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_90_1" type="checkbox"></td>
+				<td rowspan="2"><select name="GIKAI_90">
+					<option selected="selected" value="0">
+						－
+					</option>
+					<option value="1">
+						가결(조금)
+					</option>
+					<option value="2">
+						가결
+					</option>
+				</select></td>
+			</tr>
+			<tr align="center">
+				<td><select name="INNOCENT_90_2">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option value="6">
+						6체
+					</option>
+					<option value="7">
+						7체
+					</option>
+					<option selected="selected" value="8">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_90_2" type="checkbox"></td>
+			</tr>
+			<tr align="center">
+				<td rowspan="2">100F</td>
+				<td><select name="INNOCENT_100_1">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option value="6">
+						6체
+					</option>
+					<option value="7">
+						7체
+					</option>
+					<option selected="selected" value="8">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_100_1" type="checkbox"></td>
+				<td rowspan="2"><select name="GIKAI_100">
+					<option selected="selected" value="0">
+						－
+					</option>
+					<option value="1">
+						가결(조금)
+					</option>
+					<option value="2">
+						가결
+					</option>
+				</select></td>
+			</tr>
+			<tr align="center">
+				<td><select name="INNOCENT_100_2">
+					<option value="0">
+						없음
+					</option>
+					<option value="1">
+						1체
+					</option>
+					<option value="2">
+						2체
+					</option>
+					<option value="3">
+						3체
+					</option>
+					<option value="4">
+						4체
+					</option>
+					<option value="5">
+						5체
+					</option>
+					<option value="6">
+						6체
+					</option>
+					<option value="7">
+						7체
+					</option>
+					<option selected="selected" value="8">
+						8체
+					</option>
+				</select></td>
+				<td><input checked="checked" name="BOSS_100_2" type="checkbox"></td>
+			</tr>
+		</tbody>
+	</table><br>
+	<input onclick="innocent0()" type="button" value="이노센트 없음"> <input onclick="innocent1()" type="button" value="이노센트 추가"><br>
+	<input onclick="boss0()" type="button" value="보스 2회 격파 없음"> <input onclick="boss1()" type="button" value="보스 2회 격파 추가"><br>
+	<br>
+	<input onclick="calcuate1()" type="button" value="계산"><br>
+	<br>
+	최종 파라미터 : <input id="result_item_Lv_up" type="text"><br>
+</form>	
+	</div>
+	</div>
+	<div id="footer"><a href="#header">이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</a></div>
+
+<script type="text/javascript">
+function innocent0() {
+	document.forms[0].INNOCENT_10_1.value = 0;
+	document.forms[0].INNOCENT_10_2.value = 0;
+	document.forms[0].INNOCENT_20_1.value = 0;
+	document.forms[0].INNOCENT_20_2.value = 0;
+	document.forms[0].INNOCENT_30_1.value = 0;
+	document.forms[0].INNOCENT_30_2.value = 0;
+	document.forms[0].INNOCENT_40_1.value = 0;
+	document.forms[0].INNOCENT_40_2.value = 0;
+	document.forms[0].INNOCENT_50_1.value = 0;
+	document.forms[0].INNOCENT_50_2.value = 0;
+	document.forms[0].INNOCENT_60_1.value = 0;
+	document.forms[0].INNOCENT_60_2.value = 0;
+	document.forms[0].INNOCENT_70_1.value = 0;
+	document.forms[0].INNOCENT_70_2.value = 0;
+	document.forms[0].INNOCENT_80_1.value = 0;
+	document.forms[0].INNOCENT_80_2.value = 0;
+	document.forms[0].INNOCENT_90_1.value = 0;
+	document.forms[0].INNOCENT_90_2.value = 0;
+	document.forms[0].INNOCENT_100_1.value = 0;
+	document.forms[0].INNOCENT_100_2.value = 0;
+}
+
+function innocent1() {
+	document.forms[0].INNOCENT_10_1.value = 6;
+	document.forms[0].INNOCENT_10_2.value = 6;
+	document.forms[0].INNOCENT_20_1.value = 6;
+	document.forms[0].INNOCENT_20_2.value = 6;
+	document.forms[0].INNOCENT_30_1.value = 6;
+	document.forms[0].INNOCENT_30_2.value = 7;
+	document.forms[0].INNOCENT_40_1.value = 8;
+	document.forms[0].INNOCENT_40_2.value = 8;
+	document.forms[0].INNOCENT_50_1.value = 8;
+	document.forms[0].INNOCENT_50_2.value = 8;
+	document.forms[0].INNOCENT_60_1.value = 8;
+	document.forms[0].INNOCENT_60_2.value = 8;
+	document.forms[0].INNOCENT_70_1.value = 8;
+	document.forms[0].INNOCENT_70_2.value = 8;
+	document.forms[0].INNOCENT_80_1.value = 8;
+	document.forms[0].INNOCENT_80_2.value = 8;
+	document.forms[0].INNOCENT_90_1.value = 8;
+	document.forms[0].INNOCENT_90_2.value = 8;
+	document.forms[0].INNOCENT_100_1.value = 8;
+	document.forms[0].INNOCENT_100_2.value = 8;
+}
+
+function boss0() {
+	document.forms[0].BOSS_10_1.checked = false;
+	document.forms[0].BOSS_10_2.checked = true;
+	document.forms[0].BOSS_20_1.checked = false;
+	document.forms[0].BOSS_20_2.checked = true;
+	document.forms[0].BOSS_30_1.checked = false;
+	document.forms[0].BOSS_30_2.checked = true;
+	document.forms[0].BOSS_40_1.checked = false;
+	document.forms[0].BOSS_40_2.checked = true;
+	document.forms[0].BOSS_50_1.checked = false;
+	document.forms[0].BOSS_50_2.checked = true;
+	document.forms[0].BOSS_60_1.checked = false;
+	document.forms[0].BOSS_60_2.checked = true;
+	document.forms[0].BOSS_70_1.checked = false;
+	document.forms[0].BOSS_70_2.checked = true;
+	document.forms[0].BOSS_80_1.checked = false;
+	document.forms[0].BOSS_80_2.checked = true;
+	document.forms[0].BOSS_90_1.checked = false;
+	document.forms[0].BOSS_90_2.checked = true;
+	document.forms[0].BOSS_100_1.checked = false;
+	document.forms[0].BOSS_100_2.checked = true;
+}
+
+function boss1() {
+	document.forms[0].BOSS_10_1.checked = true;
+	document.forms[0].BOSS_10_2.checked = true;
+	document.forms[0].BOSS_20_1.checked = true;
+	document.forms[0].BOSS_20_2.checked = true;
+	document.forms[0].BOSS_30_1.checked = true;
+	document.forms[0].BOSS_30_2.checked = true;
+	document.forms[0].BOSS_40_1.checked = true;
+	document.forms[0].BOSS_40_2.checked = true;
+	document.forms[0].BOSS_50_1.checked = true;
+	document.forms[0].BOSS_50_2.checked = true;
+	document.forms[0].BOSS_60_1.checked = true;
+	document.forms[0].BOSS_60_2.checked = true;
+	document.forms[0].BOSS_70_1.checked = true;
+	document.forms[0].BOSS_70_2.checked = true;
+	document.forms[0].BOSS_80_1.checked = true;
+	document.forms[0].BOSS_80_2.checked = true;
+	document.forms[0].BOSS_90_1.checked = true;
+	document.forms[0].BOSS_90_2.checked = true;
+	document.forms[0].BOSS_100_1.checked = true;
+	document.forms[0].BOSS_100_2.checked = true;
+}
+
+function calcuate1() {
+	if (document.forms[0].LV1.value == "") {
+		window.alert("층수를 입력하세요.");
+		return;
+	}
+	if (document.forms[0].LV2.value == "") {
+		window.alert("추가 레벨을 입력하세요.");
+		return;
+	}
+	if (document.forms[0].STATUS.value == "") {
+		window.alert("파라미터를 입력하세요.");
+		return;
+	}
+	g = 0;
+	if (document.forms[0].GIKAI_10.value > 0) {
+		g++;
+	}
+	if (document.forms[0].GIKAI_20.value > 0) {
+		g++;
+	}
+	if (document.forms[0].GIKAI_30.value > 0) {
+		g++;
+	}
+	if (document.forms[0].GIKAI_40.value > 0) {
+		g++;
+	}
+	if (document.forms[0].GIKAI_50.value > 0) {
+		g++;
+	}
+	if (document.forms[0].GIKAI_60.value > 0) {
+		g++;
+	}
+	if (document.forms[0].GIKAI_70.value > 0) {
+		g++;
+	}
+	if (document.forms[0].GIKAI_80.value > 0) {
+		g++;
+	}
+	if (document.forms[0].GIKAI_90.value > 0) {
+		g++;
+	}
+	if (document.forms[0].GIKAI_100.value > 0) {
+		g++;
+	}
+	lv = parseInt(document.forms[0].LV1.value);
+	if (document.forms[0].RARITY[0].checked) {
+		if (lv > 30) {
+			window.alert("노멀 아이템의 경우, 층수를 30 이하로 설정하세요.");
+			return;
+		}
+		if (g > 1) {
+			window.alert("노멀 아이템의 경우, 의회 가결을 1회로 설정하세요.");
+			return;
+		}
+	} else if (document.forms[0].RARITY[1].checked) {
+		if (lv > 60) {
+			window.alert("레어 아이템의 경우, 층수를 60 이하로 설정하세요.");
+			return;
+		}
+		if (g > 2) {
+			window.alert("레어 아이템의 경우, 의회 가결을 2회로 설정하세요.");
+			return;
+		}
+	} else if (document.forms[0].RARITY[2].checked) {
+		if (lv > 100) {
+			window.alert("레전드 아이템의 경우, 층수를 100 이하로 설정하세요. ");
+			return;
+		}
+		if (g > 3) {
+			window.alert("레전드 아이템의 경우, 의회 가결을 3회로 설정하세요.");
+			return;
+		}
+	}
+	if (lv + parseInt(document.forms[0].LV2.value) > 200) {
+		window.alert("층수와 추가 레벨의 합계는 200이하로 설정해야합니다. ");
+		return;
+	}
+	x1 = 0;
+	x2 = 0;
+	x3 = 0;
+	x4 = 0;
+	x5 = 0;
+	x6 = 0;
+	// 레어리티 보정
+	if (document.forms[0].RARITY[0].checked) {
+		x1 = 100;
+	} else if (document.forms[0].RARITY[1].checked) {
+		x1 = 125;
+	} else if (document.forms[0].RARITY[2].checked) {
+		x1 = 150;
+	}
+	// 보너스 보정 / 이노센트 보정
+	x2 = 0;
+	x3 = 0;
+	g = 0;
+	if (lv > 8) {
+		if (document.forms[0].BOSS_10_1.checked) {
+			x2 = x2 + 10 + g * 1;
+			x3 = x3 + 3 * (document.forms[0].INNOCENT_10_1.value);
+		}
+	}
+	if (lv > 9) {
+		if (document.forms[0].GIKAI_10.value == 1) {
+			g = g + 1;
+		} else if (document.forms[0].GIKAI_10.value == 2) {
+			g = g + 2;
+		}
+		if (document.forms[0].BOSS_10_2.checked) {
+			x2 = x2 + 10 + g * 1;
+			x3 = x3 + 3 * (document.forms[0].INNOCENT_10_2.value);
+		}
+	}
+	if (lv > 18) {
+		if (document.forms[0].BOSS_20_1.checked) {
+			x2 = x2 + 10 + g * 1;
+			x3 = x3 + 3 * (document.forms[0].INNOCENT_20_1.value);
+		}
+	}
+	if (lv > 19) {
+		if (document.forms[0].GIKAI_20.value == 1) {
+			g = g + 1;
+		} else if (document.forms[0].GIKAI_20.value == 2) {
+			g = g + 2;
+		}
+		if (document.forms[0].BOSS_20_2.checked) {
+			x2 = x2 + 10 + g * 1;
+			x3 = x3 + 3 * (document.forms[0].INNOCENT_20_2.value);
+		}
+	}
+	if (lv > 28) {
+		if (document.forms[0].BOSS_30_1.checked) {
+			x2 = x2 + 20 + g * 2;
+			x3 = x3 + 6 * (document.forms[0].INNOCENT_30_1.value);
+		}
+	}
+	if (lv > 29) {
+		if (document.forms[0].GIKAI_30.value == 1) {
+			g = g + 1;
+		} else if (document.forms[0].GIKAI_30.value == 2) {
+			g = g + 2;
+		}
+		if (document.forms[0].BOSS_30_2.checked) {
+			x2 = x2 + 20 + g * 2;
+			x3 = x3 + 6 * (document.forms[0].INNOCENT_30_2.value);
+		}
+	}
+	if (lv > 38) {
+		if (document.forms[0].BOSS_40_1.checked) {
+			x2 = x2 + 10 + g * 1;
+			x3 = x3 + 3 * (document.forms[0].INNOCENT_40_1.value);
+		}
+	}
+	if (lv > 39) {
+		if (document.forms[0].GIKAI_40.value == 1) {
+			g = g + 1;
+		} else if (document.forms[0].GIKAI_40.value == 2) {
+			g = g + 2;
+		}
+		if (document.forms[0].BOSS_40_2.checked) {
+			x2 = x2 + 10 + g * 1;
+			x3 = x3 + 3 * (document.forms[0].INNOCENT_40_2.value);
+		}
+	}
+	if (lv > 48) {
+		if (document.forms[0].BOSS_50_1.checked) {
+			x2 = x2 + 10 + g * 1;
+			x3 = x3 + 3 * (document.forms[0].INNOCENT_50_1.value);
+		}
+	}
+	if (lv > 49) {
+		if (document.forms[0].GIKAI_50.value == 1) {
+			g = g + 1;
+		} else if (document.forms[0].GIKAI_50.value == 2) {
+			g = g + 2;
+		}
+		if (document.forms[0].BOSS_50_2.checked) {
+			x2 = x2 + 10 + g * 1;
+			x3 = x3 + 3 * (document.forms[0].INNOCENT_50_2.value);
+		}
+	}
+	if (lv > 58) {
+		if (document.forms[0].BOSS_60_1.checked) {
+			x2 = x2 + 20 + g * 2;
+			x3 = x3 + 6 * (document.forms[0].INNOCENT_60_1.value);
+		}
+	}
+	if (lv > 59) {
+		if (document.forms[0].GIKAI_60.value == 1) {
+			g = g + 1;
+		} else if (document.forms[0].GIKAI_60.value == 2) {
+			g = g + 2;
+		}
+		if (document.forms[0].BOSS_60_2.checked) {
+			x2 = x2 + 20 + g * 2;
+			x3 = x3 + 6 * (document.forms[0].INNOCENT_60_2.value);
+		}
+	}
+	if (lv > 68) {
+		if (document.forms[0].BOSS_70_1.checked) {
+			x2 = x2 + 10 + g * 1;
+			x3 = x3 + 3 * (document.forms[0].INNOCENT_70_1.value);
+		}
+	}
+	if (lv > 69) {
+		if (document.forms[0].GIKAI_70.value == 1) {
+			g = g + 1;
+		} else if (document.forms[0].GIKAI_70.value == 2) {
+			g = g + 2;
+		}
+		if (document.forms[0].BOSS_70_2.checked) {
+			x2 = x2 + 10 + g * 1;
+			x3 = x3 + 3 * (document.forms[0].INNOCENT_70_2.value);
+		}
+	}
+	if (lv > 78) {
+		if (document.forms[0].BOSS_80_1.checked) {
+			x2 = x2 + 10 + g * 1;
+			x3 = x3 + 3 * (document.forms[0].INNOCENT_80_1.value);
+		}
+	}
+	if (lv > 79) {
+		if (document.forms[0].GIKAI_80.value == 1) {
+			g = g + 1;
+		} else if (document.forms[0].GIKAI_80.value == 2) {
+			g = g + 2;
+		}
+		if (document.forms[0].BOSS_80_2.checked) {
+			x2 = x2 + 10 + g * 1;
+			x3 = x3 + 3 * (document.forms[0].INNOCENT_80_2.value);
+		}
+	}
+	if (lv > 88) {
+		if (document.forms[0].BOSS_90_1.checked) {
+			x2 = x2 + 20 + g * 2;
+			x3 = x3 + 6 * (document.forms[0].INNOCENT_90_1.value);
+		}
+	}
+	if (lv > 89) {
+		if (document.forms[0].GIKAI_90.value == 1) {
+			g = g + 1;
+		} else if (document.forms[0].GIKAI_90.value == 2) {
+			g = g + 2;
+		}
+		if (document.forms[0].BOSS_90_2.checked) {
+			x2 = x2 + 20 + g * 2;
+			x3 = x3 + 6 * (document.forms[0].INNOCENT_90_2.value);
+		}
+	}
+	if (lv > 98) {
+		if (document.forms[0].BOSS_100_1.checked) {
+			x2 = x2 + 30 + g * 3;
+			x3 = x3 + 9 * (document.forms[0].INNOCENT_100_1.value);
+		}
+	}
+	if (lv > 99) {
+		if (document.forms[0].GIKAI_100.value == 1) {
+			g = g + 1;
+		} else if (document.forms[0].GIKAI_100.value == 2) {
+			g = g + 2;
+		}
+		if (document.forms[0].BOSS_100_2.checked) {
+			x2 = x2 + 30 + g * 3;
+			x3 = x3 + 9 * (document.forms[0].INNOCENT_100_2.value);
+		}
+	}
+	if (document.forms[0].STATUS.value < 0) {
+		x2 = -x2;
+	}
+	// 의회 보정
+	x4 = 100 + parseFloat(g) * 5;
+	// 레벨 보정1
+	x5 = 100 + (lv + parseInt(document.forms[0].LV2.value)) * 5;
+	// 레벨 보정2
+	if (document.forms[0].STATUS.value < 0) {
+		x6 = -lv - parseInt(document.forms[0].LV2.value);
+	} else if (document.forms[0].STATUS.value > 0) {
+		x6 = lv + parseInt(document.forms[0].LV2.value);
+	} else if (document.forms[0].GIKAI.value != 0) {
+		x6 = lv + parseInt(document.forms[0].LV2.value);
+	} else {
+		x6 = 0;
+	}
+	z = 0;
+	//최종 계산
+	document.forms[0].STATUS.value + "×(" + x1 + "％＋" + x2 + "％)＋" + x3;
+	z = Math.floor((parseFloat(document.forms[0].STATUS.value) * (x1 + x2) / 100) + x3);
+	z + "×" + x4 + "％×" + x5 + "％＋" + x6;
+	z = Math.floor(parseFloat(z * x4 / 100 * x5 / 100) + x6);
+	document.getElementById("result_item_Lv_up").value = z;
+}
+	</script>
+	
+	<script src="../RES/jquery.min.js"></script>
+	<script src="../RES/jquery.toc-1.1.4.min.js"></script>
+	<script src="../RES/jquery.tablesorter.min.js"></script>
+	<script src="../RES/ngcquest.js"></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>공략</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="title.js"></script>
+  </head>
+  <body>
+    <!-- 상단 -->
+    <div class="header"> <a href="../index.html">
+        <h1>로맨싱 사가 3</h1>
+      </a>
+      <h2>라스트 배틀</h2>
+    </div>
+    <!-- 본문 -->
+    <div class="viewer">
+      <ol id="mozToc">
+        <!--mozToc h3 1 h4 2-->
+        <li><a href="#mozTocId644649">어비스</a></li>
+        <li><a href="#mozTocId708881">사마귀족 공략</a>
+          <ol>
+            <li><a href="#mozTocId787568">뷰네이</a></li>
+            <li><a href="#mozTocId706625">아우나스</a></li>
+            <li><a href="#mozTocId661076">포르네우스</a></li>
+            <li><a href="#mozTocId431362">아라케스</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId83015">파괴하는 자 (破壊するもの)</a>
+          <ol>
+            <li><a href="#mozTocId599254">파괴자의 형태</a></li>
+          </ol>
+        </li>
+      </ol>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId644649"></a>어비스</h3>
+      <a href="187.html">동방의 어비스 게이트</a>에 이어서 진행한다. 어비스에 들어갈 때 사라 이외의 주인공이며, 파티에 소년이 없는 경우. 강제로 소년이 동료가 된다. 때문에 파티가 6명이라면 1명을 소년과 교체해야 한다. 어비스에서 원래 세계로 되돌아갈 수 없지만, 맨 처음 워프존에서 완전 회복이 가능하다. (회복의 빛)<br>
+      <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">뷰네이</th>
+            <th align="center">아우나스</th>
+            <th align="center">파괴하는 자</th>
+            <th align="center">포르네우스</th>
+            <th align="center">아라케스</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="right"><br>
+            </td>
+            <td align="right"><br>
+            </td>
+            <th align="center">회복의 빛</th>
+            <td align="right"><br>
+            </td>
+            <td align="right"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      어비스는 위와 같은 배치로 &lt;사마귀족&gt;과 &lt;파괴하는 자&gt;가 배치되어 있다. <br>
+      <br>
+      통상적으로 사마귀족을 모두 격파한 후 파괴하는 자를 쓰러뜨리는 것이 클리어 방법이다. 다만, 사마귀족은 꼭 쓰러뜨릴 필요는 없다. 격파 여부에 따라서 파괴하는 자의 전투 패턴에 변화가 있을 뿐이다. 자세한 내용은 보스 공략에서 설명한다.<br>
+      <br>
+      각 사마귀족으로 가는 워프존을 통과하면 본체 앞까지 2개의 구역이 있다. 여기서 출현하는 몬스터로 캐릭터를 성장시키는 것도 가능하다. 회복의 빛으로 돌아와서 회복하고, 몬스터와 전투를 반복하자.<br>
+      <br>
+      최종적으로 &lt;파괴하는 자&gt;를 쓰러뜨리면 엔딩을 볼 수 있다.<br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId708881"></a>사마귀족 공략</h3>
+      사마귀족 본체의 최대 HP를 알 수 있는 계산식있다. 아래를 보자.<br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">사마귀족</th>
+            <th align="center">기준 HP</th>
+          </tr>
+          <tr class="oddRow">
+            <td>뷰네이</td>
+            <td>32000</td>
+          </tr>
+          <tr class="evenRow">
+            <td>아우나스</td>
+            <td>31000</td>
+          </tr>
+          <tr class="oddRow">
+            <td>포르네우스</td>
+            <td>37000</td>
+          </tr>
+          <tr class="evenRow">
+            <td>아라케스</td>
+            <td>35000</td>
+          </tr>
+        </tbody>
+      </table>
+      <pre>- 계산식 -
+본체 HP = 기준 HP + (수행 레벨 ÷ 8) × (기준 HP ÷ 32)
+</pre><br>
+      수행 레벨이 오를수록 사마귀족 본체의 HP가 상승한다. 수행 레벨의 최대치는 '158'이며, 최대치로 계산하면 기준 HP보다 약 61% 증가한다.<br>
+      수행 레벨에 대한 자세한 정보는 <a class="externalLink" href="http://www14.ocn.ne.jp/%7Eqiring/character/06shinki.html">#수행 레벨(일본어) 페이지</a>를 참고하자. <br>
+      <br>
+      요약하면 &lt;사마귀족 본체의 기준 HP에서 수행 레벨이라는 은폐 파라미터로 인해 HP가 증가한다.&gt; 가 된다.<br>
+      <h4><a class="mozTocH4" id="mozTocId787568"></a>뷰네이</h4>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">HP 상한치</th>
+            <th align="center">사용 기술(1회)</th>
+            <th align="center">사용 기술(2회)</th>
+            <th align="center">필수 간파</th>
+            <th align="right">회복 지상</th>
+          </tr>
+          <tr class="oddRow">
+            <td>51000</td>
+            <td>アースライザー<br>
+              凝視<br>
+              サイレン<br>
+              サンダーボール<br>
+              ララバイ</td>
+            <td>トリニティーブラスター <br>
+              超高速ナブラ</td>
+            <td>응시(凝視)</td>
+            <td>청룡</td>
+          </tr>
+        </tbody>
+      </table>
+      다양한 종류의 공격을 하기 때문에 대책을 마련하기 힘들다. 우선 응시 간파가 필수이다.<br>
+      방어구는 음파 내성이나 상태 회피가 가능한 방패가 필요하다. 수경의 방패(水鏡の盾)가 있다면 매우 편해진다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId706625"></a>아우나스</h4>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">HP 상한치</th>
+            <th align="center">사용 기술(1회)</th>
+            <th align="center">사용 기술(2회)</th>
+            <th align="center">필수 간파</th>
+            <th align="right">회복 지상</th>
+          </tr>
+          <tr class="oddRow">
+            <td>49392</td>
+            <td>エアスラッシュ<br>
+              ナイトコール<br>
+              バードソング<br>
+              ファイアウォール</td>
+            <td>통상공격(검)<br>
+              火炎<br>
+              凝視<br>
+              死神のカマ</td>
+            <td>응시(凝視)<br>
+              사신의 낫(死神のカマ)</td>
+            <td>주작</td>
+          </tr>
+        </tbody>
+      </table>
+      상시 '셀프 버닝' 상태이다. 근거리 물리 공격은 사용하지 말자.<br>
+      공격 대부분이 화염 속성이므로 화염 내성을 준비하는 것은 기본. 특히 히드라 레더(ヒドラレザー)가 있으면 매우 좋다.<br>
+      '부유 특효' 공격을 하므로 부유 속성 장비를 벗겨놓는 것이 좋다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId661076"></a>포르네우스</h4>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">HP 상한치</th>
+            <th align="center">사용 기술(1회)</th>
+            <th align="center">사용 기술(2회)</th>
+            <th align="center">필수 간파</th>
+            <th align="right">회복 지상</th>
+          </tr>
+          <tr class="oddRow">
+            <td>58964</td>
+            <td>メイルシュトローム<br>
+              マイティサイクロン<br>
+              大車輪<br>
+              かざぐるま</td>
+            <td>スコール<br>
+              マッドサンダー<br>
+              冷気<br>
+              クリスタライザー<br>
+              誘惑</td>
+            <td>블레이드 롤(ブレードロール)</td>
+            <td>현무</td>
+          </tr>
+        </tbody>
+      </table>
+      메일슈트롬(メイルシュトローム)에 대비해서 물, 뇌 내성 방어구를 장비하자. 부가적으로 던지기 내성 방어구도 필요하다. 여기에 해당하는 방어구는 마왕의 갑옷(魔王の鎧)이다.<br>
+      대차륜(大車輪)은 블레이드 롤(ブレードロール)로 간파 가능하다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId431362"></a>아라케스</h4>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">HP 상한치</th>
+            <th align="center">사용 기술(1회)</th>
+            <th align="center">사용 기술(2회)</th>
+            <th align="center">필수 간파</th>
+            <th align="right">회복 지상</th>
+          </tr>
+          <tr class="oddRow">
+            <td>55763</td>
+            <td>強打<br>
+              最強打<br>
+              体落とし<br>
+              大震撃<br>
+              ブラックジャック<br>
+              明王拳</td>
+            <td>エイミング<br>
+              スクリュードライバ<br>
+              大回転<br>
+              脳削り<br>
+              払い抜け<br>
+              舞千鳥<br>
+              ミヅチ<br>
+              やきごて</td>
+            <td>무천조(舞千鳥)<br>
+              에이밍(エイミング)<br>
+              스크류 드라이버(スクリュードライバ)<br>
+              블레이드 롤(ブレードロール)<br>
+              지진 공격(地震攻撃)<br>
+              베어내기(斬り払い)</td>
+            <td>백호</td>
+          </tr>
+        </tbody>
+      </table>
+      물리 공격 위주로 공격하므로 물리 방어력이 높은 방어구를 장비한다. 타격 속성의 방어가 높은 것으로 선택하자.<br>
+      전체 공격에 대해서는 대회전(大回転)은 브레이드 롤(ブレードロール)로 간파, 대진격(大震撃)은 지진(地震)으로 간파할 수 있다.<br>
+      대책을 준비하지 못한 경우 진형을 '봉천무의 진'으로 중앙에서 카운터 기술을 사용하면, 전체 공격 이외의 타격을 무효화하거나 반격할 수 있다.<br>
+      <br>
+      <br>
+      <hr><br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId83015"></a>파괴하는 자 (破壊するもの)</h3>
+      이 게임의 라스트 보스이다. 여기서는 줄여서 '파괴자'로 칭한다.<br>
+      '사라'가 주인공인 경우 진행이 약간 달라진다.<br>
+      <br>
+      <strong>주인공이 사라</strong><br>
+      대화가 진행되면 사라가 자동적으로 파티에서 이탈, 그대로 파괴자와 전투에 들어간다. 진형은 프리 파이트에 커맨더 모드가 되어 있다. 당황하지 말고 진형을 바꾸면, 각 캐릭터의 조작이 가능하다. (변경한 턴만은 조작 불가) 또한, 통상의 커맨더 모드와 달리 HP 회복 효과가 없어진다.<br>
+      <br>
+      <strong>주인공이 사라 이외</strong><br>
+      대화가 진행되면 소년이 자동적으로 파티에서 이탈, 곧바로 전투에 돌입하지 않는다. 장비나 진형을 점검할 수 있다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId599254"></a>파괴자의 형태</h4>
+      파괴자는 상황에 따라 여러가지 형태로 바뀐다.<br>
+      <ul>
+        <li> 통상 형태</li>
+        <li> 수마의 날개 (뷰네이)</li>
+        <li> 수마의 날개 (아우나스)</li>
+        <li> 수마의 날개 (포르네우스)</li>
+        <li> 수마의 날개 (아라케스)</li>
+        <li> 어둠의 날개</li>
+      </ul>
+      <br>
+      <h5>통상 형태</h5>
+      전투 개시시 이 형태부터 시작한다. 또한, 수마의 날개나 어둠의 날개의 형태가 끝날 때도 이 형태로 변화한다.<br>
+      통상 형태에서 일정 턴이 경과하면 토탈에크리프스(トータルエクリプス)가 발동해서 수마의 날개 또는 어둠의 날개 형태로 변화한다. 어느 날개로 변화하는지는 랜덤이다. 추가 효과로 발동과 동시에 아군 캐릭터의 보조 효과나 상태 이상이 해제된다.<br>
+      <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">필요 간파(어둠의 날개 형태 포함)</th>
+            <th align="center">공격 횟수</th>
+            <th align="center">추정 HP</th>
+          </tr>
+          <tr class="oddRow">
+            <td>네트(ネット)<br>
+              응시(凝視)<br>
+              뼈부수기(骨砕き)<br>
+              사신의 낫(死神のカマ)</td>
+            <td align="right">1~3</td>
+            <td align="right">8만</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      전투 방법은 달의 술법. 쉐도우 서번트(シャドウサーバント)로 통상 형태에서 많은 데미지를 주는 것이 기본이다. 또한, 음파 내성을 가진 방어구가 필요하다. 추천하는 음파 내성 방어구는 백은의 갑옷(白銀の鎧)이다. 쉽게 양산할 수 있고, 성능도 좋다.<br>
+      <br>
+      <br>
+      <h5>수마의 날개</h5>
+      통상 형태에서 토탈에크리프스(トータルエクリプス)가 발동했을 때 랜덤으로 변화한다. 수마의 날개는 사마귀족의 힘이 포함된 형태이다. <span
+
+        class="marked">만약 어비스에서 사마귀족을 모두 쓰러뜨렸을 때 이 형태는 나타나지 않는다.</span><br>
+      <br>
+      수마의 날개 형태가 된다면 대응하는 사마귀족의 종류에 따라 공격 패턴이 변화한다. 이 경우 사용해오는 기술이 너무 다양하기 때문에 간파나 장비 대응책이 매우 어렵다. 따라서 가능하면 이전에 사마귀족을 쓰러뜨리는 것이 좋다. 또한, 수마 형태에서 지상이 각 사마귀족에 대응한 지상으로 자동 변화한다. 그러나 지상 회복은 하지 않는다. 대신 낮은 확률로 '빛의 날개'라는 기술을 사용해서 자신은 물론 아군 파티까지 HP를 회복시켜준다. <br>
+      <br>
+      수마의 날개마다 설정된 만큼의 데미지를 주면 통상 형태로 돌아온다. <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">날개</th>
+            <th align="center">HP</th>
+          </tr>
+          <tr class="oddRow">
+            <td>뷰네이</td>
+            <td>14000</td>
+          </tr>
+          <tr class="evenRow">
+            <td>아우나스</td>
+            <td>12000</td>
+          </tr>
+          <tr class="oddRow">
+            <td>포르네우스</td>
+            <td>18000</td>
+          </tr>
+          <tr class="evenRow">
+            <td>아라케스</td>
+            <td>16000</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h5>어둠의 날개</h5>
+      어둠의 날개는 사마귀족의 생존과 상관 없이 반드시 출현한다. 어둠의 날개의 형태가 되면 지상이 어비스로 변하며, 어비스 지상의 효과로 턴 종료시 아군 전원에 100 전후의 데미지를 준다. 이것은 어비스 속성의 방어구를 착용하면 무효화시킬 수 있다.<br>
+      <br>
+      <span class="marked"><strong>어둠의 날개 변화 후, 하늘의 술법(태양, 달)을 사용하면, 일정 확률로 어둠의 날개가 풀린다.</strong></span> 그리고 풀리면서 자신과 아군 파티의 HP를 소량 회복시켜준다. 동시에 어비스 지상도 해제된다.<br>
+      <br>
+      파괴자는 일정 데미지를 받으면 "더 이상 억누를 수 없다!" (もうおさえられない!) 라는 메시지가 뜬다. 이후 어둠의 날개 형태가 계속 유지된다. 하늘의 술법으로도 풀 수 없다. 이때는 HP가 얼마 남지 않은 상태라는 뜻이니 조금만 더 버텨보자.
+    </div>
+    <!-- 하단 -->
+    <div class="footer">
+      <p>이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</p>
+    </div>
+  </body>
+</html>

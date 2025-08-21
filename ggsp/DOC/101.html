@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+
+
+
+
+
+
+
+<title>공략</title>
+
+<link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="title.js"></script>
+</head>
+
+<body>
+<!-- 상단 -->
+<div class="header">
+<a href="../index.html"><h1>SD건담 G제네레이션 스피릿츠</h1></a>
+<h2>SDガンダム Gジェネレーション スピリッツ</h2>
+</div>
+
+<!-- 본문 -->
+<div class="viewer">
+<h1>시스템 해설</h1>
+<ol id="mozToc"><!--mozToc h3 1 h4 2-->
+<li><a href="#mozTocId411470">유닛의 개조</a>
+<ol>
+<li><a href="#mozTocId308415">개조 성장</a></li>
+<li><a href="#mozTocId842898">유닛 레벨업 시, 획득 어빌리티 포인트</a></li>
+<li><a href="#mozTocId646751">능력치 강화에 필요한 어빌리티 포인트</a></li>
+<li><a href="#mozTocId259427">개조 상한치</a></li></ol></li>
+<li><a href="#mozTocId798906">경험치</a>
+<ol>
+<li><a href="#mozTocId94098">획득 경험치 계산식</a></li>
+<li><a href="#mozTocId727935">하로 랭크 경험치 보너스</a></li>
+<li><a href="#mozTocId875578">파일럿 경험치 보너스</a></li>
+<li><a href="#mozTocId900826">유닛 경험치 보너스</a></li>
+<li><a href="#mozTocId293934">백기 유닛의 경험치</a></li></ol></li>
+<li><a href="#mozTocId822303">명중률 요소</a></li>
+<li><a href="#mozTocId518968">데미지 계산식</a>
+<ol>
+<li><a href="#mozTocId132035">크리티컬 보정</a></li>
+<li><a href="#mozTocId402221">사이즈 보정</a></li>
+<li><a href="#mozTocId737472">랜덤 보정</a></li>
+<li><a href="#mozTocId463302">텐션 보정</a></li>
+<li><a href="#mozTocId277881">각성 보정</a></li>
+<li><a href="#mozTocId350173">MP보정</a></li>
+<li><a href="#mozTocId722906">데미지 증감 행동/요소</a></li></ol></li>
+<li><a href="#mozTocId627695">그룹/팀 에리어와 레벨</a>
+<ol>
+<li><a href="#mozTocId284675">마스터 에리어</a></li></ol></li>
+<li><a href="#mozTocId598857">전함의 배치 장소에 따른 효과</a></li>
+<li><a href="#mozTocId107044">유닛/파일럿의 능력치 설명</a></li>
+<li><a href="#mozTocId411252">행동에 따른 MP 변동치</a></li></ol><br>※ 기본적인 내용은 게임 소프트에 있는 매뉴얼을 읽어보세요.<br><br>
+<h3><a class="mozTocH3" id="mozTocId411470"></a>유닛의 개조</h3>유닛이 레벨업을 했을 때 획득하는 어빌리티 포인트(AP)를 사용해서 유닛을 개조할 수 있다.<br><br>
+<h4><a class="mozTocH4" id="mozTocId308415"></a>개조 성장</h4>
+<ul>
+<li> 파일럿 기본치 : 1회 개조를 할 때의 상승치는 탑승한 파일럿의 레벨에 의해 정해진다.</li>
+<li> 개발 보너스(유전) : 유닛을 일정 횟수 이상 개조 (합계 15회/25회/35회)하고 나서 '개발'했을 경우, 개발전 유닛의 <strong>개조 횟수</strong>가 가장 많은 능력치를 기준으로 해당 능력치에 보너스가 추가된다. (HP를 가장 많이 개조했다면, HP에 보너스)
+
+
+
+
+
+
+
+
+<ul>
+<li> 개발이 불가능한 유닛은 개발 보너스를 추가할 수 없다.</li></ul></li></ul><br><strong>파일럿 기본치</strong><br>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th align="left">파일럿 Lv</th><th align="center">1~10</th><th align="center">11~20</th><th align="center">21~30</th><th align="center">31~40</th><th align="center">41~50</th><th align="center">51~99</th></tr>
+<tr class="oddRow">
+<td align="left">HP</td>
+<td align="center">250</td>
+<td align="center">400</td>
+<td align="center">550</td>
+<td align="center">700</td>
+<td align="center">850</td>
+<td align="center">1000</td></tr>
+<tr class="evenRow">
+<td align="left">EN</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">6</td>
+<td align="center">7</td></tr>
+<tr class="oddRow">
+<td align="left">공격력</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">6</td></tr>
+<tr class="evenRow">
+<td align="left">방어력</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">6</td></tr>
+<tr class="oddRow">
+<td align="left">기동력</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">6</td></tr></tbody></table><br><strong>개발 보너스</strong><br>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th align="center">개조 횟수</th><th align="center">0~14</th><th align="center">15~24</th><th align="center">25~34</th><th align="center">35~</th></tr>
+<tr class="oddRow">
+<td align="left">HP</td>
+<td align="center">+0</td>
+<td align="center">+1000</td>
+<td align="center">+2000</td>
+<td align="center">+3000</td></tr>
+<tr class="evenRow">
+<td align="left">EN</td>
+<td align="center">+0</td>
+<td align="center">+1</td>
+<td align="center">+2</td>
+<td align="center">+3</td></tr>
+<tr class="oddRow">
+<td align="left">공격력</td>
+<td align="center">+0</td>
+<td align="center">+1</td>
+<td align="center">+2</td>
+<td align="center">+3</td></tr>
+<tr class="evenRow">
+<td align="left">방어력</td>
+<td align="center">+0</td>
+<td align="center">+1</td>
+<td align="center">+2</td>
+<td align="center">+3</td></tr>
+<tr class="oddRow">
+<td align="left">기동력</td>
+<td align="center">+0</td>
+<td align="center">+1</td>
+<td align="center">+2</td>
+<td align="center">+3</td></tr></tbody></table><br><br>
+<h4><a class="mozTocH4" id="mozTocId842898"></a>유닛 레벨업 시, 획득 어빌리티 포인트</h4>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th align="center">유닛 Lv</th><th align="center">입수 AP</th><th align="center">유닛 Lv</th><th align="center">입수 AP</th><th align="center">유닛 Lv</th><th align="center">입수 AP</th></tr>
+<tr class="oddRow">
+<td>2~5</td>
+<td>3</td>
+<td>46~49</td>
+<td>14</td>
+<td>80~81</td>
+<td>25</td></tr>
+<tr class="evenRow">
+<td>6~9</td>
+<td>4</td>
+<td>50~53</td>
+<td>15</td>
+<td>82~83</td>
+<td>26</td></tr>
+<tr class="oddRow">
+<td>10~13</td>
+<td>5</td>
+<td>54~56</td>
+<td>16</td>
+<td>84~85</td>
+<td>27</td></tr>
+<tr class="evenRow">
+<td>14~17</td>
+<td>6</td>
+<td>57~59</td>
+<td>17</td>
+<td>86~87</td>
+<td>28</td></tr>
+<tr class="oddRow">
+<td>18~21</td>
+<td>7</td>
+<td>60~62</td>
+<td>18</td>
+<td>88~89</td>
+<td>29</td></tr>
+<tr class="evenRow">
+<td>22~25</td>
+<td>8</td>
+<td>63~65</td>
+<td>19</td>
+<td>90~91</td>
+<td>30</td></tr>
+<tr class="oddRow">
+<td>26~29</td>
+<td>9</td>
+<td>66~68</td>
+<td>20</td>
+<td>92~93</td>
+<td>31</td></tr>
+<tr class="evenRow">
+<td>30~33</td>
+<td>10</td>
+<td>69~71</td>
+<td>21</td>
+<td>94~95</td>
+<td>32</td></tr>
+<tr class="oddRow">
+<td>34~37</td>
+<td>11</td>
+<td>72~74</td>
+<td>22</td>
+<td>96~97</td>
+<td>33</td></tr>
+<tr class="evenRow">
+<td>38~42</td>
+<td>12</td>
+<td>75~77</td>
+<td>23</td>
+<td>98</td>
+<td>34</td></tr>
+<tr class="oddRow">
+<td>42~45</td>
+<td>13</td>
+<td>78~79</td>
+<td>24</td>
+<td>99</td>
+<td>35</td></tr></tbody></table><br><br>
+<h4><a class="mozTocH4" id="mozTocId646751"></a>능력치 강화에 필요한 어빌리티 포인트</h4>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th align="center">개조횟수</th><th align="center">필요AP</th></tr>
+<tr class="oddRow">
+<td>1~5</td>
+<td>3</td></tr>
+<tr class="evenRow">
+<td>6~10</td>
+<td>4</td></tr>
+<tr class="oddRow">
+<td>11~15</td>
+<td>5</td></tr>
+<tr class="evenRow">
+<td>16~20</td>
+<td>6</td></tr>
+<tr class="oddRow">
+<td>21~25</td>
+<td>7</td></tr>
+<tr class="evenRow">
+<td>26~30</td>
+<td>8</td></tr>
+<tr class="oddRow">
+<td>31~35</td>
+<td>9</td></tr>
+<tr class="evenRow">
+<td>36~40</td>
+<td>10</td></tr>
+<tr class="oddRow">
+<td>41~45</td>
+<td>11</td></tr>
+<tr class="evenRow">
+<td>46~50</td>
+<td>12</td></tr>
+<tr class="oddRow">
+<td>51~55</td>
+<td>13</td></tr>
+<tr class="evenRow">
+<td>56~60</td>
+<td>14</td></tr>
+<tr class="oddRow">
+<td align="left">61이상</td>
+<td>15</td></tr></tbody></table>※ 해당 능력치를 개조할 때 누적된 개조 횟수에 따라 요구 AP가 증가하며, 개조 횟수에는 제한이 없다.<br><br>
+<h4><a class="mozTocH4" id="mozTocId259427"></a>개조 상한치</h4>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th align="center">능력치</th><th align="center">한계치</th></tr>
+<tr class="oddRow">
+<td>HP</td>
+<td>99999</td></tr>
+<tr class="evenRow">
+<td>EN</td>
+<td>999</td></tr>
+<tr class="oddRow">
+<td>공격<br>방어<br>기동</td>
+<td>999</td></tr></tbody></table>유닛의 레벨 상한은 '99'. 이후 필요 EXP는 표기가 '0'이 되면서 더 이상 경험치를 얻을 수 없다.<br>레벨 99까지 육성했을 경우 획득할 수 있는 어빌리티 포인트의 합계는 '1575'. 이것을 모두 한 종류의 능력치 강화에 투자할 경우 '131'회 개조가 가능하다.<br><br>
+<h3><a class="mozTocH3" id="mozTocId798906"></a>경험치</h3>다음 레벨까지 필요한 EXP의 값은 일정하다. 각 유닛과 캐릭터의 필요 경험치 계산식은 아래를 보자.<br>
+<pre>이전 레벨의 필요 경험치 × 1.04
+</pre>따라서 초기 EXP가 많으면 그 만큼 요구 경험치가 높아진다.<br><br>
+<h4><a class="mozTocH4" id="mozTocId94098"></a>획득 경험치 계산식</h4>이하 계산식은 확정된 내용이 아니다. 참고만 해두자.
+
+
+
+
+
+
+
+
+<pre>기본치 : 유닛/파일럿 모두 레벨 1에서 얻을 수 있는 경험치<br>경험치 = 기본치 × (1 - (유닛Lv + 파일럿Lv - 1) ÷ 200)
+※소수점 이하 올림
+
+전함의 경우는 함장이 파일럿에 해당, 유닛 레벨은 '1'로 계산한다.
+</pre>계산식으로 판단하면, 유닛과 파일럿의 레벨 평균치 만큼 기본치에서 감소한다.<br><br><strong>레벨에 따른 입수 경험치 감소율</strong><br>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th align="center">평균 Lv</th><th align="center">기본치에 대한 비율</th></tr>
+<tr class="oddRow">
+<td>10</td>
+<td>90%</td></tr>
+<tr class="evenRow">
+<td>20</td>
+<td>80%</td></tr>
+<tr class="oddRow">
+<td>30</td>
+<td>70%</td></tr>
+<tr class="evenRow">
+<td>40</td>
+<td>60%</td></tr>
+<tr class="oddRow">
+<td>50</td>
+<td>50%</td></tr>
+<tr class="evenRow">
+<td>99</td>
+<td>1%</td></tr></tbody></table>지원 공격의 경우 획득 경험치는 메인 공격 유닛을 기준으로 경험치가 계산되며, 참여 인원수로 등분된다.<br>따라서 고레벨의 유닛/파일럿을 육성시 단독으로 적을 격파하는 것 보다. 유닛/파일럿 평균 레벨이 '1'인 유닛을 지원하는 편이 취득 경험치가 높아진다.<br><br>
+<h4><a class="mozTocH4" id="mozTocId727935"></a>하로 랭크 경험치 보너스</h4>하로 랭크가 높을수록 파일럿/유닛의 획득 경험치가 증가한다. (적 포함)<br>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th align="center">하로 랭크</th><th align="center">획득 경험치</th></tr>
+<tr class="oddRow">
+<td>브론즈</td>
+<td>110%</td></tr>
+<tr class="evenRow">
+<td>실버</td>
+<td>130%</td></tr>
+<tr class="oddRow">
+<td>골드</td>
+<td>150%</td></tr>
+<tr class="evenRow">
+<td>플라티나</td>
+<td>200%</td></tr></tbody></table><br>
+<h4><a class="mozTocH4" id="mozTocId875578"></a>파일럿 경험치 보너스</h4>파일럿의 획득 경험치는 소속 <strong style="color: red;">팀 리더</strong>의 '매력' 수치가 높을수록 획득량이 증가한다.<br>
+<pre>매력 '5'로 100% 획득. '1'씩 높을 때 마다 +2%
+매력 '15'로 120% 획득할 수 있다.
+</pre>&lt;리더가 없는 경우, 마스터 유닛, 전함&gt;의 경우는 매력 '5'로 계산한다.<br>매력치는 레벨업에 의해서 상승하지 않으므로, 팀 리더는 높은 매력치를 가진 캐릭터를 배치하는 것이 좋다.<br><br>
+<h4><a class="mozTocH4" id="mozTocId900826"></a>유닛 경험치 보너스</h4>유닛의 경험치는 소속 그룹(전함)의 <strong style="color: red;">정비</strong>에 배치한 캐릭터의 '정비 (整備)' 수치가 높을수록 획득량이 증가한다.<br>
+<pre>정비치 '5'로 100%획득. '1'씩 높을 때 마다 +2%
+정비치 '15'로 120% 획득할 수 있다.
+</pre>&lt;정비에 배치한 캐릭터가 없는 경우, 마스터 유닛&gt;은 정비치 '5'로 계산한다.<br><br>
+<h4><a class="mozTocH4" id="mozTocId293934"></a>백기 유닛의 경험치</h4>포획 가능한 상태인 백기 유닛을 격추하면 전작과 다르게, 이번 작에서는 100% 경험치 획득이 가능하다. 다만, 획득 하로 포인트는 30%가 된다.<br><br>
+<h3><a class="mozTocH3" id="mozTocId822303"></a>명중률 요소</h3>※ 아래의 표는 명중률에 영향을 주는 요소들을 조사한 내용입니다. 각 요소들은 실험 끝에 확실히 명중률에 영향이 있다는 것을 확인한 요소입니다. 다만, 구체적인 계산식은 미확정이니 기재하지 않겠습니다.<br>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th>공격측 요소</th><th>방어측 요소</th></tr>
+<tr class="oddRow">
+<td>파일럿의 텐션</td>
+<td>파일럿의 텐션</td></tr>
+<tr class="evenRow">
+<td>파일럿의 사격/격투</td>
+<td>파일럿의 반응</td></tr>
+<tr class="oddRow">
+<td>파일럿의 각성</td>
+<td>파일럿의 각성</td></tr>
+<tr class="evenRow">
+<td>유닛의 기동력</td>
+<td>유닛의 기동력</td></tr>
+<tr class="oddRow">
+<td>유닛의 지형 적성</td>
+<td>유닛의 지형 적성</td></tr>
+<tr class="evenRow">
+<td>무기의 HIT</td>
+<td>유닛의 SIZE</td></tr>
+<tr class="oddRow">
+<td>지원 공격 보정</td>
+<td>맵의 지형 보정</td></tr></tbody></table><br>
+<dl><dt>파일럿의 텐션</dt><dd>양측의 텐션 차이에 따라 보정치가 붙는다. 방어측 텐션이 보통일 때를 기준으로 공격측의 약기~강기 사이는 약 +1%씩, 초강기는 약 +3%, 초일격 약 +7%의 명중률 차이를 보여준다.</dd><dt>유닛의 SIZE</dt><dd>방어측 유닛이 클수록 공격측의 명중률이 상승하며, 반대로 작을수록 명중률이 낮아진다.</dd><dt>유닛의 지형 적성</dt><dd>양측의 지형 적성(A~D) 차이에 따라 보정치가 붙는다. 적성 B를 기준으로 적성 랭크 한 단계의 차이마다 10%씩 명중률이 변동한다. 양측의 지형 적성이 동일하면 보정치는 없다.</dd><dt>맵의 지형 보정</dt><dd>방어측 유닛이 위치한 타일의 지형 보정(地形補正) 값만큼 사격계 무기의 명중률이 감소한다. (예 : 방어측 지형 보정이 30%일 때, 공격측이 사격계 무기로 공격하면 최종 명중률의 수치에서 -30만큼 명중률이 떨어진다.)</dd><dt>지원 공격 보정</dt><dd>단독 공격이 아닌, 지원 공격을 해서 상대를 공격했을 경우, [지원 참여 인원수 × 5%] 만큼의 명중 보정이 추가된다. (2인 이상)</dd><dt>회피 커맨드 선택 시</dt><dd>회피 커맨드를 선택하여 공격을 회피하려고 할 경우, 최종 명중률에 0.7배로 적용된다. (소수점 이하 올림)</dd></dl><br>
+<h3><a class="mozTocH3" id="mozTocId518968"></a>데미지 계산식</h3>
+<ul>
+<li> 공격측 : 유닛의 공격력, 무기의 POW</li>
+<li> 방어측 : 유닛의 방어력</li></ul><br><strong>&lt;BEAM 속성 무기&gt;</strong><br>
+<table class="twtable">
+<tbody>
+<tr class="evenRow">
+<th colspan="2">기본 데미지 = 무기 POW × 공격력 ÷ 방어력</th></tr>
+<tr class="oddRow">
+<td>BEAM 격투 (BEAM格闘)<br>특수 격투 (特殊格闘)</td>
+<td>기본 데미지×크리티컬 보정×Hit수×텐션 보정</td></tr>
+<tr class="evenRow">
+<td>사격 BEAM (射撃BEAM)<br>특수 사격 (特殊射撃)</td>
+<td>기본 데미지×크리티컬 보정×Hit수</td></tr>
+<tr class="oddRow">
+<td>확산 BEAM (拡散BEAM)</td>
+<td>기본 데미지×크리티컬 보정×Hit수×사이즈 보정</td></tr>
+<tr class="evenRow">
+<td>BEAM 연사 (BEAM連射)</td>
+<td>기본 데미지×크리티컬 보정×Hit수×랜덤 보정</td></tr>
+<tr class="oddRow">
+<td>각성 (覚醒)<br>각성 BEAM</td>
+<td>기본 데미지×크리티컬 보정×Hit수×텐션 보정×각성 보정</td></tr>
+<tr class="evenRow">
+<td>필살기 (必殺技)</td>
+<td>기본 데미지×크리티컬 보정×Hit수×MP보정</td></tr></tbody></table><br>
+
+<strong>&lt;비 BEAM 속성 무기&gt;</strong><br>
+<table class="twtable">
+<tbody>
+<tr class="evenRow">
+<th colspan="2">기본 데미지 = 무기 POW + (공격력 - 방어력) × 100</th></tr>
+<tr class="oddRow">
+<td>통상 격투 (通常格闘)</td>
+<td>기본 데미지×크리티컬 보정×Hit수×텐션 보정</td></tr>
+<tr class="evenRow">
+<td>사격 (射撃)<br>미사일 (ミサイル)<br>실체탄 (実体弾)</td>
+<td>기본 데미지×크리티컬 보정×Hit수</td></tr>
+<tr class="oddRow">
+<td>확산 (拡散)</td>
+<td>기본 데미지×크리티컬 보정×Hit수×사이즈 보정</td></tr>
+<tr class="evenRow">
+<td>연사 (連射)</td>
+<td>기본 데미지×크리티컬 보정×Hit수×랜덤 보정</td></tr></tbody></table><br><strong>&lt;전격/MAP 속성 무기&gt;</strong><br>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th align="center">공격 속성</th><th align="center">계산식</th></tr>
+<tr class="oddRow">
+<td>전격 (電撃)</td>
+<td>무기 POW×크리티컬 보정</td></tr>
+<tr class="evenRow">
+<td>MAP 병기</td>
+<td>무기 POW</td></tr></tbody></table><br>
+<h4><a class="mozTocH4" id="mozTocId132035"></a>크리티컬 보정</h4>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th><br></th><th>통상</th><th>크리티컬</th><th>슈퍼 크리티컬</th></tr>
+<tr class="oddRow">
+<td>보정치</td>
+<td>1.0</td>
+<td>1.5</td>
+<td>2.0</td></tr></tbody></table>텐션이 '초강기'일 때 공격이 명중하면 반드시 '크리티컬'이 발생한다.<br>텐션이 '초일격'일 때 공격이 명중하면 반드시 '슈퍼 크리티컬'이 발생한다.<br><br>
+<h4><a class="mozTocH4" id="mozTocId402221"></a>사이즈 보정</h4>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th>방어측 사이즈</th><th align="center">S</th><th align="center">M</th><th align="center">L</th><th align="center">2L</th><th align="center">3L</th><th align="center">4L</th></tr>
+<tr class="oddRow">
+<td>사이즈 보정치</td>
+<td>0.68</td>
+<td>1.0</td>
+<td>1.2</td>
+<td>1.4</td>
+<td>1.5</td>
+<td>1.6</td></tr></tbody></table>이 보정이 적용된 무기로 공격하면 방어측의 크기가 클수록 데미지를 더 많이 줄 수 있다.<br><br>
+<h4><a class="mozTocH4" id="mozTocId737472"></a>랜덤 보정</h4>0.8 ~ 1.2 사이의 임의의 수치가 계산식에 랜덤 보정치로 들어간다.<br><br>
+<h4><a class="mozTocH4" id="mozTocId463302"></a>텐션 보정</h4>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th><br></th><th>혼란</th><th>약기</th><th>보통</th><th>강기</th><th>초강기</th><th>초일격</th></tr>
+<tr class="oddRow">
+<td>공격측 텐션</td>
+<td align="center">-</td>
+<td>80</td>
+<td>100</td>
+<td>120</td>
+<td>150</td>
+<td>200</td></tr>
+<tr class="evenRow">
+<td>방어측 텐션</td>
+<td>70</td>
+<td>90</td>
+<td>100</td>
+<td>110</td>
+<td>130</td>
+<td>150</td></tr></tbody></table>
+<pre>&lt;계산식&gt;
+텐션 보정치 = (100+공격측 텐션-방어측 텐션)÷100
+</pre>
+<ul>
+<li> 텐션이 '혼란' : 반격 불능</li>
+<li> 텐션이 '초강기' : 공격시 반드시 크리티컬 발생
+
+
+
+
+
+
+
+
+<ul>
+<li> 유닛과 무기에 따라 전투 연출이 변화하는 경우가 있다.</li></ul></li>
+<li> 텐션이 '초일격' : 공격시 반드시 슈퍼 크리티컬 발생
+
+
+
+
+
+
+
+
+<ul>
+<li> 적에게 '초일격' 공격을 명중시키면, '초일격' 상태가 해제된다. (MP가 최대치의 50%로 하락)</li></ul></li></ul><br>
+<h4><a class="mozTocH4" id="mozTocId277881"></a>각성 보정</h4>캐릭터의 능력치 중, 각성(覚醒)에 대한 보정<br>
+<pre>각성 보정치 = (100 + (공격측 각성치 - 방어측 각성치) × 0.5) ÷ 100
+</pre><br>
+<h4><a class="mozTocH4" id="mozTocId350173"></a>MP보정</h4>공격측 캐릭터의 최대 MP에 현재 MP의 비율에 따라 보정치가 변화한다. 범위는 약 &lt;0.4배~2.5배&gt;<br>따라서 MP가 100%에 가까우면 공격 데미지가 높아진다.<br><br>
+<h4><a class="mozTocH4" id="mozTocId722906"></a>데미지 증감 행동/요소</h4>
+<ul>
+<li> 방어 : 방어측이 '방어'를 선택할 경우. 데미지가 30% 경감한다. (0.7배)</li>
+<li> 무기의 유효 적성 △ : 공격측이 무기의 유효 적성 △의 지형에서 공격한 경우 데미지가 50% 감소 (0.5배)</li>
+<li> 전함에 핀포인트 공격 : 전함의 약점을 노려서 핀포인트 공격을 하면 '무기 POW'가 1.5배가 된다.</li>
+<li> 옵션 파츠/어빌리티 : 옵션 파츠와 어빌리티의 효과에 따라서 변화한다.</li></ul><br>
+<h3><a class="mozTocH3" id="mozTocId627695"></a>그룹/팀 에리어와 레벨</h3><strong>그룹 레벨</strong>은 함장의 '지휘', 부장의 '지휘', 게스트의 '매력', 각 팀 리더의 '지휘'에 의해 증감한다.<br>
+<ul>
+<li> 그룹 에리어 : &lt;포획/구조/살포/교란막&gt;의 유효 범위</li>
+<li> 팀 에리어 : 팀 리더의 지휘 범위, 지휘 범위 내의 같은 팀 멤버는 '지원 공격'을 할 수 있다.</li>
+<li> 스테이지 개시 시, 초기 MP의 양</li></ul>
+<pre>그룹치 = (함장의 지휘 × 3) + (부장의 지휘 × 2) + ( 게스트의 매력 + 리더 1의 지휘 + 리더 2의 지휘 )
+</pre><strong>그룹치에 따른 그룹의 영향</strong><br>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th>그룹치</th>
+<td>1~19</td>
+<td>20~29</td>
+<td>30~39</td>
+<td>40~49</td>
+<td>50~59</td>
+<td>60~69</td>
+<td>70~79</td>
+<td>80~89</td>
+<td>90~99</td>
+<td>100~</td></tr>
+<tr class="oddRow"><th>그룹 에리어</th>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td></tr>
+<tr class="evenRow"><th>팀 에리어</th>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+<td>5</td></tr>
+<tr class="oddRow"><th>초기 MP의 양<br>(캐릭터의 최대 MP량에 대한 비율)</th>
+<td>40%</td>
+<td>43%</td>
+<td>45%</td>
+<td>47%</td>
+<td>50%</td>
+<td>50%</td>
+<td>53%</td>
+<td>55%</td>
+<td>57%</td>
+<td>60%</td></tr></tbody></table><br>
+<h4><a class="mozTocH4" id="mozTocId284675"></a>마스터 에리어</h4>마스터 유닛은 제한 없이 아군 유닛간에 &lt;지원 공격&gt;을 할 수 있다.<br>또한, 매턴마다 HP/EN를 일정량 회복할 수 있어서 능력만 된다면 단독 행동으로 무쌍을 펼칠 수 있다.<br>
+<pre>기준치 = (마스터 유닛 Lv + 탑승 파일럿 Lv) ÷ 2
+※소수점 이하 버림
+</pre>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th align="center">기준치</th><th align="center">마스터 에리어</th></tr>
+<tr class="oddRow">
+<td>1~5</td>
+<td>3</td></tr>
+<tr class="evenRow">
+<td>6~10</td>
+<td>4</td></tr>
+<tr class="oddRow">
+<td>11~15</td>
+<td>5</td></tr>
+<tr class="evenRow">
+<td>16~20</td>
+<td>6</td></tr>
+<tr class="oddRow">
+<td>21~30</td>
+<td>7</td></tr>
+<tr class="evenRow">
+<td>31~40</td>
+<td>8</td></tr>
+<tr class="oddRow">
+<td>41~50</td>
+<td>9</td></tr>
+<tr class="evenRow">
+<td>51~</td>
+<td>10</td></tr></tbody></table><br>
+<h3><a class="mozTocH3" id="mozTocId598857"></a>전함의 배치 장소에 따른 효과</h3>아래는 각 배치별 영향을 주는 요소를 설명한다.<br>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th align="center">배치</th><th align="center">관련 능력치</th><th align="center">효과</th></tr>
+<tr class="oddRow">
+<td>함장 (艦長)</td>
+<td>지휘 (指揮)<br>매력 (魅力)</td>
+<td align="left">그룹 레벨<br>전함의 명중/회피<br>전함의 획득 경험치 보너스</td></tr>
+<tr class="evenRow">
+<td>부장 (副長)</td>
+<td>지휘 (指揮)<br>통신 (通信)</td>
+<td align="left">그룹 레벨<br>전함의 명중/회피</td></tr>
+<tr class="oddRow">
+<td>통신 (通信)</td>
+<td>통신 (通信)</td>
+<td>전함의 명중</td></tr>
+<tr class="evenRow">
+<td>조타 (操舵)</td>
+<td>조타 (操舵)</td>
+<td>전함의 회피</td></tr>
+<tr class="oddRow">
+<td>정비 (整備)</td>
+<td>정비 (整備)</td>
+<td>전함의 HP 회복량<br>동일 그룹 유닛들의 획득 경험치 보너스</td></tr>
+<tr class="evenRow">
+<td>게스트 (ゲスト)</td>
+<td>매력 (魅力)</td>
+<td>그룹 레벨<br>동일 그룹 파일럿들의 MP 회복량</td></tr></tbody></table><br>
+<h3><a class="mozTocH3" id="mozTocId107044"></a>유닛/파일럿의 능력치 설명</h3>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th>유닛 능력치</th><th>설명</th></tr>
+<tr class="oddRow">
+<td>HP</td>
+<td>0이 되면 격추됨</td></tr>
+<tr class="evenRow">
+<td>EN</td>
+<td>무기를 사용하는데 소비</td></tr>
+<tr class="oddRow">
+<td>SIZE</td>
+<td>공격측 유닛의 확산 속성의 무기 데미지에 영향<br>방어측 유닛의 회피율</td></tr>
+<tr class="evenRow">
+<td>공격력<br>(攻撃力)</td>
+<td>유닛의 주는 데미지에 영향</td></tr>
+<tr class="oddRow">
+<td>방어력<br>(防御力)</td>
+<td>유닛의 받는 데미지에 영향</td></tr>
+<tr class="evenRow">
+<td>기동력<br>(機動力)</td>
+<td>유닛의 명중/회피/크리티컬 확률에 영향</td></tr>
+<tr class="oddRow">
+<td>이동력<br>(移動力)</td>
+<td>유닛의 기본 이동거리</td></tr>
+<tr class="evenRow">
+<td>지형 적성<br>(A ~ D)</td>
+<td>유닛의 이동거리에 영향<br>공격측 유닛의 명중률</td></tr>
+<tr class="oddRow"><th>파일럿 능력치</th><th>설명</th></tr>
+<tr class="evenRow">
+<td>사격<br>(射撃)</td>
+<td>사격계 무기의 명중률</td></tr>
+<tr class="oddRow">
+<td>격투<br>(格闘)</td>
+<td>격투계 무기의 명중률</td></tr>
+<tr class="evenRow">
+<td>반응<br>(反応)</td>
+<td>유닛의 회피율에 영향</td></tr>
+<tr class="oddRow">
+<td>각성<br>(覚醒)</td>
+<td>각성계 무기의 명중률/공격력</td></tr></tbody></table><br>
+<h3><a class="mozTocH3" id="mozTocId411252"></a>행동에 따른 MP 변동치</h3>아래의 MP 변동치 표는 잠정적인 결과 값으로 여러 조건에 의해 증감치가 변동될 수 있다.<br>
+<table class="twtable">
+<tbody>
+<tr class="evenRow"><th align="center">상황</th><th align="center">행동</th><th align="center">MP 변동치</th></tr>
+<tr class="oddRow">
+<td align="center">-</td>
+<td>자신의 턴이 돌아온다</td>
+<td>+초기 MP의 10%<br>(초기 MP 이하일 때만)</td></tr>
+<tr class="evenRow">
+<td rowspan="4">아군이 공격측</td>
+<td>공격으로 상대를 격추</td>
+<td>+40</td></tr>
+<tr class="oddRow">
+<td>공격측 공격이 명중 (격추 실패)<br>방어측 반격을 회피</td>
+<td>+20</td></tr>
+<tr class="evenRow">
+<td>공격측 공격이 명중 (격추 실패)<br>방어측 반격이 명중</td>
+<td>+0</td></tr>
+<tr class="oddRow">
+<td>공격측 공격을 회피<br>방어측 반격이 명중</td>
+<td>-20</td></tr>
+<tr class="evenRow">
+<td rowspan="7">아군이 방어측</td>
+<td>방어측 '방어' 선택<br>공격측 공격이 명중</td>
+<td>-10</td></tr>
+<tr class="oddRow">
+<td>방어측 '방어' 선택<br>공격측 공격을 회피</td>
+<td>+0</td></tr>
+<tr class="evenRow">
+<td>방어측 '회피' 선택<br>공격측 공격을 회피</td>
+<td>+10</td></tr>
+<tr class="oddRow">
+<td>방어측 '회피' 선택<br>공격측 공격이 명중</td>
+<td>-30</td></tr>
+<tr class="evenRow">
+<td>방어측 '반격' 선택<br>방어측 공격을 회피</td>
+<td>-30</td></tr>
+<tr class="oddRow">
+<td>방어측 '반격' 선택<br>양측 공격이 명중</td>
+<td>+0</td></tr>
+<tr class="evenRow">
+<td>방어측 '반격' 선택<br>공격측을 반격으로 격추</td>
+<td>+20</td></tr></tbody></table>
+</div>
+
+<!-- 하단 -->
+<div class="footer">
+<p>이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</p></div>
+</body></html>

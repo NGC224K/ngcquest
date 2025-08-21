@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>공략</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="title.js"></script>
+  </head>
+  <body>
+    <!-- 상단 -->
+    <div class="header"> <a href="../index.html">
+        <h1>드래곤 퀘스트 7</h1>
+      </a>
+      <h2>인간 직업/직업 보정</h2>
+    </div>
+    <!-- 본문 -->
+    <div class="viewer">
+      <ol id="mozToc">
+        <!--mozToc h3 1 h4 2-->
+        <li><a href="#mozTocId613547">설명</a></li>
+        <li><a href="#mozTocId506365">인간 기본직</a></li>
+        <li><a href="#mozTocId148308">인간 상급직</a></li>
+      </ol>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId613547"></a>설명</h3>
+      <dl>
+        <dt>능력치 보정</dt>
+        <dd>직업에 따라서 기본 능력치에 퍼센트 보정치가 적용된다. (백분율로 표기함)</dd>
+        <dd>예 : 기본 최대 MP이 98일 때, 도적으로 전직하면 최대 MP는 58이 된다. 「98 × (60 ÷ 100) = 58 (소수점 이하 버림)」</dd>
+      </dl>
+      <br>
+      <dl>
+        <dt>마스터 보정</dt>
+        <dd>직업 레벨(직업 숙련도)를 마스터(★8)하면, 특정 능력치가 상승한다.</dd>
+        <dd>예 : 기본 힘이 60일 때, 배틀마스터를 마스터하면 힘이 75가 된다. 「60 + 15 = 75」</dd>
+      </dl>
+      <br>
+      <dl>
+        <dt>특수 능력</dt>
+        <dd>회심UP : 회심의 일격 확률이 상승한다. (확률은 숙련도에 비례)</dd>
+        <dd>회피UP : 적의 공격을 회피하기 쉬워진다. (확률은 숙련도에 비례)</dd>
+        <dd>훔치기 : 전투 후 아이템을 훔칠 수 있다. (확률은 숙련도와 동일 특수 능력(훔치기)를 가진 캐릭터의 수에 비례)</dd>
+        <dd>바다 적응 : 선원 전용. 숙련도에 따라 「 특기 : 해일(つなみ) 」의 받는 데미지가 감소한다. (최대 75%)</dd>
+        <dd>타격 차단 : 배틀마스터 전용. 일정 확률로 적의 타격계 공격을 차단할 수 있다. (확률은 숙련도에 비례)</dd>
+        <dd>일격사 : 타격계 공격을 할 때, 일정 확률로 적을 일격사 시킬 수 있다. (확률은 숙련도에 비례)</dd>
+        <dd>소비 MP 감소 1 : 숙련도에 따라 소비 MP가 감소한다. (최대 75%)</dd>
+        <dd>소비 MP 감소 2 : 숙련도에 따라 소비 MP가 감소한다. (최대 50%)</dd>
+        <dd>행동 불능 1 : 일정 확률로 적이 공격하지 않는다. (확률은 숙련도에 비례)</dd>
+        <dd>마물 길들이기 : 마물헌터 전용. 「 특기 : 마물 길들이기(まものならし) 」의 효과가 상승 (효과는 숙련도에 비례)</dd>
+        <dd>고기 먹이기 : 마물헌터 전용. 전투 중, 도구로 뼈에 붙은 고기(ほねつきにく), 엄청나게 푸짐한 고기(超しもふり肉)를 사용할 수 있다.</dd>
+        <dd>HP 회복 : 용자 전용. ★4 이후, 전투 중 HP가 회복한다. (회복량은 숙련도에 비례. 최대 50씩 회복)</dd>
+      </dl>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId506365"></a>인간 기본직</h3>
+      <table class="sortable">
+        <thead>
+          <tr class="evenRow">
+            <td index="0">명칭(K)<span class="hidden"></span></td>
+            <td index="1">명칭(J)<span class="hidden"></span></td>
+            <td index="2">힘<span class="hidden"></span></td>
+            <td index="3">민첩함<span class="hidden"></span></td>
+            <td index="4">몸방어<span class="hidden"></span></td>
+            <td index="5">현명함<span class="hidden"></span></td>
+            <td index="6">멋짐<span class="hidden"></span></td>
+            <td index="7">최대 HP<span class="hidden"></span></td>
+            <td index="8">최대 MP<span class="hidden"></span></td>
+            <td index="9">특수 능력<span class="hidden"></span></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="oddRow">
+            <td>전사</td>
+            <td>せんし</td>
+            <td>110</td>
+            <td>65</td>
+            <td>　</td>
+            <td>70</td>
+            <td>　</td>
+            <td>110</td>
+            <td>40</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>무투가</td>
+            <td>ぶとうか</td>
+            <td>　</td>
+            <td>115</td>
+            <td>90</td>
+            <td>80</td>
+            <td>　</td>
+            <td>　</td>
+            <td>50</td>
+            <td>회심UP</td>
+          </tr>
+          <tr class="oddRow">
+            <td>마법사</td>
+            <td>まほうつかい</td>
+            <td>60</td>
+            <td>95</td>
+            <td>60</td>
+            <td>120</td>
+            <td>110</td>
+            <td>60</td>
+            <td>110</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>승려</td>
+            <td>そうりょ</td>
+            <td>80</td>
+            <td>90</td>
+            <td>70</td>
+            <td>110</td>
+            <td>　</td>
+            <td>80</td>
+            <td>　</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>무희</td>
+            <td>おどりこ</td>
+            <td>70</td>
+            <td>130</td>
+            <td>60</td>
+            <td>　</td>
+            <td>110</td>
+            <td>70</td>
+            <td>80</td>
+            <td>회피UP</td>
+          </tr>
+          <tr class="evenRow">
+            <td>도적</td>
+            <td>とうぞく</td>
+            <td>90</td>
+            <td>120</td>
+            <td>70</td>
+            <td>90</td>
+            <td>80</td>
+            <td>90</td>
+            <td>60</td>
+            <td>훔치기</td>
+          </tr>
+          <tr class="oddRow">
+            <td>음유시인</td>
+            <td>ぎんゆうしじん</td>
+            <td>75</td>
+            <td>90</td>
+            <td>85</td>
+            <td>120</td>
+            <td>110</td>
+            <td>80</td>
+            <td>　</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>선원</td>
+            <td>ふなのり</td>
+            <td>　</td>
+            <td>105</td>
+            <td>110</td>
+            <td>90</td>
+            <td>　</td>
+            <td>115</td>
+            <td>80</td>
+            <td>바다 적응</td>
+          </tr>
+          <tr class="oddRow">
+            <td>양치기</td>
+            <td>ひつじかい</td>
+            <td>85</td>
+            <td>　</td>
+            <td>80</td>
+            <td>　</td>
+            <td>　</td>
+            <td>80</td>
+            <td>70</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>광대</td>
+            <td>わらわせし</td>
+            <td>70</td>
+            <td>70</td>
+            <td>60</td>
+            <td>80</td>
+            <td>　</td>
+            <td>70</td>
+            <td>60</td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId148308"></a>인간 상급직</h3>
+      <table class="sortable">
+        <thead>
+          <tr class="evenRow">
+            <td index="0">명칭(K)<span class="hidden"></span></td>
+            <td index="1">명칭(J)<span class="hidden"></span></td>
+            <td index="2">힘<span class="hidden"></span></td>
+            <td index="3">민첩함<span class="hidden"></span></td>
+            <td index="4">몸방어<span class="hidden"></span></td>
+            <td index="5">현명함<span class="hidden"></span></td>
+            <td index="6">멋짐<span class="hidden"></span></td>
+            <td index="7">최대 HP<span class="hidden"></span></td>
+            <td index="8">최대 MP<span class="hidden"></span></td>
+            <td index="9">마스터 보정<span class="hidden"></span></td>
+            <td index="10">특수 능력<span class="hidden"></span></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="oddRow">
+            <td>배틀마스터</td>
+            <td>バトルマスター</td>
+            <td>115</td>
+            <td>110</td>
+            <td>110</td>
+            <td>80</td>
+            <td>　</td>
+            <td>120</td>
+            <td>60</td>
+            <td>힘 +15</td>
+            <td>타격 차단</td>
+          </tr>
+          <tr class="evenRow">
+            <td>마법전사</td>
+            <td>まほうせんし</td>
+            <td>105</td>
+            <td>90</td>
+            <td>85</td>
+            <td>　</td>
+            <td>　</td>
+            <td>90</td>
+            <td>110</td>
+            <td>MP +20</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>팔라딘</td>
+            <td>パラディン</td>
+            <td>110</td>
+            <td>115</td>
+            <td>　</td>
+            <td>115</td>
+            <td>　</td>
+            <td>　</td>
+            <td>　</td>
+            <td>HP +20</td>
+            <td>일격사</td>
+          </tr>
+          <tr class="evenRow">
+            <td>현자</td>
+            <td>けんじゃ</td>
+            <td>70</td>
+            <td>105</td>
+            <td>80</td>
+            <td>120</td>
+            <td>　</td>
+            <td>80</td>
+            <td>120</td>
+            <td>현명함 +20</td>
+            <td>소비 MP 감소 1</td>
+          </tr>
+          <tr class="oddRow">
+            <td>슈퍼스타</td>
+            <td>スーパースター</td>
+            <td>80</td>
+            <td>90</td>
+            <td>90</td>
+            <td>　</td>
+            <td>115</td>
+            <td>80</td>
+            <td>90</td>
+            <td>멋짐 +20</td>
+            <td>행동 불능 1</td>
+          </tr>
+          <tr class="evenRow">
+            <td>마물헌터</td>
+            <td>まものハンター</td>
+            <td>　</td>
+            <td>110</td>
+            <td>　</td>
+            <td>120</td>
+            <td>105</td>
+            <td>95</td>
+            <td>95</td>
+            <td>몸방어 +15</td>
+            <td>마물 길들이기<br>
+              고기 먹이기</td>
+          </tr>
+          <tr class="oddRow">
+            <td>해적</td>
+            <td>かいぞく</td>
+            <td>110</td>
+            <td>110</td>
+            <td>120</td>
+            <td>90</td>
+            <td>　</td>
+            <td>105</td>
+            <td>90</td>
+            <td>민첩함 +10</td>
+            <td>훔치기</td>
+          </tr>
+          <tr class="evenRow">
+            <td>천지뇌명사</td>
+            <td>てんちらいめいし</td>
+            <td>90</td>
+            <td>115</td>
+            <td>90</td>
+            <td>120</td>
+            <td>　</td>
+            <td>90</td>
+            <td>120</td>
+            <td>MP +30</td>
+            <td>소비 MP 감소 2</td>
+          </tr>
+          <tr class="oddRow">
+            <td>갓핸드</td>
+            <td>ゴッドハンド</td>
+            <td>125</td>
+            <td>110</td>
+            <td>105</td>
+            <td>　</td>
+            <td>　</td>
+            <td>110</td>
+            <td>90</td>
+            <td>힘 +25</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>용자</td>
+            <td>ゆうしゃ</td>
+            <td>110</td>
+            <td>　</td>
+            <td>　</td>
+            <td>110</td>
+            <td>110</td>
+            <td>110</td>
+            <td>110</td>
+            <td>MP +31</td>
+            <td>HP 회복</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footer">
+      <p>이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</p>
+    </div>
+  </body>
+</html>

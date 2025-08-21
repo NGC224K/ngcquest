@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>공략</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="title.js"></script>
+  </head>
+  <body>
+    <!-- 상단 -->
+    <div class="header"> <a href="../index.html">
+        <h1>페르소나2 죄</h1>
+      </a>
+      <h2>컨택트</h2>
+    </div>
+    <!-- 본문 -->
+    <div class="viewer">
+      <ol id="mozToc">
+        <!--mozToc h3 1 h4 2-->
+        <li><a href="#mozTocId787786">컨택트 (コンタクト)의 기본</a>
+          <ol>
+            <li><a href="#mozTocId756802">계약에 대해</a></li>
+            <li><a href="#mozTocId26598">카드 입수에 대해</a></li>
+            <li><a href="#mozTocId794106">개성에 대해</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId829198">캐릭터별 컨택트 커맨드</a>
+          <ol>
+            <li><a href="#mozTocId856772">1인 커맨드</a></li>
+            <li><a href="#mozTocId245548">2인 커맨드</a></li>
+            <li><a href="#mozTocId467181">3인 커맨드</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId238066">컨택트 일람</a>
+          <ol>
+            <li><a href="#mozTocId677352">개성 1</a></li>
+            <li><a href="#mozTocId191172">개성 2</a></li>
+            <li><a href="#mozTocId989706">개성 3</a></li>
+          </ol>
+        </li>
+      </ol>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId787786"></a>컨택트 (コンタクト)의 기본</h3>
+      <ul>
+        <li> 전투 중, 아군 턴의 처음에 악마와 직접 회화를 하는 선택 사항 <strong>컨택트</strong>가 있습니다.</li>
+        <li> 악마는 &lt;기쁨, 흥미, 분노, 공포&gt; 4개의 감정이 있어서, 컨택트를 실행하면 특정 감정이 1단계 상승합니다. 이 감정은 색으로 표현됩니다.</li>
+      </ul>
+      <table class="twtable">
+        <caption align="top"> 감정별 색상표</caption>
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">감정</th>
+            <th align="center">색상</th>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">기쁨 (喜び)</td>
+            <td><span style="color: rgb(0, 128, 0);">녹색</span></td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">흥미 (興味)</td>
+            <td><span style="color: rgb(218, 165, 32);">황색</span></td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">분노 (怒り)</td>
+            <td><span style="color: rgb(255, 0, 0);">적색</span></td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">공포 (恐怖)</td>
+            <td><span style="color: rgb(0, 0, 255);">청색</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <ul>
+        <li> 기본은 1체 1커맨드로 컨택트를 실시합니다만, 2~3명의 복수 컨택트도 가능합니다. (이것은 캐릭터의 관계에 따라 다름)</li>
+        <li> 어느 선택으로 어떤 감정이 오를까는 정해져 있으므로, 올리는 방법은 아래의 컨택트 일람을 참고하세요.</li>
+        <li> 각 악마는 어조(口調)가 다르므로, 익숙해지면 어조에 따라 감정을 올리는 테크닉도 생길겁니다. (일본어를 알아야겠지요...)</li>
+        <li> 악마의 감정이 최대치 (통상 3단계, 운세의 효과에 따라 2~4단계로 변화)에 도달하면 악마는 아래의 행동을 합니다.</li>
+      </ul>
+      <table class="twtable">
+        <caption align="top">감정 최대치일 때 악마의 행동 </caption>
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">감정</th>
+            <th align="center">행동</th>
+          </tr>
+          <tr class="oddRow">
+            <td>기쁨</td>
+            <td><strong>계약</strong>을 할 수 있습니다. 컨택트를 실시하는 아군의 레벨이, 악마의 레벨보다 높아야 합니다.</td>
+          </tr>
+          <tr class="evenRow">
+            <td>흥미</td>
+            <td>타로 카드를 줍니다. 받을 수 있는 카드의 종류는 악마의 아르카나와 일치합니다.</td>
+          </tr>
+          <tr class="oddRow">
+            <td>분노</td>
+            <td>교섭이 파기되며, 간혹 악마의 선제 공격을 받습니다.</td>
+          </tr>
+          <tr class="evenRow">
+            <td>공포</td>
+            <td>악마가 공포에 질려서 전투에서 도망칩니다.</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId756802"></a>계약에 대해</h4>
+      <ul>
+        <li> 악마와 계약을 한 후, 전투에서 다시 같은 악마와 만났을 경우. 기쁨을 3단계 올리면, 아이템이나 소문의 정보를 얻을 수 있습니다.</li>
+        <li> 받을 수 있는 아이템은 악마에 따라 다릅니다.</li>
+        <li> 계약 가능한 악마는 최대 3체까지 입니다.</li>
+      </ul>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId26598"></a>카드 입수에 대해</h4>
+      <ul>
+        <li> 컨택트로 악마의 흥미를 최대치까지 올리면, 악마로부터 타로 카드를 받을 수 있습니다. 페르소나 소환에 필요하는 카드는 이 방법으로 모을 수 있는 겁니다.</li>
+        <li> 계약한 상태의 악마라면, 재차 만나서 흥미를 최대치까지 올리면 '프리 타로'를 받을 수 있습니다.</li>
+      </ul>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId794106"></a>개성에 대해</h4>
+      출현하는 악마는 정해진 '개성'을 가지고 있습니다. 이 개성에 맞춰서 컨택트 커맨드를 선택해주면 원하는 결과를 낼 수 있습니다.<br>
+      <br>
+      <br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId829198"></a>캐릭터별 컨택트 커맨드</h3>
+      캐릭터마다 컨택트에 사용하는 커맨드가 지정되어 있습니다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId856772"></a>1인 커맨드</h4>
+      ※ <strong>굵은</strong>글씨는 공략에 사용하는 커맨드 약칭으로 씁니다.<br>
+      ※ 번역은 간단하게...의역 有<br>
+      <blockquote> 에이키치의 "장소를 구분" 커맨드는 의역이며, 스모의 용어인 것 같아서 <a target="_blank"
+
+          title="http://ja.wikipedia.org/wiki/%E7%9B%B8%E6%92%B2#.E4.BB.95.E5.88.87.E3.82.8A을(를) 여는 외부 링크"
+
+          href="http://ja.wikipedia.org/wiki/%E7%9B%B8%E6%92%B2#.E4.BB.95.E5.88.87.E3.82.8A"
+
+          class="externalLink">일본어 위키피디아(스모)</a>의 해당 설명이 있는 링크를 남겨봅니다. </blockquote>
+      <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">캐릭터</th>
+            <th align="center">커맨드</th>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="4">타츠야 (達哉)</td>
+            <td><strong>응시</strong>하기 (目で殺す)</td>
+          </tr>
+          <tr class="evenRow">
+            <td><strong>흉내</strong>내기 (ものまね)</td>
+          </tr>
+          <tr class="oddRow">
+            <td><strong>설득</strong>하기 (説得する)</td>
+          </tr>
+          <tr class="evenRow">
+            <td><strong>한탄</strong>하기 (漢を語る)</td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="4">에이키치 (栄吉)</td>
+            <td><strong>자아</strong>도취 (自分に酔う)</td>
+          </tr>
+          <tr class="evenRow">
+            <td><strong>인생</strong>을 말함 (人生を語る)</td>
+          </tr>
+          <tr class="oddRow">
+            <td><strong>장소</strong>를 구분 (場を仕切る)</td>
+          </tr>
+          <tr class="evenRow">
+            <td><strong>노래</strong>로 죽임 (歌い殺す)</td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="4">긴코 (ギンコ)</td>
+            <td><strong>춤</strong>추기 (踊る)</td>
+          </tr>
+          <tr class="evenRow">
+            <td><strong>연애</strong>를 말함 (恋愛を語る)</td>
+          </tr>
+          <tr class="oddRow">
+            <td><strong>쿵푸</strong> (カンフー)</td>
+          </tr>
+          <tr class="evenRow">
+            <td><strong>유혹</strong>하기 (悩殺する)</td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="4">마야 (舞耶)</td>
+            <td><strong>인터뷰</strong> (インタビュー)</td>
+          </tr>
+          <tr class="evenRow">
+            <td><strong>부모</strong>와 자식을 말함 (親子を語る)</td>
+          </tr>
+          <tr class="oddRow">
+            <td><strong>극찬</strong>으로 죽임 (褒め殺す)</td>
+          </tr>
+          <tr class="evenRow">
+            <td><strong>상담</strong>에 응함 (相談に乗る)</td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="4">유키노 (ゆきの)</td>
+            <td><strong>인도</strong>하기 (諭す)</td>
+          </tr>
+          <tr class="evenRow">
+            <td><strong>주먹</strong>으로 말함 (拳で語る)</td>
+          </tr>
+          <tr class="oddRow">
+            <td><strong>야단</strong>치기 (叱る)</td>
+          </tr>
+          <tr class="evenRow">
+            <td><strong>촬영</strong>으로 죽임 (撮り殺す)</td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="4">쥰 (淳)</td>
+            <td><strong>응석</strong>부리기 (甘える)</td>
+          </tr>
+          <tr class="evenRow">
+            <td><strong>꿈</strong>을 말함 (夢を語る)</td>
+          </tr>
+          <tr class="oddRow">
+            <td><strong>별점</strong>치기 (星占いをする)</td>
+          </tr>
+          <tr class="evenRow">
+            <td><strong>꽃</strong>으로 죽임 (花で殺す)</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId245548"></a>2인 커맨드</h4>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th colspan="2" align="center">편성</th>
+            <th align="center">사용 조건</th>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="5" align="left">타츠야</td>
+            <td align="left">에이키치</td>
+            <td>처음부터 가능<br>
+              카스가야마 고교 1-2에서 에이키치의 질문에 "에이키치가 멋지다 (栄吉の方がカッコイイ)"라고 대답하면 사용할 수 없게 된다.</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">긴코</td>
+            <td align="left">처음부터 가능</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">마야</td>
+            <td align="left">방공호 이벤트 이후</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">유키노</td>
+            <td align="left">조디악의 가면이 있는 방에서, 유키노의 질문에 "그럭저럭 (まあな)"라고 대답</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">쥰</td>
+            <td align="left">사자궁의 신전에서 "증오하지 않았다 (憎んでなどいない)" or "자신도 같은 일을~ (自分も同じ事を~)"라고 대답</td>
+          </tr>
+          <tr class="evenRow">
+            <td rowspan="4" align="left">에이키치</td>
+            <td align="left">긴코</td>
+            <td align="left">처음부터 가능</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">마야</td>
+            <td align="left">조디악 클리어 이후</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">유키노</td>
+            <td align="left">조디악 클리어 이후</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">쥰</td>
+            <td align="left">처음부터 가능</td>
+          </tr>
+          <tr class="evenRow">
+            <td rowspan="3" align="left">긴코</td>
+            <td align="left">마야</td>
+            <td align="left">이와토야마 클리어 이후</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">유키노</td>
+            <td align="right"><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">쥰</td>
+            <td align="right"><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="2" align="left">마야</td>
+            <td align="left">유키노</td>
+            <td align="left">처음부터 가능</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">쥰</td>
+            <td align="right"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId467181"></a>3인 커맨드</h4>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th colspan="3" align="center">편성</th>
+            <th align="center">사용 조건</th>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="5" align="left">타츠야</td>
+            <td rowspan="5" align="left">에이키치</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">긴코</td>
+            <td align="right"><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">마야</td>
+            <td align="right"><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">유키노</td>
+            <td align="left">조디악의 가면이 있는 방에서, 유키노의 질문에 "그럭저럭 (まあな)"라고 대답</td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">쥰</td>
+            <td align="left">보병궁의 신전 클리어 이후에 벨벳룸에서, <br>
+              에이키치의 질문에 "기타가 튄다 (ギターが弾ける)"라고 대답</td>
+          </tr>
+          <tr class="evenRow">
+            <td align="left">에이키치</td>
+            <td align="left">긴코</td>
+            <td align="left">마야</td>
+            <td align="right"><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td align="left">긴코</td>
+            <td align="left">마야</td>
+            <td align="left">유키노</td>
+            <td align="left">처음부터 가능</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId238066"></a>컨택트 일람</h3>
+      악마는 개성(個性)을 가지고 있습니다.<br>
+      전투에서 컨택트를 한 번이라도 시도하면, 애널라이즈 항목에 개성 정보가 추가됩니다.<br>
+      악마의 개성을 파악한 후, 아래의 개성표와 대응하는 커맨드를 선택하면, 원하는 감정을 올릴 수 있습니다.<br>
+      <br>
+      아래의 항목들은 개성별 커맨드 편성표입니다. <br>
+      <ul>
+        <li> &lt; = &gt;는 1인 커맨드</li>
+        <li> &lt; + &gt;는 2~3인 커맨드</li>
+      </ul>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId677352"></a>개성 1</h4>
+      기본 개성입니다. <br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">개성</th>
+            <th align="center">기쁨</th>
+            <th align="center">흥미</th>
+            <th align="center">기쁨/흥미</th>
+            <th align="center">흥미/분노</th>
+            <th align="center">흥미/공포</th>
+          </tr>
+          <tr class="oddRow">
+            <td>거만 (高慢)</td>
+            <td>타츠야=설득</td>
+            <td>에이키치=자아</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>성급 (短気)</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>강기 (強気)</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>약기 (弱気)</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>명랑 (陽気)</td>
+            <td>타츠야=흉내</td>
+            <td>긴코=유혹<br>
+              긴코+마야+유키노</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>음침 (陰気)</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>영리 (賢い)</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>바보 (愚か)</td>
+            <td>긴코=유혹<br>
+              마야=상담/부모</td>
+            <td>타츠야=응시<br>
+              에이키치=자아/장소<br>
+              마야=인터뷰/극찬<br>
+              유키노=야단<br>
+              긴코+마야+유키노</td>
+            <td>타츠야+긴코</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId191172"></a>개성 2</h4>
+      2개 개성이 조합<br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th colspan="2" align="center">개성</th>
+            <th align="center">기쁨</th>
+            <th align="center">흥미</th>
+            <th align="center">기쁨/흥미</th>
+            <th align="center">흥미/분노</th>
+            <th align="center">흥미/공포</th>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="4">거만</td>
+            <td>명랑</td>
+            <td>타츠야=흉내</td>
+            <td>에이키치=자아<br>
+              타츠야+유키노<br>
+              긴코+마야+유키노</td>
+            <td><br>
+            </td>
+            <td>에이키치=노래<br>
+              긴코=유혹</td>
+            <td>타츠야+에이키치+유키노</td>
+          </tr>
+          <tr class="evenRow">
+            <td>음침</td>
+            <td><br>
+            </td>
+            <td>유키노=야단</td>
+            <td><br>
+            </td>
+            <td>유키노=촬영</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>영리</td>
+            <td>타츠야=설득<br>
+              에이키치=인생/노래</td>
+            <td>에이키치=자아<br>
+              마야=부모<br>
+              유키노=인도</td>
+            <td>쥰=꽃</td>
+            <td>타츠야=흉내<br>
+              에이키치+유키노<br>
+              긴코+마야+유키노</td>
+            <td>타츠야+유키노<br>
+              타츠야+에이키치+유키노</td>
+          </tr>
+          <tr class="evenRow">
+            <td>바보</td>
+            <td>타츠야=설득</td>
+            <td>마야=극찬<br>
+              타츠야+에이키치<br>
+              마야+유키노</td>
+            <td>쥰=응석</td>
+            <td>마야=인터뷰</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="2">성급</td>
+            <td>영리</td>
+            <td>유키노=주먹</td>
+            <td>타츠야=흉내<br>
+              쥰=꽃</td>
+            <td><br>
+            </td>
+            <td>에이키치=자아<br>
+              마야=부모<br>
+              쥰=꿈</td>
+            <td>타츠야+에이키치+유키노</td>
+          </tr>
+          <tr class="evenRow">
+            <td>바보</td>
+            <td>마야=상담<br>
+              유키노=주먹<br>
+              쥰=별점</td>
+            <td>에이키치=장소<br>
+              마야=인터뷰<br>
+              유키노=야단<br>
+              타츠야+에이키치+유키노</td>
+            <td>타츠야+유키노</td>
+            <td>마야=극찬<br>
+              에이키치+마야<br>
+              긴코+마야+유키노</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="4">강기</td>
+            <td>명랑</td>
+            <td>타츠야=흉내<br>
+              긴코=춤/연애<br>
+              마야=극찬<br>
+              유키노=주먹<br>
+              에이키치+유키노<br>
+              마야+유키노</td>
+            <td>타츠야=한탄<br>
+              에이키치=노래<br>
+              긴코=쿵푸/유혹<br>
+              마야=인터뷰<br>
+              유키노=촬영<br>
+              타츠야+유키노</td>
+            <td>에이키치+긴코+마야</td>
+            <td>에이키치=자아<br>
+              에이키치+마야<br>
+              긴코+마야+유키노</td>
+            <td>타츠야+에이키치+유키노</td>
+          </tr>
+          <tr class="evenRow">
+            <td>음침</td>
+            <td>타츠야+마야</td>
+            <td>타츠야=한탄<br>
+              긴코=쿵푸/연애<br>
+              유키노=야단</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>영리</td>
+            <td>에이키치=인생<br>
+              유키노=주먹<br>
+              마야+유키노</td>
+            <td>타츠야=흉내/한탄<br>
+              유키노=인도/야단/촬영<br>
+              쥰=꿈/꽃<br>
+              마야=부모<br>
+              긴코=춤</td>
+            <td><br>
+            </td>
+            <td>에이키치=자아</td>
+            <td>긴코=쿵푸</td>
+          </tr>
+          <tr class="evenRow">
+            <td>바보</td>
+            <td>유키노=주먹<br>
+              쥰=별점/꿈</td>
+            <td>타츠야=한탄/응시<br>
+              에이키치=장소<br>
+              긴코=쿵푸<br>
+              마야=인터뷰/극찬<br>
+              타츠야+에이키치<br>
+              타츠야+유키노<br>
+              에이키치+유키노<br>
+              마야+유키노<br>
+              타츠야+에이키치+유키노<br>
+              에이키치+긴코+마야</td>
+            <td>긴코=유혹</td>
+            <td>에이키치=자아<br>
+              유키노=야단<br>
+              쥰=응석<br>
+              타츠야+긴코<br>
+              에이키치+마야<br>
+              긴코+마야+유키노</td>
+            <td>쥰=꽃</td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="2">약기</td>
+            <td>명랑</td>
+            <td>타츠야=흉내<br>
+              유키노=인도<br>
+              타츠야+에이키치</td>
+            <td>유키노=촬영<br>
+              긴코+마야+유키노</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td>마야=인터뷰</td>
+          </tr>
+          <tr class="evenRow">
+            <td>영리</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td>에이키치=인생</td>
+            <td><br>
+            </td>
+            <td>에이키치=자아</td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="2">명랑</td>
+            <td>영리</td>
+            <td>에이키치=인생<br>
+              긴코=연애<br>
+              마야=상담<br>
+              마야+유키노</td>
+            <td>에이키치=자아/노래<br>
+              마야=인터뷰/부모<br>
+              유키노=인도/촬영<br>
+              타츠야+긴코<br>
+              에이키치+마야</td>
+            <td>타츠야=흉내<br>
+              긴코=춤<br>
+              에이키치+유키노<br>
+              에이키치+긴코+마야</td>
+            <td>긴코=유혹<br>
+              긴코+마야+유키노</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>바보</td>
+            <td>타츠야=흉내<br>
+              긴코=춤/연애<br>
+              마야=상담/부모<br>
+              타츠야+마야</td>
+            <td>타츠야=응시<br>
+              에이키치=자아/장소/노래<br>
+              마야=인터뷰/극찬<br>
+              유키노=야단<br>
+              타츠야+에이키치<br>
+              타츠야+긴코<br>
+              타츠야+유키노<br>
+              에이키치+마야<br>
+              마야+유키노<br>
+              긴코+마야+유키노</td>
+            <td>긴코=유혹<br>
+              에이키치+유키노<br>
+              에이키치+긴코+마야</td>
+            <td><br>
+            </td>
+            <td>유키노=촬영<br>
+              타츠야+에이키치+유키노</td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="2">음침</td>
+            <td>영리</td>
+            <td>에이키치=인생</td>
+            <td>긴코=춤/연애<br>
+              유키노=인도<br>
+              타츠야+마야<br>
+              에이키치+유키노</td>
+            <td>타츠야+긴코</td>
+            <td>타츠야=흉내<br>
+              마야=부모<br>
+              유키노=촬영<br>
+              타츠야+에이키치<br>
+              타츠야+마야<br>
+              에이키치+긴코+마야</td>
+            <td>에이키치=자아<br>
+              긴코+마야+유키노</td>
+          </tr>
+          <tr class="evenRow">
+            <td>바보</td>
+            <td><br>
+            </td>
+            <td>타츠야+에이키치</td>
+            <td>긴코=유혹<br>
+              에이키치=장소<br>
+              긴코+마야+유키노</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId989706"></a>개성 3</h4>
+      3개 개성이 조합<br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th colspan="3" align="center">개성</th>
+            <th align="center">기쁨</th>
+            <th align="center">흥미</th>
+            <th align="center">기쁨/흥미</th>
+            <th align="center">흥미/분노</th>
+            <th align="center">흥미/공포</th>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="12">거만</td>
+            <td rowspan="3">강기</td>
+            <td>명랑</td>
+            <td>타츠야=흉내<br>
+              긴코=연애</td>
+            <td><br>
+            </td>
+            <td>쥰=꽃</td>
+            <td>타츠야=설득</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>영리</td>
+            <td>에이키치=인생<br>
+              쥰=응석</td>
+            <td>마야=부모</td>
+            <td>쥰=꽃</td>
+            <td>타츠야=흉내/한탄<br>
+              에이키치=자아<br>
+              긴코=춤<br>
+              쥰=꿈</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>바보</td>
+            <td>유키노=촬영</td>
+            <td>마야=극찬</td>
+            <td><br>
+            </td>
+            <td>타츠야+에이키치</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td rowspan="3">약기</td>
+            <td>명랑</td>
+            <td>타츠야=흉내<br>
+              긴코=연애<br>
+              마야=부모/극찬</td>
+            <td>긴코+마야+유키노<br>
+              타츠야+마야+쥰</td>
+            <td>타츠야=설득</td>
+            <td>에이키치=인생/노래<br>
+              긴코=유혹<br>
+              마야=상담</td>
+            <td>에이키치=자아<br>
+              타츠야+유키노</td>
+          </tr>
+          <tr class="oddRow">
+            <td>음침</td>
+            <td>에이키치=노래<br>
+              쥰=응석</td>
+            <td>타츠야+에이키치</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>영리</td>
+            <td>에이키치=인생<br>
+              타츠야+에이키치</td>
+            <td>마야=부모<br>
+              유키노=인도<br>
+              마야+유키노</td>
+            <td>타츠야=설득</td>
+            <td>타츠야=흉내<br>
+              긴코=춤<br>
+              마야=상담<br>
+              타츠야+긴코<br>
+              에이키치+마야<br>
+              에이키치+유키노<br>
+              에이키치+긴코+마야<br>
+              긴코+마야+유키노</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="2">명랑</td>
+            <td>영리</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td>긴코+마야+유키노</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>바보</td>
+            <td>타츠야=흉내/설득<br>
+              에이키치=노래<br>
+              긴코=연애<br>
+              마야=부모<br>
+              유키노=촬영</td>
+            <td>에이키치=자아<br>
+              마야=극찬</td>
+            <td>타츠야+에이키치</td>
+            <td>에이키치=장소<br>
+              마야=인터뷰</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="2">음침</td>
+            <td>영리</td>
+            <td>타츠야=설득<br>
+              에이키치=인생</td>
+            <td>타츠야+쥰</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td>에이키치=자아</td>
+          </tr>
+          <tr class="evenRow">
+            <td>바보</td>
+            <td>긴코=유혹<br>
+              타츠야=설득</td>
+            <td>타츠야=응시<br>
+              타츠야+에이키치</td>
+            <td>긴코+마야+유키노</td>
+            <td><br>
+            </td>
+            <td>타츠야+유키노<br>
+              타츠야+에이키치+유키노</td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="2">성급</td>
+            <td>영리</td>
+            <td>타츠야=설득</td>
+            <td><br>
+            </td>
+            <td>쥰=꽃</td>
+            <td>타츠야=흉내</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="evenRow">
+            <td>바보</td>
+            <td>타츠야=설득</td>
+            <td>긴코+쥰</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="6">성급</td>
+            <td rowspan="3">강기</td>
+            <td>명랑</td>
+            <td>타츠야=흉내</td>
+            <td>긴코=쿵푸</td>
+            <td>타츠야+유키노</td>
+            <td>에이키치=노래</td>
+            <td>타츠야+에이키치+유키노</td>
+          </tr>
+          <tr class="evenRow">
+            <td>영리</td>
+            <td>타츠야+긴코</td>
+            <td>타츠야=흉내<br>
+              쥰=꽃</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr class="oddRow">
+            <td>바보</td>
+            <td>쥰=별점</td>
+            <td>긴코=쿵푸<br>
+              마야=인터뷰<br>
+              에이키치+유키노<br>
+              타츠야+에이키치+유키노</td>
+            <td>타츠야+유키노</td>
+            <td>타츠야=응시</td>
+            <td>쥰=꽃</td>
+          </tr>
+          <tr class="evenRow">
+            <td>명랑</td>
+            <td>바보</td>
+            <td>타츠야=흉내<br>
+              긴코=춤<br>
+              마야=상담<br>
+              유키노=주먹</td>
+            <td>에이키치=장소<br>
+              마야=인터뷰<br>
+              유키노=야단</td>
+            <td><br>
+            </td>
+            <td>타츠야+에이키치<br>
+              긴코+마야+유키노</td>
+            <td>유키노=촬영</td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="2">음침</td>
+            <td>영리</td>
+            <td>긴코+쥰</td>
+            <td>쥰=별점</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td>쥰=꽃</td>
+          </tr>
+          <tr class="evenRow">
+            <td>바보</td>
+            <td>타츠야+에이키치+쥰</td>
+            <td>마야=인터뷰<br>
+              유키노=야단</td>
+            <td>쥰=별점</td>
+            <td>에이키치=장소<br>
+              쥰=응석<br>
+              타츠야+에이키치</td>
+            <td>타츠야+에이키치+유키노</td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="2">강기</td>
+            <td>명랑</td>
+            <td>바보</td>
+            <td>타츠야=흉내<br>
+              긴코=춤/연애<br>
+              유키노=주먹</td>
+            <td>타츠야=한탄/응시<br>
+              에이키치=장소/노래<br>
+              긴코=쿵푸<br>
+              마야=인터뷰/극찬<br>
+              타츠야+에이키치<br>
+              타츠야+유키노<br>
+              마야+유키노</td>
+            <td>긴코=유혹<br>
+              에이키치+유키노<br>
+              에이키치+긴코+마야</td>
+            <td>에이키치=자아<br>
+              유키노=야단<br>
+              타츠야+긴코<br>
+              에이키치+마야<br>
+              긴코+마야+유키노</td>
+            <td>유키노=촬영<br>
+              타츠야+에이키치+유키노</td>
+          </tr>
+          <tr class="evenRow">
+            <td>음침</td>
+            <td>영리</td>
+            <td>에이키치=인생<br>
+              긴코+마야+유키노</td>
+            <td>타츠야=한탄<br>
+              쥰=별점</td>
+            <td><br>
+            </td>
+            <td>타츠야=흉내<br>
+              마야=부모<br>
+              쥰=꿈</td>
+            <td>긴코=쿵푸<br>
+              쥰=꽃</td>
+          </tr>
+          <tr class="oddRow">
+            <td rowspan="2">약기</td>
+            <td>명랑</td>
+            <td>영리</td>
+            <td>에이키치=노래<br>
+              쥰=별점</td>
+            <td>타츠야=설득<br>
+              유키노=인도<br>
+              쥰=꿈</td>
+            <td>타츠야=흉내<br>
+              에이키치=인생</td>
+            <td>타츠야=응시</td>
+            <td>에이키치=자아<br>
+              쥰=꽃</td>
+          </tr>
+          <tr class="evenRow">
+            <td>음침</td>
+            <td>바보</td>
+            <td>유키노=인도<br>
+              쥰=별점</td>
+            <td>타츠야=설득<br>
+              긴코=연애</td>
+            <td>긴코=유혹</td>
+            <td><br>
+            </td>
+            <td>타츠야=응시<br>
+              긴코+마야+유키노</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+    <!-- 하단 -->
+    <div class="footer">
+      <p>이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</p>
+    </div>
+  </body>
+</html>

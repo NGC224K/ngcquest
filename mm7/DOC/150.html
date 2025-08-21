@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>공략</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="title.js"></script>
+  </head>
+  <body>
+    <!-- 상단 -->
+    <div class="header"> <a href="../index.html">
+        <h1>마이트 &amp; 매직 7</h1>
+      </a>
+      <h2>유용한 정보</h2>
+    </div>
+    <!-- 본문 -->
+    <div class="viewer">
+      <ol id="mozToc">
+        <!--mozToc h3 1 h4 2-->
+        <li><a href="#mozTocId548604">전투</a>
+          <ol>
+            <li><a href="#mozTocId441461">무기의 타격치란 무엇인가?</a></li>
+            <li><a href="#mozTocId744817">무기의 공격 보너스란?</a></li>
+            <li><a href="#mozTocId933197">아머 클래스란?</a></li>
+            <li><a href="#mozTocId702149">원거리의 명중률 보정</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId914358">직업</a>
+          <ol>
+            <li><a href="#mozTocId586943">도둑이나 성직자는 매우 중요하므로 꼭 하나라도 파티에 넣자</a></li>
+            <li><a href="#mozTocId131221">원소계 마법의 숙련도 우선 순위는 물 마법을 우선적으로</a></li>
+            <li><a href="#mozTocId244692">캐스터는 SP 최대치 향상을 목표로</a></li>
+            <li><a href="#mozTocId880219">가장 무난하고 적절한 파티는?</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId317321">마법</a>
+          <ol>
+            <li><a href="#mozTocId498200">원소계 공격 주문</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId684374">아이템</a>
+          <ol>
+            <li><a href="#mozTocId802281">광석으로 무기, 방어구, 아이템 제작</a></li>
+            <li><a href="#mozTocId995468">신성 개입 마법책으로 골드 모으기</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId973259">NPC</a>
+          <ol>
+            <li><a href="#mozTocId285480">경험치를 빠르게 모을 수 있는 고용인</a></li>
+          </ol>
+        </li>
+        <li><a href="#mozTocId628811">버그</a></li>
+      </ol>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId548604"></a>전투</h3>
+      <h4><a class="mozTocH4" id="mozTocId441461"></a>무기의 타격치란 무엇인가?</h4>
+      무기의 타격치는 상대에게 줄 수 있는 피해량(데미지)를 말합니다.<br>
+      여기에는 무기 툴팁의 설명을 보면 볼 수 있는 3d5+8 같은 수치가 있습니다. <br>
+      <ul>
+        <li>d5 = 주사위 면체</li>
+        <li>3 = 주사위 굴림 횟수</li>
+        <li>+8 = 수정치</li>
+      </ul>
+      1~5의 숫자로 되어있는 주사위를 3회 굴리고, 각각의 결과값의 합계에 수정치를 가감하면 최종값이 나옵니다. (예 : (3+4+2)+8 = 17)<br>
+      <ul>
+        <li>근접 무기는 힘(능력치)이 높을수록 수정치가 증가합니다.</li>
+        <li>원거리 무기는 능력치에 의한 수정치가 없습니다. 따라서 순수 무기의 타격치 성능만을 가집니다.</li>
+      </ul>
+      <h4><a class="mozTocH4" id="mozTocId744817"></a>무기의 공격 보너스란?</h4>
+      게임에서는 공격 또는 공격 보너스로 표기됩니다. 공격 보너스가 높을수록 상대에게 공격을 명중시킬 확률이 상승합니다.<br>
+      무기의 공격 보너스와 캐릭터의 공격 보너스 수정치(정확성)을 합쳐서 최종 공격 보너스값이 됩니다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId933197"></a>아머 클래스란?</h4>
+      게임에서는 아머 클래스, AC, 방어 수치 등으로 표기됩니다. 아머 클래스가 높을수록 적의 공격을 회피하기 쉬워집니다.<br>
+      이것은 공격을 막거나 회피하는 행동에 관련된 수치입니다. 회피율이라고 생각하면 간단합니다. 받는 데미지를 감소 시키는 능력치는 아닙니다. 만일 회피에 실패하면 타격치 계산식에 따라 데미지를 받게 됩니다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId702149"></a>원거리의 명중률 보정</h4>
+      거리에 따라 명중률 보정이 있습니다. 당연한 말로 멀수록 명중률이 떨어지고 가까우면 높아집니다. 다만, 이 기준은 부동 상태의 적을 향해 쐈을 때입니다. <br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId914358"></a>직업</h3>
+      <h4><a class="mozTocH4" id="mozTocId586943"></a>도둑이나 성직자는 매우 중요하므로 꼭 하나라도 파티에 넣자</h4>
+      후반에 각 진영에서 상대편 간부를 죽이라는 퀘스트를 받습니다.(컨트롤 큐브 퀘스트) MM7의 중간 보스라고 해도 될 정도로 강력합니다. 강력한 이유는 매우 높은 확률로 근절 시켜버리기 때문인데 유일하게 이 근절을 막는 방법은 육체 마법 GM급의 '마법의 방어' 입니다. 따라서 육체 마법 GM까지 올릴 수 있는 성직자가 필요하게 된 이유 입니다. 이 퀘스트를 수행하는 다른 방법은 훔치기를 사용하는 것 입니다. 단, 훔치기의 성공율은 꽤 높은 숙련도를 요구합니다. 최소 마스터급으로 시도 하십시오. 이것이 가능한 유일한 직업은 도둑뿐 입니다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId131221"></a>원소계 마법의 숙련도 우선 순위는 물 마법을 우선적으로</h4>
+      다
+      른 속성의 마법도 중요하지만 물 마법에 있는 타운포탈이나 수상 보행, 궁극적으로 로이드 비콘은 여행하는데 있어서 매우 중요하고 편리한 마법입니다. 우선적으로 스킬 포인트를 투자해서 일찍 배워두면 좀더 쉽고 빠른 진행을 할 수 있습니다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId244692"></a>캐스터는 SP 최대치 향상을 목표로</h4>
+      캐릭터 생성 할때 능력치 배분이나 물약이나 술통으로 올려줄 때도 SP가 올라가는 지성, 인성 위주로 올려주세요. 명상 스킬은 당연히 필수로 배워야 합니다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId880219"></a>가장 무난하고 적절한 파티는?</h4>
+      답은 이미 있었습니다. 새 게임 시작할 때 기본으로 잡혀있던 <span class="marked">기사, 도둑, 성직자, 마법사</span>가 바로 적당하고 게임 진행하는데 있어서 갖출껀 다 있는 파티입니다. RPG의 아주 기본적인 파티 구성이지요. 어정쩡한 하이브리드 클래스보다는 전문적인 클래스가 게임하는데 있어서 가장 편하고 강합니다.<br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId317321"></a>마법</h3>
+      <h4><a class="mozTocH4" id="mozTocId498200"></a>원소계 공격 주문</h4>
+      선정 기준은 SP 소비가 적고, 복귀 시간이 빠르며, 데미지가 높은 원소 마법의 주문입니다.<br>
+      <table class="twtable">
+        <tbody>
+          <tr class="evenRow">
+            <th align="center">속성</th>
+            <th align="center">마법 이름</th>
+            <th align="center">데미지</th>
+            <th align="center">면역 몬스터의 수</th>
+          </tr>
+          <tr class="oddRow">
+            <td>불</td>
+            <td>파이어볼<br>
+              (Fire Ball)</td>
+            <td>기술 레벨 × 1~6</td>
+            <td>13</td>
+          </tr>
+          <tr class="evenRow">
+            <td>물</td>
+            <td>애시드 버스트<br>
+              (Acid Burst)</td>
+            <td>9 + (기술 레벨 × 1~9)</td>
+            <td>24</td>
+          </tr>
+          <tr class="oddRow">
+            <td>바람</td>
+            <td>라이트닝 볼트<br>
+              (Lightning Bolt)</td>
+            <td align="left">기술 레벨 × 1~8</td>
+            <td>13</td>
+          </tr>
+          <tr class="evenRow">
+            <td>대지</td>
+            <td>블레이드<br>
+              (Blades)</td>
+            <td>기술 레벨 × 1~9</td>
+            <td>15</td>
+          </tr>
+        </tbody>
+      </table>
+      추천하는 마법은 '애시드 버스트'와 '블레이드'입니다. <br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId684374"></a>아이템</h3>
+      <h4><a class="mozTocH4" id="mozTocId802281"></a> 광석으로 무기, 방어구, 아이템 제작</h4>
+      필드나 던전의 특수한 벽에서 얻을 수 있는 광석류 아이템은 에라시아에서 장비나 아이템으로 만들 수 있습니다. 초반에 광석을 모아서 좋은 장비가 나올 때까지 세이브&amp;로드 하면 좋습니다.<br>
+      <br>
+      <h4><a class="mozTocH4" id="mozTocId995468"></a>신성 개입 마법책으로 골드 모으기</h4>
+      '
+      지옥의 홀'에서 얻을 수 있는 '신성 개입'이라는 마법책이 있는데 이 마법책을 버리고 하몬데일의 중재자를 찾아가서 '잃어버리다'를 클릭하면 중재자가 다시 돌려줍니다. 이 방법을 통해 마법책의 수를 불려서 얻은 다음 팔아버리면 많은 수익을 올릴 수 있습니다. <br>
+      신성 개입을 얻을 때 까지는 일반적으로 진행해도 돈이 부족할 이유가 없기에 시기상으로도 충분하며 방법도 간단하므로 적극 추천합니다.<br>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId973259"></a>NPC</h3>
+      <h4><a class="mozTocH4" id="mozTocId285480"></a>경험치를 빠르게 모을 수 있는 <span
+
+          class="tiddlyLink tiddlyLinkNonExisting">고용인</span></h4>
+      파티 전원이 '학습' 기술을 배운 상태로 &lt;학자 + 지도자&gt;를 고용합니다.<br>
+      <ul>
+        <li> &lt;학자&gt;는 '아이템 확인' 기술을 올릴 필요가 없어서 기술 점수를 절약할 수 있습니다. 추가로 학습 +5 효과도 가지고 있습니다.</li>
+        <li> &lt;지도자&gt;는 학습 +15의 효과가 있습니다. '학자'와 합쳐서 '학습' 기술이 +20이 됩니다. 이 게임은 기술 점수 획득이나 HP/SP 최대치 상승을 위해서 레벨을 올리는 것이 가장 중요하기 때문에 경험치 보너스가 가장 좋은 이 조합을 적극 추천합니다.</li>
+      </ul>
+      <br>
+      <h3><a class="mozTocH3" id="mozTocId628811"></a>버그</h3>
+      <ul>
+        <li> 투명 몬스터 : 이오플 터널의 투명 메두사, 드래곤 동굴의 투명 그린 드래곤을 목격했습니다. 밖에 나갔다 오면 해결되는 경우도 있고 계속 투명 상태로 유지되서 죽지도 않는 경우도 있습니다.</li>
+      </ul>
+      <br>
+    </div>
+    <!-- 하단 -->
+    <div class="footer">
+      <p>이 문서는 비영리 목적인 경우만 자유롭게 이용, 복사, 수정 및 재배포할 수 있습니다.</p>
+    </div>
+  </body>
+</html>
