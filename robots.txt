@@ -1,3 +1,4 @@
 User-agent: *
-Allow: /
-Sitemap: https://ngc224k.github.io/ngcquest/sitemap.txt
+Allow: /ngcquest/$
+Allow: /ngcquest/index.html
+Sitemap: https://ngc224k.github.io/ngcquest/sitemap.xml
